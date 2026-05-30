@@ -1,59 +1,143 @@
-# TacticaTIC
+# Proyecto Angular
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.10.
-
-## Development server
-
-To start a local development server, run:
+## Instalación
 
 ```bash
+git clone <URL_DEL_REPOSITORIO>
+cd <NOMBRE_PROYECTO>
+npm install
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## Flujo de trabajo con ramas
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+### Actualizar main
 
 ```bash
-ng generate component component-name
+git checkout main
+git pull origin main
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+### Crear una rama nueva
 
 ```bash
-ng generate --help
+git checkout -b feature/nombre-funcionalidad
 ```
 
-## Building
+Ejemplos:
 
-To build the project run:
+```bash
+git checkout -b feature/navbar
+git checkout -b feature/footer
+git checkout -b feature/home
+```
+
+### Guardar cambios
+
+```bash
+git add .
+git commit -m "Crea componente navbar"
+```
+
+### Subir la rama a GitHub
+
+```bash
+git push -u origin feature/navbar
+```
+
+### Fusionar cambios
+
+1. Crear un Pull Request.
+2. Revisar los cambios.
+3. Fusionar con `main`.
+4. Eliminar la rama.
+
+---
+
+## Actualizar una rama con los cambios de main
+
+```bash
+git checkout main
+git pull origin main
+
+git checkout feature/nombre-rama
+git merge main
+```
+
+Si existen conflictos, resolverlos y después:
+
+```bash
+git push
+```
+
+---
+
+## Creación de componentes
+
+Crear un componente:
+
+```bash
+ng g c components/nombre-componente
+```
+
+Ejemplos:
+
+```bash
+ng g c components/navbar
+ng g c components/footer
+ng g c pages/home
+```
+
+---
+
+## Estructura del proyecto
+
+```text
+src
+├── app
+│   ├── components
+│   │   ├── navbar
+│   │   ├── footer
+│   │   └── shared
+│   │
+│   ├── pages
+│   │   ├── home
+│   │   ├── about
+│   │   ├── services
+│   │   └── contact
+│   │
+│   ├── services
+│   ├── interfaces
+│   ├── models
+│   └── app.routes.ts
+│
+├── assets
+│   ├── images
+│   ├── icons
+│   └── fonts
+│
+└── styles.css
+```
+
+---
+
+## Normas del equipo
+
+* No trabajar directamente sobre `main`.
+* Una tarea = una rama.
+* Realizar commits descriptivos.
+* Ejecutar siempre:
 
 ```bash
 ng build
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+antes de subir cambios.
 
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+### Ejemplos de commits
 
 ```bash
-ng test
+git commit -m "Crea componente navbar"
+git commit -m "Añade estilos de la página principal"
+git commit -m "Implementa formulario de contacto"
 ```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
