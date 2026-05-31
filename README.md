@@ -96,15 +96,21 @@ ng g c pages/home
 src
 ├── app
 │   ├── components
-│   │   ├── navbar
-│   │   ├── footer
-│   │   └── shared
+│   ├── navbar
+│   ├── hero
+│   ├── ceo-video
+│   ├── projects
+│   ├── team
+│   ├── cta-employment
+│   ├── clients
+│   ├── contact
+│   └── footer
+│   │
+│   │
 │   │
 │   ├── pages
-│   │   ├── home
-│   │   ├── about
-│   │   ├── services
-│   │   └── contact
+│   │   └── home
+│   │
 │   │
 │   ├── services
 │   ├── interfaces
