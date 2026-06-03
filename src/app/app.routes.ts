@@ -6,6 +6,7 @@ import { About } from './pages/about/about';
 import { Careers } from './pages/careers/careers';
 import { Blog } from './pages/blog/blog';
 import { Contact } from './pages/contact/contact';
+import { Navbar } from './components/layout/navbar/navbar';
 
 export const routes: Routes = [
   {

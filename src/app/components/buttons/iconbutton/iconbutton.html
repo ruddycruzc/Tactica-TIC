@@ -1,1 +1,11 @@
-<p>iconbutton works!</p>
+<button
+  type="button"
+  class="icon-button"
+  [attr.aria-label]="ariaLabel"
+  (click)="onClick()">
+
+  <img
+    [src]="icon"
+    [alt]="ariaLabel">
+
+</button>
