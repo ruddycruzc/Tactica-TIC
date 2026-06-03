@@ -1,8 +1,9 @@
-/* Contenedor general de la sección */
+/* --- SECCIÓN ABOUT US (ESTILO EDITORIAL ASIMÉTRICO) --- */
+
 .about-container {
-  background-color: #ffffff;
-  padding: 80px 40px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 50%, #e2e8f0 100%);
+  padding: 120px 40px;
+  font-family: 'Segoe UI', Roboto, -apple-system, sans-serif;
   display: flex;
   justify-content: center;
   width: 100%;
@@ -10,91 +11,147 @@
 }
 
 .about-content {
-  max-width: 1100px;
+  max-width: 1100px; /* Un poco más estrecho para forzar el look de revista limpia */
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 80px; 
+  gap: 80px;
 }
 
-/* Filas para distribuir el contenido */
+/* Distribución de Filas (Asimetría pura de la captura) */
 .about-row {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 50px;
   width: 100%;
+  gap: 5%;
 }
 
-/* Invierte las columnas en pantallas grandes */
-.reverse-row {
-  flex-direction: row-reverse;
+/* Columna Izquierda: Títulos colgados */
+.about-left {
+  width: 30%;
+  flex-shrink: 0;
 }
 
-.about-text-right, .about-text-left {
-  flex: 1.2;
-}
-
-.about-subtitle {
-  font-size: 1.8rem;
-  color: #111111;
-  margin: 0 0 20px 0;
-  font-weight: 700;
-}
-
-.about-row p {
-  font-size: 1.05rem;
-  line-height: 1.6;
-  color: #444444;
-  margin: 0 0 15px 0;
-}
-
-/* Texto destacado en verde */
-.highlight-text {
-  color: #71a985 !important;
-  font-weight: 500;
-}
-
-/* Elementos visuales decorativos */
-.about-visual-left {
-  flex: 0.8;
+/* Columna Derecha: Contenido */
+.about-right {
+  width: 65%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  gap: 35px;
 }
 
-.badge-year {
-  font-size: 5rem;
+/* --- ESTILOS DE TEXTO --- */
+.section-side-title {
+  font-size: 3.2rem;
+  color: #0f172a;
   font-weight: 800;
-  color: #71a985;
-  opacity: 0.8;
-  line-height: 1;
+  line-height: 1.1;
+  letter-spacing: -2px;
+  margin: 0;
+  position: sticky; /* Se queda fijo si se hace scroll por su bloque */
+  top: 40px;
 }
 
-.experience-line {
-  width: 4px;
-  height: 60px;
-  background-color: #71a985;
-  margin-top: 15px;
-  border-radius: 2px;
+.section-side-title.uppercase {
+  text-transform: uppercase;
 }
 
-.about-visual-right {
-  flex: 0.8;
+.subsection-title {
+  font-size: 1.6rem;
+  color: #0f172a;
+  font-weight: 700;
+  margin: 0 0 25px 0;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(15, 23, 42, 0.08); /* Línea fina de la captura */
 }
 
-.team-placeholder-box {
-  background-color: #fafafa;
-  border: 2px dashed #71a985;
-  border-radius: 16px;
-  height: 200px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 20px;
-  color: #71a985;
-  font-weight: 500;
-  box-sizing: border-box;
+.subsection-title.inline-title {
+  border-bottom: none;
+  margin: 20px 0 10px 0;
+}
+
+.about-text {
+  font-size: 1.05rem;
+  color: #334155;
+  line-height: 1.75;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+.about-text em {
+  font-style: italic;
+  color: #4f9d72; /* Destacamos el saber hacer en verde */
+  font-weight: 600;
+}
+
+/* Bloques internos de Misión y Visión */
+.mv-block {
+  margin-bottom: 50px;
+}
+
+.mv-block:last-child {
+  margin-bottom: 0;
+}
+
+/* --- TRATAMIENTO DE IMÁGENES PRESTIGE --- */
+.about-image-container {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 16px; /* Esquinas suavizadas high-tech */
+  box-shadow: 0 20px 40px -15px rgba(15, 23, 42, 0.1);
+  background: #cbd5e1;
+}
+
+/* Imagen horizontal grande tipo banner (Bloque Quiénes Somos) */
+.about-image-container.banner-img {
+  margin-top: 20px;
+  height: 280px;
+}
+
+/* Imágenes internas de Misión y Visión */
+.about-image-container.inline-img {
+  height: 220px;
+  margin-bottom: 15px;
+}
+
+.about-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Recorte perfecto automático */
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Efecto interactivo premium al pasar el ratón por las imágenes */
+.about-image-container:hover .about-img {
+  transform: scale(1.04);
+}
+
+/* Línea divisoria elegante entre secciones */
+.about-divider {
+  border: none;
+  height: 1px;
+  background: linear-gradient(to right, rgba(15, 23, 42, 0.08) 70%, transparent);
+  margin: 20px 0;
+}
+
+/* --- ADAPTACIÓN ULTRA RESPONSIVE --- */
+@media (max-width: 900px) {
+  .about-container {
+    padding: 60px 20px;
+  }
+  .about-row {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .about-left, .about-right {
+    width: 100%;
+  }
+  .section-side-title {
+    font-size: 2.5rem;
+    position: static;
+    margin-bottom: 10px;
+  }
+  .about-image-container.banner-img,
+  .about-image-container.inline-img {
+    height: 200px;
+  }
 }

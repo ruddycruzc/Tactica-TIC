@@ -1,0 +1,235 @@
+/* --- SECCIÓN FAQ HIGH-TECH (GLASSMORPHISM MONOLÍTICO & LUZ DE NEÓN) --- */
+
+.faq-container {
+  /* Fondo limpio con un flujo de luz diagonal muy sutil */
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 50%, #e2e8f0 100%);
+  position: relative;
+  padding: 120px 40px;
+  font-family: 'Segoe UI', Roboto, -apple-system, sans-serif;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* Foco de luz verde difuminado en el fondo (Efecto Aurora Tecnológica) */
+.faq-container::before {
+  content: "";
+  position: absolute;
+  bottom: -10%;
+  left: -5%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(97, 177, 132, 0.12) 0%, transparent 70%);
+  filter: blur(60px);
+  pointer-events: none;
+}
+
+.faq-content {
+  max-width: 900px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Cabecera Minimalista y Potente */
+.faq-header {
+  text-align: center;
+}
+
+.faq-title {
+  font-size: 3rem;
+  color: #0f172a;
+  font-weight: 800;
+  margin-bottom: 20px;
+  letter-spacing: -1.5px;
+}
+
+.faq-title .highlight-green {
+  color: #4f9d72;
+  background: linear-gradient(120deg, #4f9d72, #71a985);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.faq-subtitle {
+  font-size: 1.2rem;
+  color: #475569;
+  line-height: 1.6;
+  margin: 0;
+  font-weight: 400;
+}
+
+/* --- PANEL MONOLÍTICO DE CRISTAL TRANSPARENTE --- */
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  /* Toda la lista va dentro de un único bloque flotante de cristal */
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(20px) saturate(190%);
+  -webkit-backdrop-filter: blur(20px) saturate(190%);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 24px;
+  padding: 10px 0;
+  box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.04);
+}
+
+/* Cada ítem es una fila integrada dentro del bloque monolítico */
+.faq-item {
+  border-bottom: 1px solid rgba(15, 23, 42, 0.06);
+  transition: background-color 0.3s ease;
+  position: relative;
+}
+
+/* Eliminamos el borde del último elemento para que no rompa el diseño */
+.faq-item:last-child {
+  border-bottom: none;
+}
+
+/* Efecto hover: Foco de luz horizontal muy sutil */
+.faq-item:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+/* Estado ABIERTO: Inyección de un degradado translúcido de energía verde */
+.faq-item[open] {
+  background: linear-gradient(90deg, rgba(97, 177, 132, 0.04) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+/* Pregunta (Fila interactiva) */
+.faq-question {
+  padding: 30px 40px;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1e293b;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  user-select: none;
+  list-style: none;
+  transition: color 0.3s ease;
+}
+
+.faq-question::-webkit-details-marker {
+  display: none;
+}
+
+/* Al pasar el ratón por encima, el texto de la pregunta reacciona */
+.faq-item:hover .faq-question {
+  color: #0f172a;
+}
+
+/* Cuando la pregunta está abierta, se tiñe elegantemente */
+.faq-item[open] .faq-question {
+  color: #366046;
+}
+
+/* --- INDICADOR MINIMALISTA (LÍNEAS VECTORIALES) --- */
+.faq-icon {
+  width: 24px;
+  height: 24px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* Creamos un signo de "+" con dos líneas minimalistas */
+.faq-icon::before,
+.faq-icon::after {
+  content: "";
+  position: absolute;
+  background-color: #64748b;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Línea horizontal del "+" */
+.faq-icon::before {
+  width: 14px;
+  height: 2px;
+}
+
+/* Línea vertical del "+" */
+.faq-icon::after {
+  width: 2px;
+  height: 14px;
+}
+
+/* Al hacer hover, las líneas se vuelven verdes */
+.faq-item:hover .faq-icon::before,
+.faq-item:hover .faq-icon::after {
+  background-color: #4f9d72;
+}
+
+/* Transformación de alta tecnología: El "+" se convierte en un "-" y brilla */
+.faq-item[open] .faq-icon::before {
+  background-color: #4f9d72;
+  transform: rotate(180deg);
+}
+
+.faq-item[open] .faq-icon::after {
+  background-color: #4f9d72;
+  transform: rotate(90deg); /* Se alinea con la horizontal para desaparecer */
+  opacity: 0;
+}
+
+/* --- BLOQUE DE RESPUESTA --- */
+.faq-answer {
+  padding: 0 40px 32px 40px;
+  color: #475569;
+  font-size: 1.05rem;
+  line-height: 1.75;
+  animation: techExpand 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.faq-answer p {
+  margin: 0;
+  max-width: 90%;
+}
+
+/* Símbolos abstractos de código integrados en la respuesta mediante fuentes mono */
+.faq-answer::after {
+  content: "// tech_solution";
+  position: absolute;
+  bottom: 24px;
+  right: 40px;
+  font-family: monospace;
+  font-size: 0.85rem;
+  color: #4f9d72;
+  opacity: 0.25;
+  letter-spacing: 0.5px;
+}
+
+/* Personalizamos los comentarios de código por cada pregunta */
+.faq-list .faq-item:nth-child(2) .faq-answer::after { content: "// core_location"; }
+.faq-list .faq-item:nth-child(3) .faq-answer::after { content: "// agile_workflow"; }
+.faq-list .faq-item:nth-child(4) .faq-answer::after { content: "// api_integration"; }
+
+/* 🎥 Animación ultra-fluida de renderizado */
+@keyframes techExpand {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .faq-container { padding: 80px 20px; }
+  .faq-title { font-size: 2.3rem; }
+  .faq-question { padding: 24px 20px; font-size: 1.15rem; }
+  .faq-answer { padding: 0 20px 24px 20px; }
+  .faq-answer::after { display: none; }
+}

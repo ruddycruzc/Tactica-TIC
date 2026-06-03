@@ -1,3 +1,220 @@
+<style>
+  .projects-container {
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 50%, #e2e8f0 100%);
+  position: relative;
+  padding: 100px 20px;
+  font-family: 'Segoe UI', Roboto, -apple-system, sans-serif;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* Foco de luz verde de fondo para mantener la estética de la marca */
+.projects-container::before {
+  content: "";
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(97, 177, 132, 0.08) 0%, transparent 70%);
+  filter: blur(60px);
+  pointer-events: none;
+}
+
+.projects-content {
+  max-width: 1300px; /* Un poco más ancho para albergar cómodamente los datos de las subvenciones */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  position: relative;
+  z-index: 2;
+}
+
+/* --- CABECERA DE LA SECCIÓN (Con logos institucionales superiores) --- */
+.projects-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.projects-title {
+  font-size: 3rem;
+  color: #0f172a;
+  font-weight: 800;
+  margin-bottom: 12px;
+  letter-spacing: -1.5px;
+}
+
+.projects-title .highlight-green {
+  color: #4f9d72;
+  background: linear-gradient(120deg, #4f9d72, #71a985);
+  -webkit-text-fill-color: transparent;
+}
+
+.projects-subtitle {
+  font-size: 1.15rem;
+  color: #475569;
+  line-height: 1.6;
+  margin: 0 0 25px 0;
+  font-weight: 500;
+}
+
+/* Contenedor específico para los logos oficiales de la cabecera general */
+.projects-header .project-img {
+  display: inline-block;
+  height: 55px; /* Altura regulada para logos oficiales */
+  width: auto;
+  object-fit: contain;
+  margin: 10px;
+  background: transparent;
+  mix-blend-mode: multiply; /* Limpia fondos blancos residuales de los logos */
+  filter: grayscale(15%) contrast(95%);
+}
+
+/* --- REJILLA MÁSTER DE LOS 14 PROYECTOS --- */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  gap: 30px;
+  width: 100%;
+}
+
+/* --- TARJETA DE PROYECTO (Estilo Expediente Técnico / Cristal) --- */
+.project-card {
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(20px) saturate(190%);
+  -webkit-backdrop-filter: blur(20px) saturate(190%);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 20px;
+  padding: 30px;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  box-sizing: border-box;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  background: rgba(255, 255, 255, 0.7);
+  border-color: rgba(79, 157, 114, 0.4);
+  box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.08);
+}
+
+/* Títulos de los Proyectos (con formato de expediente oficial) */
+.project-name {
+  font-size: 1.25rem;
+  color: #0f172a;
+  font-weight: 700;
+  line-height: 1.4;
+  margin: 0 0 15px 0;
+  letter-spacing: -0.5px;
+  border-bottom: 2px solid rgba(79, 157, 114, 0.15);
+  padding-bottom: 12px;
+}
+
+/* Párrafos descriptivos y de consorcios */
+.project-card p {
+  font-size: 0.95rem;
+  color: #475569;
+  line-height: 1.6;
+  margin: 0 0 14px 0;
+}
+
+.project-card p strong {
+  color: #1e293b;
+}
+
+/* Estilo para las listas del proyecto (ej. MINIASSIST) */
+.project-card li {
+  font-size: 0.9rem;
+  color: #475569;
+  line-height: 1.5;
+  margin-bottom: 10px;
+  list-style: none;
+  position: relative;
+  padding-left: 18px;
+}
+
+.project-card li::before {
+  content: "▪";
+  position: absolute;
+  left: 0;
+  color: #4f9d72;
+  font-size: 1rem;
+  top: -2px;
+}
+
+/* --- CAJA DESTACADA DE FINANCIACIÓN (ej. EPISOST) --- */
+.project-info-box {
+  background: rgba(79, 157, 114, 0.06);
+  border-left: 3px solid #4f9d72;
+  padding: 15px;
+  border-radius: 0 12px 12px 0;
+  margin: 10px 0 20px 0;
+}
+
+.project-info-box .funding {
+  font-size: 0.88rem;
+  color: #2c4e39;
+  line-height: 1.5;
+  display: block;
+  font-weight: 500;
+}
+
+/* --- TRATAMIENTO DE IMÁGENES Y LOGOS COFINANCIADORES DENTRO DE LAS TARJETAS --- */
+.project-card .project-img {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: 65px; /* Altura máxima restrictiva para que los logos no deformen la tarjeta */
+  object-fit: contain; /* Evita cualquier tipo de deformación */
+  margin-top: auto; /* Empuja las imágenes al fondo de la tarjeta de forma simétrica */
+  margin-bottom: 8px;
+  padding-top: 15px;
+  background: transparent;
+  filter: grayscale(10%) contrast(98%);
+  mix-blend-mode: multiply; /* Hace transparente el fondo blanco típico de los logotipos institucionales */
+  align-self: center; /* Centra los logos en el eje horizontal de la tarjeta */
+}
+
+/* Si hay más de una imagen seguida dentro de la tarjeta, les da espaciado correcto */
+.project-card .project-img + .project-img {
+  margin-top: 5px;
+  padding-top: 5px;
+}
+
+/* Caso especial: Para capturas de pantalla o posters grandes (ej. EPISOST o capturas VISTA) */
+.project-card .project-img[src*="Poster"],
+.project-card .project-img[src*="Captura"],
+.project-card .project-img[src*="miniassist.png"] {
+  width: 100%;
+  max-height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-top: auto;
+  padding-top: 15px;
+  mix-blend-mode: normal;
+  filter: none;
+}
+
+/* Ajustes Responsive */
+@media (max-width: 768px) {
+  .projects-container { padding: 60px 15px; }
+  .projects-title { font-size: 2.2rem; }
+  .projects-grid { grid-template-columns: 1fr; gap: 20px; }
+  .project-card { padding: 22px; }
+  .projects-header .project-img { height: 45px; }
+}
+</style>
+
+
 <section class="projects-container">
   <div class="projects-content">
     
@@ -7,8 +224,8 @@
       <p class="projects-subtitle">
         Consultoría para la implantación del ENS Nivel Medio  IDE/2024/000398
       </p>
-      <img src="src/app/img/Unknown.png" alt="Miniassist" class="project-img">
-      <img src="assets/miniassist.png" alt="Miniassist" class="project-img">
+      <img src="src/app/assets/img-táctica/sekuens.png" alt="Miniassist" class="project-img">
+      <img src="src/app/assets/img-táctica/fondos europeos.png" alt="Miniassist" class="project-img">
     </div>
 
     <!-- Rejilla con los 14 Proyectos Individuales -->
@@ -20,16 +237,14 @@
         <p class="project-text">
          Miniassist es un asistente virtual con voz destinado a personas mayores en zonas rurales de Asturias, que facilite la comunicación, el acompañamiento y el seguimiento asistencial mediante IA y conectividad sencilla. Los objetivos del proyecto son:
         </p>
+        <ul class="project-list">
           <li>Combatir la soledad no deseada y el aislamiento de personas mayores que viven en entornos rurales.</li>
           <li>Fomentar la autonomía y seguridad mediante recordatorios y asistencia por voz.</li>
           <li>Facilitar la comunicación fluida entre usuarios, familiares y profesionales sanitarios/sociales.</li>
           <li>Crear una plataforma de memoria familiar digital que preserve recuerdos y refuerce vínculos intergeneracionales.</li>
           <li>Integrar la tecnología en el modelo de cuidados de larga duración (Estrategia CUIDAS), mejorando la coordinación y eficiencia de los servicios asistenciales.</li>
-     <img src="assets/miniassist.png" alt="Miniassist" class="project-img">
-     <img src="assets/miniassist.png" alt="Miniassist" class="project-img">
-     <img src="assets/miniassist.png" alt="Miniassist" class="project-img">
-     <img src="assets/miniassist.png" alt="Miniassist" class="project-img">
-     <img src="assets/miniassist.png" alt="Miniassist" class="project-img">
+        </ul>
+     <img src="../../../../assets/img-táctica/img-miniassist.png" alt="Miniassist" class="project-img">
         </article>
 
       <!-- 2. EPISOST -->
@@ -42,7 +257,7 @@
         <div class="project-info-box">
           <span class="funding">El proyecto cuenta con un presupuesto total de 196.132,71 euros, de los cuales 99.779,62 euros han sido subvencionados por el Ministerio de Industria, Comercio y Turismo a través del programa de Apoyo a Agrupaciones Empresariales Innovadoras. (AEIs).</span>
         </div>
-        <img src="assets/miniassist.png" alt="Miniassist" class="project-img">
+        <img src="../../../../assets/img-táctica/Poster_EPISOST.jpg" alt="Miniassist" class="project-img">
       </article>
 
       <!-- 3. VISTA -->
@@ -51,10 +266,9 @@
         <p class="project-text">
           Proyecto desarrollado por Táctica TIC S.L. y Valle, Ballina y Fernández S.A.  cofinanciado por el Ayuntamiento de Gijón a través de Gijón Impulsa en el marco del programa de Incentivos Impulsa - Subvenciones al Emprendimiento e Innovación (Línea II - Innovación abierta 2024)
         </p>
-        <img src="assets/miniassist.png" alt="Miniassist" class="project-img">
-        <img src="assets/miniassist.png" alt="Miniassist" class="project-img">
-        <img src="assets/miniassist.png" alt="Miniassist" class="project-img">
-        <img src="assets/miniassist.png" alt="Miniassist" class="project-img">
+        <img src="../../../../assets/img-táctica/gijon-impulsa.png" alt="Miniassist" class="project-img">
+        <img src="../../../../assets/img-táctica/Captura de pantalla 2025-09-13 a las 22.54.20.png" alt="Miniassist" class="project-img">
+        <img src="../../../../assets/img-táctica/gaitero.jpeg" alt="Miniassist" class="project-img">
       </article>
 
       <!-- 4. MINIBAI -->
@@ -65,9 +279,9 @@
 
           Referencia: IDE/2023/0000682
         </p>
-        <img src="assets/miniassist.png" alt="Miniassist" class="project-img">
-        <img src="assets/miniassist.png" alt="Miniassist" class="project-img">
-        <img src="assets/miniassist.png" alt="Miniassist" class="project-img">
+        <img src="../../../../assets/img-táctica/cofinanciado-ue.png" alt="Miniassist" class="project-img">
+        <img src="../../../../assets/img-táctica/sekuens-iasturias.png" alt="Miniassist" class="project-img">
+        <img src="../../../../assets/img-táctica/iae.jpeg" alt="Miniassist" class="project-img">
       </article>
 
       <!-- 5. EYES -->
@@ -79,9 +293,9 @@
           Referencia: IDE/2022/0000600
         </p>
         
-        <img src="assets/miniassist.png" alt="Miniassist" class="project-img">
-        <img src="assets/miniassist.png" alt="Miniassist" class="project-img">
-        <img src="assets/miniassist.png" alt="Miniassist" class="project-img">
+        <img src="../../../../assets/img-táctica/cofinanciado-ue.png" alt="Miniassist" class="project-img">
+        <img src="../../../../assets/img-táctica/sekuens-iasturias.png" alt="Miniassist" class="project-img">
+        <img src="../../../../assets/img-táctica/iae.jpeg" alt="Miniassist" class="project-img">
       </article>
 
       <!-- 6. PROYECTO LINCE -->
@@ -91,7 +305,7 @@
           Subvención procedente del IDEPA (I+D IDEPA) y de la Unión Europea, asociada al programa de ejecución de proyectos de I+D (RIS-EMPRESA), para el ejercicio 2021.
           Referencia: IDE/2021/000444
         </p>
-        <img src="assets/miniassist.png" alt="Miniassist" class="project-img">
+        <img src="../../../../assets/img-táctica/iasturias-idepa.png" alt="Miniassist" class="project-img">
       </article>
 
       <!-- 7. SMARTCRANE II -->
@@ -107,9 +321,9 @@
         <p>El estudio, identificación y categorización de variables que afectan de forma directa al proceso de manejo de cargas mediante puentes grúa en espacios industriales abiertos a la intemperie, centrándose en áreas como muelles, puertos marítimos o almacenes a cielo abierto entre otros.
         <p>La investigación de tecnologías de visión artificial aplicables en ambientes exteriores industriales para el diseño y desarrollo de una tecnología robusta y resistente a la corrosión, la humedad, el polvo o posibles desplazamientos producidos por ráfagas de viento.</p>
         <p>Diseño y desarrollo de la solución prototipo. por un lado, del diseño conceptual, definición de arquitectura, desarrollo y programación de software basado en tecnologías de visión e inteligencia artificial, por otro, del diseño y desarrollo del hardware basado en un enfoque plug&play de tal forma que se facilite la implantación de las tecnologías sobre los puentes grúa ya existentes, permitiendo el revamping de instalaciones obsoletas a nivel técnico y funcional.
-        <p>En el presente proyecto de INVESTIGACIÓN participan 6 entidades, todas ellas de forma activa y con un papel especializado en función de su ámbito de conocimiento, cuya experiencia y conocimiento son esenciales para llevar a cabo el proyecto y alcanzar los objetivos planteados. Smart Crane II es un proyecto financiado por el Ministerio de Industria, Comercio y Turismo, a través de la Convocatoria de Agrupaciones Empresariales Innovadoras del año 2023, en el marco del Plan de Recuperación, Transformación y Resiliencia.</p>
-      <img src="assets/miniassist.png" alt="Miniassist" class="project-img">
-      <img src="assets/miniassist.png" alt="Miniassist" class="project-img">
+        <p>En el presente proyecto de INVESTIGACIÓN participan 6 entidades, todas ellas de forma activa y con un papel specializado en función de su ámbito de conocimiento, cuya experiencia y conocimiento son esenciales para llevar a cabo el proyecto y alcanzar los objetivos planteados. Smart Crane II es un proyecto financiado por el Ministerio de Industria, Comercio y Turismo, a través de la Convocatoria de Agrupaciones Empresariales Innovadoras del año 2023, en el marco del Plan de Recuperación, Transformación y Resiliencia.</p>
+      <img src="../../../../assets/img-táctica/Logos-smart-crane.png" alt="Miniassist" class="project-img">
+      <img src="../../../../assets/img-táctica/Logos-smart-crane.png" alt="Miniassist" class="project-img">
     </article>
 
       <!-- 8. REDISEÑO CORPORATIVO -->
@@ -118,7 +332,7 @@
         <p class="project-text">
           Subvención procedente del IDEPA y de la Unión Europea a través de los Programas Operativos FEDER, asociada al programa de Cheques, modalidad de Innovación, para el ejercicio 2022. Referencia: IDE/2022/000366
         </p>
-        <img src="assets/miniassist.png" alt="Miniassist" class="project-img">
+        <img src="../../../../assets/img-táctica/logos_cheque.jpeg" alt="Miniassist" class="project-img">
       </article>
 
       <!-- 9. GUARD-IA -->
@@ -127,8 +341,8 @@
         <p class="project-text">
           Proyecto de colaboración desarrollado por las empresas AIM Inspección SL y Táctica TIC SL cofinanciado por el Ayuntamiento de Gijón a través de Gijón Impulsa en el marco del programa de Incentivos Impulsa 2023 (Plataformas de Cooperación Empresarial). El proyecto consiste en un sistema basado en visión por computador que permita controlar el estado de ocupación de las zonas comunes de un inmueble. El objetivo es tener información en tiempo real de si hay alguna persona deambulando por el edificio y saber dónde se encuentra en cada momento, con el objetivo de poder informar a los vecinos de este hecho.
         </p>
-        <img src="assets/miniassist.png" alt="Miniassist" class="project-img">
-        <img src="assets/miniassist.png" alt="Miniassist" class="project-img">
+        <img src="../../../../assets/img-táctica/gijon-impulsa.png" alt="Miniassist" class="project-img">
+        <img src="../../../../assets/img-táctica/gijon_transforma.png" alt="Miniassist" class="project-img">
       </article>
 
       <!-- 10. ATICAPP -->
@@ -137,8 +351,8 @@
         <p class="project-text">
          La digitalización es una necesidad para todos los negocios. Las asesorías, a pesar de tener programas para el desarrollo de sus funciones, carecen de herramientas para la organización interna de sus equipos y la optimización de procesos que se adapten a las especificidades de su actividad. ATICAPP aglutina todas las herramientas de gestión que las asesorías necesitan en una única herramienta.
         </p>
-        <img src="assets/miniassist.png" alt="Miniassist" class="project-img">
-        <img src="assets/miniassist.png" alt="Miniassist" class="project-img">
+        <img src="../../../../assets/img-táctica/gijon-impulsa.png" alt="Miniassist" class="project-img">
+        <img src="../../../../assets/img-táctica/gijon_transforma.png" alt="Miniassist" class="project-img">
       </article>
 
       <!-- 11. APPARKIA -->
@@ -147,8 +361,8 @@
         <p class="project-text">
           APPARKIA surge como una alternativa a los aparcamientos en superficie, permitiendo a los ciudadanos obtener ganancias a través de las plazas de aparcamiento que sean de su propiedad en aquellos momentos en que no estén siendo utilizadas por ellos. APPARKIA es una APP que interconecta a personas que están buscando un aparcamiento en la ciudad para un tiempo no excesivamente largo y que suponga un coste inferior al coste de los parkings privados de la ciudad.
         </p>
-        <img src="assets/miniassist.png" alt="Miniassist" class="project-img">
-        <img src="assets/miniassist.png" alt="Miniassist" class="project-img">
+        <img src="../../../../assets/img-táctica/gijon-impulsa.png" alt="Miniassist" class="project-img">
+        <img src="../../../../assets/img-táctica/gijon_transforma.png" alt="Miniassist" class="project-img">
       </article>
 
       <!-- 12. NIBLO -->
@@ -158,7 +372,8 @@
          El objetivo del proyecto NIBLO es la creación de un almacén inteligente y conectado capaz de identificar y ubicar todos los bultos de las plantas industriales de forma continua, gracias a la creación de un gemelo digital mediante la aplicación de tecnologías de visión artificial 2D y 3D, que realizará la captura de datos y su análisis. Además, se desarrollará un sistema de trazabilidad de las piezas a lo largo de todo su ciclo de vida útil en una cadena de valor basado en tecnología blockchain.        </p>
         <p>Se trata de un proyecto de innovación colaborativa en la que participan tres empresas del sector del metal asturiano: Oxiplant, centro de transformación del acero, Iberastur, fabricante de bienes de equipo e Hiasa – Grupo Gonvarri, dedicada a la fabricación de piezas para equipos solares; lo que suponen el escenario ideal para el desarrollo del proyecto. La parte tecnológica será ejecutada por Tactica Tic e Izertis, siendo todos ellos #sociosMI4. Una vez más, el proyecto es una colaboración intercluster, incorporando a Secpho (Southern European Cluster in Photonics and Optics) como miembro del consorcio. Este, junto con MI4, trabajará en la difusión y transferencia de resultados para hacer lograr una mayor repercusión de los resultados obtenidos a nivel nacional, provocando un mayor impacto en los sectores industriales susceptibles de acoger la herramienta propuesta.</p>
         <p>NIBLO es un proyecto financiado por el Ministerio de Industria, Comercio y Turismo, a través de la Convocatoria de Agrupaciones Empresariales Innovadoras del año 2022b, en el marco del Plan de Recuperación, Transformación y Resiliencia.</p>
-        <img src="assets/miniassist.png" alt="Miniassist" class="project-img">
+        <img src="../../../../assets/img-táctica/logosniblo.png" alt="Miniassist" class="project-img">
+      <img src="../../../../assets/img-táctica/smartcrane.png" alt="Miniassist" class="project-img">
       </article>
 
       <!-- 13. EASYMATCH -->
@@ -167,7 +382,8 @@
         <p class="project-text">
          El proyecto EASYMATCH es una plataforma de gestión del talento que facilita las conexiones entre oferta y demanda logrando hacer un "match" entre los requisitos solicitados por las empresas para cubrir sus demandas laborales y sus competencias técnicas y transversales de los candidatos.
         </p>
-        <img src="assets/miniassist.png" alt="Miniassist" class="project-img">
+        <img src="../../../../assets/img-táctica/gijon-impulsa.png" alt="Miniassist" class="project-img">
+          <img src="../../../../assets/img-táctica/gijon_transforma.png" alt="Miniassist" class="project-img">  
       </article>
 
       <!-- 14. COMPACT -->
@@ -176,7 +392,8 @@
         <p class="project-text">
           El proyecto COMPACT ha sido cofinanciado de forma pública por parte del Gobierno del Principado de Asturias a través del IDEPA y por la Unión Europea, a través del Fondo Europeo de Desarrollo Regional (FEDER). El proyecto tiene como objetivo desarrollar un nuevo método de fabricación para construir módulos electrónicos sin usar aleación de soldadura, sino materiales como pasta o tinta conductora, resina, cobre sin electrodos. Consorcio formado por: TacticaTIC, Spain. Syswin Solutions SRL, Romania Politehnica University from Bucharest, Center for Electronic Technology and Interconnection Techniques, UPB-CETTI, Romania 
         </p>
-        <img src="assets/miniassist.png" alt="Miniassist" class="project-img">
+        <img src="../../../../assets/img-táctica/idepa.jpeg" alt="Miniassist" class="project-img">
+        <img src="../../../../assets/img-táctica/compact.jpeg" alt="Miniassist" class="project-img">
       </article>
 
     </div>

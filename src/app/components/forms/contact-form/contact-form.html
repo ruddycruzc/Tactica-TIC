@@ -1,34 +1,50 @@
+<link rel="stylesheet" href="./contact-form.css">
 <section class="contact-container">
   <div class="contact-content">
     
+    <!-- COLUMNA IZQUIERDA: INFORMACIÓN -->
     <div class="contact-info">
       <h2 class="contact-title">
         Impulsa tu <br>
         <span class="highlight-green">transformación digital</span>
       </h2>
       <p class="contact-text">
-        Cuéntanos qué reto tecnológico tienes entre manos. Estamos listos para escucharte, aportar nuestra experiencia y diseñar la estrategia robusta y eficiente que tu negocio necesita para seguir evolucionando. 
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
       </p>
       
       <div class="info-blocks">
+        <!-- Bloque Email -->
         <div class="info-item">
+          <div class="icon-box">
+            <svg class="info-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+          </div>
           <div class="info-text">
             <strong>Email:</strong>
             <span>hello&#64;tacticatic.com</span>
           </div>
         </div>
         
+        <!-- Bloque Oficinas -->
         <div class="info-item">
-          <div class="icon-box">📍</div>
+          <div class="icon-box">
+            <svg class="info-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+          </div>
           <div class="info-text">
             <strong>Oficinas:</strong>
-            <span> Gijón Impulsa Quinta la Vega, Cam. Viejo Musel, 246, Gijon-Oeste, 33299 Gijón, Asturias</span>
+            <span>Parque tecnológico, edificio4, Gijón, Asturias, España</span>
           </div>
         </div>
       </div>
-    </div>
+    </div> <!-- /contact-info -->
 
-    <div class="contact-card">
+    <!-- COLUMNA DERECHA: FORMULARIO (FORZADO CON DISPLAY) -->
+    <div class="contact-card" style="display: block !important; visibility: visible !important;">
       <form class="contact-form">
         <div class="form-group">
           <input type="text" placeholder="Nombre y apellidos" required>
@@ -53,7 +69,7 @@
         
         <button type="submit" class="submit-btn">Solicitar ayuda</button>
       </form>
-    </div>
+    </div> <!-- /contact-card -->
 
-  </div>
+  </div> <!-- /contact-content -->
 </section>

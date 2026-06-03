@@ -1,0 +1,54 @@
+.buttons-gallery {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-family: 'Segoe UI', Roboto, sans-serif;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 14px 28px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #000000;
+  background-color: #7bb28d; /* Verde claro de Figma */
+  text-decoration: none;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  box-sizing: border-box;
+  transition: background-color 0.25s ease-in-out;
+}
+
+.btn-primary:hover {
+  background-color: #557962; /* Verde oscuro en hover */
+}
+
+
+.btn-circle-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  background-color: #7bb28d;
+  border-radius: 50%;
+  text-decoration: none;
+  cursor: pointer;
+  box-sizing: border-box;
+  transition: background-color 0.25s ease-in-out;
+}
+
+.btn-circle-primary:hover {
+  background-color: #557962;
+}
+
+/* Flechas Negras */
+.btn-primary .arrow,
+.btn-circle-primary .arrow {
+  font-size: 1.2rem;
+  color: #000000;
+}

@@ -1,0 +1,193 @@
+/* ==========================================
+   SECCIÓN CONTACTO EDITORIAL MÍNIMALISTA
+   ========================================== */
+
+.contact-container {
+  background-color: #f9f9f9; /* Fondo gris claro limpio */
+  padding: 100px 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Roboto, -apple-system, sans-serif;
+}
+
+.contact-content {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 80px;
+}
+
+/* --- COLUMNA IZQUIERDA --- */
+.contact-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.contact-title {
+  font-size: 3.5rem;
+  color: #000000;
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -1px;
+  margin: 0;
+}
+
+.highlight-green {
+  color: #71a987; /* Color verde corporativo de Tactica-TIC */
+}
+
+.contact-text {
+  font-size: 1.05rem;
+  color: #333333;
+  line-height: 1.5;
+  margin: 0;
+  max-width: 480px;
+}
+
+/* Bloques de información de contacto */
+.info-blocks {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Cajas de iconos corporativos verdes */
+.icon-box {
+  width: 46px;
+  height: 46px;
+  background-color: #71a987;
+  color: #ffffff;
+  border-radius: 6px; /* Bordes sutiles de la imagen */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.info-svg {
+  width: 22px;
+  height: 22px;
+}
+
+.info-text {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: #000000;
+}
+
+.info-text strong {
+  font-weight: 600;
+}
+
+.info-text span {
+  color: #333333;
+}
+
+/* --- COLUMNA DERECHA: TARJETA FORMULARIO --- */
+.contact-card {
+  flex: 1;
+  background: #ffffff;
+  padding: 50px;
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.02); /* Sombra muy difuminada */
+  max-width: 550px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  width: 100%;
+}
+
+/* Fila de inputs dobles (Email y Número) */
+.form-row {
+  display: flex;
+  gap: 15px;
+}
+
+.inline-group {
+  flex: 1;
+}
+
+/* Estilo unificado de Inputs y Textarea */
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 16px 24px;
+  border: 1px solid #e2e8f0; /* Borde gris ultra sutil */
+  border-radius: 30px; /* Súper ovalados */
+  font-size: 0.95rem;
+  color: #333333;
+  background-color: #ffffff;
+  outline: none;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease;
+}
+
+/* El cuadro de texto grande es menos ovalado en las esquinas */
+.contact-form textarea {
+  border-radius: 16px;
+  resize: none;
+  font-family: inherit;
+}
+
+/* Placeholder gris suave */
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #7e8b9b;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #71a987; /* Se ilumina en verde al pinchar */
+}
+
+/* Botón de envío verde */
+.submit-btn {
+  background-color: #71a987;
+  color: #ffffff;
+  border: none;
+  padding: 16px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  width: 100%;
+  margin-top: 5px;
+}
+
+.submit-btn:hover {
+  background-color: #5d9272;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 968px) {
+  .contact-container { padding: 60px 30px; }
+  .contact-content { flex-direction: column; gap: 50px; }
+  .contact-title { font-size: 2.8rem; }
+  .contact-card { padding: 30px; }
+  .form-row { flex-direction: column; gap: 20px; }
+}

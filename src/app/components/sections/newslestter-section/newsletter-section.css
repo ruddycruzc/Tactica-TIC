@@ -1,0 +1,153 @@
+
+.social-container {
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 50%, #e2e8f0 100%);
+  font-family: 'Segoe UI', Roboto, -apple-system, sans-serif;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.social-content {
+  max-width: 1100px;
+  width: 100%;
+  display: flex;
+  gap: 5%;
+}
+
+/* Columna Izquierda: Títulos colgados */
+.social-left {
+  width: 30%;
+  flex-shrink: 0;
+}
+
+.social-side-title {
+  font-size: 3.2rem;
+  color: #0f172a;
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -2px;
+  margin: 0;
+}
+
+/* Columna Derecha */
+.social-right {
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.social-subtitle {
+  font-size: 1.6rem;
+  color: #0f172a;
+  font-weight: 700;
+  margin: 0 0 15px 0;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+}
+
+.social-lead {
+  font-size: 1.1rem;
+  color: #475569;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* Grid de dos columnas perfectas */
+.social-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+  width: 100%;
+}
+
+/* Tarjetas de Cristal */
+.social-card {
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 20px;
+  padding: 35px;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.4s ease;
+  box-sizing: border-box;
+}
+
+.social-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 20px 40px -15px rgba(15, 23, 42, 0.08);
+}
+
+/* Contenedores de Iconos */
+.social-icon-wrapper {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 25px;
+  transition: all 0.3s ease;
+}
+
+.social-svg {
+  width: 26px;
+  height: 26px;
+}
+
+/* Colores individuales */
+.social-card.linkedin .social-icon-wrapper {
+  background-color: rgba(10, 102, 194, 0.1);
+  color: #0a66c2;
+}
+
+.social-card.instagram .social-icon-wrapper {
+  background-color: rgba(225, 48, 108, 0.1);
+  color: #e1306c;
+}
+
+/* Hover de iconos */
+.social-card.linkedin:hover .social-icon-wrapper {
+  background-color: #0a66c2;
+  color: #ffffff;
+}
+
+.social-card.instagram:hover .social-icon-wrapper {
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  color: #ffffff;
+}
+
+/* Textos internos */
+.social-info h4 {
+  font-size: 1.35rem;
+  color: #0f172a;
+  margin: 0 0 10px 0;
+  font-weight: 700;
+}
+
+.social-info p {
+  font-size: 0.95rem;
+  color: #475569;
+  line-height: 1.5;
+  margin: 0 0 20px 0;
+}
+
+.social-link-text {
+  font-size: 0.9rem;
+  color: #4f9d72;
+  font-weight: 700;
+}
+
+/* Responsive para pantallas móviles */
+@media (max-width: 850px) {
+  .social-content { flex-direction: column; gap: 30px; }
+  .social-left, .social-right { width: 100%; }
+  .social-side-title { font-size: 2.5rem; }
+  .social-grid { grid-template-columns: 1fr; }
+}

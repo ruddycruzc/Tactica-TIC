@@ -1,0 +1,148 @@
+/* ==========================================
+   SECCIÓN HERO PREMIUM (TACTICA-TIC)
+   ========================================== */
+
+.hero-container {
+  /* Fondo sutilmente texturizado o degradado muy suave */
+  background-color: #fcfcfc;
+  background-image: radial-gradient(rgba(15, 23, 42, 0.01) 1px, transparent 0);
+  background-size: 24px 24px;
+  
+  padding: 120px 60px 100px 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Roboto, -apple-system, sans-serif;
+}
+
+.hero-content {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* Alinea arriba como en la captura */
+  gap: 60px;
+}
+
+/* --- COLUMNA IZQUIERDA: TÍTULO --- */
+.hero-left {
+  flex: 1.2; /* Un pelín más ancho para que el título respire */
+}
+
+.hero-title {
+  font-size: 4rem; /* Tamaño imponente */
+  color: #0f172a; /* Negro azulado corporativo */
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -1.5px;
+  margin: 0;
+}
+
+/* El toque verde característico de tu marca */
+.highlight-green {
+  color: #71a987; /* Ese verde pastel/oliva de tu botón Conócenos */
+  font-weight: 800;
+}
+
+/* --- COLUMNA DERECHA: TEXTO Y BOTONES --- */
+.hero-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding-top: 15px; /* Baja un poco el bloque para equilibrarlo con el título */
+}
+
+.hero-description {
+  font-size: 1.15rem;
+  color: #334155; /* Gris oscuro ultra legible */
+  line-height: 1.6;
+  margin: 0;
+  max-width: 480px; /* Evita que las líneas se hagan eternas */
+}
+
+/* --- CONTENEDOR DE BOTONES --- */
+.hero-buttons {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+/* Estilos Base para ambos botones */
+.btn-primary, .btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 28px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 50px; /* Completamente redondeados como la captura */
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-sizing: border-box;
+}
+
+/* Botón Conócenos (Verde Relleno) */
+.btn-primary {
+  background-color: #71a987;
+  color: #ffffff;
+  border: 1px solid #71a987;
+}
+
+.btn-primary:hover {
+  background-color: #5d9272;
+  border-color: #5d9272;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(113, 169, 135, 0.2);
+}
+
+/* Botón Nuestra Visión (Contorno Gris) */
+.btn-secondary {
+  background-color: transparent;
+  color: #0f172a;
+  border: 1px solid #cbd5e1; /* Borde fino gris */
+}
+
+.btn-secondary:hover {
+  background-color: #f8fafc;
+  border-color: #0f172a; /* Se oscurece al pasar el ratón */
+  transform: translateY(-2px);
+}
+
+/* Animación sutil de la flecha al hacer hover */
+.arrow {
+  font-size: 1.1rem;
+  transition: transform 0.2s ease;
+}
+
+.btn-primary:hover .arrow, 
+.btn-secondary:hover .arrow {
+  transform: translateX(4px); /* La flechita se mueve hacia la derecha */
+}
+
+/* --- COMPORTAMIENTO MÓVIL (RESPONSIVE) --- */
+@media (max-width: 968px) {
+  .hero-container {
+    padding: 80px 30px;
+  }
+  
+  .hero-content {
+    flex-direction: column; /* Se apila uno debajo de otro */
+    gap: 40px;
+  }
+  
+  .hero-title {
+    font-size: 2.8rem;
+  }
+  
+  .hero-right {
+    padding-top: 0;
+  }
+  
+  .hero-buttons {
+    flex-wrap: wrap; /* Si la pantalla es muy enana, los botones no se cortan */
+  }
+}

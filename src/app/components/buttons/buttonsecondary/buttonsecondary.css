@@ -1,0 +1,58 @@
+/* Contenedor solo para organizar las variantes en tu vista de pruebas */
+.buttons-gallery {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-family: 'Segoe UI', Roboto, sans-serif;
+}
+
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 14px 28px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #000000;
+  background-color: #ffffff; /* Fondo blanco en reposo */
+  border: 1px solid #7bb28d; /* Borde verde claro */
+  text-decoration: none;
+  border-radius: 50px;
+  cursor: pointer;
+  box-sizing: border-box;
+  transition: all 0.25s ease-in-out;
+}
+
+.btn-secondary:hover {
+  background-color: #e2ede5; /* Fondo menta clarito en hover */
+  border-color: #557962;     /* Borde verde oscuro */
+}
+
+.btn-circle-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  background-color: #ffffff;
+  border: 1px solid #7bb28d;
+  border-radius: 50%;
+  text-decoration: none;
+  cursor: pointer;
+  box-sizing: border-box;
+  transition: all 0.25s ease-in-out;
+}
+
+.btn-circle-secondary:hover {
+  background-color: #e2ede5;
+  border-color: #557962;
+}
+
+
+.btn-secondary .arrow,
+.btn-circle-secondary .arrow {
+  font-size: 1.2rem;
+  color: #000000;
+}
