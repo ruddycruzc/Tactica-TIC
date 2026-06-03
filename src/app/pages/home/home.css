@@ -1,0 +1,11 @@
+.home__cards-preview {
+  padding: 48px 16px 72px;
+  background: transparent;
+}
+
+.home__cards-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  place-items: center;
+}
