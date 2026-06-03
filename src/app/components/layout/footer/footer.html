@@ -1,6 +1,6 @@
 <footer class="footer-container">
   <div class="footer-content">
-    
+
     <!-- Columna 1: Info de la Empresa -->
     <div class="footer-column brand-column">
       <h2 class="footer-brand">TÁCTICA TIC</h2>
@@ -12,11 +12,21 @@
     <div class="footer-column">
       <h3 class="column-title">TECNOLOGÍA</h3>
       <ul class="footer-links">
-        <li><a href="#">Vision</a></li>
-        <li><a href="#">AI</a></li>
-        <li><a href="#">IoT</a></li>
-        <li><a href="#">Automation</a></li>
-        <li><a href="#">Digital Twins</a></li>
+
+        @for(link of technologyLinks; track link.label){
+
+        <li>
+
+          <a [routerLink]="link.route">
+
+            {{ link.label }}
+
+          </a>
+
+        </li>
+
+        }
+
       </ul>
     </div>
 
@@ -24,10 +34,21 @@
     <div class="footer-column">
       <h3 class="column-title">EMPRESA</h3>
       <ul class="footer-links">
-        <li><a href="#">Who we are</a></li>
-        <li><a href="#">Success Stories</a></li>
-        <li><a href="#">Research</a></li>
-        <li><a href="#">Jobs</a></li>
+
+        @for(link of companyLinks; track link.label){
+
+        <li>
+
+          <a [routerLink]="link.route">
+
+            {{ link.label }}
+
+          </a>
+
+        </li>
+
+        }
+
       </ul>
     </div>
 
@@ -35,7 +56,21 @@
     <div class="footer-column">
       <h3 class="column-title">LEGAL</h3>
       <ul class="footer-links">
-        <li><a href="#">Privacy Policy</a></li>
+
+        @for(link of legalLinks; track link.label){
+
+        <li>
+
+          <a [routerLink]="link.route">
+
+            {{ link.label }}
+
+          </a>
+
+        </li>
+
+        }
+
       </ul>
     </div>
 
