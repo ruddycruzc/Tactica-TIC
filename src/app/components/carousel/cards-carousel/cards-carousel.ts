@@ -1,5 +1,6 @@
 import { Component, ElementRef, Input, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ImageCard } from '../../cards/image-card/image-card';
 
 interface TeamCardData {
   image: string;
@@ -11,7 +12,7 @@ interface TeamCardData {
 @Component({
   selector: 'app-cards-carousel',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, ImageCard],
   templateUrl: './cards-carousel.html',
   styleUrl: './cards-carousel.css',
 })
@@ -20,37 +21,37 @@ export class CardsCarousel {
     {
       image: '/assets/images/cards/team1.png',
       name: 'Marco Rubio',
-      excerpt: 'Arquitectura de APIs y sistemas críticos.',
+      excerpt: 'Desarrollador Backend Senior',
       details: 'Aplica metodologías DevOps y optimiza la infraestructura para cargas empresariales.',
     },
     {
       image: '/assets/images/cards/team2.png',
-      name: 'Lucía Pérez',
-      excerpt: 'Interfaces limpias y experiencias accesibles.',
+      name: 'Marco Rubio',
+      excerpt: 'Desarrollador Backend Senior',
       details: 'Diseña flujos adaptativos que mantienen consistencia visual en desktop y mobile.',
     },
     {
       image: '/assets/images/cards/team3.png',
-      name: 'Sara Torres',
-      excerpt: 'Estrategias de producto centradas en el usuario.',
+      name: 'Marco Rubio',
+      excerpt: 'Desarrollador Backend Senior',
       details: 'Construye microinteracciones y prototipos que convierten la intención en resultados.',
     },
     {
       image: '/assets/images/cards/team1.png',
-      name: 'Alejandro Gil',
-      excerpt: 'Flujos de despliegue seguros y escalables.',
+      name: 'Marco Rubio',
+      excerpt: 'Desarrollador Backend Senior',
       details: 'Automatiza pipelines de CI/CD y mantiene la disponibilidad de servicios críticos.',
     },
     {
       image: '/assets/images/cards/team2.png',
-      name: 'Natalia Cruz',
-      excerpt: 'Visión de producto con foco en valor.',
+      name: 'Marco Rubio',
+      excerpt: 'Desarrollador Backend Senior',
       details: 'Define prioridades claras y coordina equipos multidisciplinares en cada entrega.',
     },
     {
       image: '/assets/images/cards/team3.png',
-      name: 'Carlos Vega',
-      excerpt: 'Apps nativas con alto rendimiento.',
+      name: 'Marco Rubio',
+      excerpt: 'Desarrollador Backend Senior',
       details: 'Implementa experiencias móviles fluidas y mantenibles para usuarios exigentes.',
     },
   ];

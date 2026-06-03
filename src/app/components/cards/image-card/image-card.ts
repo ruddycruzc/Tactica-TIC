@@ -9,8 +9,6 @@ import { Component, Input } from '@angular/core';
 })
 export class ImageCard {
   @Input() image = '';
-  @Input() name = 'Nombre Apellido';
-  @Input() role = 'Desarrollador Backend Senior';
-  @Input() excerpt = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.';
-  @Input() details = 'Aplica metodologías DevOps y optimiza la infraestructura para cargas empresariales.';
+  @Input() title = 'Título de la tarjeta';
+  @Input() description = 'Descripción de la tarjeta o subtítulo breve.';
 }

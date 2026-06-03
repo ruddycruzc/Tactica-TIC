@@ -20,15 +20,11 @@
   >
     <div class="cards-carousel__track">
       <div class="cards-carousel__slide" *ngFor="let card of cards">
-        <article class="carousel-card">
-          <div class="carousel-card__image" [style.backgroundImage]="'url(' + card.image + ')'" aria-hidden="true"></div>
-          <div class="carousel-card__overlay"></div>
-          <div class="carousel-card__content">
-            <h3 class="carousel-card__name">{{ card.name }}</h3>
-            <p class="carousel-card__excerpt">{{ card.excerpt }}</p>
-            <p class="carousel-card__details">{{ card.details }}</p>
-          </div>
-        </article>
+        <app-image-card
+          [image]="card.image"
+          [title]="card.name"
+          [description]="card.excerpt"
+        ></app-image-card>
       </div>
     </div>
   </div>
