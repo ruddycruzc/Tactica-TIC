@@ -1,0 +1,196 @@
+
+
+.services-container {
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 50%, #e2e8f0 100%);
+  position: relative;
+  padding: 100px 40px;
+  font-family: 'Segoe UI', Roboto, -apple-system, sans-serif;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+
+.services-container::before {
+  content: "";
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(97, 177, 132, 0.07) 0%, transparent 70%);
+  filter: blur(50px);
+  pointer-events: none;
+}
+
+.services-content {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  position: relative;
+  z-index: 2;
+}
+
+.services-header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.services-title {
+  font-size: 3rem;
+  color: #0f172a;
+  font-weight: 800;
+  margin-bottom: 20px;
+  letter-spacing: -1.5px;
+}
+
+.services-title .highlight-green {
+  color: #4f9d72;
+  background: linear-gradient(120deg, #4f9d72, #71a985);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.services-subtitle {
+  font-size: 1.2rem;
+  color: #475569;
+  line-height: 1.65;
+  margin: 0;
+  font-weight: 400;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  width: 100%;
+}
+
+.service-card {
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(20px) saturate(190%);
+  -webkit-backdrop-filter: blur(20px) saturate(190%);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 24px;
+  padding: 40px;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  background: rgba(255, 255, 255, 0.65);
+  border-color: rgba(79, 157, 114, 0.4);
+  box-shadow: 0 30px 60px -15px rgba(15, 23, 42, 0.08);
+}
+
+.service-icon {
+  width: 48px;
+  height: 48px;
+  background-color: rgba(79, 157, 114, 0.1);
+  border-radius: 12px;
+  margin-bottom: 25px;
+  position: relative;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.service-card:nth-child(1) .service-icon::before {
+  content: "</>";
+  font-family: monospace;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #4f9d72;
+}
+
+
+.service-card:nth-child(2) .service-icon::before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  border-left: 2px solid #4f9d72;
+  border-bottom: 2px solid #4f9d72;
+  background: linear-gradient(to top, #4f9d72 4px, transparent 4px);
+  background-size: 4px 100%;
+}
+
+
+.service-card:nth-child(3) .service-icon::before {
+  content: "↗";
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #4f9d72;
+}
+
+
+.service-card:hover .service-icon {
+  background-color: #4f9d72;
+  box-shadow: 0 8px 20px rgba(79, 157, 114, 0.25);
+}
+
+.service-card:hover .service-icon::before {
+  color: #ffffff;
+  border-color: #ffffff;
+}
+
+.service-card h3 {
+  font-size: 1.5rem;
+  color: #0f172a;
+  font-weight: 700;
+  margin: 0 0 15px 0;
+}
+
+.service-description {
+  font-size: 1rem;
+  color: #475569;
+  line-height: 1.65;
+  margin: 0 0 25px 0;
+}
+
+.service-features {
+  list-style: none;
+  padding: 0;
+  margin: auto 0 0 0; 
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  border-top: 1px solid rgba(15, 23, 42, 0.06);
+  padding-top: 20px;
+}
+
+.service-features li {
+  font-size: 0.95rem;
+  color: #1e293b;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+
+.service-features li::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  background-color: #4f9d72;
+  border-radius: 50%;
+  flex-shrink: 0;
+  box-shadow: 0 0 8px #4f9d72;
+}
+
+@media (max-width: 768px) {
+  .services-container { padding: 80px 20px; }
+  .services-title { font-size: 2.3rem; }
+  .services-grid { grid-template-columns: 1fr; gap: 20px; }
+  .service-card { padding: 30px; }
+}
