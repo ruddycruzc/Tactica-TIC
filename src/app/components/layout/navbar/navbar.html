@@ -1,26 +1,46 @@
 <nav class="navbar">
-  <div class="navbar-logo">
-    <img src="assets/logo.png" routerLink="/home" routerLinkActive="active"alt="TÁCTICA TIC Logo" class="logo-img">
-    <span class="logo-text">TÁCTICA TIC</span>
-  </div>
 
-  <ul class="navbar-links">
-    <li class="dropdown">
-      <a routerLink="/about" routerLinkActive="active">Lo que hacemos <span class="arrow">▼</span></a></li>
-    <li>
-      <a routerLink="/projects" routerLinkActive="active">Proyectos</a></li>
-    <li>
-      <a routerLink="/contact" routerLinkActive="active">Contacto</a></li>
-    <li>
-      <a routerLink="/careers" routerLinkActive="active">Empleos</a></li>
+  <a
+    routerLink="/"
+    class="navbar__logo">
+
+<img src="/assets/images/logo-TT.png" alt="Táctica TIC">
+
+  </a>
+
+  <ul class="navbar__menu">
+
+    @for(item of navigationItems; track item.route){
+
+      <li>
+
+        <a
+          [routerLink]="item.route"
+          routerLinkActive="active-link"
+          [routerLinkActiveOptions]="{ exact: true }">
+
+          {{ item.label }}
+
+        </a>
+
+      </li>
+
+    }
+
   </ul>
 
-    <button class="icon-btn" aria-label="Buscar">
-      🔍
+  <div class="navbar__actions">
+
+    <app-icon-button
+    icon="/assets/icons/icon-search.png"
+      ariaLabel="Buscar"
+      (clicked)="onSearchClick()">
+    </app-icon-button>
+
+    <button class="language-button">
+      ES
     </button>
-    <div class="language-selector">
-      <span class="lang-current">ES</span>
-      <span class="icon-globe">🌐</span>
-    </div>
+
+  </div>
 
 </nav>
