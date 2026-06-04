@@ -14,7 +14,7 @@
 .cards-carousel__header {
   display: flex;
   align-items: flex-start;
-  justify-content: flex-end;
+  justify-content: space-between;
   gap: 24px;
   width: var(--cards-width);
   margin: 0 auto 34px;
@@ -23,6 +23,7 @@
 .cards-carousel__intro {
   flex: 1 1 auto;
   max-width: 720px;
+  text-align: left;
 }
 
 .cards-carousel__title {
@@ -31,6 +32,7 @@
   font-size: clamp(2rem, 2.25vw, 2.25rem);
   font-weight: 800;
   line-height: 1.05;
+  text-align: left;
 }
 
 .cards-carousel__subtitle {
@@ -40,6 +42,7 @@
   font-size: clamp(0.95rem, 1.05vw, 1.05rem);
   font-weight: 400;
   line-height: 1.2;
+  text-align: left;
 }
 
 .cards-carousel__controls {
