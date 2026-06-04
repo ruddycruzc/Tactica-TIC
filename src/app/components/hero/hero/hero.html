@@ -1,6 +1,16 @@
+<link rel="stylesheet" href="./hero.css">
 <section class="hero-container">
+  
+
+
+<video #miVideo class="hero-video" autoplay loop muted playsinline webkit-playsinline (canplay)="miVideo.play()">
+  <source src="../../../../assets/Videos/Video.mp4" type="video/mp4">
+</video>
+
+  <div class="hero-overlay"></div>
+
+  
   <div class="hero-content">
-    
     <div class="hero-left">
       <h1 class="hero-title">
         Tecnología que <br>
@@ -13,17 +23,14 @@
         Combinamos tecnología, automatización y estrategia digital para ayudarte a optimizar procesos, conectar herramientas y hacer crecer tu negocio de forma inteligente y progresiva.
       </p>
       <div class="hero-buttons">
-        <a   routerLink="/about"
-              class="btn-primary">
+        <a routerLink="/about" class="btn-primary">
           Conócenos <span class="arrow">→</span>
         </a>
-        <a
-             routerLink="/projects"
-             class="btn-secondary">
+        <a routerLink="/projects" class="btn-secondary">
           Nuestra visión <span class="arrow">→</span>
         </a>
       </div>
     </div>
-
   </div>
+
 </section>
