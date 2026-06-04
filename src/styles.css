@@ -4,6 +4,10 @@
 
 :root {
 	font-family: 'Inter', sans-serif;
+	--page-max-width: 1196px;
+	--page-gutter: clamp(24px, 9.3vw, 136px);
+	--page-margin: max(var(--page-gutter), calc((100vw - var(--page-max-width)) / 2));
+	--grid-gap: 24px;
 }
 
 html,

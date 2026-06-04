@@ -1,10 +1,10 @@
 .info-section {
-  padding: 0 4rem 6rem;
+  padding: 0 var(--page-margin, 4rem) 6rem;
   background-color: #fcfcfc;
 }
 
 .info-card {
-  max-width: 1400px;
+  max-width: var(--page-max-width, 1196px);
   margin: 0 auto;
 
   background: #5f8f74;

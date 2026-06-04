@@ -56,6 +56,14 @@ export class CardsCarousel {
     },
   ];
 
+  get displayCards(): TeamCardData[] {
+    if (this.cards.length === 0) {
+      return [];
+    }
+
+    return [this.cards[this.cards.length - 1], ...this.cards, this.cards[0]];
+  }
+
   @ViewChild('viewport', { static: true }) private viewport?: ElementRef<HTMLElement>;
   private isDragging = false;
   private dragStartX = 0;

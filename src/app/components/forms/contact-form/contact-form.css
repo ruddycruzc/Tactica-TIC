@@ -4,7 +4,7 @@
 
 .contact-container {
   background-color: #f9f9f9; /* Fondo gris claro limpio */
-  padding: 100px 60px;
+  padding: 100px var(--page-margin, 60px);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -14,7 +14,7 @@
 }
 
 .contact-content {
-  max-width: 1200px;
+  max-width: var(--page-max-width, 1196px);
   width: 100%;
   display: flex;
   justify-content: space-between;
