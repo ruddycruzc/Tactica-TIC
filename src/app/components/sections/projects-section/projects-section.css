@@ -95,7 +95,7 @@
   backdrop-filter: blur(20px) saturate(190%);
   -webkit-backdrop-filter: blur(20px) saturate(190%);
   border: 1px solid rgba(255, 255, 255, 0.6);
-  border-radius: 20px;
+  border-radius: 16px;
   padding: 30px;
   transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   box-sizing: border-box;
@@ -196,9 +196,10 @@
 .project-card .project-img[src*="Captura"],
 .project-card .project-img[src*="miniassist.png"] {
   width: 100%;
+  aspect-ratio: 16 / 9;
   max-height: 180px;
   object-fit: cover;
-  border-radius: 12px;
+  border-radius: 16px;
   margin-top: auto;
   padding-top: 15px;
   mix-blend-mode: normal;
