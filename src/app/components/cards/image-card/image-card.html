@@ -2,10 +2,18 @@
   <div class="image-card__media">
     <img [src]="image" [alt]="title" />
   </div>
-  <div class="image-card__content">
-    <div>
+
+  <div class="image-card__overlay image-card__overlay--default">
+    <div class="image-card__content">
       <h3 class="image-card__title">{{ title }}</h3>
       <p class="image-card__description">{{ description }}</p>
+    </div>
+  </div>
+
+  <div class="image-card__overlay image-card__overlay--hover" aria-hidden="true">
+    <div class="image-card__content">
+      <h3 class="image-card__title">{{ title }}</h3>
+      <p class="image-card__description">{{ hoverDescription }}</p>
     </div>
   </div>
 </article>

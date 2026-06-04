@@ -20,39 +20,39 @@ export class CardsCarousel {
   @Input() cards: TeamCardData[] = [
     {
       image: '/assets/images/cards/team1.png',
-      name: 'Marco Rubio',
+      name: 'Name',
       excerpt: 'Desarrollador Backend Senior',
-      details: 'Aplica metodologías DevOps y optimiza la infraestructura para cargas empresariales.',
+      details: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     },
     {
       image: '/assets/images/cards/team2.png',
-      name: 'Marco Rubio',
+      name: 'Name',
       excerpt: 'Desarrollador Backend Senior',
-      details: 'Diseña flujos adaptativos que mantienen consistencia visual en desktop y mobile.',
+      details: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     },
     {
       image: '/assets/images/cards/team3.png',
-      name: 'Marco Rubio',
+      name: 'Name',
       excerpt: 'Desarrollador Backend Senior',
-      details: 'Construye microinteracciones y prototipos que convierten la intención en resultados.',
+      details: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     },
     {
       image: '/assets/images/cards/team1.png',
-      name: 'Marco Rubio',
+      name: 'Name',
       excerpt: 'Desarrollador Backend Senior',
-      details: 'Automatiza pipelines de CI/CD y mantiene la disponibilidad de servicios críticos.',
+      details: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     },
     {
       image: '/assets/images/cards/team2.png',
-      name: 'Marco Rubio',
+      name: 'Name',
       excerpt: 'Desarrollador Backend Senior',
-      details: 'Define prioridades claras y coordina equipos multidisciplinares en cada entrega.',
+      details: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     },
     {
       image: '/assets/images/cards/team3.png',
-      name: 'Marco Rubio',
+      name: 'Name',
       excerpt: 'Desarrollador Backend Senior',
-      details: 'Implementa experiencias móviles fluidas y mantenibles para usuarios exigentes.',
+      details: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     },
   ];
 
