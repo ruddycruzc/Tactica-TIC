@@ -8,72 +8,53 @@
   min-height: 550px;
   box-sizing: border-box;
   overflow: hidden;
-  background:
-    radial-gradient(circle at var(--hero-x, 50%) var(--hero-y, 50%), rgba(123, 178, 141, 0.18), transparent 26%),
-    linear-gradient(135deg, #fbfcfb 0%, #f4f7f5 48%, #edf4ef 100%);
+  background: #fcfcfc;
   --hero-x: 50%;
   --hero-y: 50%;
-  --hero-lens-scale: 0.92;
 }
 
-.hero-container--active {
-  --hero-lens-scale: 1;
-}
-
-.hero-ambient {
+.hero-wave {
   position: absolute;
-  inset: 0;
-  overflow: hidden;
+  left: 50%;
+  top: 50%;
+  width: 120vw;
+  height: clamp(320px, 42vw, 560px);
+  transform:
+    translate(-50%, -50%)
+    translate(
+      calc((var(--hero-x, 50%) - 50%) * 0.04),
+      calc((var(--hero-y, 50%) - 50%) * 0.03)
+    );
   pointer-events: none;
+  transition: transform 360ms ease;
   z-index: 1;
 }
 
-.hero-grid {
+.hero-wave__svg {
   position: absolute;
-  inset: -14%;
-  transition: opacity 280ms ease, transform 520ms ease;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  fill: none;
+  animation: heroWaveDrift 16s ease-in-out infinite alternate;
 }
 
-.hero-grid--base {
-  opacity: 0.52;
-  background-image:
-    radial-gradient(circle, rgba(15, 23, 42, 0.16) 1px, transparent 1.4px),
-    linear-gradient(90deg, rgba(85, 121, 98, 0.08) 1px, transparent 1px),
-    linear-gradient(rgba(85, 121, 98, 0.08) 1px, transparent 1px);
-  background-size: 34px 34px, 102px 102px, 102px 102px;
-  transform: translate(
-    calc((var(--hero-x, 50%) - 50%) * -0.04),
-    calc((var(--hero-y, 50%) - 50%) * -0.04)
-  );
+.hero-wave__svg path {
+  stroke: rgba(85, 121, 98, 0.09);
+  stroke-width: 0.72;
+  vector-effect: non-scaling-stroke;
 }
 
-.hero-grid--focus {
-  opacity: 0.78;
-  background-image:
-    radial-gradient(circle, rgba(15, 23, 42, 0.32) 1.4px, transparent 1.8px),
-    linear-gradient(90deg, rgba(123, 178, 141, 0.2) 1px, transparent 1px),
-    linear-gradient(rgba(123, 178, 141, 0.2) 1px, transparent 1px);
-  background-size: 23px 23px, 69px 69px, 69px 69px;
-  clip-path: circle(clamp(120px, 17vw, 230px) at var(--hero-x, 50%) var(--hero-y, 50%));
-  transform: scale(1.035);
+.hero-wave__svg--focus {
+  mask-image: radial-gradient(circle at var(--hero-x, 50%) var(--hero-y, 50%), #000 0 12%, transparent 30%);
+  -webkit-mask-image: radial-gradient(circle at var(--hero-x, 50%) var(--hero-y, 50%), #000 0 12%, transparent 30%);
+  transform: scale(1.025);
 }
 
-.hero-lens {
-  position: absolute;
-  left: var(--hero-x, 50%);
-  top: var(--hero-y, 50%);
-  width: clamp(190px, 24vw, 320px);
-  aspect-ratio: 1;
-  border-radius: 50%;
-  background:
-    radial-gradient(circle at 42% 38%, rgba(255, 255, 255, 0.55), transparent 26%),
-    radial-gradient(circle, rgba(123, 178, 141, 0.24), rgba(123, 178, 141, 0.08) 42%, transparent 68%);
-  border: 1px solid rgba(85, 121, 98, 0.22);
-  box-shadow: 0 28px 80px rgba(85, 121, 98, 0.2);
-  transform: translate(-50%, -50%) scale(var(--hero-lens-scale, 0.92));
-  transition: left 90ms linear, top 90ms linear, transform 420ms ease;
+.hero-wave__svg--focus path {
+  stroke: rgba(85, 121, 98, 0.24);
+  stroke-width: 0.95;
 }
-
 
 .hero-content {
   max-width: var(--page-max-width, 1196px);
@@ -201,15 +182,16 @@
   .hero-buttons {
     flex-wrap: wrap;
   }
+
+  .hero-wave {
+    width: 138vw;
+    height: 360px;
+    top: 38%;
+  }
 }
 
-@media (hover: none) {
-  .hero-grid--focus {
-    clip-path: circle(clamp(140px, 36vw, 220px) at 74% 28%);
-  }
-
-  .hero-lens {
-    left: 74%;
-    top: 28%;
+@keyframes heroWaveDrift {
+  to {
+    transform: translateX(-36px) translateY(16px) skewY(-2deg);
   }
 }

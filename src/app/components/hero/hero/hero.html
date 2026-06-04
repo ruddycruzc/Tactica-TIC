@@ -6,10 +6,18 @@
   (pointermove)="onPointerMove($event)"
   (pointerleave)="onPointerLeave()"
 >
-  <div class="hero-ambient" aria-hidden="true">
-    <div class="hero-grid hero-grid--base"></div>
-    <div class="hero-grid hero-grid--focus"></div>
-    <div class="hero-lens"></div>
+  <div class="hero-wave" aria-hidden="true">
+    <svg class="hero-wave__svg hero-wave__svg--base" viewBox="0 0 1200 360" preserveAspectRatio="none">
+      @for (path of wavePaths; track path) {
+        <path [attr.d]="path"></path>
+      }
+    </svg>
+
+    <svg class="hero-wave__svg hero-wave__svg--focus" viewBox="0 0 1200 360" preserveAspectRatio="none">
+      @for (path of wavePaths; track path) {
+        <path [attr.d]="path"></path>
+      }
+    </svg>
   </div>
 
   
