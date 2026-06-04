@@ -1,1 +1,11 @@
-<p>image-card works!</p>
+<article class="image-card">
+  <div class="image-card__media">
+    <img [src]="image" [alt]="title" />
+  </div>
+  <div class="image-card__content">
+    <div>
+      <h3 class="image-card__title">{{ title }}</h3>
+      <p class="image-card__description">{{ description }}</p>
+    </div>
+  </div>
+</article>

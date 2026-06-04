@@ -1,0 +1,85 @@
+.logos-carousel {
+  width: 100%;
+  padding: 54px 0 58px;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+.logos-carousel__title {
+  margin: 0 0 42px;
+  color: #171717;
+  font-size: clamp(1.25rem, 1.55vw, 1.6rem);
+  font-weight: 800;
+  line-height: 1.15;
+  text-align: center;
+}
+
+.logos-carousel__viewport {
+  width: 100%;
+  overflow: hidden;
+}
+
+.logos-carousel__track {
+  display: flex;
+  width: max-content;
+  animation: logos-scroll 24s linear infinite;
+  will-change: transform;
+}
+
+.logos-carousel__group {
+  display: flex;
+  align-items: center;
+  gap: clamp(72px, 7vw, 126px);
+  padding-right: clamp(72px, 7vw, 126px);
+}
+
+.logos-carousel__item {
+  display: grid;
+  flex: 0 0 clamp(150px, 13vw, 220px);
+  place-items: center;
+  height: clamp(88px, 8vw, 132px);
+}
+
+.logos-carousel__logo {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+@keyframes logos-scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .logos-carousel__track {
+    animation: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .logos-carousel {
+    padding: 42px 0 46px;
+  }
+
+  .logos-carousel__title {
+    margin-bottom: 30px;
+    font-size: 1.2rem;
+  }
+
+  .logos-carousel__group {
+    gap: 42px;
+    padding-right: 42px;
+  }
+
+  .logos-carousel__item {
+    flex-basis: 138px;
+    height: 82px;
+  }
+}

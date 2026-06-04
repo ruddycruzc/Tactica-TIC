@@ -1,1 +1,19 @@
-<p>logos-carousel works!</p>
+<section class="logos-carousel" aria-labelledby="logos-carousel-title">
+  <h2 id="logos-carousel-title" class="logos-carousel__title">Empresas&nbsp; que confían en nosotros</h2>
+
+  <div class="logos-carousel__viewport">
+    <div class="logos-carousel__track">
+      <div class="logos-carousel__group" aria-label="Empresas colaboradoras">
+        <div class="logos-carousel__item" *ngFor="let logo of logos">
+          <img [src]="logo.src" [alt]="logo.alt" class="logos-carousel__logo" />
+        </div>
+      </div>
+
+      <div class="logos-carousel__group" aria-hidden="true">
+        <div class="logos-carousel__item" *ngFor="let logo of logos">
+          <img [src]="logo.src" alt="" class="logos-carousel__logo" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

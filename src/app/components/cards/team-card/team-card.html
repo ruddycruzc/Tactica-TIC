@@ -1,1 +1,17 @@
-<p>team-card works!</p>
+<article class="team-card">
+  <div class="team-card__image" [style.background-image]="'url(&quot;' + image + '&quot;)'" aria-hidden="true"></div>
+  <div class="team-card__details">
+    <div class="team-card__copy">
+      <h2 class="team-card__title">{{ title }}</h2>
+      <p class="team-card__description">{{ description }}</p>
+    </div>
+    <div class="team-card__actions">
+      <a class="team-card__button team-card__button--primary" [href]="primaryHref">
+        {{ primaryLabel }} <span aria-hidden="true">→</span>
+      </a>
+      <a class="team-card__button team-card__button--secondary" [href]="secondaryHref">
+        {{ secondaryLabel }} <span aria-hidden="true">→</span>
+      </a>
+    </div>
+  </div>
+</article>
