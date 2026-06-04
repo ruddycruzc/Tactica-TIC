@@ -1,9 +1,4 @@
 .video-container {
-background-image: 
-    radial-gradient(rgba(15, 23, 42, 0.015) 1px, transparent 1px), 
-    linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)),
-    url('../../../../assets/images/linea-blanca.jpg');
-  
   background-size: 24px 24px, auto, cover;
   background-position: center;
   background-repeat: repeat, no-repeat, no-repeat;
