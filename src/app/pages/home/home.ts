@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { Hero } from '../../components/hero/hero/hero';
 import { InfoRightImage } from '../../components/info-blocks/info-right-image/info-right-image';
 import { ContactForm } from '../../components/forms/contact-form/contact-form';
+import { VideoHero } from '../../components/hero/video-hero/video-hero';
 
 @Component({
   selector: 'app-home',
@@ -10,7 +11,8 @@ import { ContactForm } from '../../components/forms/contact-form/contact-form';
   imports: [
     Hero,
     InfoRightImage,
-    ContactForm
+    ContactForm,
+    VideoHero
   ],
   templateUrl: './home.html',
   styleUrl: './home.css'
