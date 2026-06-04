@@ -6,6 +6,7 @@ import { ContactForm } from '../../components/forms/contact-form/contact-form';
 import { VideoHero } from '../../components/hero/video-hero/video-hero';
 import { CaseStudiesSection } from "../../components/sections/case-studies-section/case-studies-section";
 import { CardsCarousel } from '../../components/carousel/cards-carousel/cards-carousel';
+import { LogosCarousel } from "../../components/carousel/logos-carousel/logos-carousel";
 
 @Component({
   selector: 'app-home',
@@ -16,7 +17,8 @@ import { CardsCarousel } from '../../components/carousel/cards-carousel/cards-ca
     ContactForm,
     VideoHero,
     CaseStudiesSection,
-    CardsCarousel
+    CardsCarousel,
+    LogosCarousel
 ],
   templateUrl: './home.html',
   styleUrl: './home.css'
