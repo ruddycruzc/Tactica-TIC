@@ -9,7 +9,7 @@
   background-position: center;
   background-repeat: repeat, no-repeat, no-repeat;
   
-  padding: 120px var(--page-margin, 60px) 100px;
+  padding: 120px var(--page-margin, 24px) 100px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -167,7 +167,7 @@
 
 @media (max-width: 640px) {
   .cases-section {
-    padding: 50px var(--page-margin, 20px);
+    padding: 50px var(--page-margin, 24px);
   }
   .cases-header {
     flex-direction: column;

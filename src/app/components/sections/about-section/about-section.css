@@ -2,7 +2,7 @@
 
 .about-container {
   background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 50%, #e2e8f0 100%);
-  padding: 120px 40px;
+  padding: 120px var(--page-margin, 24px);
   font-family: 'Segoe UI', Roboto, -apple-system, sans-serif;
   display: flex;
   justify-content: center;
@@ -11,7 +11,7 @@
 }
 
 .about-content {
-  max-width: 1100px; /* Un poco más estrecho para forzar el look de revista limpia */
+  max-width: var(--page-max-width, 1196px);
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -136,7 +136,7 @@
 /* --- ADAPTACIÓN ULTRA RESPONSIVE --- */
 @media (max-width: 900px) {
   .about-container {
-    padding: 60px 20px;
+    padding: 60px var(--page-margin, 24px);
   }
   .about-row {
     flex-direction: column;

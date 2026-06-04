@@ -3,7 +3,7 @@
   background-position: center;
   background-repeat: repeat, no-repeat, no-repeat;
   
-  padding: 120px 60px 100px 60px;
+  padding: 120px var(--page-margin, 24px) 100px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -13,7 +13,7 @@
 }
 
 .video-content {
-  max-width: 1200px;
+  max-width: var(--page-max-width, 1196px);
   width: 100%;
   display: flex;
   align-items: center; 
@@ -136,7 +136,7 @@
 
 @media (max-width: 968px) {
   .video-container {
-    padding: 60px 30px;
+    padding: 60px var(--page-margin, 24px);
   }
   
   .video-content {

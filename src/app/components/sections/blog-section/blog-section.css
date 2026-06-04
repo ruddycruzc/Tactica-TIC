@@ -4,7 +4,7 @@
   /* Fondo limpio con flujo diagonal idéntico al FAQ */
   background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 50%, #e2e8f0 100%);
   position: relative;
-  padding: 100px 40px;
+  padding: 100px var(--page-margin, 24px);
   font-family: 'Segoe UI', Roboto, -apple-system, sans-serif;
   display: flex;
   justify-content: center;
@@ -27,7 +27,7 @@
 }
 
 .blog-content {
-  max-width: 1200px; /* Más ancho para que quepan bien las 3 columnas */
+  max-width: var(--page-max-width, 1196px);
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -230,7 +230,7 @@
 }
 /* Adaptación para pantallas pequeñas (móviles y tablets) */
 @media (max-width: 768px) {
-  .blog-container { padding: 80px 20px; }
+  .blog-container { padding: 80px var(--page-margin, 24px); }
   .blog-title { font-size: 2.3rem; }
   .blog-grid { grid-template-columns: 1fr; gap: 20px; }
   .blog-card { padding: 25px; }

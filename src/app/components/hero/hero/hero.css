@@ -1,6 +1,6 @@
 .hero-container {
   position: relative; 
-  padding: 120px 60px 100px 60px;
+  padding: 120px var(--page-margin, 24px) 100px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -40,7 +40,7 @@
 
 
 .hero-content {
-  max-width: 1200px;
+  max-width: var(--page-max-width, 1196px);
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -149,7 +149,7 @@
 
 @media (max-width: 968px) {
   .hero-container {
-    padding: 80px 30px;
+    padding: 80px var(--page-margin, 24px);
   }
   
   .hero-content {

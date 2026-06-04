@@ -4,7 +4,7 @@
   /* Fondo limpio con un flujo de luz diagonal muy sutil */
   background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 50%, #e2e8f0 100%);
   position: relative;
-  padding: 120px 40px;
+  padding: 120px var(--page-margin, 24px);
   font-family: 'Segoe UI', Roboto, -apple-system, sans-serif;
   display: flex;
   justify-content: center;
@@ -27,7 +27,7 @@
 }
 
 .faq-content {
-  max-width: 900px;
+  max-width: var(--page-max-width, 1196px);
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -227,7 +227,7 @@
 
 /* Responsive */
 @media (max-width: 768px) {
-  .faq-container { padding: 80px 20px; }
+  .faq-container { padding: 80px var(--page-margin, 24px); }
   .faq-title { font-size: 2.3rem; }
   .faq-question { padding: 24px 20px; font-size: 1.15rem; }
   .faq-answer { padding: 0 20px 24px 20px; }

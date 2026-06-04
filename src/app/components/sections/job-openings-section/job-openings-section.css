@@ -8,7 +8,7 @@
               linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
   position: relative;
   overflow: hidden;
-  padding: 120px 60px;
+  padding: 120px var(--page-margin, 24px);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -18,7 +18,7 @@
 }
 
 .jobs-content {
-  max-width: 1200px;
+  max-width: var(--page-max-width, 1196px);
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -209,7 +209,7 @@
     height: auto;
   }
   .jobs-container {
-    padding: 80px 30px;
+    padding: 80px var(--page-margin, 24px);
   }
   .jobs-title {
     font-size: 2.6rem;

@@ -5,7 +5,7 @@
 
 .hub-container {
   background-color: #f8fafc;
-  padding: 90px 40px;
+  padding: 90px var(--page-margin, 24px);
   width: 100%;
   display: flex;
   justify-content: center;
@@ -14,7 +14,7 @@
 }
 
 .hub-wrapper {
-  max-width: 1100px;
+  max-width: var(--page-max-width, 1196px);
   width: 100%;
   display: flex;
   flex-direction: column;

@@ -3,7 +3,7 @@
 .projects-container {
   background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 50%, #e2e8f0 100%);
   position: relative;
-  padding: 100px 20px;
+  padding: 100px var(--page-margin, 24px);
   font-family: 'Segoe UI', Roboto, -apple-system, sans-serif;
   display: flex;
   justify-content: center;
@@ -26,7 +26,7 @@
 }
 
 .projects-content {
-  max-width: 1300px; /* Un poco más ancho para albergar cómodamente los datos de las subvenciones */
+  max-width: var(--page-max-width, 1196px);
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -208,7 +208,7 @@
 
 /* Ajustes Responsive */
 @media (max-width: 768px) {
-  .projects-container { padding: 60px 15px; }
+  .projects-container { padding: 60px var(--page-margin, 24px); }
   .projects-title { font-size: 2.2rem; }
   .projects-grid { grid-template-columns: 1fr; gap: 20px; }
   .project-card { padding: 22px; }
