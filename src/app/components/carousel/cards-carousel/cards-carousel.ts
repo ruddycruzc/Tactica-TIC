@@ -1,13 +1,8 @@
 import { Component, ElementRef, Input, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ImageCard } from '../../cards/image-card/image-card';
 
-interface TeamCardData {
-  image: string;
-  name: string;
-  excerpt: string;
-  details: string;
-}
+import { ImageCard } from '../../cards/image-card/image-card';
+import { TeamCard } from '../../../interfaces/team-card.interface';
 
 @Component({
   selector: 'app-cards-carousel',
@@ -17,7 +12,8 @@ interface TeamCardData {
   styleUrl: './cards-carousel.css',
 })
 export class CardsCarousel {
-  @Input() cards: TeamCardData[] = [
+
+  @Input() cards: TeamCard[] = [
     {
       image: '/assets/images/cards/team1.png',
       name: 'Marco Rubio',

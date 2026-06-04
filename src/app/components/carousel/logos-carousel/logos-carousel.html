@@ -4,16 +4,35 @@
   <div class="logos-carousel__viewport">
     <div class="logos-carousel__track">
       <div class="logos-carousel__group" aria-label="Empresas colaboradoras">
-        <div class="logos-carousel__item" *ngFor="let logo of logos">
+        @for (logo of logos; track logo.src) {
+
+        <div class="logos-carousel__item">
+
           <img [src]="logo.src" [alt]="logo.alt" class="logos-carousel__logo" />
+
         </div>
+
+        }
       </div>
 
-      <div class="logos-carousel__group" aria-hidden="true">
-        <div class="logos-carousel__item" *ngFor="let logo of logos">
-          <img [src]="logo.src" alt="" class="logos-carousel__logo" />
-        </div>
+   
+<div class="logos-carousel__group" aria-hidden="true">
+
+  @for (logo of logos; track logo.src) {
+
+    <div class="logos-carousel__item">
+
+      <img
+        [src]="logo.src"
+        alt=""
+        class="logos-carousel__logo" />
+
+    </div>
+
+  }
+
+</div>
       </div>
     </div>
-  </div>
+
 </section>

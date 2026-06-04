@@ -1,20 +1,17 @@
-import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { Component, Input } from '@angular/core';
 
-interface LogoItem {
-  src: string;
-  alt: string;
-}
+import { LogoItem } from '../../../interfaces/logos-carousel.interface';
 
 @Component({
   selector: 'app-logos-carousel',
   standalone: true,
-  imports: [CommonModule],
+  imports: [],
   templateUrl: './logos-carousel.html',
   styleUrl: './logos-carousel.css',
 })
 export class LogosCarousel {
-  logos: LogoItem[] = [
+
+  @Input() logos: LogoItem[] = [
     { src: '/assets/Logos/Arriba.png', alt: 'Capsa Food' },
     { src: '/assets/Logos/Arriba-1.png', alt: 'Emulsa' },
     { src: '/assets/Logos/Arriba-2.png', alt: 'Grupo El Gaitero' },
@@ -22,4 +19,5 @@ export class LogosCarousel {
     { src: '/assets/Logos/Arriba-4.png', alt: 'Delfin Tubes' },
     { src: '/assets/Logos/Arriba-5.png', alt: 'Axalta' },
   ];
+
 }
