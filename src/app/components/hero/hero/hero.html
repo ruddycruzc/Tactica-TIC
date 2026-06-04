@@ -1,13 +1,16 @@
-<link rel="stylesheet" href="./hero.css">
-<section class="hero-container">
-  
-
-<video class="hero-video" autoplay muted loop playsinline>
-  <source src="../../../../assets/Videos/Video.mp4" type="video/mp4">
-  Tu navegador no soporta videos HTML5.
-</video>
-
-  <div class="hero-overlay"></div>
+<section
+  class="hero-container"
+  [class.hero-container--active]="isPointerActive"
+  [style.--hero-x.%]="cursorX"
+  [style.--hero-y.%]="cursorY"
+  (pointermove)="onPointerMove($event)"
+  (pointerleave)="onPointerLeave()"
+>
+  <div class="hero-ambient" aria-hidden="true">
+    <div class="hero-grid hero-grid--base"></div>
+    <div class="hero-grid hero-grid--focus"></div>
+    <div class="hero-lens"></div>
+  </div>
 
   
   <div class="hero-content">
