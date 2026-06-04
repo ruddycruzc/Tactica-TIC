@@ -6,6 +6,7 @@ import { Footer } from '../../components/layout/footer/footer';
 import { Hero } from '../../components/hero/hero/hero';
 import { CardsCarousel } from '../../components/carousel/cards-carousel/cards-carousel';
 import { TeamCard } from '../../components/cards/team-card/team-card';
+import { LogosCarousel } from '../../components/carousel/logos-carousel/logos-carousel';
 
 @Component({
   selector: 'app-home',
@@ -13,7 +14,8 @@ import { TeamCard } from '../../components/cards/team-card/team-card';
   imports: [
     Hero,
     CardsCarousel,
-    TeamCard
+    TeamCard,
+    LogosCarousel
   ],
   templateUrl: './home.html',
   styleUrl: './home.css'
