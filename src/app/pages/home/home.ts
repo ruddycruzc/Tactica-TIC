@@ -9,7 +9,7 @@ import { InfoRightImage } from '../../components/info-blocks/info-right-image/in
   imports: [
     Hero,
     InfoRightImage
-],
+  ],
   templateUrl: './home.html',
   styleUrl: './home.css'
 })
