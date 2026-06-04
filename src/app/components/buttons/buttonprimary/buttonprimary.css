@@ -9,22 +9,25 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 12px;
-  padding: 14px 28px;
-  font-size: 1rem;
-  font-weight: 500;
-  color: #000000;
-  background-color: #7bb28d; /* Verde claro de Figma */
+  gap: var(--button-gap, 10px);
+  min-height: var(--button-height, 56px);
+  padding: 0 var(--button-padding-x, 26px);
+  font-size: var(--button-font-size, 1rem);
+  font-weight: var(--button-font-weight, 400);
+  color: var(--button-text, #0f172a);
+  background-color: var(--color-primary, #7bb28d);
   text-decoration: none;
-  border-radius: 50px;
-  border: none;
+  border-radius: var(--button-radius, 999px);
+  border: var(--button-border-width, 2px) solid var(--color-primary, #7bb28d);
   cursor: pointer;
   box-sizing: border-box;
-  transition: background-color 0.25s ease-in-out;
+  transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out, transform 0.25s ease-in-out;
 }
 
 .btn-primary:hover {
-  background-color: #557962; /* Verde oscuro en hover */
+  background-color: var(--color-secondary, #557962);
+  color: var(--button-text-inverse, #ffffff);
+  transform: translateY(-1px);
 }
 
 
@@ -32,9 +35,9 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 52px;
-  height: 52px;
-  background-color: #7bb28d;
+  width: var(--button-height, 56px);
+  height: var(--button-height, 56px);
+  background-color: var(--color-primary, #7bb28d);
   border-radius: 50%;
   text-decoration: none;
   cursor: pointer;
@@ -43,12 +46,13 @@
 }
 
 .btn-circle-primary:hover {
-  background-color: #557962;
+  background-color: var(--color-secondary, #557962);
+  color: var(--button-text-inverse, #ffffff);
 }
 
 /* Flechas Negras */
 .btn-primary .arrow,
 .btn-circle-primary .arrow {
   font-size: 1.2rem;
-  color: #000000;
+  color: currentColor;
 }

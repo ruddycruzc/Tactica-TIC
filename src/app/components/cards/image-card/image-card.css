@@ -86,7 +86,7 @@
   margin: 0 0 4px;
   font-size: clamp(1.45rem, 1.7vw, 1.85rem);
   line-height: 1.05;
-  color: #79b58a;
+  color: var(--color-primary, #7bb28d);
   font-weight: 800;
 }
 

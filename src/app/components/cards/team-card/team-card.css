@@ -59,36 +59,39 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 12px;
-  min-width: 184px;
-  padding: 16px 28px;
-  border-radius: 999px;
-  font-size: 1rem;
-  font-weight: 500;
+  gap: var(--button-gap, 10px);
+  min-width: 0;
+  min-height: var(--button-height, 56px);
+  padding: 0 var(--button-padding-x, 26px);
+  border-radius: var(--button-radius, 999px);
+  font-size: var(--button-font-size, 1rem);
+  font-weight: var(--button-font-weight, 400);
   text-decoration: none;
   transition: transform 220ms ease, background 220ms ease, color 220ms ease, border-color 220ms ease;
 }
 
 .team-card__button--primary {
-  background: #79b58a;
-  color: #152119;
-  border: 1px solid transparent;
+  background: var(--color-primary, #7bb28d);
+  color: var(--button-text, #0f172a);
+  border: var(--button-border-width, 2px) solid var(--color-primary, #7bb28d);
 }
 
 .team-card__button--primary:hover {
   transform: translateY(-1px);
-  background: #65a677;
+  background: var(--color-secondary, #557962);
+  color: var(--button-text-inverse, #ffffff);
 }
 
 .team-card__button--secondary {
   background: transparent;
-  color: #232629;
-  border: 2px solid #79b58a;
+  color: var(--button-text, #0f172a);
+  border: var(--button-border-width, 2px) solid var(--color-primary, #7bb28d);
 }
 
 .team-card__button--secondary:hover {
   transform: translateY(-1px);
-  background: rgba(121, 181, 138, 0.14);
+  background: var(--color-tertiary, #e2ede5);
+  border-color: var(--color-secondary, #557962);
 }
 
 @media (max-width: 980px) {

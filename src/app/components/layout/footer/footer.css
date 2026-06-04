@@ -48,7 +48,7 @@
 }
 
 .column-title {
-  color: #48E04E;
+  color: var(--color-primary, #7bb28d);
   font-size: 0.9rem;
   font-weight: 700;
   letter-spacing: 0.08rem;
@@ -79,7 +79,7 @@
 }
 
 .footer-links a:hover {
-  color: #48E04E;
+  color: var(--color-primary, #7bb28d);
 }
 
 /* Tablet */

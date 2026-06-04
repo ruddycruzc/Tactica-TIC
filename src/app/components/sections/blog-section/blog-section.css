@@ -156,9 +156,9 @@
 
 /* Enlace interactivo "Leer artículo completo" */
 .read-more-btn {
-  color: #4f9d72;
+  color: var(--color-secondary, #557962);
   text-decoration: none;
-  font-weight: 600;
+  font-weight: var(--button-font-weight, 400);
   font-size: 0.95rem;
   display: inline-flex;
   align-items: center;
@@ -172,7 +172,7 @@
 
 /* Animación del botón al pasar por encima de la tarjeta */
 .blog-card:hover .read-more-btn {
-  color: #366046;
+  color: var(--color-primary, #7bb28d);
 }
 
 .blog-card:hover .read-more-btn .arrow {
@@ -213,9 +213,9 @@
 .toggle-text-btn {
   background: none;
   border: none;
-  color: #4f9d72;
+  color: var(--color-secondary, #557962);
   font-size: 0.85rem;
-  font-weight: 700;
+  font-weight: var(--button-font-weight, 400);
   padding: 0;
   margin-top: 10px;
   cursor: pointer;
@@ -225,8 +225,8 @@
 }
 
 .toggle-text-btn:hover {
-  color: #366046;
-  text-decoration: underline;
+  color: var(--color-primary, #7bb28d);
+  text-decoration: none;
 }
 /* Adaptación para pantallas pequeñas (móviles y tablets) */
 @media (max-width: 768px) {

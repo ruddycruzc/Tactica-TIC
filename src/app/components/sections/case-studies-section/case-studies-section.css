@@ -55,17 +55,17 @@
 
 
 .cases-view-all-link {
-  color: #7bb28d; 
+  color: var(--color-secondary, #557962); 
   text-decoration: none;
-  font-weight: 600;
+  font-weight: var(--button-font-weight, 400);
   font-size: 0.95rem;
   padding-top: 10px;
   transition: color 0.2s ease;
 }
 
 .cases-view-all-link:hover {
-  color: #557962;
-  text-decoration: underline;
+  color: var(--color-primary, #7bb28d);
+  text-decoration: none;
 }
 
 

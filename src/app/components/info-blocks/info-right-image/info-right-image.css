@@ -81,21 +81,25 @@
   align-items: center;
   justify-content: center;
   align-self: flex-start;
-  gap: 12px;
-  min-width: 142px;
-  padding: 15px 24px;
-  border-radius: 999px;
-  background: #75ad85;
-  color: #17211a;
+  gap: var(--button-gap, 10px);
+  min-width: 0;
+  min-height: var(--button-height, 56px);
+  padding: 0 var(--button-padding-x, 26px);
+  border-radius: var(--button-radius, 999px);
+  background: var(--color-primary, #7bb28d);
+  color: var(--button-text, #0f172a);
   text-decoration: none;
-  font-size: 0.98rem;
-  font-weight: 400;
+  font-size: var(--button-font-size, 1rem);
+  font-weight: var(--button-font-weight, 400);
   line-height: 1;
-  transition: background 200ms ease, transform 200ms ease;
+  border: var(--button-border-width, 2px) solid var(--color-primary, #7bb28d);
+  transition: background 200ms ease, color 200ms ease, transform 200ms ease;
 }
 
 .info-button:hover {
-  background: #679c76;
+  background: var(--color-secondary, #557962);
+  border-color: var(--color-secondary, #557962);
+  color: var(--button-text-inverse, #ffffff);
   transform: translateY(-1px);
 }
 

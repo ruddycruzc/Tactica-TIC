@@ -127,35 +127,39 @@
 .hub-btn {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
-  padding: 14px 28px;
-  font-size: 0.95rem;
-  font-weight: 600;
+  gap: var(--button-gap, 10px);
+  min-height: var(--button-height, 56px);
+  padding: 0 var(--button-padding-x, 26px);
+  font-size: var(--button-font-size, 1rem);
+  font-weight: var(--button-font-weight, 400);
   text-decoration: none;
-  border-radius: 100px; /* Píldoras perfectas */
+  border-radius: var(--button-radius, 999px);
   transition: all 0.25s ease;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
 
 .btn-linkedin {
-  background-color: #7bb28d; /* Verde corporativo primario */
-  color: #ffffff;
+  background-color: var(--color-primary, #7bb28d);
+  color: var(--button-text, #0f172a);
+  border: var(--button-border-width, 2px) solid var(--color-primary, #7bb28d);
 }
 
 .btn-linkedin:hover {
-  background-color: #557962; /* Tu variante de verde oscuro */
+  background-color: var(--color-secondary, #557962);
+  color: var(--button-text-inverse, #ffffff);
+  border-color: var(--color-secondary, #557962);
 }
 
 .btn-instagram {
   background-color: #ffffff;
   color: #0f172a;
-  border: 1px solid #cbd5e1;
+  border: var(--button-border-width, 2px) solid var(--color-primary, #7bb28d);
 }
 
 .btn-instagram:hover {
-  background-color: #0f172a;
-  color: #ffffff;
-  border-color: #0f172a;
+  background-color: var(--color-tertiary, #e2ede5);
+  color: var(--button-text, #0f172a);
+  border-color: var(--color-secondary, #557962);
 }
 
 .arrow {

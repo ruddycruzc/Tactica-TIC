@@ -109,20 +109,24 @@
 .btn-view-projects {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
-  background-color: #7bb28d; /* Tu verde principal */
-  color: #ffffff;
-  font-size: 1rem;
-  font-weight: 600;
+  gap: var(--button-gap, 10px);
+  background-color: var(--color-primary, #7bb28d);
+  color: var(--button-text, #0f172a);
+  font-size: var(--button-font-size, 1rem);
+  font-weight: var(--button-font-weight, 400);
   text-decoration: none;
-  padding: 14px 32px;
-  border-radius: 100px; /* Forma de píldora perfecta */
+  min-height: var(--button-height, 56px);
+  padding: 0 var(--button-padding-x, 26px);
+  border-radius: var(--button-radius, 999px);
+  border: var(--button-border-width, 2px) solid var(--color-primary, #7bb28d);
   transition: all 0.25s ease;
   box-shadow: 0 4px 14px rgba(123, 178, 141, 0.3);
 }
 
 .btn-view-projects:hover {
-  background-color: #557962; /* Tu variante verde más oscura al hacer hover */
+  background-color: var(--color-secondary, #557962);
+  color: var(--button-text-inverse, #ffffff);
+  border-color: var(--color-secondary, #557962);
   transform: translateY(-1px);
   box-shadow: 0 6px 20px rgba(85, 121, 98, 0.4);
 }

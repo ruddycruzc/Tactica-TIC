@@ -8,6 +8,18 @@
 	--page-gutter: clamp(24px, 9.3vw, 136px);
 	--page-margin: max(var(--page-gutter), calc((100vw - var(--page-max-width)) / 2));
 	--grid-gap: 24px;
+	--color-primary: #7bb28d;
+	--color-secondary: #557962;
+	--color-tertiary: #e2ede5;
+	--button-text: #0f172a;
+	--button-text-inverse: #ffffff;
+	--button-height: 56px;
+	--button-padding-x: 26px;
+	--button-gap: 10px;
+	--button-radius: 999px;
+	--button-font-size: 1rem;
+	--button-font-weight: 400;
+	--button-border-width: 2px;
 }
 
 html,

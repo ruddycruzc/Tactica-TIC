@@ -166,21 +166,25 @@
 
 /* Botón de envío verde */
 .submit-btn {
-  background-color: #71a987;
-  color: #ffffff;
-  border: none;
-  padding: 16px;
-  font-size: 1rem;
-  font-weight: 600;
-  border-radius: 30px;
+  background-color: var(--color-primary, #7bb28d);
+  color: var(--button-text, #0f172a);
+  border: var(--button-border-width, 2px) solid var(--color-primary, #7bb28d);
+  min-height: var(--button-height, 56px);
+  padding: 0 var(--button-padding-x, 26px);
+  font-size: var(--button-font-size, 1rem);
+  font-weight: var(--button-font-weight, 400);
+  border-radius: var(--button-radius, 999px);
   cursor: pointer;
-  transition: background-color 0.2s ease;
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
   width: 100%;
   margin-top: 5px;
 }
 
 .submit-btn:hover {
-  background-color: #5d9272;
+  background-color: var(--color-secondary, #557962);
+  color: var(--button-text-inverse, #ffffff);
+  border-color: var(--color-secondary, #557962);
+  transform: translateY(-1px);
 }
 
 /* --- RESPONSIVE --- */
