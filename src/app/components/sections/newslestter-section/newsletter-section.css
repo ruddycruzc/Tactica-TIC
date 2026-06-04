@@ -1,153 +1,186 @@
 
-.social-container {
-  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 50%, #e2e8f0 100%);
-  font-family: 'Segoe UI', Roboto, -apple-system, sans-serif;
+/* ==========================================
+   NUEVO COMPONENTE: SOCIAL HUB DE DISEÑO LINEAL
+   ========================================== */
+
+.hub-container {
+  background-color: #f8fafc;
+  padding: 90px 40px;
+  width: 100%;
   display: flex;
   justify-content: center;
-  width: 100%;
   box-sizing: border-box;
+  font-family: 'Segoe UI', Roboto, sans-serif;
 }
 
-.social-content {
+.hub-wrapper {
   max-width: 1100px;
   width: 100%;
   display: flex;
-  gap: 5%;
+  flex-direction: column;
+  gap: 50px;
 }
 
-/* Columna Izquierda: Títulos colgados */
-.social-left {
-  width: 30%;
-  flex-shrink: 0;
+/* --- CABECERA --- */
+.hub-header {
+  max-width: 700px;
 }
 
-.social-side-title {
-  font-size: 3.2rem;
+.hub-tag {
+  display: inline-block;
+  background-color: rgba(123, 178, 141, 0.12);
+  color: #557962;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 6px 16px;
+  border-radius: 50px; /* Estilo píldora como tus botones */
+  margin-bottom: 16px;
+}
+
+.hub-title {
+  font-size: 2.8rem;
   color: #0f172a;
   font-weight: 800;
-  line-height: 1.1;
-  letter-spacing: -2px;
-  margin: 0;
+  line-height: 1.2;
+  letter-spacing: -1px;
+  margin: 0 0 16px 0;
 }
 
-/* Columna Derecha */
-.social-right {
-  width: 65%;
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
+.text-green {
+  color: #7bb28d;
 }
 
-.social-subtitle {
-  font-size: 1.6rem;
-  color: #0f172a;
-  font-weight: 700;
-  margin: 0 0 15px 0;
-  padding-bottom: 12px;
-  border-bottom: 1px solid rgba(15, 23, 42, 0.08);
-}
-
-.social-lead {
+.hub-description {
   font-size: 1.1rem;
   color: #475569;
-  line-height: 1.7;
+  line-height: 1.6;
   margin: 0;
 }
 
-/* Grid de dos columnas perfectas */
-.social-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 25px;
+/* --- FILA DE COMPONENTES --- */
+.hub-row {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Van apilados en filas horizontales elegantes */
   width: 100%;
 }
 
-/* Tarjetas de Cristal */
-.social-card {
+.hub-item {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 24px;
+  padding: 24px 35px;
   display: flex;
-  flex-direction: column;
-  background: rgba(255, 255, 255, 0.45);
-  backdrop-filter: blur(20px) saturate(180%);
-  -webkit-backdrop-filter: blur(20px) saturate(180%);
-  border: 1px solid rgba(255, 255, 255, 0.6);
-  border-radius: 20px;
-  padding: 35px;
-  text-decoration: none;
-  color: inherit;
-  transition: all 0.4s ease;
-  box-sizing: border-box;
+  align-items: center;
+  justify-content: space-between; /* El texto a la izquierda, el botón a la derecha */
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px -1px rgba(15, 23, 42, 0.02);
 }
 
-.social-card:hover {
-  transform: translateY(-5px);
-  background: rgba(255, 255, 255, 0.8);
-  box-shadow: 0 20px 40px -15px rgba(15, 23, 42, 0.08);
+.hub-item:hover {
+  border-color: #7bb28d;
+  transform: translateX(6px); /* Efecto sutil de desplazamiento hacia la derecha en vez de flotar hacia arriba */
+  box-shadow: 0 12px 20px -8px rgba(15, 23, 42, 0.05);
 }
 
-/* Contenedores de Iconos */
-.social-icon-wrapper {
-  width: 50px;
-  height: 50px;
-  border-radius: 12px;
+/* Organización interna izquierda */
+.hub-meta {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.hub-badge-icon {
+  width: 54px;
+  height: 54px;
+  border-radius: 16px;
+  background-color: #f1f5f9;
+  font-size: 1.6rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 25px;
-  transition: all 0.3s ease;
+  flex-shrink: 0;
 }
 
-.social-svg {
-  width: 26px;
-  height: 26px;
+.hub-text-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 }
 
-/* Colores individuales */
-.social-card.linkedin .social-icon-wrapper {
-  background-color: rgba(10, 102, 194, 0.1);
-  color: #0a66c2;
-}
-
-.social-card.instagram .social-icon-wrapper {
-  background-color: rgba(225, 48, 108, 0.1);
-  color: #e1306c;
-}
-
-/* Hover de iconos */
-.social-card.linkedin:hover .social-icon-wrapper {
-  background-color: #0a66c2;
-  color: #ffffff;
-}
-
-.social-card.instagram:hover .social-icon-wrapper {
-  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-  color: #ffffff;
-}
-
-/* Textos internos */
-.social-info h4 {
-  font-size: 1.35rem;
+.hub-text-group h3 {
+  font-size: 1.3rem;
   color: #0f172a;
-  margin: 0 0 10px 0;
   font-weight: 700;
+  margin: 0;
 }
 
-.social-info p {
+.hub-text-group p {
   font-size: 0.95rem;
-  color: #475569;
-  line-height: 1.5;
-  margin: 0 0 20px 0;
+  color: #64748b;
+  margin: 0;
 }
 
-.social-link-text {
-  font-size: 0.9rem;
-  color: #4f9d72;
-  font-weight: 700;
+/* --- BOTONES ESTILO PÍLDORA (Basados en tus capturas) --- */
+.hub-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 28px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 100px; /* Píldoras perfectas */
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
 
-/* Responsive para pantallas móviles */
-@media (max-width: 850px) {
-  .social-content { flex-direction: column; gap: 30px; }
-  .social-left, .social-right { width: 100%; }
-  .social-side-title { font-size: 2.5rem; }
-  .social-grid { grid-template-columns: 1fr; }
+.btn-linkedin {
+  background-color: #7bb28d; /* Verde corporativo primario */
+  color: #ffffff;
+}
+
+.btn-linkedin:hover {
+  background-color: #557962; /* Tu variante de verde oscuro */
+}
+
+.btn-instagram {
+  background-color: #ffffff;
+  color: #0f172a;
+  border: 1px solid #cbd5e1;
+}
+
+.btn-instagram:hover {
+  background-color: #0f172a;
+  color: #ffffff;
+  border-color: #0f172a;
+}
+
+.arrow {
+  transition: transform 0.2s ease;
+}
+
+.hub-btn:hover .arrow {
+  transform: translateX(4px);
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+  .hub-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 24px;
+  }
+  
+  .hub-btn {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .hub-title {
+    font-size: 2.2rem;
+  }
 }
