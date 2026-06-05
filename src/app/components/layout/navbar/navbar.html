@@ -19,7 +19,7 @@
           routerLinkActive="active-link"
           [routerLinkActiveOptions]="{ exact: true }">
 
-          {{ item.label }}
+       {{ item.label | translate }}
 
         </a>
 
@@ -37,9 +37,13 @@
       (clicked)="onSearchClick()">
     </app-icon-button>
 
-    <button class="language-button">
-      ES
-    </button>
+<button
+  class="language-button"
+  (click)="toggleLanguage()">
+
+  {{ currentLanguage.toUpperCase() }}
+
+</button>
 
   </div>
 

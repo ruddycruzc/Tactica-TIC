@@ -1,0 +1,18 @@
+{
+  "NAV": {
+    "ABOUT": "Cómo pensamos",
+    "PROJECTS": "Proyectos",
+    "CONTACT": "Contacto",
+    "BLOG": "Blog",
+    "CAREERS": "Empleos"
+  },
+
+  "HOME": {
+    "TITLE_LINE_1": "Tecnología que",
+    "TITLE_HIGHLIGHT": "evoluciona",
+    "TITLE_LINE_2": "contigo",
+    "DESCRIPTION": "Combinamos tecnología, automatización y estrategia digital para ayudarte a optimizar procesos, conectar herramientas y hacer crecer tu negocio de forma inteligente y progresiva.",
+    "ABOUT_BUTTON": "Conócenos",
+    "VISION_BUTTON": "Nuestra visión"
+  }
+}
