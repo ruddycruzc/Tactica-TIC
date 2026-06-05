@@ -397,5 +397,6 @@ antes de realizar un commit.
 * Mantener componentes reutilizables y desacoplados.
 * Mantener una arquitectura basada en Angular Standalone Components.
 
-```
+```bash
+ng serve -o
 ```
