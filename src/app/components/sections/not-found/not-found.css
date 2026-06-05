@@ -54,28 +54,6 @@
   margin-top: 15px;
 }
 
-.btn-home {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  background-color: #71a987; 
-  color: #ffffff;
-  text-decoration: none;
-  padding: 14px 28px;
-  border-radius: 8px;
-  font-weight: 600;
-  font-size: 1rem;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 12px rgba(113, 169, 135, 0.2);
-  cursor: pointer;
-}
-
-.btn-home:hover {
-  background-color: #5d9271;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(113, 169, 135, 0.3);
-}
-
 .btn-icon {
   width: 20px;
   height: 20px;

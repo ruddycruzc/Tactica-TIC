@@ -1,0 +1,119 @@
+:host {
+  display: inline-flex;
+}
+
+:host:has(.app-button--full) {
+  display: flex;
+  width: 100%;
+}
+
+.app-button {
+  --_height: var(--button-height, 56px);
+  --_padding: var(--button-padding-x, 26px);
+
+  min-height: var(--_height);
+  padding: 0 var(--_padding);
+  border: var(--button-border-width, 2px) solid transparent;
+  border-radius: var(--button-radius, 999px);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--button-gap, 10px);
+  box-sizing: border-box;
+  color: var(--button-text, #0f172a);
+  font: inherit;
+  font-size: var(--button-font-size, 1rem);
+  font-weight: var(--button-font-weight, 400);
+  line-height: 1;
+  text-decoration: none;
+  cursor: pointer;
+  user-select: none;
+  transition:
+    background-color 180ms ease,
+    border-color 180ms ease,
+    color 180ms ease,
+    transform 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.app-button ::ng-deep .arrow,
+.app-button ::ng-deep [aria-hidden='true'],
+.app-button ::ng-deep svg {
+  transition: transform 180ms ease;
+}
+
+.app-button:hover ::ng-deep .arrow,
+.app-button:hover ::ng-deep [aria-hidden='true'] {
+  transform: translateX(4px);
+}
+
+.app-button--sm {
+  --_height: 40px;
+  --_padding: 18px;
+  font-size: 0.92rem;
+}
+
+.app-button--lg {
+  --_height: 64px;
+  --_padding: 32px;
+}
+
+.app-button--full {
+  width: 100%;
+}
+
+.app-button--icon-only {
+  width: var(--_height);
+  min-width: var(--_height);
+  padding: 0;
+  border-radius: 50%;
+}
+
+.app-button--primary {
+  background: var(--color-primary, #7bb28d);
+  border-color: var(--color-primary, #7bb28d);
+}
+
+.app-button--primary:hover {
+  background: var(--color-secondary, #557962);
+  border-color: var(--color-secondary, #557962);
+  color: var(--button-text-inverse, #ffffff);
+}
+
+.app-button--secondary {
+  background: #ffffff;
+  border-color: var(--color-primary, #7bb28d);
+}
+
+.app-button--secondary:hover {
+  background: var(--color-tertiary, #e2ede5);
+  border-color: var(--color-secondary, #557962);
+}
+
+.app-button--tertiary {
+  min-height: auto;
+  padding: 0;
+  background: transparent;
+  border-color: transparent;
+  color: var(--color-secondary, #557962);
+}
+
+.app-button--tertiary:hover {
+  color: var(--color-primary, #7bb28d);
+}
+
+.app-button:not(.app-button--tertiary):active {
+  transform: translateY(1px) scale(0.99);
+}
+
+.app-button:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(123, 178, 141, 0.28);
+}
+
+.app-button--disabled,
+.app-button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  pointer-events: none;
+}

@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
+import { AppButtonComponent } from '../../../shared/components/buttons/app-button/app-button.component';
 
 @Component({
   selector: 'app-case-studies-section',
    standalone: true,
-  imports: [],
+  imports: [AppButtonComponent],
   templateUrl: './case-studies-section.html',
   styleUrl: './case-studies-section.css',
 })

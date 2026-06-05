@@ -6,12 +6,12 @@
       <p class="team-card__description">{{ description }}</p>
     </div>
     <div class="team-card__actions">
-      <a class="team-card__button team-card__button--primary" [href]="primaryHref">
+      <app-button variant="primary" [href]="primaryHref">
         {{ primaryLabel }} <span aria-hidden="true">→</span>
-      </a>
-      <a class="team-card__button team-card__button--secondary" [href]="secondaryHref">
+      </app-button>
+      <app-button variant="secondary" [href]="secondaryHref">
         {{ secondaryLabel }} <span aria-hidden="true">→</span>
-      </a>
+      </app-button>
     </div>
   </div>
 </article>

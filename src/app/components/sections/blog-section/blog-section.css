@@ -155,30 +155,6 @@
 }
 
 /* Enlace interactivo "Leer artículo completo" */
-.read-more-btn {
-  color: var(--color-secondary, #557962);
-  text-decoration: none;
-  font-weight: var(--button-font-weight, 400);
-  font-size: 0.95rem;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  transition: color 0.3s ease;
-}
-
-.read-more-btn .arrow {
-  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-/* Animación del botón al pasar por encima de la tarjeta */
-.blog-card:hover .read-more-btn {
-  color: var(--color-primary, #7bb28d);
-}
-
-.blog-card:hover .read-more-btn .arrow {
-  transform: translateX(6px); /* La flecha se mueve hacia el lado elegantemente */
-}
-
 /* Marcador tecnológico invisible en el código trasero de cada tarjeta */
 .blog-card::after {
   content: "</>";

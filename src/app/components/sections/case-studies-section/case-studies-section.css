@@ -54,21 +54,6 @@
 }
 
 
-.cases-view-all-link {
-  color: var(--color-secondary, #557962); 
-  text-decoration: none;
-  font-weight: var(--button-font-weight, 400);
-  font-size: 0.95rem;
-  padding-top: 10px;
-  transition: color 0.2s ease;
-}
-
-.cases-view-all-link:hover {
-  color: var(--color-primary, #7bb28d);
-  text-decoration: none;
-}
-
-
 .cases-grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -172,9 +157,6 @@
   .cases-header {
     flex-direction: column;
     gap: 16px;
-  }
-  .cases-view-all-link {
-    padding-top: 0;
   }
   .cases-section-title {
     font-size: 2rem;

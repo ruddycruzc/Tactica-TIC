@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
+import { AppButtonComponent } from '../../../shared/components/buttons/app-button/app-button.component';
 
 @Component({
   selector: 'app-contact-form',
    standalone: true,
-  imports: [],
+  imports: [AppButtonComponent],
   templateUrl: './contact-form.html',
   styleUrl: './contact-form.css',
 })

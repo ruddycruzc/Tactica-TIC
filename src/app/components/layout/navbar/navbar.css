@@ -58,22 +58,3 @@
   gap: 1rem;
 }
 
-.language-button {
-
-  border: var(--button-border-width, 2px) solid var(--color-primary, #7bb28d);
-  border-radius: var(--button-radius, 999px);
-  background: transparent;
-  color: var(--button-text, #0f172a);
-  min-height: 40px;
-  padding: 0 16px;
-  font-weight: var(--button-font-weight, 400);
-
-  cursor: pointer;
-  transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
-}
-
-.language-button:hover {
-  background-color: var(--color-tertiary, #e2ede5);
-  border-color: var(--color-secondary, #557962);
-  transform: translateY(-1px);
-}

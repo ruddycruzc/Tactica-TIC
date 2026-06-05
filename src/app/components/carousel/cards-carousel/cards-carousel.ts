@@ -1,6 +1,7 @@
 import { Component, ElementRef, Input, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ImageCard } from '../../cards/image-card/image-card';
+import { AppButtonComponent } from '../../../shared/components/buttons/app-button/app-button.component';
 
 interface TeamCardData {
   image: string;
@@ -12,7 +13,7 @@ interface TeamCardData {
 @Component({
   selector: 'app-cards-carousel',
   standalone: true,
-  imports: [CommonModule, ImageCard],
+  imports: [CommonModule, ImageCard, AppButtonComponent],
   templateUrl: './cards-carousel.html',
   styleUrl: './cards-carousel.css',
 })
