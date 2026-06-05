@@ -2,14 +2,13 @@
   background-size: 24px 24px, auto, cover;
   background-position: center;
   background-repeat: repeat, no-repeat, no-repeat;
-  
   padding: 120px var(--page-margin, 24px) 100px;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   box-sizing: border-box;
-  font-family: 'Segoe UI', Roboto, -apple-system, sans-serif
+  font-family: 'Segoe UI', Roboto, -apple-system, sans-serif;
 }
 
 .video-content {
@@ -36,14 +35,17 @@
   background-color: #000; 
 }
 
-.video-wrapper video {
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover; 
+  border: 0;
   display: block;
-  border-radius: inherit;
+  z-index: 1;
 }
-
 
 .play-overlay-btn {
   position: absolute;
@@ -62,6 +64,7 @@
   cursor: pointer;
   transition: all 0.3s ease;
   pointer-events: none; 
+  z-index: 2; 
 }
 
 .play-overlay-btn svg {
@@ -75,14 +78,15 @@
   transform: translate(-50%, -50%) scale(1.08);
 }
 
-
 .video-overlay-text {
   position: absolute;
   bottom: 35px;
   left: 35px;
-  color: #2c2c2c; 
-  z-index: 2;
+  color: #ffffff; 
+  z-index: 2; 
   font-family: inherit;
+  pointer-events: none; 
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8); 
 }
 
 .ceo-name {
@@ -90,7 +94,7 @@
   font-weight: 500;
   margin: 0 0 2px 0;
   letter-spacing: -0.5px;
-  color: #333333;
+  color: #ffffff;
 }
 
 .ceo-role {
@@ -101,7 +105,6 @@
   text-transform: uppercase;
   letter-spacing: 1px;
 }
-
 
 .video-right {
   flex: 1; 
@@ -132,7 +135,6 @@
   font-weight: 600;
   margin: 0;
 }
-
 
 @media (max-width: 968px) {
   .video-container {
