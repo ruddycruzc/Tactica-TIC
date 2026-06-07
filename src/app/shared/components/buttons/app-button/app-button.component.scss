@@ -1,24 +1,15 @@
 :host {
-  display: inline-flex;
-}
-
-:host:has(.app-button--full) {
-  display: flex;
-  width: 100%;
-}
-
-.app-button {
   --_height: var(--button-height, 56px);
   --_padding: var(--button-padding-x, 26px);
 
   min-height: var(--_height);
+  min-width: max-content;
   padding: 0 var(--_padding);
   border: var(--button-border-width, 2px) solid transparent;
   border-radius: var(--button-radius, 999px);
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: var(--button-gap, 10px);
   box-sizing: border-box;
   color: var(--button-text, #0f172a);
   font: inherit;
@@ -36,61 +27,78 @@
     box-shadow 180ms ease;
 }
 
-.app-button ::ng-deep .arrow,
-.app-button ::ng-deep [aria-hidden='true'],
-.app-button ::ng-deep svg {
+.app-button__content {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--button-gap, 10px);
+  white-space: nowrap;
+  color: inherit;
+  font: inherit;
+  line-height: inherit;
+}
+
+.app-button__content ::ng-deep .arrow,
+.app-button__content ::ng-deep [aria-hidden='true'],
+.app-button__content ::ng-deep svg {
+  flex: 0 0 auto;
   transition: transform 180ms ease;
 }
 
-.app-button:hover ::ng-deep .arrow,
-.app-button:hover ::ng-deep [aria-hidden='true'] {
+:host(:hover) .app-button__content ::ng-deep .arrow,
+:host(:hover) .app-button__content ::ng-deep [aria-hidden='true'] {
   transform: translateX(4px);
 }
 
-.app-button--sm {
+:host(.app-button--sm) {
   --_height: 40px;
   --_padding: 18px;
   font-size: 0.92rem;
 }
 
-.app-button--lg {
+:host(.app-button--lg) {
   --_height: 64px;
   --_padding: 32px;
 }
 
-.app-button--full {
+:host(.app-button--full) {
   width: 100%;
 }
 
-.app-button--icon-only {
+:host(.app-button--icon-only) {
   width: var(--_height);
   min-width: var(--_height);
   padding: 0;
   border-radius: 50%;
 }
 
-.app-button--primary {
+:host(.app-button--icon-only) .app-button__content {
+  width: 100%;
+  height: 100%;
+}
+
+:host(.app-button--primary) {
   background: var(--color-primary, #7bb28d);
   border-color: var(--color-primary, #7bb28d);
 }
 
-.app-button--primary:hover {
+:host(.app-button--primary:hover) {
   background: var(--color-secondary, #557962);
   border-color: var(--color-secondary, #557962);
   color: var(--button-text-inverse, #ffffff);
 }
 
-.app-button--secondary {
+:host(.app-button--secondary) {
   background: #ffffff;
   border-color: var(--color-primary, #7bb28d);
 }
 
-.app-button--secondary:hover {
+:host(.app-button--secondary:hover) {
   background: var(--color-tertiary, #e2ede5);
   border-color: var(--color-secondary, #557962);
 }
 
-.app-button--tertiary {
+:host(.app-button--tertiary) {
   min-height: auto;
   padding: 0;
   background: transparent;
@@ -98,21 +106,20 @@
   color: var(--color-secondary, #557962);
 }
 
-.app-button--tertiary:hover {
+:host(.app-button--tertiary:hover) {
   color: var(--color-primary, #7bb28d);
 }
 
-.app-button:not(.app-button--tertiary):active {
+:host(:not(.app-button--tertiary):active) {
   transform: translateY(1px) scale(0.99);
 }
 
-.app-button:focus-visible {
+:host(:focus-visible) {
   outline: none;
   box-shadow: 0 0 0 4px rgba(123, 178, 141, 0.28);
 }
 
-.app-button--disabled,
-.app-button:disabled {
+:host(.app-button--disabled) {
   opacity: 0.45;
   cursor: not-allowed;
   pointer-events: none;
