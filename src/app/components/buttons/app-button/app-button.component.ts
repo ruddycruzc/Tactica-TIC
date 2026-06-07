@@ -19,7 +19,7 @@ export type AppButtonSize = 'sm' | 'md' | 'lg';
   selector: 'app-button',
   standalone: true,
   templateUrl: './app-button.component.html',
-  styleUrl: './app-button.component.scss',
+  styleUrl: './app-button.component.css',
 })
 export class AppButtonComponent {
   private readonly elementRef = inject<ElementRef<HTMLElement>>(ElementRef);
@@ -41,10 +41,13 @@ export class AppButtonComponent {
 
   @HostBinding('class')
   get classes(): string {
+    const variant = this.isValidVariant(this.variant) ? this.variant : 'primary';
+    const size = this.isValidSize(this.size) ? this.size : 'md';
+
     return [
       'app-button',
-      `app-button--${this.variant}`,
-      `app-button--${this.size}`,
+      `app-button--${variant}`,
+      `app-button--${size}`,
       this.fullWidth ? 'app-button--full' : '',
       this.iconOnly ? 'app-button--icon-only' : '',
       this.disabled ? 'app-button--disabled' : '',
@@ -74,6 +77,20 @@ export class AppButtonComponent {
   @HostBinding('attr.href')
   get hostHref(): string | null {
     return this.href;
+  }
+
+  @HostBinding('attr.target')
+  get hostTarget(): string | null {
+    return this.href ? this.target : null;
+  }
+
+  @HostBinding('attr.rel')
+  get hostRel(): string | null {
+    if (!this.href) {
+      return null;
+    }
+
+    return this.target === '_blank' ? this.rel ?? 'noopener noreferrer' : this.rel;
   }
 
   @HostListener('click', ['$event'])
@@ -138,5 +155,13 @@ export class AppButtonComponent {
       form?.reset();
       return;
     }
+  }
+
+  private isValidVariant(value: string): value is AppButtonVariant {
+    return value === 'primary' || value === 'secondary' || value === 'tertiary';
+  }
+
+  private isValidSize(value: string): value is AppButtonSize {
+    return value === 'sm' || value === 'md' || value === 'lg';
   }
 }

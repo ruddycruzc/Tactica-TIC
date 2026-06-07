@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { AppButtonComponent } from '../../../shared/components/buttons/app-button/app-button.component';
+import { AppButtonComponent } from '../../buttons/app-button/app-button.component';
 
 @Component({
   selector: 'app-minimal-hero',

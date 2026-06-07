@@ -1,15 +1,14 @@
 import { Component } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 
-import { IconButton } from '../../buttons/iconbutton/iconbutton';
-import { AppButtonComponent } from '../../../shared/components/buttons/app-button/app-button.component';
+import { AppButtonComponent } from '../../buttons/app-button/app-button.component';
 
 import { NavItem } from '../../../interfaces/nav-item.interface';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [RouterLink, RouterLinkActive, IconButton, AppButtonComponent ],
+  imports: [RouterLink, RouterLinkActive, AppButtonComponent],
   templateUrl: './navbar.html',
   styleUrl: './navbar.css'
 })

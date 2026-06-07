@@ -31,11 +31,13 @@
 
   <div class="navbar__actions">
 
-    <app-icon-button
-    icon="/assets/icons/icon-search.png"
+    <app-button
+      variant="secondary"
+      iconOnly
       ariaLabel="Buscar"
-      (clicked)="onSearchClick()">
-    </app-icon-button>
+      (buttonClick)="onSearchClick()">
+      <img src="/assets/icons/icon-search.png" alt="">
+    </app-button>
 
     <app-button variant="secondary" size="sm">
       ES

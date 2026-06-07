@@ -45,6 +45,13 @@
   transition: transform 180ms ease;
 }
 
+.app-button__content ::ng-deep img,
+.app-button__content ::ng-deep svg {
+  width: 1.35em;
+  height: 1.35em;
+  object-fit: contain;
+}
+
 :host(:hover) .app-button__content ::ng-deep .arrow,
 :host(:hover) .app-button__content ::ng-deep [aria-hidden='true'] {
   transform: translateX(4px);
@@ -88,6 +95,12 @@
   color: var(--button-text-inverse, #ffffff);
 }
 
+:host(.app-button--primary:active) {
+  background: #496a55;
+  border-color: #496a55;
+  color: var(--button-text-inverse, #ffffff);
+}
+
 :host(.app-button--secondary) {
   background: #ffffff;
   border-color: var(--color-primary, #7bb28d);
@@ -95,6 +108,11 @@
 
 :host(.app-button--secondary:hover) {
   background: var(--color-tertiary, #e2ede5);
+  border-color: var(--color-secondary, #557962);
+}
+
+:host(.app-button--secondary:active) {
+  background: #d3e3d7;
   border-color: var(--color-secondary, #557962);
 }
 
@@ -110,7 +128,11 @@
   color: var(--color-primary, #7bb28d);
 }
 
-:host(:not(.app-button--tertiary):active) {
+:host(.app-button--tertiary:active) {
+  color: #496a55;
+}
+
+:host(:active) {
   transform: translateY(1px) scale(0.99);
 }
 
@@ -120,7 +142,20 @@
 }
 
 :host(.app-button--disabled) {
-  opacity: 0.45;
+  background: rgba(15, 23, 42, 0.08);
+  border-color: rgba(15, 23, 42, 0.12);
+  color: rgba(15, 23, 42, 0.36);
   cursor: not-allowed;
   pointer-events: none;
+}
+
+:host(.app-button--primary.app-button--disabled),
+:host(.app-button--secondary.app-button--disabled) {
+  background: rgba(15, 23, 42, 0.08);
+  border-color: rgba(15, 23, 42, 0.12);
+}
+
+:host(.app-button--tertiary.app-button--disabled) {
+  background: transparent;
+  border-color: transparent;
 }

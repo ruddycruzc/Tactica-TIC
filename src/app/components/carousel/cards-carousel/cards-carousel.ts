@@ -1,7 +1,7 @@
 import { Component, ElementRef, Input, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ImageCard } from '../../cards/image-card/image-card';
-import { AppButtonComponent } from '../../../shared/components/buttons/app-button/app-button.component';
+import { AppButtonComponent } from '../../buttons/app-button/app-button.component';
 
 interface TeamCardData {
   image: string;
