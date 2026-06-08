@@ -8,11 +8,31 @@
   },
 
   "HOME": {
-    "TITLE_LINE_1": "Tecnología que",
-    "TITLE_HIGHLIGHT": "evoluciona",
-    "TITLE_LINE_2": "contigo",
-    "DESCRIPTION": "Combinamos tecnología, automatización y estrategia digital para ayudarte a optimizar procesos, conectar herramientas y hacer crecer tu negocio de forma inteligente y progresiva.",
-    "ABOUT_BUTTON": "Conócenos",
-    "VISION_BUTTON": "Nuestra visión"
-  }
+      "HERO":{
+        "TITLE_LINE_1": "Tecnología que",
+        "TITLE_HIGHLIGHT": "evoluciona",
+        "TITLE_LINE_2": "contigo",
+        "DESCRIPTION": "Combinamos tecnología, automatización y estrategia digital para ayudarte a optimizar procesos, conectar herramientas y hacer crecer tu negocio de forma inteligente y progresiva.",
+        "ABOUT_BUTTON": "Conócenos",
+        "VISION_BUTTON": "Nuestra visión"
+              },
+       "INFO":   {
+        "TAG": "Innovación tecnológica",
+        "TITLE": "Crecimiento digital",
+        "DESCRIPTION": "Ayudamos a las empresas a optimizar procesos, integrar herramientas y acelerar su transformación digital mediante soluciones tecnológicas adaptadas a cada necesidad.",
+        "BUTTON": "Conócenos",
+        "IMAGE_ALT": "Tecnología digital"
+             },
+        "VIDEO": {
+          "PLAY_VIDEO": "Reproducir vídeo",
+          "CEO_NAME": "Isabel Santos",
+          "CEO_ROLE": "CEO",
+          "TITLE": "Liderando el cambio digital",
+          "DESCRIPTION": "Nuestra misión es guiar a las empresas en su proceso de automatización y evolución tecnológica. Creemos en una tecnología cercana, eficiente y diseñada a la medida de los retos reales de cada negocio.",
+          "LEAD": "Descubre a través de nuestra CEO cómo impulsamos la estrategia digital de forma inteligente y progresiva."
+}
+}
+  
+
+
 }
