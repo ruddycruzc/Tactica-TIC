@@ -4,22 +4,24 @@
 
     <div class="info-content">
 
-      <span class="info-tag">Lorem ipsum dolor sit amet</span>
+      <span class="info-tag">
+        {{ 'HOME.INFO.TAG' | translate }}
+      </span>
 
       <h2 class="info-title">
-        Crecimiento digital
+        {{ 'HOME.INFO.TITLE' | translate }}
       </h2>
 
       <p class="info-description">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-        do eiusmod tempor incididunt ut labore et dolore magna
-        aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-        ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        {{ 'HOME.INFO.DESCRIPTION' | translate }}
       </p>
 
-      <app-button variant="primary" routerLink="/about">
+      <app-button
+        variant="primary"
+        routerLink="/about">
 
-        Conócenos <span aria-hidden="true">→</span>
+        {{ 'HOME.INFO.BUTTON' | translate }}
+        <span aria-hidden="true">→</span>
 
       </app-button>
 
@@ -29,7 +31,7 @@
 
       <img
         src="assets/images/placeholder-tech.jpg"
-        alt="Tecnología digital">
+        [attr.alt]="'HOME.INFO.IMAGE_ALT' | translate">
 
     </div>
 

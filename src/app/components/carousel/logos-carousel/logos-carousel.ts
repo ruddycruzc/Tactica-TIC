@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { TranslateModule } from '@ngx-translate/core';
 
 interface LogoItem {
   src: string;
@@ -9,7 +10,7 @@ interface LogoItem {
 @Component({
   selector: 'app-logos-carousel',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule,TranslateModule],
   templateUrl: './logos-carousel.html',
   styleUrl: './logos-carousel.css',
 })

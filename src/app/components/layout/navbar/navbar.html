@@ -19,7 +19,7 @@
           routerLinkActive="active-link"
           [routerLinkActiveOptions]="{ exact: true }">
 
-          {{ item.label }}
+       {{ item.label | translate }}
 
         </a>
 
@@ -39,9 +39,14 @@
       <img src="/assets/icons/icon-search.png" alt="">
     </app-button>
 
-    <app-button variant="secondary" size="sm">
-      ES
-    </app-button>
+<app-button
+  variant="tertiary"
+  size="sm"
+  (buttonClick)="toggleLanguage()">
+
+  {{ currentLanguage.toUpperCase() }}
+
+</app-button>
 
   </div>
 

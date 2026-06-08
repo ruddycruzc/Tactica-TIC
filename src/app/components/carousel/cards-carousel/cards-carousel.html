@@ -1,13 +1,34 @@
 <section class="cards-carousel">
   <div class="cards-carousel__header">
     <div class="cards-carousel__intro">
-      <h2 class="cards-carousel__title">Nuestro equipo</h2>
-      <p class="cards-carousel__subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <h2 class="cards-carousel__title">
+         {{ 'HOME.TEAM.TITLE' | translate }}
+      </h2>
+      <p class="cards-carousel__subtitle">
+         {{'HOME.TEAM.SUBTITLE' | translate}}
+      </p>
     </div>
 
-    <div class="cards-carousel__controls" aria-label="Controles del carrusel">
-      <app-button variant="primary" iconOnly ariaLabel="Anterior" (buttonClick)="prev()">‹</app-button>
-      <app-button variant="primary" iconOnly ariaLabel="Siguiente" (buttonClick)="next()">›</app-button>
+    <div class="cards-carousel__controls" [attr.aria-label]="'HOME.TEAM.CAROUSEL_CONTROLS' | translate">
+  <app-button
+  variant="primary"
+  iconOnly
+  [ariaLabel]="'HOME.TEAM.PREVIOUS' | translate"
+  (buttonClick)="prev()">
+   
+←    
+  
+</app-button>
+
+<app-button
+  variant="primary"
+  iconOnly
+  [ariaLabel]="'HOME.TEAM.NEXT' | translate"
+  (buttonClick)="next()">
+  
+→
+  
+  </app-button>
     </div>
   </div>
 

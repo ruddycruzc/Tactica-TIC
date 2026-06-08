@@ -20,19 +20,27 @@
     </svg>
   </div>
 
-  
   <div class="hero-content">
+
     <div class="hero-left">
+
       <h1 class="hero-title">
-        Tecnología que <br>
-        <span class="highlight-green">evoluciona</span> contigo
+        {{ 'HOME.HERO.TITLE_LINE_1' | translate }}
+        <br>
+        <span class="highlight-green">
+          {{ 'HOME.HERO.TITLE_HIGHLIGHT' | translate }}
+        </span>
+        {{ 'HOME.HERO.TITLE_LINE_2' | translate }}
       </h1>
+
     </div>
 
     <div class="hero-right">
+
       <p class="hero-description">
-        Combinamos tecnología, automatización y estrategia digital para ayudarte a optimizar procesos, conectar herramientas y hacer crecer tu negocio de forma inteligente y progresiva.
+        {{ 'HOME.HERO.DESCRIPTION' | translate }}
       </p>
+
       <div class="hero-buttons">
         <app-button variant="primary" routerLink="/about">
           Conócenos <span class="arrow">→</span>
@@ -41,7 +49,9 @@
           Nuestra visión <span class="arrow">→</span>
         </app-button>
       </div>
+
     </div>
+
   </div>
 
 </section>
