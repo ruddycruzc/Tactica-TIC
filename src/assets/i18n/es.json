@@ -30,6 +30,21 @@
           "TITLE": "Liderando el cambio digital",
           "DESCRIPTION": "Nuestra misión es guiar a las empresas en su proceso de automatización y evolución tecnológica. Creemos en una tecnología cercana, eficiente y diseñada a la medida de los retos reales de cada negocio.",
           "LEAD": "Descubre a través de nuestra CEO cómo impulsamos la estrategia digital de forma inteligente y progresiva."
+},
+"CASE_STUDIES": {
+  "TITLE": "Nuestros proyectos",
+  "SUBTITLE": "Descubre cómo resolvemos desafíos complejos de ingeniería y transformamos ideas en soluciones tecnológicas reales.",
+  "VIEW_ALL": "Ver todos los proyectos",
+  "TAG": "I+D+i",
+  "PROJECT_1_ALT": "Proyecto MINIASSIST",
+  "PROJECT_2_ALT": "Proyecto EPISOT"
+},
+"TEAM": {
+  "TITLE": "Nuestro equipo",
+  "SUBTITLE": "Conoce a las personas que impulsan nuestros proyectos y convierten los desafíos tecnológicos en soluciones reales.",
+  "PREVIOUS": "Anterior",
+  "NEXT": "Siguiente",
+  "CAROUSEL_CONTROLS": "Controles del carrusel"
 }
 }
   

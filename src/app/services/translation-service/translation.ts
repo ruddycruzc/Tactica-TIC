@@ -38,14 +38,30 @@ export class TranslationService {
           BUTTON: 'Conócenos',
           IMAGE_ALT: 'Tecnología digital'
         },
-       "VIDEO": {
-          "PLAY_VIDEO": "Reproducir vídeo",
-          "CEO_NAME": "Isabel Santos",
-          "CEO_ROLE": "CEO",
-          "TITLE": "Liderando el cambio digital",
-          "DESCRIPTION": "Nuestra misión es guiar a las empresas en su proceso de automatización y evolución tecnológica. Creemos en una tecnología cercana, eficiente y diseñada a la medida de los retos reales de cada negocio.",
-          "LEAD": "Descubre a través de nuestra CEO cómo impulsamos la estrategia digital de forma inteligente y progresiva."
+       VIDEO: {
+          PLAY_VIDEO: "Reproducir vídeo",
+          CEO_NAME: "Isabel Santos",
+          CEO_ROLE: "CEO",
+          TITLE: "Liderando el cambio digital",
+          DESCRIPTION: "Nuestra misión es guiar a las empresas en su proceso de automatización y evolución tecnológica. Creemos en una tecnología cercana, eficiente y diseñada a la medida de los retos reales de cada negocio.",
+          LEAD: "Descubre a través de nuestra CEO cómo impulsamos la estrategia digital de forma inteligente y progresiva."
+        },
+        CASE_STUDIES: {
+          TITLE: "Nuestros proyectos",
+          SUBTITLE: "Descubre cómo resolvemos desafíos complejos de ingeniería y transformamos ideas en soluciones tecnológicas reales.",
+          VIEW_ALL: "Ver todos los proyectos",
+          TAG: "I+D+i",
+          PROJECT_1_ALT: "Proyecto MINIASSIST",
+          PROJECT_2_ALT: "Proyecto EPISOT"  
+        },
+          TEAM: {
+          TITLE: "Nuestro equipo",
+          SUBTITLE: "Conoce a las personas que impulsan nuestros proyectos y convierten los desafíos tecnológicos en soluciones reales.",
+          PREVIOUS: "Anterior",
+          NEXT: "Siguiente",
+          CAROUSEL_CONTROLS: "Controles del carrusel"
 }
+
       }
     });
 
@@ -75,14 +91,29 @@ export class TranslationService {
           BUTTON: 'Get to know us',
           IMAGE_ALT: 'Digital technology'
         },
-               "VIDEO": {
-             "PLAY_VIDEO": "Play video",
-             "CEO_NAME": "Isabel Santos",
-             "CEO_ROLE": "CEO",
-             "TITLE": "Leading digital transformation",
-             "DESCRIPTION": "Our mission is to guide companies through their automation and technological evolution journey. We believe in technology that is accessible, efficient, and tailored to the real challenges of every business.",
-             "LEAD": "Discover through our CEO how we drive digital strategy in an intelligent and progressive way."
-              }
+        VIDEO: {
+          PLAY_VIDEO: "Play video",
+          CEO_NAME: "Isabel Santos",
+          CEO_ROLE: "CEO",
+          TITLE: "Leading digital transformation",
+          DESCRIPTION: "Our mission is to guide companies through their automation and technological evolution journey. We believe in technology that is accessible, efficient, and tailored to the real challenges of every business.",
+          LEAD: "Discover through our CEO how we drive digital strategy in an intelligent and progressive way."
+        },
+        CASE_STUDIES: {
+            TITLE: "Our projects",
+            SUBTITLE: "Discover how we solve complex engineering challenges and transform ideas into real technological solutions.",
+            VIEW_ALL: "View all projects",
+            TAG: "I+D+i",
+            PROJECT_1_ALT: "MINIASSIST project",
+            PROJECT_2_ALT: "EPISOT project"
+},
+        TEAM: {
+           TITLE: "Our team",
+           SUBTITLE: "Meet the people who drive our projects and turn technological challenges into real solutions.",
+           PREVIOUS: "Previous",
+           NEXT: "Next",
+           CAROUSEL_CONTROLS: "Carousel controls"
+}
       }
     });
 

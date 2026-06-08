@@ -31,7 +31,22 @@
              "TITLE": "Leading digital transformation",
              "DESCRIPTION": "Our mission is to guide companies through their automation and technological evolution journey. We believe in technology that is accessible, efficient, and tailored to the real challenges of every business.",
              "LEAD": "Discover through our CEO how we drive digital strategy in an intelligent and progressive way."
-              }
+              },
+              "CASE_STUDIES": {
+  "TITLE": "Our projects",
+  "SUBTITLE": "Discover how we solve complex engineering challenges and transform ideas into real technological solutions.",
+  "VIEW_ALL": "View all projects",
+  "TAG": "R&D&I",
+  "PROJECT_1_ALT": "MINIASSIST project",
+  "PROJECT_2_ALT": "EPISOT project"
+},
+"TEAM": {
+  "TITLE": "Our team",
+  "SUBTITLE": "Meet the people who drive our projects and turn technological challenges into real solutions.",
+  "PREVIOUS": "Previous",
+  "NEXT": "Next",
+  "CAROUSEL_CONTROLS": "Carousel controls"
+}
 }
   
 
