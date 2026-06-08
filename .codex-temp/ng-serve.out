@@ -406,3 +406,11 @@ Component update sent to client(s).
 Application bundle generation complete. [0.151 seconds] - 2026-06-08T05:23:00.248Z
 
 Component update sent to client(s).
+[33m>[39m Changes detected. Rebuilding...
+[32m√[39m Changes detected. Rebuilding...
+
+No output file changes.
+
+Application bundle generation complete. [0.334 seconds] - 2026-06-08T05:23:46.902Z
+
+Component update sent to client(s).
