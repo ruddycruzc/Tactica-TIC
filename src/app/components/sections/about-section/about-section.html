@@ -1,59 +1,127 @@
-<link rel="stylesheet" href="./about-section.css">
 <section class="about-section">
+
   <div class="about-bg-lines">
-    <img src="assets/images/lineas.png" alt="Líneas de fondo">
+
+    <img
+      src="assets/images/lineas.png"
+      alt="Background lines">
+
   </div>
 
   <div class="about-container">
+
+    <!-- QUIÉNES SOMOS -->
+
     <div class="about-row glass-card">
+
       <div class="about-left">
-        <h2 class="section-side-title">Quiénes<br><span class="text-green">somos</span></h2>
+
+        <h2 class="section-side-title">
+
+          {{ 'ABOUT.WHO.TITLE' | translate }}
+
+          <br>
+
+          <span class="text-green">
+
+            {{ 'ABOUT.WHO.TITLE_HIGHLIGHT' | translate }}
+
+          </span>
+
+        </h2>
+
       </div>
+
       <div class="about-right">
+
         <div class="content-wrapper">
-          <h3 class="subsection-title">Nuestra Historia</h3>
-          <p class="about-text">
-            En 2016 asumimos un reto que nos ilusionaba y nos ponía a prueba: fundar una empresa tecnológica diferente. Nuestro objetivo era claro: ser el aliado estratégico que ayudara a otras empresas a evolucionar. Hoy, una década después, mantenemos ese corazón joven, pero con una esencia forjada en la experiencia, el rigor y la pasión.
-          </p>
-          <p class="about-text">
-            Nuestro equipo es el motor de todo esto. Combinamos la frescura de una mentalidad innovadora con años de experiencia real en el sector. Esta mezcla perfecta de juventud que nos permite diseñar software robusto, ético y eficiente, adaptado milimétricamente a cada una de tus necesidades para construir, juntos, el mañana.
-          </p>
+
+          <h3 class="subsection-title">
+
+            {{ aboutContent.historyTitle | translate }}
+
+          </h3>
+
+          @for (
+            paragraph of aboutContent.paragraphs;
+            track paragraph
+          ) {
+
+            <p class="about-text">
+
+              {{ paragraph | translate }}
+
+            </p>
+
+          }
+
         </div>
+
       </div>
+
     </div>
 
     <hr class="about-divider">
 
-    <div class="about-row">
-      <div class="about-left">
-        <h2 class="section-side-title">Mission<br>And<br><span class="text-green">Vision</span></h2>
-      </div>
-      <div class="about-right">
-        <div class="mv-cards-container">
-          
-      
-          <div class="mv-card">
-            <div class="card-header">
-              <h3 class="subsection-title">Misión</h3>
-            </div>
-            <p class="about-text">
-              Nos negamos a ver el código como algo frío. Cada proyecto social que asumimos busca resolver retos reales y humanos.
-            </p>
-          </div>
+    <!-- MISIÓN Y VISIÓN -->
 
-      
-          <div class="mv-card">
-            <div class="card-header">
-              <h3 class="subsection-title">Visión</h3>
+    <div class="about-row">
+
+      <div class="about-left">
+
+        <h2 class="section-side-title">
+
+          {{ 'ABOUT.MISSION_VISION.TITLE' | translate }}
+
+          <br>
+
+          <span class="text-green">
+
+            {{ 'ABOUT.MISSION_VISION.TITLE_HIGHLIGHT' | translate }}
+
+          </span>
+
+        </h2>
+
+      </div>
+
+      <div class="about-right">
+
+        <div class="mv-cards-container">
+
+          @for (
+            card of missionVisionCards;
+            track card.title
+          ) {
+
+            <div class="mv-card">
+
+              <div class="card-header">
+
+                <h3 class="subsection-title">
+
+                  {{ card.title | translate }}
+
+                </h3>
+
+              </div>
+
+              <p class="about-text">
+
+                {{ card.description | translate }}
+
+              </p>
+
             </div>
-            <p class="about-text">
-              Tratamos cada línea de desarrollo con la responsabilidad moral que merece el impacto comunitario. Garantizamos un software transparente, accesible y con un fin ético claro, celebrando 10 años de tecnología transparente.
-            </p>
-          </div>
+
+          }
 
         </div>
+
       </div>
+
     </div>
 
   </div>
+
 </section>

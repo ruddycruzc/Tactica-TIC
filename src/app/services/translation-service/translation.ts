@@ -1,5 +1,10 @@
 import { Injectable, signal } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
+import { navEs } from '../../translations/es/nav.es';
+import { navEn } from '../../translations/en/nav.en';
+
+import { aboutEs } from '../../translations/es/about.es';
+import { aboutEn } from '../../translations/en/about.en';
 
 @Injectable({
   providedIn: 'root'
@@ -13,14 +18,8 @@ export class TranslationService {
   ) {
 
     this.translate.setTranslation('es', {
-      NAV: {
-        ABOUT: 'Cómo pensamos',
-        PROJECTS: 'Proyectos',
-        CONTACT: 'Contacto',
-        BLOG: 'Blog',
-        CAREERS: 'Empleos'
-      },
-
+ ...navEs,
+ ...aboutEs,
       HOME: {
         HERO: {
           TITLE_LINE_1: 'Tecnología que',
@@ -128,13 +127,8 @@ FOOTER_LINKS: {
     });
 
     this.translate.setTranslation('en', {
-      NAV: {
-        ABOUT: 'How We Think',
-        PROJECTS: 'Projects',
-        CONTACT: 'Contact',
-        BLOG: 'Blog',
-        CAREERS: 'Careers'
-      },
+   ...navEn,
+  ...aboutEn,
 
       HOME: {
         HERO: {
