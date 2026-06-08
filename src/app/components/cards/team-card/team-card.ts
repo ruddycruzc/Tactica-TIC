@@ -1,8 +1,10 @@
 import { Component, Input } from '@angular/core';
+import { AppButtonComponent } from '../../buttons/app-button/app-button.component';
 
 @Component({
   selector: 'app-team-card',
   standalone: true,
+  imports: [AppButtonComponent],
   templateUrl: './team-card.html',
   styleUrls: ['./team-card.css'],
 })

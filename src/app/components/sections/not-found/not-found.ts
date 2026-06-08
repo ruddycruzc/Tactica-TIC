@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { AppButtonComponent } from '../../buttons/app-button/app-button.component';
 
 @Component({
   selector: 'app-not-found',
-  imports: [],
+  imports: [AppButtonComponent],
   templateUrl: './not-found.html',
   styleUrl: './not-found.css',
 })

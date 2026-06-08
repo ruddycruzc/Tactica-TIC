@@ -31,19 +31,17 @@
 
   <div class="navbar__actions">
 
-    <app-icon-button
-    icon="/assets/icons/icon-search.png"
+    <app-button
+      variant="tertiary"
+      iconOnly
       ariaLabel="Buscar"
-      (clicked)="onSearchClick()">
-    </app-icon-button>
+      (buttonClick)="onSearchClick()">
+      <img src="/assets/icons/icon-search.png" alt="">
+    </app-button>
 
-<button
-  class="language-button"
-  (click)="toggleLanguage()">
-
-  {{ currentLanguage.toUpperCase() }}
-
-</button>
+    <app-button variant="secondary" size="sm">
+      ES
+    </app-button>
 
   </div>
 

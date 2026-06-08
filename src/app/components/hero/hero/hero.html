@@ -42,25 +42,12 @@
       </p>
 
       <div class="hero-buttons">
-
-        <a
-          routerLink="/about"
-          class="btn-primary">
-
-          {{ 'HOME.ABOUT_BUTTON' | translate }}
-          <span class="arrow">→</span>
-
-        </a>
-
-        <a
-          routerLink="/projects"
-          class="btn-secondary">
-
-          {{ 'HOME.VISION_BUTTON' | translate }}
-          <span class="arrow">→</span>
-
-        </a>
-
+        <app-button variant="primary" routerLink="/about">
+          Conócenos <span class="arrow">→</span>
+        </app-button>
+        <app-button variant="secondary" routerLink="/projects">
+          Nuestra visión <span class="arrow">→</span>
+        </app-button>
       </div>
 
     </div>

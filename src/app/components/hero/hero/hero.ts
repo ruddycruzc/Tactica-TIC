@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
-import { TranslateModule } from '@ngx-translate/core';
+import { AppButtonComponent } from '../../buttons/app-button/app-button.component';
 
 @Component({
   selector: 'app-hero',
   standalone: true,
-  imports: [RouterLink, TranslateModule],
+  imports: [AppButtonComponent],
   templateUrl: './hero.html',
   styleUrl: './hero.css',
 })

@@ -1,21 +1,14 @@
 import { Component } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 
-import { TranslateModule, TranslateService } from '@ngx-translate/core';
-
-import { IconButton } from '../../buttons/iconbutton/iconbutton';
+import { AppButtonComponent } from '../../buttons/app-button/app-button.component';
 
 import { NavItem } from '../../../interfaces/nav-item.interface';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [
-    RouterLink,
-    RouterLinkActive,
-    IconButton,
-    TranslateModule
-  ],
+  imports: [RouterLink, RouterLinkActive, AppButtonComponent],
   templateUrl: './navbar.html',
   styleUrl: './navbar.css'
 })
@@ -110,4 +103,5 @@ this.translate.setTranslation('es', {
   onSearchClick(): void {
     console.log('Buscar');
   }
+
 }

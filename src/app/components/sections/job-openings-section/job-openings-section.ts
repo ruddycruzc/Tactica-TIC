@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { AppButtonComponent } from '../../buttons/app-button/app-button.component';
 
 @Component({
   selector: 'app-job-openings-section',
-  imports: [],
+  imports: [AppButtonComponent],
   templateUrl: './job-openings-section.html',
   styleUrl: './job-openings-section.css',
 })

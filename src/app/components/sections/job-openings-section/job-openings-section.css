@@ -178,30 +178,6 @@
   line-height: 1.5;
 }
 
-.btn-cv {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: var(--button-height, 56px);
-  padding: 0 var(--button-padding-x, 26px);
-  font-size: var(--button-font-size, 1rem);
-  font-weight: var(--button-font-weight, 400);
-  color: var(--button-text, #0f172a);
-  background-color: var(--color-primary, #7bb28d);
-  text-decoration: none;
-  border-radius: var(--button-radius, 999px);
-  border: var(--button-border-width, 2px) solid var(--color-primary, #7bb28d);
-  cursor: pointer;
-  transition: all 0.25s ease-in-out;
-}
-
-.btn-cv:hover {
-  background-color: var(--color-secondary, #557962);
-  color: var(--button-text-inverse, #ffffff);
-  border-color: var(--color-secondary, #557962);
-  transform: translateY(-1px);
-}
-
 /* --- RESPONSIVE --- */
 @media (max-width: 1024px) {
   .culture-grid {
