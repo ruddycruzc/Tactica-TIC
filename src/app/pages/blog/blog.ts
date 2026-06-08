@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-
+import { BlogSection } from '../../components/sections/blog-section/blog-section';
 @Component({
   selector: 'app-blog',
-  imports: [],
+  imports: [BlogSection],
   templateUrl: './blog.html',
   styleUrl: './blog.css',
 })
