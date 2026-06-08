@@ -1,17 +1,20 @@
-
 <section class="contact-container">
   <div class="contact-content">
-    
+
     <!-- COLUMNA IZQUIERDA: INFORMACIÓN -->
     <div class="contact-info">
       <h2 class="contact-title">
-        Impulsa tu <br>
-        <span class="highlight-green">transformación digital</span>
+        {{ 'CONTACT_FORM.TITLE_LINE_1' | translate }}
+        <br>
+
+        <span class="highlight-green">
+          {{ 'CONTACT_FORM.TITLE_HIGHLIGHT' | translate }}
+        </span>
       </h2>
       <p class="contact-text">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        {{ 'CONTACT_FORM.DESCRIPTION' | translate }}
       </p>
-      
+
       <div class="info-blocks">
         <!-- Bloque Email -->
         <div class="info-item">
@@ -22,11 +25,13 @@
             </svg>
           </div>
           <div class="info-text">
-            <strong>Email:</strong>
+            <strong>
+              {{ 'CONTACT_FORM.EMAIL_LABEL' | translate }}
+            </strong>
             <span>hello&#64;tacticatic.com</span>
           </div>
         </div>
-        
+
         <!-- Bloque Oficinas -->
         <div class="info-item">
           <div class="icon-box">
@@ -36,7 +41,9 @@
             </svg>
           </div>
           <div class="info-text">
-            <strong>Oficinas:</strong>
+            <strong>
+              {{ 'CONTACT_FORM.OFFICE_LABEL' | translate }}
+            </strong>
             <span>Parque tecnológico, edificio4, Gijón, Asturias, España</span>
           </div>
         </div>
@@ -47,27 +54,32 @@
     <div class="contact-card" style="display: block !important; visibility: visible !important;">
       <form class="contact-form">
         <div class="form-group">
-          <input type="text" placeholder="Nombre y apellidos" required>
+          <input type="text" [placeholder]="'CONTACT_FORM.NAME_PLACEHOLDER' | translate" required>
         </div>
-        
+
         <div class="form-group">
-          <input type="text" placeholder="Empresa">
+          <input type="text" [placeholder]="'CONTACT_FORM.COMPANY_PLACEHOLDER' | translate">
         </div>
-        
+
         <div class="form-row">
           <div class="form-group inline-group">
-            <input type="email" placeholder="Email" required>
+            <input type="email" [placeholder]="'CONTACT_FORM.EMAIL_PLACEHOLDER' | translate" required>
           </div>
           <div class="form-group inline-group">
-            <input type="tel" placeholder="Numero">
+            <input type="tel" [placeholder]="'CONTACT_FORM.PHONE_PLACEHOLDER' | translate">
           </div>
         </div>
-        
+
         <div class="form-group">
-          <textarea placeholder="¿Como podemos ayudarte?" rows="5"></textarea>
+          <textarea [placeholder]="'CONTACT_FORM.MESSAGE_PLACEHOLDER' | translate" rows="5">
+</textarea>
         </div>
-        
-        <app-button variant="primary" type="submit" fullWidth>Solicitar ayuda</app-button>
+
+        <app-button variant="primary" type="submit" fullWidth>
+
+          {{ 'CONTACT_FORM.SUBMIT' | translate }}
+
+        </app-button>
       </form>
     </div> <!-- /contact-card -->
 
