@@ -1,0 +1,184 @@
+:root {
+	font-family: 'Inter', sans-serif;
+
+	/* Typography */
+	--font-family-base: 'Inter', sans-serif;
+	--font-family-system: 'Segoe UI', Roboto, -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
+	--font-family-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', monospace;
+	--font-size-xs: 0.8rem;
+	--font-size-sm: 0.92rem;
+	--font-size-base: 1rem;
+	--font-size-md: 1.05rem;
+	--font-size-lg: 1.15rem;
+	--font-size-xl: 1.3rem;
+	--font-size-2xl: 1.5rem;
+	--font-size-3xl: 1.8rem;
+	--font-size-4xl: 2.4rem;
+	--font-size-5xl: 3rem;
+	--font-size-hero: 4rem;
+	--line-height-tight: 1.05;
+	--line-height-heading: 1.15;
+	--line-height-base: 1.6;
+	--line-height-relaxed: 1.7;
+	--font-weight-regular: 400;
+	--font-weight-medium: 500;
+	--font-weight-semibold: 600;
+	--font-weight-bold: 700;
+	--font-weight-extrabold: 800;
+	--font-weight-black: 900;
+
+	/* Layout */
+	--page-max-width: 74.75rem;
+	--page-gutter: clamp(1.5rem, 9.3vw, 8.5rem);
+	--page-margin: max(var(--page-gutter), calc((100vw - var(--page-max-width)) / 2));
+	--grid-gap: 1.5rem;
+	--section-gap: clamp(4rem, 10vw, 8rem);
+	--section-padding-y-sm: 3.75rem;
+	--section-padding-y: 6.25rem;
+	--section-padding-y-lg: 7.5rem;
+	--container-padding-sm: 1.5rem;
+	--container-padding: 2.5rem;
+	--container-padding-lg: 4.5rem;
+
+	/* Color palette */
+	--color-primary: #7bb28d;
+	--color-secondary: #557962;
+	--color-tertiary: #e2ede5;
+	--color-accent: #71a987;
+	--color-accent-alt: #71a985;
+	--color-accent-strong: #4f9d72;
+	--color-accent-soft: #92aa99;
+	--color-accent-muted: #7fae91;
+	--color-accent-dark: #496a55;
+	--color-accent-deep: #366046;
+	--color-accent-forest: #2b7a56;
+	--color-accent-line: #5f8f74;
+	--color-ink: #0f172a;
+	--color-ink-blue: #0f1d3a;
+	--color-ink-strong: #050505;
+	--color-ink-soft: #1e293b;
+	--color-ink-card: #101114;
+	--color-ink-warm: #211719;
+	--color-ink-footer: #171717;
+	--color-text: #333333;
+	--color-text-dark: #202020;
+	--color-text-strong: #111111;
+	--color-text-cool: #334155;
+	--color-text-muted: #475569;
+	--color-text-soft: #64748b;
+	--color-text-subtle: #94a3b8;
+	--color-text-footer: #d9d9d9;
+	--color-text-footer-muted: #b0b0b0;
+	--color-text-warm: #3a2d30;
+	--color-white: #ffffff;
+	--color-black: #000000;
+	--color-page: #fcfcfc;
+	--color-surface: #ffffff;
+	--color-surface-raised: #fafafa;
+	--color-surface-muted: #f8fafc;
+	--color-surface-soft: #f8f9fa;
+	--color-surface-alt: #f9f9f9;
+	--color-surface-cool: #f1f5f9;
+	--color-surface-neutral: #f4f4f2;
+	--color-surface-disabled: #d9d9d9;
+	--color-border: #e2e8f0;
+	--color-border-strong: #cbd5e1;
+	--color-border-soft: #f1f5f9;
+	--color-footer: #232625;
+	--color-card-dark: #141414;
+	--color-card-green: #92aa99;
+	--color-danger: #e63956;
+	--color-success-hover: #69967b;
+	--color-quote: #1e3a2f;
+	--color-overlay-dark: rgba(0, 0, 0, 0.78);
+	--color-overlay-card: rgba(0, 0, 0, 0.76);
+	--color-glass-light: rgba(255, 255, 255, 0.65);
+	--color-glass-soft: rgba(255, 255, 255, 0.3);
+	--color-glass-border: rgba(255, 255, 255, 0.5);
+	--color-border-alpha: rgba(15, 23, 42, 0.08);
+	--color-border-alpha-strong: rgba(15, 23, 42, 0.12);
+	--color-brand-alpha: rgba(123, 178, 141, 0.15);
+	--color-brand-alpha-soft: rgba(79, 157, 114, 0.1);
+	--color-brand-alpha-border: rgba(79, 157, 114, 0.4);
+
+	/* Radius */
+	--radius-xs: 0.25rem;
+	--radius-sm: 0.375rem;
+	--radius-md: 0.625rem;
+	--radius-lg: 1rem;
+	--radius-xl: 1.5rem;
+	--radius-pill: 999rem;
+	--radius-circle: 50%;
+
+	/* Elevation */
+	--shadow-soft: 0 0.25rem 1.25rem rgba(15, 29, 58, 0.01);
+	--shadow-soft-black: 0 0.25rem 1.875rem rgba(0, 0, 0, 0.02);
+	--shadow-panel: 0 0.5rem 2rem rgba(0, 0, 0, 0.03);
+	--shadow-card: 0 1.125rem 2.8125rem rgba(15, 23, 42, 0.08);
+	--shadow-card-subtle: 0 0.75rem 1.25rem -0.3125rem rgba(15, 23, 42, 0.04);
+	--shadow-card-lift: 0 1.875rem 3.75rem -0.9375rem rgba(15, 23, 42, 0.08);
+	--shadow-control: 0 0.5rem 1.125rem rgba(15, 23, 42, 0.08);
+	--shadow-focus: 0 0 0 0.25rem rgba(123, 178, 141, 0.22);
+	--shadow-focus-muted: 0 0 0 0.1875rem rgba(127, 174, 145, 0.15);
+
+	/* Motion */
+	--transition-fast: 180ms ease;
+	--transition-base: 260ms ease;
+	--transition-slow: 360ms ease;
+	--transition-card: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+
+	/* Buttons */
+	--button-text: var(--color-ink);
+	--button-text-inverse: var(--color-white);
+	--button-primary-bg: var(--color-primary);
+	--button-primary-bg-hover: var(--color-secondary);
+	--button-primary-bg-active: var(--color-accent-dark);
+	--button-secondary-bg: var(--color-white);
+	--button-secondary-bg-hover: var(--color-tertiary);
+	--button-secondary-bg-active: #d3e3d7;
+	--button-tertiary-color: var(--color-secondary);
+	--button-tertiary-color-hover: var(--color-primary);
+	--button-tertiary-color-active: var(--color-accent-dark);
+	--button-disabled-bg: rgba(15, 23, 42, 0.08);
+	--button-disabled-border: rgba(15, 23, 42, 0.12);
+	--button-disabled-text: rgba(15, 23, 42, 0.36);
+	--button-height: 3.5rem;
+	--button-height-sm: 2.75rem;
+	--button-height-lg: 4rem;
+	--button-padding-x: 1.625rem;
+	--button-padding-x-sm: 1.25rem;
+	--button-padding-x-lg: 2rem;
+	--button-gap: 0.625rem;
+	--button-radius: var(--radius-pill);
+	--button-font-size: 1rem;
+	--button-font-weight: var(--font-weight-regular);
+	--button-border-width: 0.125rem;
+
+	/* Forms */
+	--input-height: 3.375rem;
+	--input-padding-x: 1.5rem;
+	--input-radius: 1.875rem;
+	--input-border-color: var(--color-border);
+	--input-placeholder-color: #7e8b9b;
+	--input-background: var(--color-white);
+	--input-focus-color: var(--color-accent);
+}
+
+.page-shell {
+	width: 100%;
+	max-width: var(--page-max-width);
+	margin-inline: auto;
+}
+
+.section-padding {
+	padding-inline: var(--page-margin);
+}
+
+.surface-card {
+	background: var(--color-surface);
+	border-radius: var(--radius-lg);
+}
+
+.text-muted {
+	color: var(--color-text-muted);
+}
