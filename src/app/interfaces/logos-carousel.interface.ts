@@ -1,4 +1,4 @@
 export interface LogoItem {
-  src: string;
-  alt: string;
+  readonly src: string;
+  readonly alt: string;
 }
