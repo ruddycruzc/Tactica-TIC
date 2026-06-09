@@ -1,4 +1,3 @@
-<link rel="stylesheet" href="./about-section.css">
 <section class="about-section">
   <div class="about-bg-lines">
     <img src="assets/images/lineas.png" alt="Líneas de fondo">
@@ -31,24 +30,12 @@
       <div class="about-right">
         <div class="mv-cards-container">
           
-      
-          <div class="mv-card">
+          <!-- Renderizado dinámico de Misión y Visión con el mismo diseño -->
+          <div class="mv-card" *ngFor="let card of mvCards">
             <div class="card-header">
-              <h3 class="subsection-title">Misión</h3>
+              <h3 class="subsection-title">{{ card.title }}</h3>
             </div>
-            <p class="about-text">
-              Nos negamos a ver el código como algo frío. Cada proyecto social que asumimos busca resolver retos reales y humanos.
-            </p>
-          </div>
-
-      
-          <div class="mv-card">
-            <div class="card-header">
-              <h3 class="subsection-title">Visión</h3>
-            </div>
-            <p class="about-text">
-              Tratamos cada línea de desarrollo con la responsabilidad moral que merece el impacto comunitario. Garantizamos un software transparente, accesible y con un fin ético claro, celebrando 10 años de tecnología transparente.
-            </p>
+            <p class="about-text">{{ card.text }}</p>
           </div>
 
         </div>
