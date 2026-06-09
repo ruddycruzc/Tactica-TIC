@@ -8,7 +8,8 @@
 
   </a>
 
-  <ul class="navbar__menu">
+  <ul class="navbar__menu"
+   [class.navbar__menu--open]="menuOpen">
 
     @for(item of navigationItems; track item.route){
 
@@ -51,7 +52,8 @@
   <app-button
     variant="tertiary"
     iconOnly
-    ariaLabel="abrirmenu">
+    ariaLabel="abrirmenu"
+    (buttonClick)="toggleMenu()">
 
     <img src="/assets/icons/menu.svg" alt="menu">
 
