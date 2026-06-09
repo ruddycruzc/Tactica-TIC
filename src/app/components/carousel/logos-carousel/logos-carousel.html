@@ -1,22 +1,37 @@
 <section class="logos-carousel" aria-labelledby="logos-carousel-title">
   <h2 id="logos-carousel-title" class="logos-carousel__title">
-      {{ 'HOME.LOGOS.TITLE' | translate }}
+    {{ 'HOME.LOGOS.TITLE' | translate }}
   </h2>
 
   <div class="logos-carousel__viewport">
     <div class="logos-carousel__track">
-      <div class="logos-carousel__group"
+      <div class="logos-carousel__group" 
       [attr.aria-label]="'HOME.LOGOS.PARTNERS_LABEL' | translate">
-        <div class="logos-carousel__item" *ngFor="let logo of logos">
-          <img [src]="logo.src" [alt]="logo.alt" class="logos-carousel__logo" />
-        </div>
-      </div>
+        @for (logo of logos; track logo.src) {
 
-      <div class="logos-carousel__group" aria-hidden="true">
-        <div class="logos-carousel__item" *ngFor="let logo of logos">
-          <img [src]="logo.src" alt="" class="logos-carousel__logo" />
+  
+          <div class="logos-carousel__item">
+
+            <img [src]="logo.src" alt="" class="logos-carousel__logo" />
+
+          </div>
+
+
+
+          }
+        </div>
+
+
+        <div class="logos-carousel__group" aria-hidden="true">
+
+          @for (logo of logos; track logo.src) {
+
+
+
+          }
+
         </div>
       </div>
     </div>
-  </div>
+
 </section>

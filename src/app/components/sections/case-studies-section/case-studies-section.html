@@ -1,56 +1,77 @@
-<link rel="stylesheet" href="case-studies-section.css">
 <section class="cases-section">
+
   <div class="cases-container">
 
     <div class="cases-header">
-      <div class="cases-header-left">
-        <h2 class="cases-section-title">
-          {{ 'HOME.CASE_STUDIES.TITLE' | translate }}
-        </h2>
-        <p class="cases-section-subtitle">
-          {{ 'HOME.CASE_STUDIES.SUBTITLE' | translate }}
-        </p>
-      </div>
-      <app-button variant="tertiary" href="#todos-casos">
-        {{'HOME.CASE_STUDIES.VIEW_ALL' | translate }}
-      </app-button>
-    </div>
 
+      <div class="cases-header-left">
+
+        <h2 class="cases-section-title">
+
+          {{ caseStudiesContent.title | translate }}
+
+        </h2>
+
+        <p class="cases-section-subtitle">
+
+          {{ caseStudiesContent.subtitle | translate }}
+
+        </p>
+
+      </div>
+
+      <app-button
+        variant="tertiary"
+        href="#todos-casos">
+
+        {{ caseStudiesContent.button | translate }}
+
+      </app-button>
+
+    </div>
 
     <div class="cases-grid">
 
-      <div class="case-card card-narrow">
-        <div class="case-info">
-          <span class="case-tag">
-            {{'HOME.CASE_STUDIES.TAG'|translate}}
-          </span>
-          <h3 class="case-name">
-            {{'HOME.CASE_STUDIES.PROJECT_1_ALT' | translate}}
-          </h3>
-        </div>
-        <div class="case-image-wrapper">
-          <img src="assets/images/case-image/imagen2.png" [attr.alt]="'HOME.CASE_STUDIES.PROJECT_1_ALT' | translate" class="case-img">
-        </div>
-      </div>
+      @for (
+        project of projects;
+        track project.title
+      ) {
 
+        <div
+          class="case-card"
+         [class]="'case-card ' + project.cardClass">
 
-      <div class="case-card card-wide">
-        <div class="case-info">
-          <span class="case-tag">
-           {{'HOME.CASE_STUDIES.TAG'|translate}}
-          </span>
-          <h3 class="case-name">
-            {{'HOME.CASE_STUDIES.PROJECT_2_ALT' | translate}}
+          <div class="case-info">
 
-          </h3>
+            <span class="case-tag">
+
+              {{ project.tag | translate }}
+
+            </span>
+
+            <h3 class="case-name">
+
+              {{ project.title | translate }}
+
+            </h3>
+
+          </div>
+
+          <div class="case-image-wrapper">
+
+            <img
+              [src]="project.image"
+              [attr.alt]="project.title | translate"
+              class="case-img">
+
+          </div>
+
         </div>
-        <div class="case-image-wrapper">
-          <img src="assets/images/case-image/proyecto2.png" [attr.alt]="'HOME.CASE_STUDIES.PROJECT_2_ALT' | translate"
-            class="case-img">
-        </div>
-      </div>
+
+      }
 
     </div>
 
   </div>
+
 </section>

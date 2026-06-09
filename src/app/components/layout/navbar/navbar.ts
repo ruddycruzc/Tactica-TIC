@@ -26,6 +26,8 @@ export class Navbar {
     private translationService: TranslationService
   ) {}
 
+  menuOpen = false;
+
   navigationItems: NavItem[] = [
     {
       label: 'NAV.ABOUT',
@@ -57,7 +59,14 @@ export class Navbar {
     this.translationService.toggleLanguage();
   }
 
+  toggleMenu(): void {
+    this.menuOpen = !this.menuOpen;
+  }
+
   onSearchClick(): void {
     console.log('Buscar');
   }
+  closeMenu(): void {
+  this.menuOpen = false;
+}
 }
