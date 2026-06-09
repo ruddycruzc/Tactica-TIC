@@ -141,3 +141,27 @@
 .text-muted {
 	color: var(--color-text-muted);
 }
+
+/* Responsive */
+
+/*MÓVIL (Pantallas menores a 768px) */
+@media (max-width: 767px) {
+  /* código exclusivo para celulares va aquí */
+  .about-row { 
+    flex-direction: column; 
+  }
+  .section-side-title { 
+    font-size: 1.8rem; 
+  }
+}
+
+/*TABLET (Pantallas entre 768px y 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  /*código exclusivo para tablets va aquí */
+  .about-row { 
+    gap: 1.5rem; 
+  }
+  .section-side-title { 
+    font-size: 2.2rem; 
+  }
+}
