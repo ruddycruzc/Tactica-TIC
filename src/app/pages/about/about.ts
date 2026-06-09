@@ -3,7 +3,7 @@ import { AboutSection} from '../../components/sections/about-section/about-secti
 
 @Component({
   selector: 'app-about',
-  imports: [AboutSection],
+  imports: [AboutSection, ],
   templateUrl: './about.html',
   styleUrl: './about.css',
 })

@@ -12,8 +12,8 @@ import { TranslateModule } from '@ngx-translate/core';
   styleUrl: './footer.css'
 })
 export class Footer {
-technologyLinks: FooterLink[] = [
-  { label: 'FOOTER_LINKS.VISION', route: '/' },
+technologyLinks: FooterLink[] = [ //hay rutas que aun no tienen un destino porque son las futuras landing pages
+  { label: 'FOOTER_LINKS.VISION', route: '/about' },
   { label: 'FOOTER_LINKS.AI', route: '/' },
   { label: 'FOOTER_LINKS.IOT', route: '/' },
   { label: 'FOOTER_LINKS.AUTOMATION', route: '/' },

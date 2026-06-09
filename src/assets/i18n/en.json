@@ -1,4 +1,4 @@
-{
+{  //esto simplemente funcionaba antes de crear la carpeta translations ya que las traducciones ahora se encarga: TranslationService carga las traducciones directamente desde TypeScript
   "NAV": {
     "ABOUT": "How We Think",
     "PROJECTS": "Projects",
