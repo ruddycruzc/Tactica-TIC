@@ -13,7 +13,7 @@ import { MissionVisionCard } from '../../../interfaces/mission-vision-card.inter
   templateUrl: './about-section.html',
   styleUrl: './about-section.css'
 })
-export class AboutSection {
+export class AboutSection {   //La info modificable está en: src/app/translations/es 
 
   aboutContent: AboutContent = {
     historyTitle: 'ABOUT.WHO.HISTORY_TITLE',
