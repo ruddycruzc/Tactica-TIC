@@ -1,46 +1,75 @@
-<link rel="stylesheet" href="video-hero.css">
 <section class="video-container">
+
   <div class="video-content">
-    
+
     <div class="video-left">
+
       <div class="video-wrapper">
-        <iframe 
-          src="https://www.youtube.com/embed/ma8JDBwat_s" 
-          title="YouTube video player" 
-          frameborder="0" 
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+
+        <iframe
+          src="https://www.youtube.com/embed/ma8JDBwat_s"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowfullscreen>
         </iframe>
 
-        <button class="play-overlay-btn" 
-               [attr.aria-label]="'HOME.VIDEO.PLAY_VIDEO' | translate">
-          <svg viewBox="0 0 24 24" fill="currentColor">
+        <button
+          class="play-overlay-btn"
+          [attr.aria-label]="videoContent.playVideo | translate">
+
+          <svg
+            viewBox="0 0 24 24"
+            fill="currentColor">
+
             <path d="M8 5v14l11-7z"/>
+
           </svg>
+
         </button>
 
         <div class="video-overlay-text">
-          <h3 class="ceo-name"> 
-            {{ 'HOME.VIDEO.CEO_NAME' | translate }}
+
+          <h3 class="ceo-name">
+
+            {{ videoContent.ceoName | translate }}
+
           </h3>
-          <p class="ceo-role"> 
-            {{ 'HOME.VIDEO.CEO_ROLE' | translate }}
+
+          <p class="ceo-role">
+
+            {{ videoContent.ceoRole | translate }}
+
           </p>
+
         </div>
+
       </div>
+
     </div>
 
     <div class="video-right">
+
       <h2 class="section-title">
-        {{ 'HOME.VIDEO.TITLE' | translate }}
+
+        {{ videoContent.title | translate }}
+
       </h2>
+
       <p class="section-description">
-        {{'HOME.VIDEO.DESCRIPTION' | translate }}
+
+        {{ videoContent.description | translate }}
+
       </p>
+
       <p class="section-lead">
-      {{'HOME.VIDEO.LEAD' | translate }}
+
+        {{ videoContent.lead | translate }}
+
       </p>
+
     </div>
 
   </div>
+
 </section>
