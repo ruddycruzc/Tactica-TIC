@@ -5,22 +5,29 @@
     <div class="info-content">
 
       <span class="info-tag">
-        {{ 'HOME.INFO.TAG' | translate }}
+
+        {{ infoContent.tag | translate }}
+
       </span>
 
       <h2 class="info-title">
-        {{ 'HOME.INFO.TITLE' | translate }}
+
+        {{ infoContent.title | translate }}
+
       </h2>
 
       <p class="info-description">
-        {{ 'HOME.INFO.DESCRIPTION' | translate }}
+
+        {{ infoContent.description | translate }}
+
       </p>
 
       <app-button
         variant="primary"
         routerLink="/about">
 
-        {{ 'HOME.INFO.BUTTON' | translate }}
+        {{ infoContent.button | translate }}
+
         <span aria-hidden="true">→</span>
 
       </app-button>
@@ -31,7 +38,7 @@
 
       <img
         src="assets/images/placeholder-tech.jpg"
-        [attr.alt]="'HOME.INFO.IMAGE_ALT' | translate">
+        [attr.alt]="infoContent.imageAlt | translate">
 
     </div>
 

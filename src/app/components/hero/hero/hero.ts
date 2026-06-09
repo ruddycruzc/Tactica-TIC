@@ -1,27 +1,34 @@
 import { Component } from '@angular/core';
-import { AppButtonComponent } from '../../buttons/app-button/app-button.component';
+
 import { TranslateModule } from '@ngx-translate/core';
+
+import { AppButtonComponent } from '../../buttons/app-button/app-button.component';
+
 import { HeroContent } from '../../../interfaces/hero-content.interface';
 
 @Component({
   selector: 'app-hero',
   standalone: true,
-  imports: [AppButtonComponent,TranslateModule],
+  imports: [
+    AppButtonComponent,
+    TranslateModule
+  ],
   templateUrl: './hero.html',
   styleUrl: './hero.css',
 })
 export class Hero {
 
-readonly heroContent: HeroContent = {   //EL contenido modificable se encuentra en: translations/es/home.es.ts
-  titleLine1: 'HOME.HERO.TITLE_LINE_1',
-  titleHighlight: 'HOME.HERO.TITLE_HIGHLIGHT',
-  titleLine2: 'HOME.HERO.TITLE_LINE_2',
-  description: 'HOME.HERO.DESCRIPTION',
-  aboutButton: 'HOME.HERO.ABOUT_BUTTON',
-  visionButton: 'HOME.HERO.VISION_BUTTON'
-};
+  readonly heroContent: HeroContent = {
+    titleLine1: 'HOME.HERO.TITLE_LINE_1',
+    titleHighlight: 'HOME.HERO.TITLE_HIGHLIGHT',
+    titleLine2: 'HOME.HERO.TITLE_LINE_2',
+    description: 'HOME.HERO.DESCRIPTION',
+    aboutButton: 'HOME.HERO.ABOUT_BUTTON',
+    visionButton: 'HOME.HERO.VISION_BUTTON'
+  };
 
   readonly wavePaths = Array.from({ length: 38 }, (_, index) => {
+
     const y = 58 + index * 5.6;
     const lift = index - 18.5;
 
@@ -33,23 +40,47 @@ readonly heroContent: HeroContent = {   //EL contenido modificable se encuentra 
 
   cursorX = 50;
   cursorY = 50;
+
   isPointerActive = false;
 
   onPointerMove(event: PointerEvent): void {
-    const bounds = (event.currentTarget as HTMLElement).getBoundingClientRect();
 
-    this.cursorX = this.toPercent(event.clientX - bounds.left, bounds.width);
-    this.cursorY = this.toPercent(event.clientY - bounds.top, bounds.height);
+    const bounds =
+      (event.currentTarget as HTMLElement)
+        .getBoundingClientRect();
+
+    this.cursorX = this.toPercent(
+      event.clientX - bounds.left,
+      bounds.width
+    );
+
+    this.cursorY = this.toPercent(
+      event.clientY - bounds.top,
+      bounds.height
+    );
+
     this.isPointerActive = true;
   }
 
   onPointerLeave(): void {
+
     this.cursorX = 50;
     this.cursorY = 50;
+
     this.isPointerActive = false;
   }
 
-  private toPercent(value: number, total: number): number {
-    return Math.min(100, Math.max(0, (value / total) * 100));
+  private toPercent(
+    value: number,
+    total: number
+  ): number {
+
+    return Math.min(
+      100,
+      Math.max(
+        0,
+        (value / total) * 100
+      )
+    );
   }
 }
