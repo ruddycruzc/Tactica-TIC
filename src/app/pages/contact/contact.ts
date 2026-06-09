@@ -1,11 +1,14 @@
 import { Component } from '@angular/core';
 import { NewsletterSection } from '../../components/sections/newslestter-section/newsletter-section';
-import { TestimonialsSection } from '../../components/sections/testimonials-section/testimonials-section';
+import { ContactForm } from '../../components/forms/contact-form/contact-form';
+
+
 
 @Component({
   selector: 'app-contact',
-  imports: [NewsletterSection, TestimonialsSection],
+  standalone: true,
+  imports: [NewsletterSection, ContactForm], 
   templateUrl: './contact.html',
-  styleUrl: './contact.css',
+  styleUrl: './contact.css'
 })
 export class Contact {}
