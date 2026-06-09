@@ -1,35 +1,49 @@
 <section class="cards-carousel">
+
   <div class="cards-carousel__header">
+
     <div class="cards-carousel__intro">
+
       <h2 class="cards-carousel__title">
-         {{ 'HOME.TEAM.TITLE' | translate }}
+
+        {{ carouselContent.title | translate }}
+
       </h2>
+
       <p class="cards-carousel__subtitle">
-         {{'HOME.TEAM.SUBTITLE' | translate}}
+
+        {{ carouselContent.subtitle | translate }}
+
       </p>
+
     </div>
 
-    <div class="cards-carousel__controls" [attr.aria-label]="'HOME.TEAM.CAROUSEL_CONTROLS' | translate">
-  <app-button
-  variant="primary"
-  iconOnly
-  [ariaLabel]="'HOME.TEAM.PREVIOUS' | translate"
-  (buttonClick)="prev()">
-   
-←    
-  
-</app-button>
+    <div
+      class="cards-carousel__controls"
+      [attr.aria-label]="carouselContent.carouselControls | translate">
 
-<app-button
-  variant="primary"
-  iconOnly
-  [ariaLabel]="'HOME.TEAM.NEXT' | translate"
-  (buttonClick)="next()">
-  
-→
-  
-  </app-button>
+      <app-button
+        variant="primary"
+        iconOnly
+        [ariaLabel]="carouselContent.previous | translate"
+        (buttonClick)="prev()">
+
+        ←
+
+      </app-button>
+
+      <app-button
+        variant="primary"
+        iconOnly
+        [ariaLabel]="carouselContent.next | translate"
+        (buttonClick)="next()">
+
+        →
+
+      </app-button>
+
     </div>
+
   </div>
 
   <div
@@ -38,17 +52,25 @@
     (pointerdown)="startDrag($event)"
     (pointermove)="drag($event)"
     (pointerup)="endDrag($event)"
-    (pointercancel)="endDrag($event)"
-  >
+    (pointercancel)="endDrag($event)">
+
     <div class="cards-carousel__track">
-      <div class="cards-carousel__slide" *ngFor="let card of displayCards">
+
+      <div
+        class="cards-carousel__slide"
+        *ngFor="let card of displayCards">
+
         <app-image-card
           [image]="card.image"
           [title]="card.name"
           [description]="card.excerpt"
-          [hoverDescription]="card.details"
-        ></app-image-card>
+          [hoverDescription]="card.details">
+        </app-image-card>
+
       </div>
+
     </div>
+
   </div>
+
 </section>

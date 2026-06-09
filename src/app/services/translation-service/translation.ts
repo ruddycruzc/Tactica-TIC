@@ -12,7 +12,7 @@ export class TranslationService {
     private translate: TranslateService
   ) {
 
-    this.translate.setTranslation('es', {
+    this.translate.setTranslation('es', {  //Recuerda introducir datos tanto en ES como en EN :)
       NAV: {
         ABOUT: 'Cómo pensamos',
         PROJECTS: 'Proyectos',
