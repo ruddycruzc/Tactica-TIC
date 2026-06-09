@@ -3,7 +3,7 @@
   padding: 80px 0;
   background-color: var(--color-bkg-light); 
   overflow: hidden;
-  font-family: sans-serif; 
+  font-family: var(--font-family-base); 
 }
 
 .about-bg-lines {
@@ -49,39 +49,40 @@
 
 .section-side-title {
   font-size: 2.8rem;
-  color: var(--color-ink); 
-  font-weight: 800;
-  line-height: 1.1;
+  color: var(--text-heading-color); 
+  font-weight: var(--font-weight-extrabold);
+  line-height: var(--text-heading-line-height);
   margin: 0;
 }
 
 .text-green {
-  color: var(--color-accent-muted); 
-  font-weight: 800; 
+  color: var(--text-highlight-color); 
+  font-weight: var(--font-weight-extrabold); 
 }
 
 .glass-card {
-  background: var(--color-glass-border); 
+  background: var(--card-background); 
   backdrop-filter: blur(12px); 
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid var(--color-glass-light);
-  border-radius: 24px;
+  border: var(--card-border);
+  border-radius: var(--card-radius);
   padding: 40px;
-  box-shadow: var(--shadow-card);
+  box-shadow: var(--card-shadow);
+  transition: var(--card-transition);
 }
 
 .subsection-title {
   font-size: 1.5rem;
-  color: var(--color-ink);
+  color: var(--text-heading-color);
   margin-top: 0;
   margin-bottom: 20px;
-  font-weight: 700;
+  font-weight: var(--font-weight-bold);
 }
 
 .about-text {
   font-size: 1.05rem;
-  color: var(--color-text-soft);
-  line-height: 1.7;
+  color: var(--text-body-color);
+  line-height: var(--line-height-relaxed);
   margin-bottom: 20px;
 }
 
@@ -93,7 +94,7 @@
 .highlight-text {
   color: var(--color-secondary); 
   font-style: normal;
-  font-weight: 600;
+  font-weight: var(--font-weight-semibold);
   background-color: var(--color-glass-soft);
   padding: 2px 6px;
   border-radius: 4px;
@@ -115,16 +116,18 @@
 
 .mv-card {
   flex: 1;
-  background: var(--color-white);
-  border-radius: 18px;
+  background: var(--card-background);
+  border-radius: var(--card-radius);
   padding: 30px;
-  box-shadow: var(--shadow-card);
-  border: 1px solid var(--color-border-alpha);
-  transition: transform 0.3s ease;
+  box-shadow: var(--card-shadow);
+  border: var(--card-border);
+  transition: var(--card-transition);
 }
 
 .mv-card:hover {
-  transform: translateY(-5px);
+  transform: var(--card-hover-transform);
+  border-color: var(--card-border-hover);
+  box-shadow: var(--card-shadow-hover);
 }
 
 .card-header {
@@ -146,7 +149,7 @@
   position: relative;
   padding: 80px 0;
   overflow: hidden;
-  font-family: sans-serif;
+  font-family: var(--font-family-base);
 }
 
 

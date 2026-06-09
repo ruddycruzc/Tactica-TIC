@@ -19,7 +19,7 @@
   align-items: center;
 
   text-decoration: none;
-  color: var(--color-text);
+  color: var(--text-heading-color);
 
   justify-self: start;
 }
@@ -45,7 +45,7 @@
 
 .navbar__menu a {
   text-decoration: none;
-  color: var(--color-text);
+  color: var(--text-heading-color);
 
   font-weight: 300;
   font-size: 1rem;
@@ -53,11 +53,11 @@
 }
 
 .navbar__menu a:hover {
-  color: var(--color-primary);
+  color: var(--text-highlight-color);
 }
 
 .active-link {
-  color: var(--color-primary);
+  color: var(--text-highlight-color);
 }
 
 .navbar__actions {

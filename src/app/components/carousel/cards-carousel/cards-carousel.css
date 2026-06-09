@@ -28,9 +28,9 @@
 
 .cards-carousel__title {
   margin: 0 0 12px;
-  color: var(--color-ink);
+  color: var(--text-heading-color);
   font-size: clamp(2rem, 2.25vw, 2.25rem);
-  font-weight: 800;
+  font-weight: var(--font-weight-extrabold);
   line-height: 1.05;
   text-align: left;
 }
@@ -38,10 +38,10 @@
 .cards-carousel__subtitle {
   max-width: 700px;
   margin: 0;
-  color: var(--color-text-soft);
+  color: var(--text-body-color);
   font-size: clamp(0.95rem, 1.05vw, 1.05rem);
-  font-weight: 400;
-  line-height: 1.2;
+  font-weight: var(--font-weight-regular);
+  line-height: var(--text-heading-line-height);
   text-align: left;
 }
 

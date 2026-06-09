@@ -14,7 +14,7 @@
   align-items: center;
   width: 100%;
   box-sizing: border-box;
-  font-family: 'Segoe UI', Roboto, sans-serif;
+  font-family: var(--font-family-base);
 }
 
 .jobs-content {
@@ -36,21 +36,21 @@
 
 .jobs-title {
   font-size: 3.5rem;
-  color: var(--color-ink);
-  font-weight: 800;
-  line-height: 1.15;
+  color: var(--text-heading-color);
+  font-weight: var(--font-weight-extrabold);
+  line-height: var(--text-heading-line-height);
   letter-spacing: -1.5px;
   margin: 0 0 24px 0;
 }
 
 .highlight-green {
-  color: var(--color-primary);
+  color: var(--text-highlight-color);
 }
 
 .jobs-lead {
   font-size: 1.15rem;
-  color: var(--color-text-soft);
-  line-height: 1.7;
+  color: var(--text-body-color);
+  line-height: var(--line-height-relaxed);
   margin: 0;
 }
 
@@ -63,17 +63,17 @@
 }
 
 .culture-card {
-  background: var(--color-glass-light);
+  background: var(--card-background);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid var(--color-glass-light);
-  border-radius: 16px;
+  border: var(--card-border);
+  border-radius: var(--card-radius);
   overflow: hidden; /* Importante para que la imagen respete las esquinas redondeadas */
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: var(--shadow-soft);
+  transition: var(--card-transition);
+  box-shadow: var(--card-shadow);
 }
 
 /* Contenedor de la Imagen */
@@ -106,10 +106,10 @@
 
 /* Efecto hover premium coordinado */
 .culture-card:hover {
-  transform: translateY(-8px);
+  transform: var(--card-hover-transform);
   background: var(--color-card-white);
-  border-color: var(--color-primary);
-  box-shadow: var(--shadow-card);
+  border-color: var(--card-border-hover);
+  box-shadow: var(--card-shadow-hover);
 }
 
 .culture-card:hover .card-image-box img {
@@ -133,15 +133,15 @@
 
 .culture-card h3 {
   font-size: 1.3rem;
-  color: var(--color-ink);
-  font-weight: 700;
+  color: var(--text-heading-color);
+  font-weight: var(--font-weight-bold);
   margin: 0;
 }
 
 .culture-card p {
   font-size: 0.95rem;
-  color: var(--color-text-soft);
-  line-height: 1.6;
+  color: var(--text-body-color);
+  line-height: var(--text-body-line-height);
   margin: 0;
 }
 
@@ -165,17 +165,17 @@
 
 .jobs-footer-banner h3 {
   font-size: 1.8rem;
-  color: var(--color-ink);
-  font-weight: 800;
+  color: var(--text-heading-color);
+  font-weight: var(--font-weight-extrabold);
   margin: 0;
 }
 
 .jobs-footer-banner p {
   font-size: 1.05rem;
-  color: var(--color-text-soft);
+  color: var(--text-body-color);
   max-width: 600px;
   margin: 0 0 12px 0;
-  line-height: 1.5;
+  line-height: var(--text-body-line-height);
 }
 
 /* --- RESPONSIVE --- */

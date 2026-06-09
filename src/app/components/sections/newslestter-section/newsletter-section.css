@@ -3,7 +3,7 @@
   background-color: var(--color-bkg-light); 
   position: relative; 
   overflow: hidden; 
-  font-family: sans-serif;
+  font-family: var(--font-family-base);
 }
 
 .hub-container::before {
@@ -39,11 +39,11 @@
 .hub-tag {
   display: inline-block;
   background-color: var(--color-glass-soft);
-  color: var(--color-accent-muted);
+  color: var(--text-highlight-color);
   padding: 6px 14px;
   border-radius: 20px;
   font-size: 0.85rem;
-  font-weight: 600;
+  font-weight: var(--font-weight-semibold);
   text-transform: uppercase;
   margin-bottom: 15px;
   letter-spacing: 0.5px;
@@ -51,20 +51,20 @@
 
 .hub-title {
   font-size: 2.5rem;
-  color: var(--color-ink);
-  font-weight: 800;
+  color: var(--text-heading-color);
+  font-weight: var(--font-weight-extrabold);
   margin-top: 0;
   margin-bottom: 15px;
 }
 
 .text-green {
-  color: var(--color-accent-muted);
+  color: var(--text-highlight-color);
 }
 
 .hub-description {
   font-size: 1.05rem;
-  color: var(--color-text-soft);
-  line-height: 1.6;
+  color: var(--text-body-color);
+  line-height: var(--text-body-line-height);
   margin: 0;
 }
 
@@ -88,15 +88,15 @@
 
 .hub-text-group h3 {
   font-size: 1.3rem;
-  color: var(--color-ink);
+  color: var(--text-heading-color);
   margin-top: 0;
   margin-bottom: 10px;
 }
 
 .hub-text-group p {
   font-size: 0.98rem;
-  color: var(--color-text-soft);
-  line-height: 1.6;
+  color: var(--text-body-color);
+  line-height: var(--text-body-line-height);
   margin: 0;
 }
 

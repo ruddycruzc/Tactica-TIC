@@ -8,7 +8,7 @@
   align-items: center;
   width: 100%;
   box-sizing: border-box;
-  font-family: 'Segoe UI', Roboto, -apple-system, sans-serif;
+  font-family: var(--font-family-base);
 }
 
 .video-content {
@@ -32,7 +32,7 @@
   overflow: hidden;
   box-shadow: var(--shadow-card); 
   aspect-ratio: 16 / 9; 
-  background-color: var(--color-bkg-black); 
+  background-color: var(--text-heading-color); 
 }
 
 
@@ -74,7 +74,7 @@
 }
 
 .video-wrapper:hover .play-overlay-btn {
-  background-color: var(--color-primary); 
+  background-color: var(--text-highlight-color); 
   transform: translate(-50%, -50%) scale(1.08);
 }
 
@@ -91,7 +91,7 @@
 
 .ceo-name {
   font-size: 2.2rem;
-  font-weight: 500;
+  font-weight: var(--font-weight-medium);
   margin: 0 0 2px 0;
   letter-spacing: -0.5px;
   color: var(--color-white);
@@ -99,7 +99,7 @@
 
 .ceo-role {
   font-size: 1.4rem;
-  font-weight: 600;
+  font-weight: var(--font-weight-semibold);
   color: var(--color-secondary); 
   margin: 0;
   text-transform: uppercase;
@@ -115,24 +115,24 @@
 
 .section-title {
   font-size: 2.8rem;
-  color: var(--color-ink);
-  font-weight: 800;
-  line-height: 1.15;
+  color: var(--text-heading-color);
+  font-weight: var(--font-weight-extrabold);
+  line-height: var(--text-heading-line-height);
   letter-spacing: -1px;
   margin: 0;
 }
 
 .section-description {
   font-size: 1.1rem;
-  color: var(--color-text-soft);
-  line-height: 1.6;
+  color: var(--text-body-color);
+  line-height: var(--text-body-line-height);
   margin: 0;
 }
 
 .section-lead {
   font-size: 1rem;
-  color: var(--color-primary); 
-  font-weight: 600;
+  color: var(--text-highlight-color); 
+  font-weight: var(--font-weight-semibold);
   margin: 0;
 }
 

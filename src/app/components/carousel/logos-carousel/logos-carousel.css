@@ -7,10 +7,10 @@
 
 .logos-carousel__title {
   margin: 0 0 22px;
-  color: var(--color-ink);
+  color: var(--text-heading-color);
   font-size: clamp(1.25rem, 1.55vw, 1.6rem);
-  font-weight: 800;
-  line-height: 1.15;
+  font-weight: var(--font-weight-extrabold);
+  line-height: var(--text-heading-line-height);
   text-align: center;
 }
 

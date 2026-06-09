@@ -15,7 +15,7 @@
   align-items: center;
   width: 100%;
   box-sizing: border-box;
-  font-family: 'Segoe UI', Roboto, -apple-system, sans-serif
+  font-family: var(--font-family-base)
 }
 
 .cases-container {
@@ -40,16 +40,16 @@
 
 .cases-section-title {
   font-size: 2.4rem;
-  color: var(--color-ink);
-  font-weight: 700;
+  color: var(--text-heading-color);
+  font-weight: var(--font-weight-bold);
   margin: 0 0 12px 0;
   letter-spacing: -1px;
 }
 
 .cases-section-subtitle {
   font-size: 1rem;
-  color: var(--color-text-soft);
-  line-height: 1.6;
+  color: var(--text-body-color);
+  line-height: var(--text-body-line-height);
   margin: 0;
 }
 
@@ -63,21 +63,22 @@
 
 
 .case-card {
-  background-color: var(--color-white);
-  border-radius: 16px;
-  border: 1px solid var(--color-border);
+  background: var(--card-background);
+  border-radius: var(--card-radius);
+  border: var(--card-border);
   padding: 40px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   overflow: hidden;
-  box-shadow: var(--shadow-soft);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: var(--card-shadow);
+  transition: var(--card-transition);
 }
 
 .case-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-soft);
+  transform: var(--card-hover-transform);
+  box-shadow: var(--card-shadow-hover);
+  border-color: var(--card-border-hover);
 }
 
 .card-narrow {
@@ -96,18 +97,18 @@
 .case-tag {
   display: block;
   font-size: 1.4rem;
-  color: var(--color-ink);
-  font-weight: 500;
+  color: var(--text-heading-color);
+  font-weight: var(--font-weight-medium);
   margin-bottom: 4px;
 }
 
 .case-name {
   font-size: 1.8rem;
-  color: var(--color-ink);
-  font-weight: 800;
+  color: var(--text-heading-color);
+  font-weight: var(--font-weight-extrabold);
   margin: 0;
   letter-spacing: -0.5px;
-  line-height: 1.2;
+  line-height: var(--text-heading-line-height);
 }
 
 
@@ -135,7 +136,7 @@
 
 .case-img[alt] {
   font-size: 0.9rem;
-  color: var(--color-text-soft);
+  color: var(--text-body-color);
   text-align: center;
   padding: 20px;
   font-style: italic;

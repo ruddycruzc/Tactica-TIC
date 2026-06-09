@@ -86,6 +86,22 @@
 	--transition-slow: 360ms ease;
 	--transition-card: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 
+	--text-heading-color: var(--color-ink);
+	--text-body-color: var(--color-text-soft);
+	--text-highlight-color: var(--color-primary);
+	--text-heading-line-height: var(--line-height-heading);
+	--text-body-line-height: var(--line-height-base);
+
+	--card-background: var(--color-card-white);
+	--card-background-hover: var(--color-card-white);
+	--card-border: 0.0625rem solid var(--color-border-alpha);
+	--card-border-hover: var(--color-primary);
+	--card-radius: var(--radius-cards);
+	--card-shadow: var(--shadow-soft);
+	--card-shadow-hover: var(--shadow-card);
+	--card-transition: transform var(--transition-base), border-color var(--transition-base), box-shadow var(--transition-base), background-color var(--transition-base);
+	--card-hover-transform: translateY(-0.1875rem);
+
 
 	--button-text: var(--color-text);
 	--button-text-inverse: var(--color-white);
@@ -102,66 +118,13 @@
 	--button-height-lg: 4rem;
 
 	--button-padding: 2rem;
-
-	
-	
-	/*revisar a aprtir de aqui*/
-
 	--button-gap: 0.625rem;
 	--button-radius: 999rem;
-	--button-font-size: 1rem;
+	--button-font-size: var(--font-size-base);
 	--button-font-weight: var(--font-weight-regular);
 	--button-border-width: 0.125rem;
 
+	
+	
 
-	--input-height: 3.375rem;
-	--input-padding-x: 1.5rem;
-	--input-radius: 1.875rem;
-	--input-border-color: var(--color-border);
-	--input-placeholder-color: #7e8b9b;
-	--input-background: var(--color-white);
-	--input-focus-color: var(--color-primary);
-}
-
-.page-shell {
-	width: 100%;
-	max-width: var(--page-max-width);
-	margin-inline: auto;
-}
-
-.section-padding {
-	padding-inline: var(--page-margin);
-}
-
-.surface-card {
-	background: var(--color-card-white);
-	border-radius: var(--radius-cards);
-}
-
-.text-muted {
-	color: var(--color-text-soft);
-}
-
-/* Responsive */
-
-/*MÓVIL (Pantallas menores a 768px) */
-@media (max-width: 767px) {
-  /* código exclusivo para celulares va aquí */
-  .about-row { 
-    flex-direction: column; 
-  }
-  .section-side-title { 
-    font-size: 1.8rem; 
-  }
-}
-
-/*TABLET (Pantallas entre 768px y 1023px) */
-@media (min-width: 768px) and (max-width: 1023px) {
-  /*código exclusivo para tablets va aquí */
-  .about-row { 
-    gap: 1.5rem; 
-  }
-  .section-side-title { 
-    font-size: 2.2rem; 
-  }
 }

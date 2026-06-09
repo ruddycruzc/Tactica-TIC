@@ -1,5 +1,5 @@
 .footer-container {
-  background-color: var(--color-bkg-black);
+  background-color: var(--text-heading-color);
   color: var(--color-white);
   padding: clamp(56px, 7vw, 84px) var(--page-margin, 24px);
 }
@@ -22,7 +22,7 @@
 
 .footer-brand {
   font-size: clamp(2rem, 3vw, 2.75rem);
-  font-weight: 700;
+  font-weight: var(--font-weight-bold);
   margin: 0;
   line-height: 1;
 }
@@ -32,14 +32,14 @@
   color: var(--color-surface-disabled);
   margin: 0;
   max-width: 320px;
-  line-height: 1.5;
+  line-height: var(--text-body-line-height);
 }
 
 .footer-copyright {
   margin-top: auto;
   font-size: 0.85rem;
-  color: var(--color-text-soft);
-  line-height: 1.5;
+  color: var(--text-body-color);
+  line-height: var(--text-body-line-height);
 }
 
 .footer-column {
@@ -48,9 +48,9 @@
 }
 
 .column-title {
-  color: var(--color-primary);
+  color: var(--text-highlight-color);
   font-size: 0.9rem;
-  font-weight: 700;
+  font-weight: var(--font-weight-bold);
   letter-spacing: 0.08rem;
   margin: 0 0 18px;
   text-transform: uppercase;
@@ -75,11 +75,11 @@
   text-decoration: none;
   transition: color 0.25s ease;
   font-size: 0.96rem;
-  line-height: 1.45;
+  line-height: var(--text-body-line-height);
 }
 
 .footer-links a:hover {
-  color: var(--color-primary);
+  color: var(--text-highlight-color);
 }
 
 /* Tablet */

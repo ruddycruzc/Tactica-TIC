@@ -69,17 +69,17 @@
 
 .hero-title {
   font-size: 4rem;
-  color: var(--color-ink);
-  font-weight: 800;
-  line-height: 1.15;
+  color: var(--text-heading-color);
+  font-weight: var(--font-weight-extrabold);
+  line-height: var(--text-heading-line-height);
   letter-spacing: -1.5px;
   margin: 0;
 }
 
 
 .highlight-green {
-  color: var(--color-primary);
-  font-weight: 800;
+  color: var(--text-highlight-color);
+  font-weight: var(--font-weight-extrabold);
 }
 
 
@@ -93,8 +93,8 @@
 
 .hero-description {
   font-size: 1.15rem;
-  color: var(--color-text-soft);
-  line-height: 1.6;
+  color: var(--text-body-color);
+  line-height: var(--text-body-line-height);
   margin: 0;
   max-width: 480px;
 }

@@ -86,7 +86,7 @@
 
 :host(.app-button--primary) {
   background: var(--color-primary);
-  border-color: var(--color-primary);
+  border-color: var(--text-highlight-color);
 }
 
 :host(.app-button--primary:hover) {
@@ -103,7 +103,7 @@
 
 :host(.app-button--secondary) {
   background: var(--color-white);
-  border-color: var(--color-primary);
+  border-color: var(--text-highlight-color);
 }
 
 :host(.app-button--secondary:hover) {
@@ -125,7 +125,7 @@
 }
 
 :host(.app-button--tertiary:hover) {
-  color: var(--color-primary);
+  color: var(--text-highlight-color);
 }
 
 :host(.app-button--tertiary:active) {
@@ -144,7 +144,7 @@
 :host(.app-button--disabled) {
   background: var(--color-border-alpha);
   border-color: var(--color-border-alpha-strong);
-  color: var(--color-text-soft);
+  color: var(--text-body-color);
   cursor: not-allowed;
   pointer-events: none;
 }
