@@ -66,4 +66,7 @@ export class Navbar {
   onSearchClick(): void {
     console.log('Buscar');
   }
+  closeMenu(): void {
+  this.menuOpen = false;
+}
 }
