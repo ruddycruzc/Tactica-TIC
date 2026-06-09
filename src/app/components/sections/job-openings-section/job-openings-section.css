@@ -3,9 +3,9 @@
    ========================================== */
 
 .jobs-container {
-  background: radial-gradient(circle at 10% 20%, rgba(113, 169, 135, 0.08) 0%, transparent 40%),
-              radial-gradient(circle at 90% 80%, rgba(85, 121, 98, 0.05) 0%, transparent 50%),
-              linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  background: radial-gradient(circle at 10% 20%, var(--color-glass-soft) 0%, transparent 40%),
+              radial-gradient(circle at 90% 80%, var(--color-glass-soft) 0%, transparent 50%),
+              linear-gradient(135deg, var(--color-bkg-light) 0%, var(--color-border) 100%);
   position: relative;
   overflow: hidden;
   padding: 120px var(--page-margin, 24px);
@@ -36,7 +36,7 @@
 
 .jobs-title {
   font-size: 3.5rem;
-  color: #0f172a;
+  color: var(--color-ink);
   font-weight: 800;
   line-height: 1.15;
   letter-spacing: -1.5px;
@@ -44,12 +44,12 @@
 }
 
 .highlight-green {
-  color: #7bb28d;
+  color: var(--color-primary);
 }
 
 .jobs-lead {
   font-size: 1.15rem;
-  color: #475569;
+  color: var(--color-text-soft);
   line-height: 1.7;
   margin: 0;
 }
@@ -63,17 +63,17 @@
 }
 
 .culture-card {
-  background: rgba(255, 255, 255, 0.65);
+  background: var(--color-glass-light);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.8);
+  border: 1px solid var(--color-glass-light);
   border-radius: 16px;
   overflow: hidden; /* Importante para que la imagen respete las esquinas redondeadas */
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.01);
+  box-shadow: var(--shadow-soft);
 }
 
 /* Contenedor de la Imagen */
@@ -83,7 +83,7 @@
   height: auto;
   overflow: hidden;
   position: relative;
-  background-color: #f1f5f9;
+  background-color: var(--color-border);
   border-radius: 16px;
 }
 
@@ -107,9 +107,9 @@
 /* Efecto hover premium coordinado */
 .culture-card:hover {
   transform: translateY(-8px);
-  background: rgba(255, 255, 255, 0.95);
-  border-color: #7bb28d;
-  box-shadow: 0 24px 48px -15px rgba(15, 23, 42, 0.1);
+  background: var(--color-card-white);
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-card);
 }
 
 .culture-card:hover .card-image-box img {
@@ -120,8 +120,8 @@
 .card-icon {
   width: 40px;
   height: 40px;
-  background-color: rgba(123, 178, 141, 0.15);
-  color: #557962;
+  background-color: var(--color-glass-soft);
+  color: var(--color-secondary);
   border-radius: 10px;
   display: inline-flex;
   align-items: center;
@@ -133,22 +133,22 @@
 
 .culture-card h3 {
   font-size: 1.3rem;
-  color: #0f172a;
+  color: var(--color-ink);
   font-weight: 700;
   margin: 0;
 }
 
 .culture-card p {
   font-size: 0.95rem;
-  color: #475569;
+  color: var(--color-text-soft);
   line-height: 1.6;
   margin: 0;
 }
 
 /* --- BANNER INFERIOR --- */
 .jobs-footer-banner {
-  background: #ffffff;
-  border: 1px solid rgba(226, 232, 240, 0.8);
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
   padding: 50px;
   border-radius: 16px;
   text-align: center;
@@ -160,19 +160,19 @@
   flex-direction: column;
   align-items: center;
   gap: 16px;
-  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.02);
+  box-shadow: var(--shadow-soft);
 }
 
 .jobs-footer-banner h3 {
   font-size: 1.8rem;
-  color: #0f172a;
+  color: var(--color-ink);
   font-weight: 800;
   margin: 0;
 }
 
 .jobs-footer-banner p {
   font-size: 1.05rem;
-  color: #475569;
+  color: var(--color-text-soft);
   max-width: 600px;
   margin: 0 0 12px 0;
   line-height: 1.5;

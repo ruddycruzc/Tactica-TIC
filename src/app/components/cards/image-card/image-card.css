@@ -3,7 +3,7 @@
   width: 100%;
   aspect-ratio: 0.86;
   min-height: 430px;
-  background: #141414;
+  background: var(--color-bkg-black);
   border-radius: 16px;
   overflow: hidden;
   box-shadow: none;
@@ -18,7 +18,7 @@
   position: absolute;
   inset: 0;
   overflow: hidden;
-  background: #d9d9d9;
+  background: var(--color-surface-disabled);
 }
 
 .image-card__media img {
@@ -49,13 +49,13 @@
 
 .image-card__overlay--default {
   opacity: 1;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.08) 26%, rgba(0, 0, 0, 0.78) 100%);
+  background: linear-gradient(180deg, var(--color-border-alpha) 26%, var(--color-overlay-card) 100%);
 }
 
 .image-card__overlay--hover {
   opacity: 0;
   transform: translateY(14px);
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 44%, rgba(0, 0, 0, 0.76) 100%);
+  background: linear-gradient(180deg, transparent 44%, var(--color-overlay-card) 100%);
 }
 
 .image-card:hover .image-card__overlay--default {
@@ -76,7 +76,7 @@
 
 .image-card__role {
   margin: 0 0 6px;
-  color: #ffffff;
+  color: var(--color-white);
   font-size: clamp(1rem, 1.1vw, 1.18rem);
   font-weight: 800;
   line-height: 1.12;
@@ -86,13 +86,13 @@
   margin: 0 0 4px;
   font-size: clamp(1.45rem, 1.7vw, 1.85rem);
   line-height: 1.05;
-  color: var(--color-primary, #7bb28d);
+  color: var(--color-primary);
   font-weight: 800;
 }
 
 .image-card__description {
   margin: 0;
-  color: #ffffff;
+  color: var(--color-white);
   font-size: clamp(1rem, 1.15vw, 1.18rem);
   line-height: 1.12;
   font-weight: 400;

@@ -1,7 +1,7 @@
 
 
 .contact-container {
-  background-color: #f9f9f9; /* Fondo gris claro limpio */
+  background-color: var(--color-bkg-light); /* Fondo gris claro limpio */
   padding: 100px var(--page-margin, 24px);
   display: flex;
   justify-content: center;
@@ -30,7 +30,7 @@
 
 .contact-title {
   font-size: 3.5rem;
-  color: #000000;
+  color: var(--color-bkg-black);
   font-weight: 800;
   line-height: 1.1;
   letter-spacing: -1px;
@@ -38,12 +38,12 @@
 }
 
 .highlight-green {
-  color: #71a987; /* Color verde corporativo de Tactica-TIC */
+  color: var(--color-primary); /* Color verde corporativo de Tactica-TIC */
 }
 
 .contact-text {
   font-size: 1.05rem;
-  color: #333333;
+  color: var(--color-text-soft);
   line-height: 1.5;
   margin: 0;
   max-width: 480px;
@@ -67,8 +67,8 @@
 .icon-box {
   width: 46px;
   height: 46px;
-  background-color: #71a987;
-  color: #ffffff;
+  background-color: var(--color-primary);
+  color: var(--color-white);
   border-radius: 6px; /* Bordes sutiles de la imagen */
   display: flex;
   align-items: center;
@@ -86,7 +86,7 @@
   flex-direction: column;
   font-size: 0.95rem;
   line-height: 1.4;
-  color: #000000;
+  color: var(--color-bkg-black);
 }
 
 .info-text strong {
@@ -94,16 +94,16 @@
 }
 
 .info-text span {
-  color: #333333;
+  color: var(--color-text-soft);
 }
 
 
 .contact-card {
   flex: 1;
-  background: #ffffff;
+  background: var(--color-white);
   padding: 50px;
   border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.02); /* Sombra muy difuminada */
+  box-shadow: var(--shadow-soft); /* Sombra muy difuminada */
   max-width: 550px;
   width: 100%;
   box-sizing: border-box;
@@ -119,7 +119,7 @@
   width: 100%;
 }
 
-/* Fila de inputs dobles (Email y Número) */
+
 .form-row {
   display: flex;
   gap: 15px;
@@ -129,41 +129,41 @@
   flex: 1;
 }
 
-/* Estilo unificado de Inputs y Textarea */
+
 .contact-form input,
 .contact-form textarea {
   width: 100%;
   padding: 16px 24px;
-  border: 1px solid #e2e8f0; /* Borde gris ultra sutil */
+  border: 1px solid var(--color-border); /* Borde gris ultra sutil */
   border-radius: 30px; /* Súper ovalados */
   font-size: 0.95rem;
-  color: #333333;
-  background-color: #ffffff;
+  color: var(--color-text-soft);
+  background-color: var(--color-white);
   outline: none;
   box-sizing: border-box;
   transition: border-color 0.2s ease;
 }
 
-/* El cuadro de texto grande es menos ovalado en las esquinas */
+
 .contact-form textarea {
-  border-radius: 16px;
+  border-radius: 1rem;
   resize: none;
   font-family: inherit;
 }
 
-/* Placeholder gris suave */
+
 .contact-form input::placeholder,
 .contact-form textarea::placeholder {
-  color: #7e8b9b;
+  color: var(--color-text-soft);
 }
 
 .contact-form input:focus,
 .contact-form textarea:focus {
-  border-color: #71a987; /* Se ilumina en verde al pinchar */
+  border-color: var(--color-primary); /* Se ilumina en verde al pinchar */
 }
 
 
-/* --- RESPONSIVE --- */
+
 @media (max-width: 968px) {
   .contact-container { padding: 60px var(--page-margin, 24px); }
   .contact-content { flex-direction: column; gap: 50px; }

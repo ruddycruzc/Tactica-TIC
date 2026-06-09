@@ -30,9 +30,9 @@
   width: 100%;
   border-radius: 16px; 
   overflow: hidden;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06); 
+  box-shadow: var(--shadow-card); 
   aspect-ratio: 16 / 9; 
-  background-color: #000; 
+  background-color: var(--color-bkg-black); 
 }
 
 
@@ -54,10 +54,10 @@
   transform: translate(-50%, -50%);
   width: 70px;
   height: 70px;
-  background-color: rgba(0, 0, 0, 0.85); 
+  background-color: var(--color-overlay-card); 
   border: none;
   border-radius: 50%;
-  color: #ffffff;
+  color: var(--color-white);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -74,7 +74,7 @@
 }
 
 .video-wrapper:hover .play-overlay-btn {
-  background-color: #7bb28d; 
+  background-color: var(--color-primary); 
   transform: translate(-50%, -50%) scale(1.08);
 }
 
@@ -82,11 +82,11 @@
   position: absolute;
   bottom: 35px;
   left: 35px;
-  color: #ffffff; 
+  color: var(--color-white); 
   z-index: 2; 
   font-family: inherit;
   pointer-events: none; 
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8); 
+  text-shadow: 0 2px 8px var(--color-overlay-card); 
 }
 
 .ceo-name {
@@ -94,13 +94,13 @@
   font-weight: 500;
   margin: 0 0 2px 0;
   letter-spacing: -0.5px;
-  color: #ffffff;
+  color: var(--color-white);
 }
 
 .ceo-role {
   font-size: 1.4rem;
   font-weight: 600;
-  color: #e63956; 
+  color: var(--color-secondary); 
   margin: 0;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -115,7 +115,7 @@
 
 .section-title {
   font-size: 2.8rem;
-  color: #0f172a;
+  color: var(--color-ink);
   font-weight: 800;
   line-height: 1.15;
   letter-spacing: -1px;
@@ -124,14 +124,14 @@
 
 .section-description {
   font-size: 1.1rem;
-  color: #475569;
+  color: var(--color-text-soft);
   line-height: 1.6;
   margin: 0;
 }
 
 .section-lead {
   font-size: 1rem;
-  color: #71a987; 
+  color: var(--color-primary); 
   font-weight: 600;
   margin: 0;
 }

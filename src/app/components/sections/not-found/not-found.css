@@ -12,10 +12,10 @@
   max-width: 600px;
   width: 100%;
   text-align: center;
-  background-color: #ffffff;
+  background-color: var(--color-white);
   padding: 60px 40px;
   border-radius: 16px;
-  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.05);
+  box-shadow: var(--shadow-card);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -28,7 +28,7 @@
   line-height: 1;
   letter-spacing: -4px;
   margin: 0 0 10px 0;
-  background: linear-gradient(135deg, #0f172a 0%, #71a987 100%);
+  background: linear-gradient(135deg, var(--color-ink) 0%, var(--color-primary) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -36,7 +36,7 @@
 /* Título del error */
 .error-title {
   font-size: 2.2rem;
-  color: #0f172a;
+  color: var(--color-ink);
   font-weight: 800;
   letter-spacing: -0.5px;
   margin: 0;
@@ -44,7 +44,7 @@
 
 .error-description {
   font-size: 1.1rem;
-  color: #64748b;
+  color: var(--color-text-soft);
   line-height: 1.6;
   max-width: 480px;
   margin: 0;

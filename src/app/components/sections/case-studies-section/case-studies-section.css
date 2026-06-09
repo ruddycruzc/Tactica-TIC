@@ -1,8 +1,8 @@
 
 .cases-section {
   background-image: 
-    radial-gradient(rgba(15, 23, 42, 0.015) 1px, transparent 1px), 
-    linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)),
+    radial-gradient(var(--color-border-alpha) 1px, transparent 1px), 
+    linear-gradient(var(--color-glass-light), var(--color-glass-light)),
     url('../../../../assets/images/lineas.png');
   
   background-size: 24px 24px, auto, cover;
@@ -40,7 +40,7 @@
 
 .cases-section-title {
   font-size: 2.4rem;
-  color: #0f172a;
+  color: var(--color-ink);
   font-weight: 700;
   margin: 0 0 12px 0;
   letter-spacing: -1px;
@@ -48,7 +48,7 @@
 
 .cases-section-subtitle {
   font-size: 1rem;
-  color: #475569;
+  color: var(--color-text-soft);
   line-height: 1.6;
   margin: 0;
 }
@@ -63,21 +63,21 @@
 
 
 .case-card {
-  background-color: #ffffff;
+  background-color: var(--color-white);
   border-radius: 16px;
-  border: 1px solid #e2e8f0;
+  border: 1px solid var(--color-border);
   padding: 40px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   overflow: hidden;
-  box-shadow: 0 4px 6px -1px rgba(15, 23, 42, 0.01);
+  box-shadow: var(--shadow-soft);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .case-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 20px -5px rgba(15, 23, 42, 0.04);
+  box-shadow: var(--shadow-soft);
 }
 
 .card-narrow {
@@ -96,14 +96,14 @@
 .case-tag {
   display: block;
   font-size: 1.4rem;
-  color: #0f172a;
+  color: var(--color-ink);
   font-weight: 500;
   margin-bottom: 4px;
 }
 
 .case-name {
   font-size: 1.8rem;
-  color: #0f172a;
+  color: var(--color-ink);
   font-weight: 800;
   margin: 0;
   letter-spacing: -0.5px;
@@ -115,7 +115,7 @@
   width: 100%;
   aspect-ratio: 16 / 9;
   height: auto;
-  background-color: #f1f5f9; 
+  background-color: var(--color-border); 
   border-radius: 16px;
   display: flex;
   align-items: center;
@@ -135,7 +135,7 @@
 
 .case-img[alt] {
   font-size: 0.9rem;
-  color: #94a3b8;
+  color: var(--color-text-soft);
   text-align: center;
   padding: 20px;
   font-style: italic;

@@ -1,20 +1,20 @@
 :host {
-  --_height: var(--button-height, 56px);
-  --_padding: var(--button-padding-x, 26px);
+  --_height: var(--button-height);
+  --_padding: var(--button-padding);
 
   min-height: var(--_height);
   min-width: max-content;
   padding: 0 var(--_padding);
-  border: var(--button-border-width, 2px) solid transparent;
-  border-radius: var(--button-radius, 999px);
+  border: var(--button-border-width) solid transparent;
+  border-radius: var(--button-radius);
   display: inline-flex;
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
-  color: var(--button-text, #0f172a);
+  color: var(--button-text);
   font: inherit;
-  font-size: var(--button-font-size, 1rem);
-  font-weight: var(--button-font-weight, 400);
+  font-size: var(--button-font-size);
+  font-weight: var(--button-font-weight);
   line-height: 1;
   text-decoration: none;
   cursor: pointer;
@@ -31,7 +31,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: var(--button-gap, 10px);
+  gap: var(--button-gap);
   white-space: nowrap;
   color: inherit;
   font: inherit;
@@ -54,18 +54,18 @@
 
 :host(:hover) .app-button__content ::ng-deep .arrow,
 :host(:hover) .app-button__content ::ng-deep [aria-hidden='true'] {
-  transform: translateX(4px);
+  transform: translateX(0.25rem);
 }
 
 :host(.app-button--sm) {
-  --_height: 40px;
-  --_padding: 18px;
-  font-size: 0.92rem;
+  --_height: var(--button-height-sm);
+  --_padding: var(--button-padding);
+  font-size: var(--font-size-sm);
 }
 
 :host(.app-button--lg) {
-  --_height: 64px;
-  --_padding: 32px;
+  --_height: var(--button-height-lg);
+  --_padding: var(--button-padding);
 }
 
 :host(.app-button--full) {
@@ -85,35 +85,35 @@
 }
 
 :host(.app-button--primary) {
-  background: var(--color-primary, #7bb28d);
-  border-color: var(--color-primary, #7bb28d);
+  background: var(--color-primary);
+  border-color: var(--color-primary);
 }
 
 :host(.app-button--primary:hover) {
-  background: var(--color-secondary, #557962);
-  border-color: var(--color-secondary, #557962);
-  color: var(--button-text-inverse, #ffffff);
+  background: var(--color-secondary);
+  border-color: var(--color-secondary);
+  color: var(--button-text-inverse);
 }
 
 :host(.app-button--primary:active) {
-  background: #496a55;
-  border-color: #496a55;
-  color: var(--button-text-inverse, #ffffff);
+  background: var(--color-secondary);
+  border-color: var(--color-secondary);
+  color: var(--button-text-inverse);
 }
 
 :host(.app-button--secondary) {
-  background: #ffffff;
-  border-color: var(--color-primary, #7bb28d);
+  background: var(--color-white);
+  border-color: var(--color-primary);
 }
 
 :host(.app-button--secondary:hover) {
-  background: var(--color-tertiary, #e2ede5);
-  border-color: var(--color-secondary, #557962);
+  background: var(--color-tertiary);
+  border-color: var(--color-secondary);
 }
 
 :host(.app-button--secondary:active) {
-  background: #d3e3d7;
-  border-color: var(--color-secondary, #557962);
+  background: var(--color-tertiary);
+  border-color: var(--color-secondary);
 }
 
 :host(.app-button--tertiary) {
@@ -121,38 +121,38 @@
   padding: 0;
   background: transparent;
   border-color: transparent;
-  color: var(--color-secondary, #557962);
+  color: var(--color-secondary);
 }
 
 :host(.app-button--tertiary:hover) {
-  color: var(--color-primary, #7bb28d);
+  color: var(--color-primary);
 }
 
 :host(.app-button--tertiary:active) {
-  color: #496a55;
+  color: var(--color-secondary);
 }
 
 :host(:active) {
-  transform: translateY(1px) scale(0.99);
+  transform: translateY(0.0625rem) scale(0.99);
 }
 
 :host(:focus-visible) {
   outline: none;
-  box-shadow: 0 0 0 4px rgba(123, 178, 141, 0.28);
+  box-shadow: var(--shadow-focus);
 }
 
 :host(.app-button--disabled) {
-  background: rgba(15, 23, 42, 0.08);
-  border-color: rgba(15, 23, 42, 0.12);
-  color: rgba(15, 23, 42, 0.36);
+  background: var(--color-border-alpha);
+  border-color: var(--color-border-alpha-strong);
+  color: var(--color-text-soft);
   cursor: not-allowed;
   pointer-events: none;
 }
 
 :host(.app-button--primary.app-button--disabled),
 :host(.app-button--secondary.app-button--disabled) {
-  background: rgba(15, 23, 42, 0.08);
-  border-color: rgba(15, 23, 42, 0.12);
+  background: var(--color-border-alpha);
+  border-color: var(--color-border-alpha-strong);
 }
 
 :host(.app-button--tertiary.app-button--disabled) {

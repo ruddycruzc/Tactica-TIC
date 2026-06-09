@@ -26,7 +26,7 @@
 
 
 	--page-max-width: 74.75rem;
-	--page-margin: max(var(--page-gutter), calc((100vw - var(--page-max-width)) / 2));
+	--page-margin: max(1.5rem, calc((100vw - var(--page-max-width)) / 2));
 	--grid-gap: 1.5rem;
 	--section-gap: clamp(4rem, 10vw, 8rem);
 	--section-padding-y-sm: 3.75rem;
@@ -50,7 +50,7 @@
 	--color-ink: #171717;
 	--color-text: #111111;
 	
-	--color-text-soft: 333;
+	--color-text-soft: #333333;
 	--color-text-green: #87B190;
 	
 	--color-white: #ffffff;
@@ -108,7 +108,7 @@
 	/*revisar a aprtir de aqui*/
 
 	--button-gap: 0.625rem;
-	--button-radius: var(--radius-pill);
+	--button-radius: 999rem;
 	--button-font-size: 1rem;
 	--button-font-weight: var(--font-weight-regular);
 	--button-border-width: 0.125rem;
@@ -120,7 +120,7 @@
 	--input-border-color: var(--color-border);
 	--input-placeholder-color: #7e8b9b;
 	--input-background: var(--color-white);
-	--input-focus-color: var(--color-accent);
+	--input-focus-color: var(--color-primary);
 }
 
 .page-shell {
@@ -134,12 +134,12 @@
 }
 
 .surface-card {
-	background: var(--color-surface);
-	border-radius: var(--radius-lg);
+	background: var(--color-card-white);
+	border-radius: var(--radius-cards);
 }
 
 .text-muted {
-	color: var(--color-text-muted);
+	color: var(--color-text-soft);
 }
 
 /* Responsive */

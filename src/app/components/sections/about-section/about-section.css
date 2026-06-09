@@ -1,7 +1,7 @@
 .about-section {
   position: relative;
   padding: 80px 0;
-  background-color: #f8f9fa; 
+  background-color: var(--color-bkg-light); 
   overflow: hidden;
   font-family: sans-serif; 
 }
@@ -49,30 +49,30 @@
 
 .section-side-title {
   font-size: 2.8rem;
-  color: #0f1d3a; 
+  color: var(--color-ink); 
   font-weight: 800;
   line-height: 1.1;
   margin: 0;
 }
 
 .text-green {
-  color: #7fae91; 
+  color: var(--color-accent-muted); 
   font-weight: 800; 
 }
 
 .glass-card {
-  background: rgba(255, 255, 255, 0.45); 
+  background: var(--color-glass-border); 
   backdrop-filter: blur(12px); 
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.6);
+  border: 1px solid var(--color-glass-light);
   border-radius: 24px;
   padding: 40px;
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.03);
+  box-shadow: var(--shadow-card);
 }
 
 .subsection-title {
   font-size: 1.5rem;
-  color: #0f1d3a;
+  color: var(--color-ink);
   margin-top: 0;
   margin-bottom: 20px;
   font-weight: 700;
@@ -80,7 +80,7 @@
 
 .about-text {
   font-size: 1.05rem;
-  color: #334155;
+  color: var(--color-text-soft);
   line-height: 1.7;
   margin-bottom: 20px;
 }
@@ -91,10 +91,10 @@
 
 
 .highlight-text {
-  color: #2b7a56; 
+  color: var(--color-secondary); 
   font-style: normal;
   font-weight: 600;
-  background-color: rgba(43, 122, 86, 0.1);
+  background-color: var(--color-glass-soft);
   padding: 2px 6px;
   border-radius: 4px;
 }
@@ -103,7 +103,7 @@
 .about-divider {
   border: 0;
   height: 1px;
-  background: rgba(0, 0, 0, 0.08);
+  background: var(--color-border-alpha);
   margin: 60px 0;
 }
 
@@ -115,11 +115,11 @@
 
 .mv-card {
   flex: 1;
-  background: #ffffff;
+  background: var(--color-white);
   border-radius: 18px;
   padding: 30px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.04);
-  border: 1px solid rgba(0, 0, 0, 0.02);
+  box-shadow: var(--shadow-card);
+  border: 1px solid var(--color-border-alpha);
   transition: transform 0.3s ease;
 }
 

@@ -6,7 +6,7 @@
   min-height: 8rem;
   padding: 0.5rem 8rem;
 
-  background-color: white;
+  background-color: var(--color-white);
 
   position: sticky;
   top: 0;
@@ -19,7 +19,7 @@
   align-items: center;
 
   text-decoration: none;
-  color: black;
+  color: var(--color-text);
 
   justify-self: start;
 }
@@ -45,7 +45,7 @@
 
 .navbar__menu a {
   text-decoration: none;
-  color: black;
+  color: var(--color-text);
 
   font-weight: 300;
   font-size: 1rem;
@@ -53,11 +53,11 @@
 }
 
 .navbar__menu a:hover {
-  color: var(--color-primary, #7bb28d);
+  color: var(--color-primary);
 }
 
 .active-link {
-  color: var(--color-primary, #7bb28d);
+  color: var(--color-primary);
 }
 
 .navbar__actions {
@@ -112,11 +112,11 @@
   padding: 2rem 0;
   margin: 0;
 
-  background: white;
+  background: var(--color-white);
 
   gap: 1.5rem;
 
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow-card);
 
   z-index: 999;
 }

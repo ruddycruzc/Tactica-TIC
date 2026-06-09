@@ -2,12 +2,12 @@
   width: 100%;
   padding: 42px 0 36px;
   overflow: hidden;
-  background: #ffffff;
+  background: var(--color-white);
 }
 
 .logos-carousel__title {
   margin: 0 0 22px;
-  color: #171717;
+  color: var(--color-ink);
   font-size: clamp(1.25rem, 1.55vw, 1.6rem);
   font-weight: 800;
   line-height: 1.15;

@@ -3,7 +3,7 @@
    ========================================== */
 
 .clients-container {
-  background-color: #ffffff;
+  background-color: var(--color-white);
   padding: 100px var(--page-margin, 24px);
   width: 100%;
   display: flex;
@@ -27,7 +27,7 @@
 
 .clients-title {
   font-size: 2.8rem;
-  color: #0f172a;
+  color: var(--color-ink);
   font-weight: 800;
   line-height: 1.2;
   letter-spacing: -1.5px;
@@ -35,12 +35,12 @@
 }
 
 .highlight-green {
-  color: #7bb28d; /* Tu verde identitario */
+  color: var(--color-primary); /* Tu verde identitario */
 }
 
 .clients-subtitle {
   font-size: 1.15rem;
-  color: #475569;
+  color: var(--color-text-soft);
   line-height: 1.6;
   margin: 0;
 }
@@ -55,8 +55,8 @@
 
 /* Tarjetas individuales de empresas */
 .client-brand-card {
-  background-color: #f8fafc;
-  border: 1px solid #e2e8f0;
+  background-color: var(--color-bkg-light);
+  border: 1px solid var(--color-border);
   border-radius: 16px;
   padding: 40px 20px;
   display: flex;
@@ -67,24 +67,24 @@
 }
 
 .client-brand-card:hover {
-  background-color: #ffffff;
-  border-color: #7bb28d;
+  background-color: var(--color-white);
+  border-color: var(--color-primary);
   transform: translateY(-4px);
-  box-shadow: 0 20px 25px -5px rgba(15, 23, 42, 0.05);
+  box-shadow: var(--shadow-card);
 }
 
 /* Nombre de la marca simulando un logotipo */
 .brand-name {
   font-size: 1.25rem;
   font-weight: 700;
-  color: #334155;
+  color: var(--color-text-soft);
   letter-spacing: -0.5px;
   opacity: 0.85;
   transition: opacity 0.3s ease;
 }
 
 .client-brand-card:hover .brand-name {
-  color: #0f172a;
+  color: var(--color-ink);
   opacity: 1;
 }
 
@@ -95,13 +95,13 @@
   align-items: center;
   gap: 24px;
   padding-top: 20px;
-  border-top: 1px solid #f1f5f9;
+  border-top: 1px solid var(--color-border);
   text-align: center;
 }
 
 .action-text {
   font-size: 1.05rem;
-  color: #64748b;
+  color: var(--color-text-soft);
   margin: 0;
 }
 
