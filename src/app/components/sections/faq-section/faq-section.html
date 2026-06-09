@@ -3,72 +3,62 @@
   <div class="faq-content">
 
     <div class="faq-header">
+
       <h2 class="faq-title">
-        {{ 'FAQ.TITLE' | translate }}
+
+        {{ faqContent.title | translate }}
+
         <span class="highlight-green">
-          {{ 'FAQ.TITLE_HIGHLIGHT' | translate }}
+
+          {{ faqContent.titleHighlight | translate }}
+
         </span>
+
       </h2>
+
       <p class="faq-subtitle">
-        {{ 'FAQ.SUBTITLE' | translate }}
+
+        {{ faqContent.subtitle | translate }}
+
       </p>
+
     </div>
 
     <div class="faq-list">
 
-      <!-- PREGUNTA 1 -->
-      <details class="faq-item" open>
-        <summary class="faq-question">
-          {{ 'FAQ.QUESTION_1' | translate }}
-          <span class="faq-icon"></span>
-        </summary>
-        <div class="faq-answer">
-          <p>
-            {{ 'FAQ.ANSWER_1' | translate }}
-          </p>
-        </div>
-      </details>
+      @for (
+        item of faqItems;
+        track item.question
+      ) {
 
-      <!-- PREGUNTA 2 -->
-      <details class="faq-item">
-        <summary class="faq-question">
-          {{ 'FAQ.QUESTION_2' | translate }}
-          <span class="faq-icon"></span>
-        </summary>
-        <div class="faq-answer">
-          <p>
-            {{ 'FAQ.ANSWER_2' | translate }}
-          </p>
-        </div>
-      </details>
+        <details
+          class="faq-item"
+          [attr.open]="item.isOpen ? '' : null">
 
-      <!-- PREGUNTA 3 -->
-      <details class="faq-item">
-        <summary class="faq-question">
-          {{ 'FAQ.QUESTION_3' | translate }}
-          <span class="faq-icon"></span>
-        </summary>
-        <div class="faq-answer">
-          <p>
-            {{ 'FAQ.ANSWER_3' | translate }}
-          </p>
-        </div>
-      </details>
+          <summary class="faq-question">
 
-      <!-- PREGUNTA 4 -->
-      <details class="faq-item">
-        <summary class="faq-question">
-          {{ 'FAQ.QUESTION_4' | translate }}
-          <span class="faq-icon"></span>
-        </summary>
-        <div class="faq-answer">
-          <p>
-            {{ 'FAQ.ANSWER_4' | translate }}
+            {{ item.question | translate }}
 
-          </p>
-        </div>
-      </details>
+            <span class="faq-icon"></span>
+
+          </summary>
+
+          <div class="faq-answer">
+
+            <p>
+
+              {{ item.answer | translate }}
+
+            </p>
+
+          </div>
+
+        </details>
+
+      }
 
     </div>
+
   </div>
+
 </section>
