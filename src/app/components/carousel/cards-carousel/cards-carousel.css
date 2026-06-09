@@ -2,10 +2,12 @@
   position: relative;
   width: 100%;
   max-width: none;
-  margin: 0 0 24px;
+  margin: 0;
   padding: 56px 0 0;
+  background: var(--color-bkg-white);
   box-sizing: border-box;
   overflow: hidden;
+  user-select: none;
   --cards-gap: var(--grid-gap, 24px);
   --cards-width: min(var(--page-max-width, 1196px), calc(100vw - (var(--page-margin, 24px) * 2)));
   --card-size: calc((var(--cards-width) - (var(--cards-gap) * 2)) / 3);
@@ -79,6 +81,7 @@
   scroll-snap-align: start;
   display: flex;
   align-items: stretch;
+  user-select: none;
 }
 
 :host ::ng-deep app-image-card {
@@ -108,8 +111,7 @@
   }
 
   .cards-carousel__controls {
-    justify-content: flex-start;
-    padding-top: 0;
+    display: none;
   }
 }
 

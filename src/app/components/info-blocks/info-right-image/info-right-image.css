@@ -8,7 +8,7 @@
   margin: 0 auto;
   min-height: clamp(520px, 50vw, 628px);
   padding: clamp(96px, 9.2vw, 118px) clamp(70px, 7.8vw, 92px);
-  background: var(--card-background);
+  background: var(--color-secondary);
   border-radius: var(--card-radius);
   box-sizing: border-box;
   --info-inner-side: clamp(32px, 4.2vw, 60px);
@@ -19,7 +19,7 @@
 
 .info-card {
   position: relative;
-  background: var(--card-background);
+  background: var(--color-secondary);
   border: var(--card-border);
   border-radius: var(--card-radius);
   box-shadow: var(--card-shadow);
@@ -36,7 +36,7 @@
   grid-template-columns: minmax(0, 0.98fr) minmax(320px, 1.02fr);
   gap: clamp(44px, 5.8vw, 76px);
   align-items: center;
-  background: var(--card-background);
+  background: var(--color-secondary);
   border: var(--card-border);
   border-radius: var(--card-radius);
   box-shadow: var(--card-shadow);
@@ -48,7 +48,7 @@
   position: absolute;
   inset: clamp(58px, 6vw, 70px) clamp(52px, 5.8vw, 64px);
   border: 16px solid var(--color-white);
-  border-radius: 16px;
+  border-radius: var(--card-radius);
   background: var(--color-card-contrast);
 }
 

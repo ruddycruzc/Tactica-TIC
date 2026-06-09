@@ -38,42 +38,35 @@ export class CardsCarousel {
 
   readonly cards: TeamCard[] = [
     {
-      image: '/assets/images/cards/team1.png',
+      image: '/assets/images/cards/handsome-businessman-working-office.jpg',
       name: 'Name',
       excerpt: 'Desarrollador Backend Senior',
       details:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
     },
     {
-      image: '/assets/images/cards/team2.png',
+      image: '/assets/images/cards/medium-shot-smiley-business-woman-desk.jpg',
       name: 'Name',
       excerpt: 'Desarrollador Backend Senior',
       details:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
     },
     {
-      image: '/assets/images/cards/team3.png',
+      image: '/assets/images/cards/young-business-woman-working-her-desk-with-laptop.jpg',
       name: 'Name',
       excerpt: 'Desarrollador Backend Senior',
       details:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
     },
     {
-      image: '/assets/images/cards/team1.png',
+      image: '/assets/images/cards/man-thinking-about-solution.jpg',
       name: 'Name',
       excerpt: 'Desarrollador Backend Senior',
       details:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
     },
     {
-      image: '/assets/images/cards/team2.png',
-      name: 'Name',
-      excerpt: 'Desarrollador Backend Senior',
-      details:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
-    },
-    {
-      image: '/assets/images/cards/team3.png',
+      image: '/assets/images/cards/business-startup-people-concept-happy-businessman-creative-male-office-worker-with-tablet-pc-computer.jpg',
       name: 'Name',
       excerpt: 'Desarrollador Backend Senior',
       details:

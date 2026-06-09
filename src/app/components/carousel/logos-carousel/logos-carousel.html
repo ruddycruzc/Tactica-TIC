@@ -26,7 +26,9 @@
 
           @for (logo of logos; track logo.src) {
 
-
+          <div class="logos-carousel__item">
+            <img [src]="logo.src" alt="" class="logos-carousel__logo" />
+          </div>
 
           }
 

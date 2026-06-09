@@ -1,14 +1,16 @@
 .image-card {
   position: relative;
   width: 100%;
-  aspect-ratio: 0.86;
-  min-height: 430px;
+  aspect-ratio: 0.92;
+  min-height: clamp(21rem, 30vw, 25rem);
   background: var(--card-background);
   border-radius: var(--card-radius);
   overflow: hidden;
   box-shadow: var(--card-shadow);
   transition: var(--card-transition);
   border: var(--card-border);
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .image-card:hover {
@@ -30,14 +32,16 @@
   object-fit: cover;
   object-position: center;
   display: block;
-  filter: grayscale(100%) brightness(0.78);
-  transform: scale(1.01);
+  filter: grayscale(100%) brightness(0.9);
+  transform: scale(1);
   transition: transform 420ms ease, filter 420ms ease;
+  user-select: none;
+  -webkit-user-drag: none;
 }
 
 .image-card:hover .image-card__media img {
   transform: scale(1);
-  filter: grayscale(0%) brightness(0.86);
+  filter: grayscale(0%) brightness(1);
 }
 
 .image-card__overlay {
@@ -52,13 +56,13 @@
 
 .image-card__overlay--default {
   opacity: 1;
-  background: linear-gradient(180deg, var(--color-border-alpha) 26%, var(--color-overlay-card) 100%);
+  background: linear-gradient(180deg, transparent 30%, var(--color-overlay-card-soft) 62%, var(--color-overlay-card-readable) 100%);
 }
 
 .image-card__overlay--hover {
   opacity: 0;
   transform: translateY(14px);
-  background: linear-gradient(180deg, transparent 44%, var(--color-overlay-card) 100%);
+  background: linear-gradient(180deg, transparent 28%, var(--color-overlay-card-soft) 58%, var(--color-overlay-card-readable) 100%);
 }
 
 .image-card:hover .image-card__overlay--default {
@@ -75,6 +79,7 @@
   width: 100%;
   padding: 26px;
   box-sizing: border-box;
+  text-shadow: 0 0.125rem 0.75rem var(--color-overlay-card-readable);
 }
 
 .image-card__role {
@@ -108,5 +113,27 @@
 
   .image-card__content {
     padding: 22px;
+  }
+}
+
+@media (hover: none) {
+  .image-card:hover {
+    transform: none;
+    border-color: var(--color-border-alpha);
+    box-shadow: var(--card-shadow);
+  }
+
+  .image-card:hover .image-card__media img {
+    filter: grayscale(100%) brightness(0.9);
+  }
+
+  .image-card:hover .image-card__overlay--default {
+    opacity: 1;
+    transform: none;
+  }
+
+  .image-card:hover .image-card__overlay--hover {
+    opacity: 0;
+    transform: translateY(14px);
   }
 }

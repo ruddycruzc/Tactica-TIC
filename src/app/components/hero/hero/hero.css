@@ -40,8 +40,9 @@
 }
 
 .hero-wave__svg path {
-  stroke: var(--color-glass-soft);
+  stroke: var(--color-border-alpha);
   stroke-width: 0.72;
+  opacity: 0.55;
   vector-effect: non-scaling-stroke;
 }
 
@@ -52,8 +53,9 @@
 }
 
 .hero-wave__svg--focus path {
-  stroke: var(--color-secondary);
+  stroke: var(--color-primary);
   stroke-width: 0.95;
+  opacity: 0.22;
 }
 
 .hero-content {

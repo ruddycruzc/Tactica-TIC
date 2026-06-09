@@ -1,5 +1,5 @@
 .faq-container {
-  background: var(--color-bkg-light);
+  background: var(--color-bkg-white);
   padding: 96px var(--page-margin, 24px);
   width: 100%;
   box-sizing: border-box;

@@ -38,7 +38,7 @@
 .footer-copyright {
   margin-top: auto;
   font-size: 0.85rem;
-  color: var(--text-body-color);
+  color: var(--color-primary);
   line-height: var(--text-body-line-height);
 }
 

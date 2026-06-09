@@ -2,7 +2,7 @@
 .cases-section {
   background-image: 
     radial-gradient(var(--color-border-alpha) 1px, transparent 1px), 
-    linear-gradient(var(--color-glass-light), var(--color-glass-light)),
+    linear-gradient(var(--color-background-image-muted), var(--color-background-image-muted)),
     url('../../../../assets/images/lineas.png');
   
   background-size: 24px 24px, auto, cover;
@@ -73,6 +73,9 @@
   overflow: hidden;
   box-shadow: var(--card-shadow);
   transition: var(--card-transition);
+  cursor: default;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .case-card:hover {
@@ -91,7 +94,8 @@
 
 
 .case-info {
-  margin-bottom: 30px;
+  min-height: 8.25rem;
+  margin-bottom: 36px;
 }
 
 .case-tag {
@@ -121,7 +125,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: auto;
+  margin-top: 0;
   overflow: hidden;
   position: relative;
 }
@@ -132,6 +136,13 @@
   object-fit: cover;
   display: block;
   border-radius: inherit;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.card-narrow .case-img {
+  object-position: center bottom;
+  transform: scale(1.22);
 }
 
 .case-img[alt] {
@@ -149,6 +160,11 @@
   .case-card {
     padding: 30px;
   }
+
+  .case-info {
+    min-height: auto;
+    margin-bottom: 28px;
+  }
 }
 
 @media (max-width: 640px) {
@@ -164,5 +180,13 @@
   }
   .case-name {
     font-size: 1.5rem;
+  }
+
+  .case-image-wrapper {
+    aspect-ratio: 4 / 3;
+  }
+
+  .card-narrow .case-img {
+    transform: scale(1.08);
   }
 }

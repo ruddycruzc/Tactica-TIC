@@ -1,6 +1,6 @@
 .home__cards-preview {
-  padding: 48px var(--page-margin, 24px) 72px;
-  background: transparent;
+  padding: 48px var(--page-margin, 24px) 0;
+  background: var(--color-bkg-white);
 }
 
 .home__cards-grid {

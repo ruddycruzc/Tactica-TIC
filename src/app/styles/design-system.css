@@ -45,7 +45,8 @@
 	--color-accent-muted: #7fae91;
 	
 	--color-bkg-black: #111;
-	--color-bkg-light: #fcfcfc;
+	--color-bkg-light: #F8F8F8;
+	--color-bkg-white: #fff;
 	
 	--color-ink: #171717;
 	--color-text: #111111;
@@ -64,6 +65,9 @@
 
 
 	--color-overlay-card: rgba(0, 0, 0, 0.76);
+	--color-overlay-card-soft: rgba(0, 0, 0, 0.42);
+	--color-overlay-card-readable: rgba(0, 0, 0, 0.62);
+	--color-background-image-muted: rgba(248, 248, 248, 0.8);
 	--color-glass-light: rgba(255, 255, 255, 0.65);
 	--color-glass-soft: rgba(255, 255, 255, 0.3);
 	--color-glass-border: rgba(255, 255, 255, 0.5);

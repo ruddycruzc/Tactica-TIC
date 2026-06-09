@@ -57,7 +57,7 @@
   border-radius: var(--card-radius);
   padding: 40px;
   box-shadow: var(--card-shadow);
-  transition: var(--card-transition);
+  transition: none;
   
   /* Forzamos comportamiento flex interno para empujar los logos abajo */
   display: flex;
@@ -65,9 +65,9 @@
 }
 
 .project-card:hover {
-  transform: var(--card-hover-transform);
-  box-shadow: var(--card-shadow-hover);
-  border-color: var(--card-border-hover);
+  transform: none;
+  box-shadow: var(--card-shadow);
+  border-color: var(--color-border-alpha);
 }
 
 .project-name {
