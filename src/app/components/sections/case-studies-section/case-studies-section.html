@@ -1,38 +1,52 @@
 <link rel="stylesheet" href="case-studies-section.css">
 <section class="cases-section">
   <div class="cases-container">
-    
+
     <div class="cases-header">
       <div class="cases-header-left">
-        <h2 class="cases-section-title">Nuestros Proyectos</h2>
+        <h2 class="cases-section-title">
+          {{ 'HOME.CASE_STUDIES.TITLE' | translate }}
+        </h2>
         <p class="cases-section-subtitle">
-          Descubre cómo resolvemos desafíos complejos de ingeniería y transformamos ideas en soluciones tecnológicas reales.
+          {{ 'HOME.CASE_STUDIES.SUBTITLE' | translate }}
         </p>
       </div>
-      <a href="#todos-casos" class="cases-view-all-link">ver todos los proyectos</a>
+      <app-button variant="tertiary" href="#todos-casos">
+        {{'HOME.CASE_STUDIES.VIEW_ALL' | translate }}
+      </app-button>
     </div>
 
-    
+
     <div class="cases-grid">
-      
+
       <div class="case-card card-narrow">
         <div class="case-info">
-          <span class="case-tag">I+D+i</span>
-          <h3 class="case-name">MINIASSIST</h3>
+          <span class="case-tag">
+            {{'HOME.CASE_STUDIES.TAG'|translate}}
+          </span>
+          <h3 class="case-name">
+            {{'HOME.CASE_STUDIES.PROJECT_1_ALT' | translate}}
+          </h3>
         </div>
         <div class="case-image-wrapper">
-          <img src="src/assets/images/lineas.png" alt="Caso de Estudio Visión por Computador" class="case-img">
+          <img src="assets/images/case-image/imagen2.png" [attr.alt]="'HOME.CASE_STUDIES.PROJECT_1_ALT' | translate" class="case-img">
         </div>
       </div>
 
-      
+
       <div class="case-card card-wide">
         <div class="case-info">
-          <span class="case-tag">I+D+i</span>
-          <h3 class="case-name">EPISOT</h3>
+          <span class="case-tag">
+           {{'HOME.CASE_STUDIES.TAG'|translate}}
+          </span>
+          <h3 class="case-name">
+            {{'HOME.CASE_STUDIES.PROJECT_2_ALT' | translate}}
+
+          </h3>
         </div>
         <div class="case-image-wrapper">
-          <img src="src/assets/images/lineas.png" alt="Caso de Estudio Página Web Táctica TIC" class="case-img">
+          <img src="assets/images/case-image/proyecto2.png" [attr.alt]="'HOME.CASE_STUDIES.PROJECT_2_ALT' | translate"
+            class="case-img">
         </div>
       </div>
 

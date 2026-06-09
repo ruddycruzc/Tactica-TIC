@@ -7,6 +7,7 @@ import { VideoHero } from '../../components/hero/video-hero/video-hero';
 import { CaseStudiesSection } from "../../components/sections/case-studies-section/case-studies-section";
 import { CardsCarousel } from '../../components/carousel/cards-carousel/cards-carousel';
 import { LogosCarousel } from "../../components/carousel/logos-carousel/logos-carousel";
+import { FaqSection } from '../../components/sections/faq-section/faq-section';
 
 @Component({
   selector: 'app-home',
@@ -18,7 +19,8 @@ import { LogosCarousel } from "../../components/carousel/logos-carousel/logos-ca
     VideoHero,
     CaseStudiesSection,
     CardsCarousel,
-    LogosCarousel
+    LogosCarousel,
+    FaqSection
 ],
   templateUrl: './home.html',
   styleUrl: './home.css'

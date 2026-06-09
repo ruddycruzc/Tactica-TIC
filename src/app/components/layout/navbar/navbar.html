@@ -19,7 +19,7 @@
           routerLinkActive="active-link"
           [routerLinkActiveOptions]="{ exact: true }">
 
-          {{ item.label }}
+       {{ item.label | translate }}
 
         </a>
 
@@ -31,15 +31,32 @@
 
   <div class="navbar__actions">
 
-    <app-icon-button
-    icon="/assets/icons/icon-search.png"
+    <app-button
+      variant="tertiary"
+      iconOnly
       ariaLabel="Buscar"
-      (clicked)="onSearchClick()">
-    </app-icon-button>
+      (buttonClick)="onSearchClick()">
+      <img src="/assets/icons/icon-search.png" alt="">
+    </app-button>
 
-    <button class="language-button">
-      ES
-    </button>
+<app-button
+  variant="tertiary"
+  size="sm"
+  (buttonClick)="toggleLanguage()">
+
+  {{ currentLanguage.toUpperCase() }}
+
+</app-button>
+<div class="navbar__hamburger">
+  <app-button
+    variant="tertiary"
+    iconOnly
+    ariaLabel="abrirmenu">
+
+    <img src="/assets/icons/menu.svg" alt="menu">
+
+  </app-button>
+</div>
 
   </div>
 

@@ -1,56 +1,66 @@
 import { Component, ElementRef, Input, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
 import { ImageCard } from '../../cards/image-card/image-card';
+import { AppButtonComponent } from '../../buttons/app-button/app-button.component';
+import { TranslateModule } from '@ngx-translate/core';
 import { TeamCard } from '../../../interfaces/team-card.interface';
+
 
 @Component({
   selector: 'app-cards-carousel',
   standalone: true,
-  imports: [CommonModule, ImageCard],
+  imports: [CommonModule, ImageCard, AppButtonComponent,TranslateModule],
   templateUrl: './cards-carousel.html',
   styleUrl: './cards-carousel.css',
 })
 export class CardsCarousel {
 
-  @Input() cards: TeamCard[] = [
+  @Input() cards: TeamCard [] = [
     {
       image: '/assets/images/cards/team1.png',
-      name: 'Marco Rubio',
+      name: 'Name',
       excerpt: 'Desarrollador Backend Senior',
-      details: 'Aplica metodologías DevOps y optimiza la infraestructura para cargas empresariales.',
+      details: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     },
     {
       image: '/assets/images/cards/team2.png',
-      name: 'Marco Rubio',
+      name: 'Name',
       excerpt: 'Desarrollador Backend Senior',
-      details: 'Diseña flujos adaptativos que mantienen consistencia visual en desktop y mobile.',
+      details: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     },
     {
       image: '/assets/images/cards/team3.png',
-      name: 'Marco Rubio',
+      name: 'Name',
       excerpt: 'Desarrollador Backend Senior',
-      details: 'Construye microinteracciones y prototipos que convierten la intención en resultados.',
+      details: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     },
     {
       image: '/assets/images/cards/team1.png',
-      name: 'Marco Rubio',
+      name: 'Name',
       excerpt: 'Desarrollador Backend Senior',
-      details: 'Automatiza pipelines de CI/CD y mantiene la disponibilidad de servicios críticos.',
+      details: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     },
     {
       image: '/assets/images/cards/team2.png',
-      name: 'Marco Rubio',
+      name: 'Name',
       excerpt: 'Desarrollador Backend Senior',
-      details: 'Define prioridades claras y coordina equipos multidisciplinares en cada entrega.',
+      details: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     },
     {
       image: '/assets/images/cards/team3.png',
-      name: 'Marco Rubio',
+      name: 'Name',
       excerpt: 'Desarrollador Backend Senior',
-      details: 'Implementa experiencias móviles fluidas y mantenibles para usuarios exigentes.',
+      details: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     },
   ];
+
+  get displayCards(): TeamCard[] {
+    if (this.cards.length === 0) {
+      return [];
+    }
+
+    return [this.cards[this.cards.length - 1], ...this.cards, this.cards[0]];
+  }
 
   @ViewChild('viewport', { static: true }) private viewport?: ElementRef<HTMLElement>;
   private isDragging = false;

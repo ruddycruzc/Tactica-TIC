@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 
 import { LogoItem } from '../../../interfaces/logos-carousel.interface';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-logos-carousel',
   standalone: true,
-  imports: [],
+  imports: [TranslateModule],
   templateUrl: './logos-carousel.html',
   styleUrl: './logos-carousel.css',
 })

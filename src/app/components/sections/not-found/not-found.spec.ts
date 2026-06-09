@@ -1,18 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { Buttonsecondary } from './buttonsecondary';
+import { NotFound } from './not-found';
 
-describe('Buttonsecondary', () => {
-  let component: Buttonsecondary;
-  let fixture: ComponentFixture<Buttonsecondary>;
+describe('NotFound', () => {
+  let component: NotFound;
+  let fixture: ComponentFixture<NotFound>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [Buttonsecondary]
-    })
-    .compileComponents();
+      imports: [NotFound],
+    }).compileComponents();
 
-    fixture = TestBed.createComponent(Buttonsecondary);
+    fixture = TestBed.createComponent(NotFound);
     component = fixture.componentInstance;
     await fixture.whenStable();
   });

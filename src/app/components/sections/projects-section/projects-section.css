@@ -1,215 +1,181 @@
-/* --- SECCIÓN PROYECTOS I+D+i (DISEÑO INSTITUCIONAL / HIGH-TECH) --- */
+/* ==========================================================================
+   SECCIÓN DE PROYECTOS (ESTILO FEED VERTICAL CON LOGOS CONTROLADOS)
+   ========================================================================== */
 
 .projects-container {
-  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 50%, #e2e8f0 100%);
-  position: relative;
-  padding: 100px 20px;
-  font-family: 'Segoe UI', Roboto, -apple-system, sans-serif;
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  box-sizing: border-box;
-  overflow: hidden;
-}
-
-/* Foco de luz verde de fondo para mantener la estética de la marca */
-.projects-container::before {
-  content: "";
-  position: absolute;
-  top: 5%;
-  left: 5%;
-  width: 600px;
-  height: 600px;
-  background: radial-gradient(circle, rgba(97, 177, 132, 0.08) 0%, transparent 70%);
-  filter: blur(60px);
-  pointer-events: none;
+  padding: 60px 20px;
+  background-color: #f8f9fa; 
+  font-family: sans-serif;
 }
 
 .projects-content {
-  max-width: 1300px; /* Un poco más ancho para albergar cómodamente los datos de las subvenciones */
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 50px;
-  position: relative;
-  z-index: 2;
+  max-width: 850px; 
+  margin: 0 auto;
 }
 
-/* --- CABECERA DE LA SECCIÓN (Con logos institucionales superiores) --- */
+/* --- CABECERA DE LA SECCIÓN --- */
 .projects-header {
   text-align: center;
-  max-width: 800px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  margin-bottom: 50px;
 }
 
 .projects-title {
-  font-size: 3rem;
-  color: #0f172a;
+  font-size: 2.6rem;
+  color: #0f1d3a; 
   font-weight: 800;
   margin-bottom: 12px;
-  letter-spacing: -1.5px;
 }
 
-.projects-title .highlight-green {
-  color: #4f9d72;
-  background: linear-gradient(120deg, #4f9d72, #71a985);
-  -webkit-text-fill-color: transparent;
+.highlight-green {
+  color: #7fae91; 
 }
 
 .projects-subtitle {
-  font-size: 1.15rem;
-  color: #475569;
+  font-size: 1.1rem;
+  color: #64748b;
   line-height: 1.6;
-  margin: 0 0 25px 0;
-  font-weight: 500;
+  margin: 0;
 }
 
-/* Contenedor específico para los logos oficiales de la cabecera general */
-.projects-header .project-img {
-  display: inline-block;
-  height: 55px; /* Altura regulada para logos oficiales */
-  width: auto;
-  object-fit: contain;
-  margin: 10px;
-  background: transparent;
-  mix-blend-mode: multiply; /* Limpia fondos blancos residuales de los logos */
-  filter: grayscale(15%) contrast(95%);
+/* Control para los logos de la cabecera general */
+.projects-header .project-image {
+  height: 55px;
+  margin: 20px 12px 0 12px;
 }
 
-/* --- REJILLA MÁSTER DE LOS 14 PROYECTOS --- */
+/* --- CONTENEDOR DE TARJETAS --- */
 .projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
-  gap: 30px;
-  width: 100%;
-}
-
-/* --- TARJETA DE PROYECTO (Estilo Expediente Técnico / Cristal) --- */
-.project-card {
   display: flex;
   flex-direction: column;
-  background: rgba(255, 255, 255, 0.3);
-  backdrop-filter: blur(20px) saturate(190%);
-  -webkit-backdrop-filter: blur(20px) saturate(190%);
-  border: 1px solid rgba(255, 255, 255, 0.6);
-  border-radius: 20px;
-  padding: 30px;
-  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-  box-sizing: border-box;
+  gap: 35px; 
+}
+
+/* --- TARJETA DE PROYECTO INDIVIDUAL --- */
+.project-card {
+  background: #ffffff;
+  border: 1px solid rgba(15, 29, 58, 0.06);
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.01);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+  /* Forzamos comportamiento flex interno para empujar los logos abajo */
+  display: flex;
+  flex-direction: column;
 }
 
 .project-card:hover {
-  transform: translateY(-6px);
-  background: rgba(255, 255, 255, 0.7);
-  border-color: rgba(79, 157, 114, 0.4);
-  box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.08);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(15, 29, 58, 0.04);
+  border-color: rgba(127, 174, 145, 0.3);
 }
 
-/* Títulos de los Proyectos (con formato de expediente oficial) */
 .project-name {
-  font-size: 1.25rem;
-  color: #0f172a;
+  font-size: 1.35rem;
+  color: #7fae91; /* Tus títulos verdes corporativos */
   font-weight: 700;
   line-height: 1.4;
-  margin: 0 0 15px 0;
-  letter-spacing: -0.5px;
-  border-bottom: 2px solid rgba(79, 157, 114, 0.15);
+  margin-top: 0;
+  margin-bottom: 20px;
   padding-bottom: 12px;
+  border-bottom: 2px solid #f1f5f9; 
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
-/* Párrafos descriptivos y de consorcios */
-.project-card p {
-  font-size: 0.95rem;
-  color: #475569;
+/* --- TEXTOS, LISTAS Y CAJAS --- */
+.project-card p, 
+.project-text {
+  font-size: 0.98rem;
+  color: #334155;
+  line-height: 1.7;
+  margin-top: 0;
+  margin-bottom: 20px; /* Margen unificado para que respire antes de los logos */
+}
+
+/* Evitamos que el último elemento de texto choque si no hay imágenes */
+.project-card p:last-child,
+.project-list:last-child,
+.project-info-box:last-child {
+  margin-bottom: 0;
+}
+
+.project-list {
+  padding-left: 20px;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.project-list li {
+  font-size: 0.98rem;
+  color: #334155;
   line-height: 1.6;
-  margin: 0 0 14px 0;
-}
-
-.project-card p strong {
-  color: #1e293b;
-}
-
-/* Estilo para las listas del proyecto (ej. MINIASSIST) */
-.project-card li {
-  font-size: 0.9rem;
-  color: #475569;
-  line-height: 1.5;
   margin-bottom: 10px;
-  list-style: none;
-  position: relative;
-  padding-left: 18px;
+  list-style-type: square; 
 }
 
-.project-card li::before {
-  content: "▪";
-  position: absolute;
-  left: 0;
-  color: #4f9d72;
-  font-size: 1rem;
-  top: -2px;
-}
-
-/* --- CAJA DESTACADA DE FINANCIACIÓN (ej. EPISOST) --- */
 .project-info-box {
-  background: rgba(79, 157, 114, 0.06);
-  border-left: 3px solid #4f9d72;
-  padding: 15px;
-  border-radius: 0 12px 12px 0;
-  margin: 10px 0 20px 0;
+  background-color: rgba(127, 174, 145, 0.07);
+  border-left: 4px solid #7fae91;
+  padding: 16px 20px;
+  border-radius: 4px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
-.project-info-box .funding {
-  font-size: 0.88rem;
-  color: #2c4e39;
-  line-height: 1.5;
+.funding {
+  font-size: 0.92rem;
+  color: #1e3a2f;
+  line-height: 1.6;
   display: block;
-  font-weight: 500;
 }
 
-/* --- TRATAMIENTO DE IMÁGENES Y LOGOS COFINANCIADORES DENTRO DE LAS TARJETAS --- */
-.project-card .project-img {
-  width: auto;
-  max-width: 100%;
-  height: auto;
-  max-height: 65px; /* Altura máxima restrictiva para que los logos no deformen la tarjeta */
-  object-fit: contain; /* Evita cualquier tipo de deformación */
-  margin-top: auto; /* Empuja las imágenes al fondo de la tarjeta de forma simétrica */
-  margin-bottom: 8px;
-  padding-top: 15px;
-  background: transparent;
-  filter: grayscale(10%) contrast(98%);
-  mix-blend-mode: multiply; /* Hace transparente el fondo blanco típico de los logotipos institucionales */
-  align-self: center; /* Centra los logos en el eje horizontal de la tarjeta */
+/* --- CONTROL DE IMÁGENES Y LOGOS (Evita tamaños gigantes) --- */
+.project-image {
+  display: inline-block;
+  height: 45px;          /* Altura fija perfecta para homogeneizar todos los logos */
+  width: auto;           /* Mantiene la proporción horizontal original sin deformar */
+  max-width: 100%;       /* Garantiza que ningún cartel rompa el diseño */
+  object-fit: contain;   /* Ajuste limpio dentro del espacio contenedor */
+  margin-right: 15px;    /* Separación entre logos contiguos */
+  margin-top: 15px;      /* Separación del bloque de texto superior */
+  vertical-align: middle;
+  
+  /* Filtro sutil para homogeneizar los colores institucionales */
+  filter: grayscale(15%) opacity(0.9);
+  transition: filter 0.3s ease;
 }
 
-/* Si hay más de una imagen seguida dentro de la tarjeta, les da espaciado correcto */
-.project-card .project-img + .project-img {
-  margin-top: 5px;
-  padding-top: 5px;
+.project-image:hover {
+  filter: grayscale(0%) opacity(1); /* Color original al pasar el ratón */
 }
 
-/* Caso especial: Para capturas de pantalla o posters grandes (ej. EPISOST o capturas VISTA) */
-.project-card .project-img[src*="Poster"],
-.project-card .project-img[src*="Captura"],
-.project-card .project-img[src*="miniassist.png"] {
-  width: 100%;
-  max-height: 180px;
-  object-fit: cover;
-  border-radius: 12px;
-  margin-top: auto;
-  padding-top: 15px;
-  mix-blend-mode: normal;
-  filter: none;
+/* --- RESPONSIVE ADAPTATION --- */
+@media (max-width: 600px) {
+  .project-card {
+    padding: 25px;
+  }
+  
+  .projects-title {
+    font-size: 2rem;
+  }
 }
 
-/* Ajustes Responsive */
-@media (max-width: 768px) {
-  .projects-container { padding: 60px 15px; }
-  .projects-title { font-size: 2.2rem; }
-  .projects-grid { grid-template-columns: 1fr; gap: 20px; }
-  .project-card { padding: 22px; }
-  .projects-header .project-img { height: 45px; }
+.project-card .project-image.image-large {
+  height: 120px;          
+  margin-left: auto;     
+  margin-right: auto;    
+  display: block;        
+  filter: none;          
+  opacity: 1;            
+}
+@media (max-width: 400px) {
+  .project-card {
+    padding: 20px;
+  }
+  
+  .project-image {
+    height: 38px; /* Un pelín más pequeños en pantallas muy compactas */
+    margin-right: 10px;
+  }
 }

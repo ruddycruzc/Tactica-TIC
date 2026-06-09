@@ -1,10 +1,7 @@
-/* --- SECCIÓN BLOG / PRENSA HIGH-TECH MINIMALISTA --- */
-
 .blog-container {
-  /* Fondo limpio con flujo diagonal idéntico al FAQ */
   background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 50%, #e2e8f0 100%);
   position: relative;
-  padding: 100px 40px;
+  padding: 100px var(--page-margin, 24px);
   font-family: 'Segoe UI', Roboto, -apple-system, sans-serif;
   display: flex;
   justify-content: center;
@@ -13,7 +10,6 @@
   overflow: hidden;
 }
 
-/* Foco de luz verde en la esquina opuesta al FAQ para equilibrar la web */
 .blog-container::before {
   content: "";
   position: absolute;
@@ -27,7 +23,7 @@
 }
 
 .blog-content {
-  max-width: 1200px; /* Más ancho para que quepan bien las 3 columnas */
+  max-width: var(--page-max-width, 1196px);
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -36,7 +32,6 @@
   z-index: 2;
 }
 
-/* Cabecera Editorial */
 .blog-header {
   text-align: center;
   max-width: 700px;
@@ -66,7 +61,6 @@
   font-weight: 400;
 }
 
-/* --- REJILLA DE ARTÍCULOS (GRID) --- */
 .blog-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -74,21 +68,20 @@
   width: 100%;
 }
 
-/* --- TARJETAS EDITORIALES DE CRISTAL --- */
 .blog-card {
   display: flex;
   flex-direction: column;
-  background: rgba(255, 255, 255, 0.3); /* Cristal ultra-transparente */
+  background: rgba(255, 255, 255, 0.3); 
   backdrop-filter: blur(20px) saturate(190%);
   -webkit-backdrop-filter: blur(20px) saturate(190%);
   border: 1px solid rgba(255, 255, 255, 0.5);
-  border-radius: 24px;
+  border-radius: 16px;
   padding: 35px;
   transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   position: relative;
 }
 
-/* Efecto Hover: La tarjeta cobra vida, flota y el borde brilla */
+
 .blog-card:hover {
   transform: translateY(-8px);
   background: rgba(255, 255, 255, 0.65);
@@ -96,16 +89,14 @@
   box-shadow: 0 30px 60px -15px rgba(15, 23, 42, 0.08);
 }
 
-/* Meta-datos (Etiqueta y Fecha) */
 .blog-meta {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 20px;
-  min-height: 28px; /* Evita que salte el diseño si una tarjeta no tiene etiqueta */
+  min-height: 28px; 
 }
 
-/* Distintivo de prensa "Prensa Escrita" */
 .media-badge {
   background-color: rgba(79, 157, 114, 0.12);
   color: #366046;
@@ -123,7 +114,6 @@
   font-weight: 500;
 }
 
-/* Títulos de los artículos */
 .article-title {
   font-size: 1.35rem;
   color: #1e293b;
@@ -137,49 +127,21 @@
   color: #0f172a;
 }
 
-/* Resumen del artículo */
+
 .article-excerpt {
   font-size: 1rem;
   color: #475569;
   line-height: 1.65;
   margin: 0 0 30px 0;
-  /* Si la cita de La Voz es muy larga, esto la equilibra visualmente */
   flex-grow: 1; 
 }
 
-/* Pie de la tarjeta */
 .article-footer {
   display: flex;
   align-items: center;
-  margin-top: auto; /* Empuja el botón siempre abajo del todo aunque el texto varíe */
+  margin-top: auto; 
 }
 
-/* Enlace interactivo "Leer artículo completo" */
-.read-more-btn {
-  color: #4f9d72;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 0.95rem;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  transition: color 0.3s ease;
-}
-
-.read-more-btn .arrow {
-  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-/* Animación del botón al pasar por encima de la tarjeta */
-.blog-card:hover .read-more-btn {
-  color: #366046;
-}
-
-.blog-card:hover .read-more-btn .arrow {
-  transform: translateX(6px); /* La flecha se mueve hacia el lado elegantemente */
-}
-
-/* Marcador tecnológico invisible en el código trasero de cada tarjeta */
 .blog-card::after {
   content: "</>";
   position: absolute;
@@ -190,32 +152,29 @@
   color: #4f9d72;
   opacity: 0.15;
 }
-/* --- EFECTO DESPLEGABLE INTELIGENTE --- */
 
 .article-excerpt {
   display: -webkit-box;
-  -webkit-line-clamp: 4; /* Número de líneas visibles por defecto */
+  -webkit-line-clamp: 4; 
   -webkit-box-orient: vertical;  
   overflow: hidden;
   text-overflow: ellipsis;
   transition: max-height 0.5s ease;
-  max-height: 100px; /* Altura estimada para 4 líneas */
+  max-height: 100px; 
 }
 
-/* Cuando la tarjeta esté expandida, rompemos el límite para que se muestre todo */
 .blog-card.is-expanded .article-excerpt {
   display: block;
   -webkit-line-clamp: none;
-  max-height: 1000px; /* Un límite muy alto para que se abra suave */
+  max-height: 1000px; 
 }
 
-/* Botón interactivo interno para simular el "Leer más" de forma escolar */
 .toggle-text-btn {
   background: none;
   border: none;
-  color: #4f9d72;
+  color: var(--color-secondary, #557962);
   font-size: 0.85rem;
-  font-weight: 700;
+  font-weight: var(--button-font-weight, 400);
   padding: 0;
   margin-top: 10px;
   cursor: pointer;
@@ -225,12 +184,21 @@
 }
 
 .toggle-text-btn:hover {
-  color: #366046;
-  text-decoration: underline;
+  color: var(--color-primary, #7bb28d);
+  text-decoration: none;
 }
-/* Adaptación para pantallas pequeñas (móviles y tablets) */
+.blog-placeholder {
+  width: 100%;
+  max-width: 100%;
+  height: 300px; 
+  object-fit: cover;
+  border-radius: 16px; 
+  border: 1px solid rgba(15, 29, 58, 0.06);
+  margin-top: 15px;
+}
+
 @media (max-width: 768px) {
-  .blog-container { padding: 80px 20px; }
+  .blog-container { padding: 80px var(--page-margin, 24px); }
   .blog-title { font-size: 2.3rem; }
   .blog-grid { grid-template-columns: 1fr; gap: 20px; }
   .blog-card { padding: 25px; }

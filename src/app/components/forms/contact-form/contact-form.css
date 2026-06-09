@@ -1,10 +1,8 @@
-/* ==========================================
-   SECCIÓN CONTACTO EDITORIAL MÍNIMALISTA
-   ========================================== */
+
 
 .contact-container {
   background-color: #f9f9f9; /* Fondo gris claro limpio */
-  padding: 100px 60px;
+  padding: 100px var(--page-margin, 24px);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -14,7 +12,7 @@
 }
 
 .contact-content {
-  max-width: 1200px;
+  max-width: var(--page-max-width, 1196px);
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -22,7 +20,7 @@
   gap: 80px;
 }
 
-/* --- COLUMNA IZQUIERDA --- */
+
 .contact-info {
   flex: 1;
   display: flex;
@@ -99,7 +97,7 @@
   color: #333333;
 }
 
-/* --- COLUMNA DERECHA: TARJETA FORMULARIO --- */
+
 .contact-card {
   flex: 1;
   background: #ffffff;
@@ -164,28 +162,10 @@
   border-color: #71a987; /* Se ilumina en verde al pinchar */
 }
 
-/* Botón de envío verde */
-.submit-btn {
-  background-color: #71a987;
-  color: #ffffff;
-  border: none;
-  padding: 16px;
-  font-size: 1rem;
-  font-weight: 600;
-  border-radius: 30px;
-  cursor: pointer;
-  transition: background-color 0.2s ease;
-  width: 100%;
-  margin-top: 5px;
-}
-
-.submit-btn:hover {
-  background-color: #5d9272;
-}
 
 /* --- RESPONSIVE --- */
 @media (max-width: 968px) {
-  .contact-container { padding: 60px 30px; }
+  .contact-container { padding: 60px var(--page-margin, 24px); }
   .contact-content { flex-direction: column; gap: 50px; }
   .contact-title { font-size: 2.8rem; }
   .contact-card { padding: 30px; }

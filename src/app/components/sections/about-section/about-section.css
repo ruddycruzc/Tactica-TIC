@@ -1,157 +1,196 @@
-/* --- SECCIÓN ABOUT US (ESTILO EDITORIAL ASIMÉTRICO) --- */
+.about-section {
+  position: relative;
+  padding: 80px 0;
+  background-color: #f8f9fa; 
+  overflow: hidden;
+  font-family: sans-serif; 
+}
+
+.about-bg-lines {
+  position: absolute;
+  top: 5%;
+  left: 0;
+  width: 100%;
+  opacity: 0.25; 
+  pointer-events: none; 
+  z-index: 1;
+}
+
+.about-bg-lines img {
+  width: 100%;
+  height: auto;
+  max-height: 500px; 
+  object-fit: cover;
+}
 
 .about-container {
-  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 50%, #e2e8f0 100%);
-  padding: 120px 40px;
-  font-family: 'Segoe UI', Roboto, -apple-system, sans-serif;
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  box-sizing: border-box;
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  z-index: 2; 
 }
 
-.about-content {
-  max-width: 1100px; /* Un poco más estrecho para forzar el look de revista limpia */
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 80px;
-}
-
-/* Distribución de Filas (Asimetría pura de la captura) */
 .about-row {
   display: flex;
-  width: 100%;
-  gap: 5%;
+  gap: 40px;
+  margin-bottom: 40px;
+  align-items: flex-start;
 }
 
-/* Columna Izquierda: Títulos colgados */
 .about-left {
-  width: 30%;
-  flex-shrink: 0;
+  flex: 0 0 30%; 
 }
 
-/* Columna Derecha: Contenido */
 .about-right {
-  width: 65%;
-  display: flex;
-  flex-direction: column;
-  gap: 35px;
+  flex: 0 0 70%;
 }
 
-/* --- ESTILOS DE TEXTO --- */
+
 .section-side-title {
-  font-size: 3.2rem;
-  color: #0f172a;
+  font-size: 2.8rem;
+  color: #0f1d3a; 
   font-weight: 800;
   line-height: 1.1;
-  letter-spacing: -2px;
   margin: 0;
-  position: sticky; /* Se queda fijo si se hace scroll por su bloque */
-  top: 40px;
 }
 
-.section-side-title.uppercase {
-  text-transform: uppercase;
+.text-green {
+  color: #7fae91; 
+  font-weight: 800; 
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.45); 
+  backdrop-filter: blur(12px); 
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 24px;
+  padding: 40px;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.03);
 }
 
 .subsection-title {
-  font-size: 1.6rem;
-  color: #0f172a;
+  font-size: 1.5rem;
+  color: #0f1d3a;
+  margin-top: 0;
+  margin-bottom: 20px;
   font-weight: 700;
-  margin: 0 0 25px 0;
-  padding-bottom: 12px;
-  border-bottom: 1px solid rgba(15, 23, 42, 0.08); /* Línea fina de la captura */
-}
-
-.subsection-title.inline-title {
-  border-bottom: none;
-  margin: 20px 0 10px 0;
 }
 
 .about-text {
   font-size: 1.05rem;
   color: #334155;
-  line-height: 1.75;
+  line-height: 1.7;
   margin-bottom: 20px;
-  text-align: justify;
 }
 
-.about-text em {
-  font-style: italic;
-  color: #4f9d72; /* Destacamos el saber hacer en verde */
-  font-weight: 600;
-}
-
-/* Bloques internos de Misión y Visión */
-.mv-block {
-  margin-bottom: 50px;
-}
-
-.mv-block:last-child {
+.about-text:last-child {
   margin-bottom: 0;
 }
 
-/* --- TRATAMIENTO DE IMÁGENES PRESTIGE --- */
-.about-image-container {
-  width: 100%;
-  overflow: hidden;
-  border-radius: 16px; /* Esquinas suavizadas high-tech */
-  box-shadow: 0 20px 40px -15px rgba(15, 23, 42, 0.1);
-  background: #cbd5e1;
+
+.highlight-text {
+  color: #2b7a56; 
+  font-style: normal;
+  font-weight: 600;
+  background-color: rgba(43, 122, 86, 0.1);
+  padding: 2px 6px;
+  border-radius: 4px;
 }
 
-/* Imagen horizontal grande tipo banner (Bloque Quiénes Somos) */
-.about-image-container.banner-img {
-  margin-top: 20px;
-  height: 280px;
+
+.about-divider {
+  border: 0;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.08);
+  margin: 60px 0;
 }
 
-/* Imágenes internas de Misión y Visión */
-.about-image-container.inline-img {
-  height: 220px;
+
+.mv-cards-container {
+  display: flex;
+  gap: 24px;
+}
+
+.mv-card {
+  flex: 1;
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 30px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(0, 0, 0, 0.02);
+  transition: transform 0.3s ease;
+}
+
+.mv-card:hover {
+  transform: translateY(-5px);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin-bottom: 15px;
 }
 
-.about-img {
+.card-header .subsection-title {
+  margin: 0;
+}
+
+.card-icon {
+  font-size: 1.5rem;
+}
+
+.about-section {
+  position: relative;
+  padding: 80px 0;
+  overflow: hidden;
+  font-family: sans-serif;
+}
+
+
+.about-bg-lines {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Recorte perfecto automático */
-  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  opacity: 0.4; 
+  pointer-events: none;
+  z-index: 1; 
 }
 
-/* Efecto interactivo premium al pasar el ratón por las imágenes */
-.about-image-container:hover .about-img {
-  transform: scale(1.04);
+.about-bg-lines img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
 }
 
-/* Línea divisoria elegante entre secciones */
-.about-divider {
-  border: none;
-  height: 1px;
-  background: linear-gradient(to right, rgba(15, 23, 42, 0.08) 70%, transparent);
-  margin: 20px 0;
+.about-container {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  z-index: 5; 
 }
 
-/* --- ADAPTACIÓN ULTRA RESPONSIVE --- */
-@media (max-width: 900px) {
-  .about-container {
-    padding: 60px 20px;
-  }
+@media (max-width: 768px) {
   .about-row {
     flex-direction: column;
-    gap: 30px;
+    gap: 20px;
   }
-  .about-left, .about-right {
-    width: 100%;
+  
+  .glass-card {
+    padding: 24px;
   }
+  
+  .mv-cards-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
   .section-side-title {
-    font-size: 2.5rem;
-    position: static;
-    margin-bottom: 10px;
-  }
-  .about-image-container.banner-img,
-  .about-image-container.inline-img {
-    height: 200px;
+    font-size: 2.2rem;
   }
 }

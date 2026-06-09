@@ -1,36 +1,57 @@
-<link rel="stylesheet" href="./hero.css">
-<section class="hero-container">
-  
+<section
+  class="hero-container"
+  [class.hero-container--active]="isPointerActive"
+  [style.--hero-x.%]="cursorX"
+  [style.--hero-y.%]="cursorY"
+  (pointermove)="onPointerMove($event)"
+  (pointerleave)="onPointerLeave()"
+>
+  <div class="hero-wave" aria-hidden="true">
+    <svg class="hero-wave__svg hero-wave__svg--base" viewBox="0 0 1200 360" preserveAspectRatio="none">
+      @for (path of wavePaths; track path) {
+        <path [attr.d]="path"></path>
+      }
+    </svg>
 
+    <svg class="hero-wave__svg hero-wave__svg--focus" viewBox="0 0 1200 360" preserveAspectRatio="none">
+      @for (path of wavePaths; track path) {
+        <path [attr.d]="path"></path>
+      }
+    </svg>
+  </div>
 
-<video #miVideo class="hero-video" autoplay loop muted playsinline webkit-playsinline (canplay)="miVideo.play()">
-  <source src="../../../../assets/Videos/Video.mp4" type="video/mp4">
-</video>
-
-  <div class="hero-overlay"></div>
-
-  
   <div class="hero-content">
+
     <div class="hero-left">
+
       <h1 class="hero-title">
-        Tecnología que <br>
-        <span class="highlight-green">evoluciona</span> contigo
+        {{ 'HOME.HERO.TITLE_LINE_1' | translate }}
+        <br>
+        <span class="highlight-green">
+          {{ 'HOME.HERO.TITLE_HIGHLIGHT' | translate }}
+        </span>
+        {{ 'HOME.HERO.TITLE_LINE_2' | translate }}
       </h1>
+
     </div>
 
     <div class="hero-right">
+
       <p class="hero-description">
-        Combinamos tecnología, automatización y estrategia digital para ayudarte a optimizar procesos, conectar herramientas y hacer crecer tu negocio de forma inteligente y progresiva.
+        {{ 'HOME.HERO.DESCRIPTION' | translate }}
       </p>
+
       <div class="hero-buttons">
-        <a routerLink="/about" class="btn-primary">
+        <app-button variant="primary" routerLink="/about">
           Conócenos <span class="arrow">→</span>
-        </a>
-        <a routerLink="/projects" class="btn-secondary">
+        </app-button>
+        <app-button variant="secondary" routerLink="/projects">
           Nuestra visión <span class="arrow">→</span>
-        </a>
+        </app-button>
       </div>
+
     </div>
+
   </div>
 
 </section>

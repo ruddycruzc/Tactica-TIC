@@ -1,186 +1,112 @@
-
-/* ==========================================
-   NUEVO COMPONENTE: SOCIAL HUB DE DISEÑO LINEAL
-   ========================================== */
-
 .hub-container {
-  background-color: #f8fafc;
-  padding: 90px 40px;
+  padding: 80px 20px;
+  background-color: #f8f9fa; 
+  position: relative; 
+  overflow: hidden; 
+  font-family: sans-serif;
+}
+
+.hub-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  display: flex;
-  justify-content: center;
-  box-sizing: border-box;
-  font-family: 'Segoe UI', Roboto, sans-serif;
+  height: 100%;
+  background-image: url('/assets/images/lineas.png'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.1;
+  z-index: 1; 
 }
 
 .hub-wrapper {
   max-width: 1100px;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 50px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2; 
 }
 
-/* --- CABECERA --- */
 .hub-header {
+  text-align: center;
+  margin-bottom: 50px;
   max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .hub-tag {
   display: inline-block;
-  background-color: rgba(123, 178, 141, 0.12);
-  color: #557962;
+  background-color: rgba(127, 174, 145, 0.12);
+  color: #7fae91;
+  padding: 6px 14px;
+  border-radius: 20px;
   font-size: 0.85rem;
-  font-weight: 700;
+  font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 1px;
-  padding: 6px 16px;
-  border-radius: 50px; /* Estilo píldora como tus botones */
-  margin-bottom: 16px;
+  margin-bottom: 15px;
+  letter-spacing: 0.5px;
 }
 
 .hub-title {
-  font-size: 2.8rem;
-  color: #0f172a;
+  font-size: 2.5rem;
+  color: #0f1d3a;
   font-weight: 800;
-  line-height: 1.2;
-  letter-spacing: -1px;
-  margin: 0 0 16px 0;
+  margin-top: 0;
+  margin-bottom: 15px;
 }
 
 .text-green {
-  color: #7bb28d;
+  color: #7fae91;
 }
 
 .hub-description {
-  font-size: 1.1rem;
+  font-size: 1.05rem;
+  color: #64748b;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.hub-row {
+  display: flex;
+  gap: 30px;
+}
+
+.hub-item {
+  flex: 1;
+  background: #ffffff;
+  border: 1px solid rgba(15, 29, 58, 0.06);
+  border-radius: 16px;
+  padding: 35px;
+  box-shadow: 0 4px 20px rgba(15, 29, 58, 0.01);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.hub-text-group h3 {
+  font-size: 1.3rem;
+  color: #0f1d3a;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.hub-text-group p {
+  font-size: 0.98rem;
   color: #475569;
   line-height: 1.6;
   margin: 0;
 }
 
-/* --- FILA DE COMPONENTES --- */
-.hub-row {
-  display: flex;
-  flex-direction: column;
-  gap: 20px; /* Van apilados en filas horizontales elegantes */
-  width: 100%;
-}
 
-.hub-item {
-  background-color: #ffffff;
-  border: 1px solid #e2e8f0;
-  border-radius: 24px;
-  padding: 24px 35px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between; /* El texto a la izquierda, el botón a la derecha */
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 6px -1px rgba(15, 23, 42, 0.02);
-}
-
-.hub-item:hover {
-  border-color: #7bb28d;
-  transform: translateX(6px); /* Efecto sutil de desplazamiento hacia la derecha en vez de flotar hacia arriba */
-  box-shadow: 0 12px 20px -8px rgba(15, 23, 42, 0.05);
-}
-
-/* Organización interna izquierda */
-.hub-meta {
-  display: flex;
-  align-items: center;
-  gap: 24px;
-}
-
-.hub-badge-icon {
-  width: 54px;
-  height: 54px;
-  border-radius: 16px;
-  background-color: #f1f5f9;
-  font-size: 1.6rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-}
-
-.hub-text-group {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-
-.hub-text-group h3 {
-  font-size: 1.3rem;
-  color: #0f172a;
-  font-weight: 700;
-  margin: 0;
-}
-
-.hub-text-group p {
-  font-size: 0.95rem;
-  color: #64748b;
-  margin: 0;
-}
-
-/* --- BOTONES ESTILO PÍLDORA (Basados en tus capturas) --- */
-.hub-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  padding: 14px 28px;
-  font-size: 0.95rem;
-  font-weight: 600;
-  text-decoration: none;
-  border-radius: 100px; /* Píldoras perfectas */
-  transition: all 0.25s ease;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-}
-
-.btn-linkedin {
-  background-color: #7bb28d; /* Verde corporativo primario */
-  color: #ffffff;
-}
-
-.btn-linkedin:hover {
-  background-color: #557962; /* Tu variante de verde oscuro */
-}
-
-.btn-instagram {
-  background-color: #ffffff;
-  color: #0f172a;
-  border: 1px solid #cbd5e1;
-}
-
-.btn-instagram:hover {
-  background-color: #0f172a;
-  color: #ffffff;
-  border-color: #0f172a;
-}
-
-.arrow {
-  transition: transform 0.2s ease;
-}
-
-.hub-btn:hover .arrow {
-  transform: translateX(4px);
-}
-
-/* --- RESPONSIVE --- */
 @media (max-width: 768px) {
-  .hub-item {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 20px;
-    padding: 24px;
-  }
-  
-  .hub-btn {
-    width: 100%;
-    justify-content: center;
+  .hub-row {
+    flex-direction: column; /* Se apilan en móvil */
   }
   
   .hub-title {
-    font-size: 2.2rem;
+    font-size: 2rem;
   }
 }

@@ -1,15 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
 @import 'tailwindcss';
-
-:root {
-	font-family: 'Inter', sans-serif;
-}
+@import './app/styles/design-system.css';
 
 html,
 body {
 	min-height: 100%;
-	font-family: 'Inter', sans-serif;
+	font-family: var(--font-family-base);
 	margin: 0;
 	overflow-x: hidden;
 }
