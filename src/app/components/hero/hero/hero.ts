@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { AppButtonComponent } from '../../buttons/app-button/app-button.component';
 import { TranslateModule } from '@ngx-translate/core';
+import { HeroContent } from '../../../interfaces/hero-content.interface';
 
 @Component({
   selector: 'app-hero',
@@ -10,6 +11,16 @@ import { TranslateModule } from '@ngx-translate/core';
   styleUrl: './hero.css',
 })
 export class Hero {
+
+readonly heroContent: HeroContent = {   //EL contenido modificable se encuentra en: translations/es/home.es.ts
+  titleLine1: 'HOME.HERO.TITLE_LINE_1',
+  titleHighlight: 'HOME.HERO.TITLE_HIGHLIGHT',
+  titleLine2: 'HOME.HERO.TITLE_LINE_2',
+  description: 'HOME.HERO.DESCRIPTION',
+  aboutButton: 'HOME.HERO.ABOUT_BUTTON',
+  visionButton: 'HOME.HERO.VISION_BUTTON'
+};
+
   readonly wavePaths = Array.from({ length: 38 }, (_, index) => {
     const y = 58 + index * 5.6;
     const lift = index - 18.5;
