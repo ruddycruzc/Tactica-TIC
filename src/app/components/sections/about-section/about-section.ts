@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 
 import { TranslateModule } from '@ngx-translate/core';
 
+
 import { AboutContent } from '../../../interfaces/about-section.interface';
 import { MissionVisionCard } from '../../../interfaces/mission-vision-card.interface';
 

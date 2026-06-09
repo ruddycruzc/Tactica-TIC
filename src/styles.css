@@ -1,31 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
 @import 'tailwindcss';
-
-:root {
-	font-family: 'Inter', sans-serif;
-	--page-max-width: 1196px;
-	--page-gutter: clamp(24px, 9.3vw, 136px);
-	--page-margin: max(var(--page-gutter), calc((100vw - var(--page-max-width)) / 2));
-	--grid-gap: 24px;
-	--color-primary: #7bb28d;
-	--color-secondary: #557962;
-	--color-tertiary: #e2ede5;
-	--button-text: #0f172a;
-	--button-text-inverse: #ffffff;
-	--button-height: 56px;
-	--button-padding-x: 26px;
-	--button-gap: 10px;
-	--button-radius: 999px;
-	--button-font-size: 1rem;
-	--button-font-weight: 400;
-	--button-border-width: 2px;
-}
+@import './app/styles/design-system.css';
 
 html,
 body {
 	min-height: 100%;
-	font-family: 'Inter', sans-serif;
+	font-family: var(--font-family-base);
 	margin: 0;
 	overflow-x: hidden;
 }

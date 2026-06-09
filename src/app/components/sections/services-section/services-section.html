@@ -1,7 +1,6 @@
-<link rel="stylesheet" href="./services-section.css">
+<link rel="stylesheet" href="./services-section.css"> 
 <section class="services-container">
   <div class="services-content">
-    
     
     <div class="services-header">
       <h2 class="services-title">Nuestras <span class="highlight-green">Áreas de Trabajo</span></h2>
@@ -11,49 +10,15 @@
     </div>
 
     <div class="services-grid">
-      
-      <!-- SERVICIO 1-->
-      <div class="service-card">
+      <!-- Bucle dinámico -->
+      <div class="service-card" *ngFor="let srv of services">
         <div class="service-icon"></div>
-        <h3>Ingeniería de Software</h3>
-        <p class="service-description">
-          Construcción y desarrollo de sistemas de software propios, claros y eficientes. Soluciones robustas diseñadas con rigor técnico y centradas en el factor humano.
-        </p>
+        <h3>{{ srv.title }}</h3>
+        <p class="service-description">{{ srv.description }}</p>
         <ul class="service-features">
-          <li>Desarrollo de Sistemas Propios</li>
-          <li>Arquitecturas Robustas y Limpias</li>
-          <li>Centralización y Control Digital</li>
+          <li *ngFor="let feat of srv.features">{{ feat }}</li>
         </ul>
       </div>
-
-      <!-- SERVICIO 2 -->
-      <div class="service-card">
-        <div class="service-icon"></div>
-        <h3>Consultoría Tecnológica</h3>
-        <p class="service-description">
-          Asesoramiento estratégico para optimizar los recursos internos, mejorando la competitividad en el mercado técnico y reduciendo la dependencia de terceros.
-        </p>
-        <ul class="service-features">
-          <li>Estrategia y Diagnóstico Digital</li>
-          <li>Optimización de Infraestructura</li>
-          <li>Independencia Tecnológica</li>
-        </ul>
-      </div>
-
-      <!-- SERVICIO 3-->
-      <div class="service-card">
-        <div class="service-icon"></div>
-        <h3>Estrategia y Crecimiento</h3>
-        <p class="service-description">
-          Impulso de la marca a través de la transparencia pública y la cultura corporativa, facilitando la atracción de talento cualificado y la confianza de inversores.
-        </p>
-        <ul class="service-features">
-          <li>Promoción y Crecimiento Orgánico</li>
-          <li>Fomento de la Identidad Corporativa</li>
-          <li>Atracción de Talento Cualificado</li>
-        </ul>
-      </div>
-
     </div>
 
   </div>

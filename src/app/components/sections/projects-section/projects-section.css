@@ -1,3 +1,7 @@
+/* ==========================================================================
+   SECCIÓN DE PROYECTOS (ESTILO FEED VERTICAL CON LOGOS CONTROLADOS)
+   ========================================================================== */
+
 .projects-container {
   padding: 60px 20px;
   background-color: #f8f9fa; 
@@ -9,6 +13,7 @@
   margin: 0 auto;
 }
 
+/* --- CABECERA DE LA SECCIÓN --- */
 .projects-header {
   text-align: center;
   margin-bottom: 50px;
@@ -32,12 +37,20 @@
   margin: 0;
 }
 
+/* Control para los logos de la cabecera general */
+.projects-header .project-image {
+  height: 55px;
+  margin: 20px 12px 0 12px;
+}
+
+/* --- CONTENEDOR DE TARJETAS --- */
 .projects-grid {
   display: flex;
   flex-direction: column;
   gap: 35px; 
 }
 
+/* --- TARJETA DE PROYECTO INDIVIDUAL --- */
 .project-card {
   background: #ffffff;
   border: 1px solid rgba(15, 29, 58, 0.06);
@@ -45,6 +58,10 @@
   padding: 40px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.01);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+  /* Forzamos comportamiento flex interno para empujar los logos abajo */
+  display: flex;
+  flex-direction: column;
 }
 
 .project-card:hover {
@@ -55,7 +72,7 @@
 
 .project-name {
   font-size: 1.35rem;
-  color: #7fae91; 
+  color: #7fae91; /* Tus títulos verdes corporativos */
   font-weight: 700;
   line-height: 1.4;
   margin-top: 0;
@@ -66,16 +83,20 @@
   letter-spacing: 0.5px;
 }
 
+/* --- TEXTOS, LISTAS Y CAJAS --- */
 .project-card p, 
 .project-text {
   font-size: 0.98rem;
   color: #334155;
   line-height: 1.7;
   margin-top: 0;
-  margin-bottom: 16px;
+  margin-bottom: 20px; /* Margen unificado para que respire antes de los logos */
 }
 
-.project-card p:last-child {
+/* Evitamos que el último elemento de texto choque si no hay imágenes */
+.project-card p:last-child,
+.project-list:last-child,
+.project-info-box:last-child {
   margin-bottom: 0;
 }
 
@@ -99,7 +120,7 @@
   padding: 16px 20px;
   border-radius: 4px;
   margin-top: 20px;
-  margin-bottom: 0;
+  margin-bottom: 20px;
 }
 
 .funding {
@@ -109,6 +130,27 @@
   display: block;
 }
 
+/* --- CONTROL DE IMÁGENES Y LOGOS (Evita tamaños gigantes) --- */
+.project-image {
+  display: inline-block;
+  height: 45px;          /* Altura fija perfecta para homogeneizar todos los logos */
+  width: auto;           /* Mantiene la proporción horizontal original sin deformar */
+  max-width: 100%;       /* Garantiza que ningún cartel rompa el diseño */
+  object-fit: contain;   /* Ajuste limpio dentro del espacio contenedor */
+  margin-right: 15px;    /* Separación entre logos contiguos */
+  margin-top: 15px;      /* Separación del bloque de texto superior */
+  vertical-align: middle;
+  
+  /* Filtro sutil para homogeneizar los colores institucionales */
+  filter: grayscale(15%) opacity(0.9);
+  transition: filter 0.3s ease;
+}
+
+.project-image:hover {
+  filter: grayscale(0%) opacity(1); /* Color original al pasar el ratón */
+}
+
+/* --- RESPONSIVE ADAPTATION --- */
 @media (max-width: 600px) {
   .project-card {
     padding: 25px;
@@ -118,16 +160,22 @@
     font-size: 2rem;
   }
 }
+
+.project-card .project-image.image-large {
+  height: 120px;          
+  margin-left: auto;     
+  margin-right: auto;    
+  display: block;        
+  filter: none;          
+  opacity: 1;            
+}
 @media (max-width: 400px) {
-  .projects-grid {
-    grid-template-columns: 1fr; 
-  }
-  
   .project-card {
     padding: 20px;
   }
   
-  .projects-title {
-    font-size: 2rem;
+  .project-image {
+    height: 38px; /* Un pelín más pequeños en pantallas muy compactas */
+    margin-right: 10px;
   }
 }
