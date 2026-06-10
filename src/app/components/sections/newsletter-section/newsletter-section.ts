@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NgFor } from '@angular/common';
-import { AppButtonComponent } from '../../buttons/app-button/app-button.component';
+import { AppButtonComponent } from '../../ui/buttons/app-button/app-button.component';
 import { HubItem } from '../../../interfaces/newsletter-section.interface';
 
 @Component({

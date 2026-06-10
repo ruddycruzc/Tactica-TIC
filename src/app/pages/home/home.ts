@@ -5,8 +5,8 @@ import { InfoRightImage } from '../../components/info-blocks/info-right-image/in
 import { ContactForm } from '../../components/forms/contact-form/contact-form';
 import { VideoHero } from '../../components/hero/video-hero/video-hero';
 import { CaseStudiesSection } from "../../components/sections/case-studies-section/case-studies-section";
-import { CardsCarousel } from '../../components/carousel/cards-carousel/cards-carousel';
-import { LogosCarousel } from "../../components/carousel/logos-carousel/logos-carousel";
+import { CardsCarousel } from '../../components/ui/carousel/cards-carousel/cards-carousel';
+import { LogosCarousel } from '../../components/ui/carousel/logos-carousel/logos-carousel';
 import { FaqSection } from '../../components/sections/faq-section/faq-section';
 
 @Component({

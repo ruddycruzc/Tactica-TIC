@@ -5,8 +5,8 @@ import { TranslateModule } from '@ngx-translate/core';
 
 
 import { NavItem } from '../../../interfaces/nav-item.interface';
-import { TranslationService } from '../../../services/translation-service/translation';
-import { AppButtonComponent } from '../../buttons/app-button/app-button.component';
+import { TranslationService } from '../../../services/translation-service/translation.service';
+import { AppButtonComponent } from '../../ui/buttons/app-button/app-button.component';
 
 @Component({
   selector: 'app-navbar',

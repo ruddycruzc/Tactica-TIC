@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NewsletterSection } from '../../components/sections/newslestter-section/newsletter-section';
+import { NewsletterSection } from '../../components/sections/newsletter-section/newsletter-section';
 import { ContactForm } from '../../components/forms/contact-form/contact-form';
 
 

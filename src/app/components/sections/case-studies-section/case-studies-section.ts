@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 import { TranslateModule } from '@ngx-translate/core';
 
-import { AppButtonComponent } from '../../buttons/app-button/app-button.component';
+import { AppButtonComponent } from '../../ui/buttons/app-button/app-button.component';
 
 import { CaseStudy } from '../../../interfaces/case-study.interface';
 import { CaseStudiesContent } from '../../../interfaces/case-studies-content.interface';

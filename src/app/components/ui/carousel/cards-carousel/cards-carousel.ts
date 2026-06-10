@@ -10,10 +10,8 @@ import { TranslateModule } from '@ngx-translate/core';
 
 import { ImageCard } from '../../cards/image-card/image-card';
 import { AppButtonComponent } from '../../buttons/app-button/app-button.component';
-
-import { TeamCard } from '../../../interfaces/team-card.interface';
-import { TeamCarouselContent } from '../../../interfaces/team-carousel-content.interface';
-
+import { TeamCard } from '../../../../interfaces/team-card.interface';
+import { TeamCarouselContent } from '../../../../interfaces/team-carousel-content.interface';
 @Component({
   selector: 'app-cards-carousel',
   standalone: true,

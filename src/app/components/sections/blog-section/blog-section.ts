@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { AppButtonComponent } from '../../buttons/app-button/app-button.component';
+import { AppButtonComponent } from '../../ui/buttons/app-button/app-button.component';
 import { BlogPost } from '../../../interfaces/blog-section.interface';
 
 @Component({
