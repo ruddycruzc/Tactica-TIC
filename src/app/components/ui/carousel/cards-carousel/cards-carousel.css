@@ -60,7 +60,7 @@
   scroll-snap-type: x mandatory;
   padding: 8px 0 24px;
   cursor: grab;
-  touch-action: pan-y;
+  touch-action: auto;
 }
 
 .cards-carousel__viewport:active {
@@ -123,9 +123,10 @@
 
   .cards-carousel__track {
     gap: var(--cards-gap);
+     padding-inline: 2rem;
   }
 
   .cards-carousel__slide {
-    flex-basis: min(78vw, 340px);
+    flex-basis: min(72vw, 320px);
   }
 }
