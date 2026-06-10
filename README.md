@@ -11,6 +11,31 @@ ng serve
 
 ---
 
+# Tecnologías utilizadas
+
+* Angular (Standalone Components)
+* TypeScript
+* Angular Router
+* ngx-translate
+* Firebase Hosting
+* HTML5
+* CSS3
+
+---
+
+# Características implementadas
+
+* Navegación mediante Angular Router.
+* Arquitectura basada en Standalone Components.
+* Componentes UI reutilizables.
+* Sistema de internacionalización ES/EN.
+* Selector de idioma persistente.
+* Carruseles reutilizables.
+* Diseño responsive.
+* Hosting y despliegue mediante Firebase.
+
+---
+
 # Flujo de trabajo
 
 ## 1. Crear tarea en Jira
@@ -30,8 +55,6 @@ TT-35 Implementar carrusel de logos
 
 ## 2. Actualizar rama de desarrollo
 
-Antes de crear una nueva rama:
-
 ```bash
 git checkout dev
 git pull origin dev
@@ -40,8 +63,6 @@ git pull origin dev
 ---
 
 ## 3. Crear rama de trabajo
-
-Crear una rama asociada a la tarea Jira:
 
 ```bash
 git checkout -b TT-35-logos-carousel
@@ -58,8 +79,6 @@ git checkout -b TT-35-logos-carousel
 ---
 
 ## 4. Desarrollo
-
-Realizar la implementación de la tarea correspondiente.
 
 Antes de guardar cambios ejecutar:
 
@@ -99,35 +118,21 @@ git commit -m "Implement logos carousel"
 
 ## 6. Integrar cambios en dev
 
-Cambiar a la rama de desarrollo:
-
 ```bash
 git checkout dev
-```
-
-Actualizar la rama:
-
-```bash
 git pull origin dev
-```
-
-Fusionar la rama de trabajo:
-
-```bash
 git merge TT-35-logos-carousel
 ```
 
 ---
 
-## 7. Resolver conflictos (si existen)
-
-Comprobar estado:
+## 7. Resolver conflictos
 
 ```bash
 git status
 ```
 
-Resolver manualmente los conflictos y después:
+Resolver conflictos y después:
 
 ```bash
 git add .
@@ -148,16 +153,8 @@ git push origin dev
 
 Una vez validada la integración:
 
-* Marcar la tarea como completada en Jira.
-* Eliminar la rama local.
-
 ```bash
 git branch -d TT-35-logos-carousel
-```
-
-Eliminar la rama remota (si existe):
-
-```bash
 git push origin --delete TT-35-logos-carousel
 ```
 
@@ -169,26 +166,6 @@ Repetir el proceso desde el paso 1.
 
 ---
 
-# Creación de componentes
-
-Crear un componente:
-
-```bash
-ng g c components/nombre-componente
-```
-
-Ejemplos:
-
-```bash
-ng g c components/layout/navbar
-ng g c components/layout/footer
-ng g c components/forms/contact-form
-ng g c components/carousel/logos-carousel
-ng g c pages/home
-```
-
----
-
 # Arquitectura del proyecto
 
 ```text
@@ -197,25 +174,27 @@ src
 │
 │   ├── components
 │   │
-│   │   ├── buttons
-│   │   │   ├── buttonprimary
-│   │   │   ├── buttonsecondary
-│   │   │   └── iconbutton
-│   │   │
-│   │   ├── cards
-│   │   ├── carousel
 │   │   ├── forms
-│   │   ├── grids
+│   │   │   └── contact-form
+│   │   │
 │   │   ├── hero
+│   │   │
 │   │   ├── info-blocks
-│   │   ├── media
 │   │   │
 │   │   ├── layout
 │   │   │   ├── navbar
 │   │   │   ├── body
 │   │   │   └── footer
 │   │   │
-│   │   └── sections
+│   │   ├── media
+│   │   │
+│   │   ├── sections
+│   │   │
+│   │   └── ui
+│   │       ├── buttons
+│   │       ├── cards
+│   │       ├── carousel
+│   │       └── grids
 │   │
 │   ├── interfaces
 │   │
@@ -227,19 +206,20 @@ src
 │   │   ├── home
 │   │   └── projects
 │   │
-│   ├── app.config.ts
-│   ├── app.css
-│   ├── app.html
-│   ├── app.routes.ts
-│   ├── app.spec.ts
-│   └── app.ts
+│   ├── services
+│   │   └── translation-service
+│   │
+│   ├── styles
+│   │
+│   └── translations
+│       ├── pages
+│       └── shared
 │
 ├── assets
 │   ├── images
 │   ├── icons
 │   ├── logos
-│   ├── videos
-│   └── fonts
+│   └── videos
 │
 ├── main.ts
 ├── index.html
@@ -250,22 +230,42 @@ src
 
 # Organización
 
-### Components
+## Components
 
-Contienen todos los componentes reutilizables del proyecto.
+Contienen todos los componentes reutilizables y componentes de negocio del proyecto.
+
+### UI
+
+```text
+components/ui
+```
+
+Contiene componentes genéricos reutilizables:
+
+* Buttons
+* Cards
+* Carousel
+* Grids
+
+### Sections
+
+```text
+components/sections
+```
+
+Contiene secciones completas construidas a partir de componentes UI.
 
 Ejemplos:
 
-* Navbar
-* Footer
-* Cards
-* Carruseles
-* Formularios
-* Secciones reutilizables
+* AboutSection
+* CaseStudiesSection
+* ClientsSection
+* ServicesSection
+* FAQSection
 
 ---
 
-### Interfaces
+## Interfaces
 
 Todas las interfaces compartidas deben almacenarse en:
 
@@ -279,18 +279,16 @@ Ejemplos:
 nav-item.interface.ts
 footer-link.interface.ts
 team-card.interface.ts
-logo-item.interface.ts
+project.interface.ts
 ```
 
 No se deben declarar interfaces reutilizables dentro de los componentes.
 
 ---
 
-### Pages
+## Pages
 
 Contienen las páginas principales asociadas al sistema de rutas.
-
-Ejemplos:
 
 ```text
 Home
@@ -300,6 +298,35 @@ Blog
 Careers
 Contact
 ```
+
+---
+
+## Translations
+
+Las traducciones están organizadas por páginas y recursos compartidos.
+
+```text
+translations
+├── pages
+│   ├── home
+│   ├── about
+│   ├── contact
+│   ├── blog
+│   ├── careers
+│   └── projects
+│
+└── shared
+    ├── nav
+    └── footer
+```
+
+La gestión del idioma se realiza mediante:
+
+```text
+TranslationService
+```
+
+con persistencia del idioma seleccionado.
 
 ---
 
@@ -330,15 +357,12 @@ No se deben utilizar enlaces HTML tradicionales para navegar entre páginas de l
 
 ## Assets
 
-Los recursos estáticos se organizan en:
-
 ```text
 src/assets
 ├── images
 ├── icons
 ├── logos
-├── videos
-└── fonts
+└── videos
 ```
 
 ---
@@ -378,6 +402,22 @@ Home
 
 ---
 
+# Despliegue
+
+Compilar la aplicación:
+
+```bash
+ng build --configuration production
+```
+
+Desplegar en Firebase:
+
+```bash
+firebase deploy
+```
+
+---
+
 # Normas del equipo
 
 * No trabajar directamente sobre `dev`.
@@ -396,6 +436,8 @@ antes de realizar un commit.
 * Mantener las interfaces centralizadas.
 * Mantener componentes reutilizables y desacoplados.
 * Mantener una arquitectura basada en Angular Standalone Components.
+
+Para desarrollo local:
 
 ```bash
 ng serve -o
