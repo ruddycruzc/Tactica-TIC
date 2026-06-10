@@ -16,28 +16,28 @@ import { FaqItem } from '../../../interfaces/faq-item.interface';
 export class FaqSection {
 
   readonly faqContent = {
-    title: 'FAQ.TITLE',
-    titleHighlight: 'FAQ.TITLE_HIGHLIGHT',
-    subtitle: 'FAQ.SUBTITLE'
+    title: 'HOME.FAQ.TITLE',
+    titleHighlight: 'HOME.FAQ.TITLE_HIGHLIGHT',
+    subtitle: 'HOME.FAQ.SUBTITLE'
   };
 
-  readonly faqItems: FaqItem[] = [
+  readonly faqItems: FaqItem[] = [  //para añadir cualquier pregunta mas hay que añadirla en la ruta: src/app/translations/pages/home/home.en.ts ó home.es.ts recordando que tiene que tener su respectiva traduccion 
     {
-      question: 'FAQ.QUESTION_1',
-      answer: 'FAQ.ANSWER_1',
+      question: 'HOME.FAQ.QUESTION_1',
+      answer: 'HOME.FAQ.ANSWER_1',
       isOpen: true
     },
     {
-      question: 'FAQ.QUESTION_2',
-      answer: 'FAQ.ANSWER_2'
+      question: 'HOME.FAQ.QUESTION_2',
+      answer: 'HOME.FAQ.ANSWER_2'
     },
     {
-      question: 'FAQ.QUESTION_3',
-      answer: 'FAQ.ANSWER_3'
+      question: 'HOME.FAQ.QUESTION_3',
+      answer: 'HOME.FAQ.ANSWER_3'
     },
     {
-      question: 'FAQ.QUESTION_4',
-      answer: 'FAQ.ANSWER_4'
+      question: 'HOME.FAQ.QUESTION_4',
+      answer: 'HOME.FAQ.ANSWER_4'
     }
   ];
 

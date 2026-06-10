@@ -1,23 +1,37 @@
 import { Component } from '@angular/core';
-import { NgFor } from '@angular/common'; 
+
 import { TranslateModule } from '@ngx-translate/core';
+
+
+import { AboutContent } from '../../../interfaces/about-section.interface';
+import { MissionVisionCard } from '../../../interfaces/mission-vision-card.interface';
 
 @Component({
   selector: 'app-about-section',
   standalone: true,
-  imports: [TranslateModule, NgFor],
+  imports: [TranslateModule],
   templateUrl: './about-section.html',
   styleUrl: './about-section.css'
 })
-export class AboutSectionComponent {
-  readonly mvCards = [
+export class AboutSection {   //La info modificable está en: src/app/translations/es 
+
+  aboutContent: AboutContent = {
+    historyTitle: 'ABOUT.WHO.HISTORY_TITLE',
+    paragraphs: [
+      'ABOUT.WHO.PARAGRAPH_1',
+      'ABOUT.WHO.PARAGRAPH_2'
+    ]
+  };
+
+  missionVisionCards: MissionVisionCard[] = [
     {
-      title: 'Misión',
-      text: 'Nos negamos a ver el código como algo frío. Cada proyecto social que asumimos busca resolver retos reales y humanos.'
+      title: 'ABOUT.MISSION_VISION.MISSION_TITLE',
+      description: 'ABOUT.MISSION_VISION.MISSION_TEXT'
     },
     {
-      title: 'Visión',
-      text: 'Tratamos cada línea de desarrollo con la responsabilidad moral que merece el impacto comunitario. Garantizamos un software transparente, accesible y con un fin ético claro, celebrando 10 años de tecnología transparente.'
+      title: 'ABOUT.MISSION_VISION.VISION_TITLE',
+      description: 'ABOUT.MISSION_VISION.VISION_TEXT'
     }
   ];
+
 }
