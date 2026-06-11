@@ -1,7 +1,7 @@
 :root {
 	font-family: 'Inter', sans-serif;
 
-	/* Typography */
+	
 	--font-family-base: 'Inter', sans-serif;
 	--font-size-sm: 0.92rem;
 	--font-size-base: 1rem;
@@ -24,7 +24,7 @@
 	--font-weight-extrabold: 800;
 	--font-weight-black: 900;
 
-	/* Layout and spacing */
+	
 	--page-max-width: 74.75rem;
 	--section-padding-x-desktop: 8rem;
 	--section-padding-x-tablet: 4rem;
@@ -40,11 +40,11 @@
 	--container-padding: var(--section-padding-x);
 	--container-padding-lg: var(--section-padding-x-desktop);
 	--page-margin: var(--section-padding-x);
-	--grid-gap: 1.5rem;
+	--grid-gap: 1rem;
 	--section-gap: clamp(4rem, 10vw, 8rem);
-	--title-subtitle-spacing: 2rem;
+	--title-subtitle-spacing: 1rem;
 
-	/* Color palette */
+
 	--color-primary: #87B190;
 	--color-secondary: #5D7864;
 	--color-tertiary: #e2ede5;
@@ -74,26 +74,25 @@
 	--color-border-alpha: rgba(15, 23, 42, 0.08);
 	--color-border-alpha-strong: rgba(15, 23, 42, 0.12);
 
-	/* Radius and shadow */
+	
 	--radius-cards: 1rem;
 	--radius-m: 0.5rem;
 	--shadow-soft: 0 0.25rem 1.25rem rgba(15, 29, 58, 0.01);
 	--shadow-card: 0 1.125rem 2.8125rem rgba(15, 23, 42, 0.08);
 	--shadow-focus: 0 0 0 0.25rem rgba(123, 178, 141, 0.22);
 
-	/* Motion */
+	
 	--transition-base: 260ms ease;
 	--transition-slow: 360ms ease;
 	--transition-card: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 
-	/* Text tokens */
+	
 	--text-heading-color: var(--color-ink);
 	--text-body-color: var(--color-text-soft);
 	--text-highlight-color: var(--color-primary);
 	--text-heading-line-height: var(--line-height-heading);
 	--text-body-line-height: var(--line-height-base);
 
-	/* Card tokens */
 	--card-background: var(--color-card-white);
 	--card-background-hover: var(--color-card-white);
 	--card-border: 0.0625rem solid var(--color-border-alpha);
@@ -104,7 +103,7 @@
 	--card-transition: transform var(--transition-base), border-color var(--transition-base), box-shadow var(--transition-base), background-color var(--transition-base);
 	--card-hover-transform: translateY(-0.1875rem);
 
-	/* Button tokens */
+	
 	--button-text: var(--color-text);
 	--button-text-inverse: var(--color-white);
 	--button-primary-bg: var(--color-primary);
