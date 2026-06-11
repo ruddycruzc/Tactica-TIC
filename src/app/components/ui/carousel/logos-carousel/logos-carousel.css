@@ -1,6 +1,6 @@
 .logos-carousel {
   width: 100%;
-  padding: var(--section-padding-y) 0;
+  padding: 34px 0 46px;
   overflow: hidden;
   background: var(--color-bkg-white);
   --logos-gap: clamp(34px, 5vw, 82px);
@@ -9,8 +9,8 @@
 .logos-carousel__title {
   margin: 0 0 var(--title-subtitle-spacing);
   color: var(--text-heading-color);
-  font-size: clamp(1.25rem, 1.55vw, 1.6rem);
-  font-weight: var(--font-weight-extrabold);
+  font-size: clamp(1rem, 1.4vw, 1.5rem);
+  font-weight: var(--font-weight-semibold);
   line-height: var(--text-heading-line-height);
   text-align: center;
 }
@@ -38,9 +38,9 @@
 
 .logos-carousel__item {
   display: grid;
-  flex: 0 0 clamp(154px, 13.2vw, 216px);
+  flex: 0 0 clamp(132px, 12vw, 198px);
   place-items: center;
-  height: clamp(104px, 8.6vw, 130px);
+  height: clamp(72px, 7vw, 104px);
   padding: 10px;
   box-sizing: border-box;
   overflow: visible;

@@ -1,145 +1,77 @@
 .hero-container {
   position: relative;
-  padding: calc(var(--section-padding-y) * 2) var(--section-padding-x);
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   width: 100%;
-  min-height: 550px;
+  min-height: clamp(24rem, 34vw, 28rem);
+  padding: clamp(9rem, 12vw, 11.5rem) var(--section-padding-x) clamp(3rem, 4vw, 4rem);
   box-sizing: border-box;
   overflow: hidden;
-  background: var(--color-bkg-light);
-  --hero-x: 50%;
-  --hero-y: 50%;
-}
-
-.hero-wave {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  width: 120vw;
-  height: clamp(320px, 42vw, 560px);
-  transform:
-    translate(-50%, -50%)
-    translate(
-      calc((var(--hero-x, 50%) - 50%) * 0.04),
-      calc((var(--hero-y, 50%) - 50%) * 0.03)
-    );
-  pointer-events: none;
-  transition: transform 360ms ease;
-  z-index: 1;
-}
-
-.hero-wave__svg {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  fill: none;
-  animation: heroWaveDrift 16s ease-in-out infinite alternate;
-}
-
-.hero-wave__svg path {
-  stroke: var(--color-border-alpha);
-  stroke-width: 0.72;
-  opacity: 0.55;
-  vector-effect: non-scaling-stroke;
-}
-
-.hero-wave__svg--focus {
-  mask-image: radial-gradient(circle at var(--hero-x, 50%) var(--hero-y, 50%), var(--color-bkg-black) 0 12%, transparent 30%);
-  -webkit-mask-image: radial-gradient(circle at var(--hero-x, 50%) var(--hero-y, 50%), var(--color-bkg-black) 0 12%, transparent 30%);
-  transform: scale(1.025);
-}
-
-.hero-wave__svg--focus path {
-  stroke: var(--color-primary);
-  stroke-width: 0.95;
-  opacity: 0.22;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0.76)),
+    url('/assets/images/fondo hero.png') center top / cover no-repeat,
+    var(--color-bkg-light);
 }
 
 .hero-content {
-  max-width: var(--page-max-width, 1196px);
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 60px;
   position: relative;
-  z-index: 2;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: min(100%, 70rem);
+  gap: clamp(1.5rem, 2.5vw, 2rem);
+  text-align: center;
 }
 
 .hero-title {
-  font-size: 4rem;
-  color: var(--text-heading-color);
-  font-weight: var(--font-weight-extrabold);
-  line-height: var(--text-heading-line-height);
-  letter-spacing: -1.5px;
   margin: 0;
+  color: var(--text-heading-color);
+  font-size: clamp(2.75rem, 4.2vw, 4rem);
+  font-weight: var(--font-weight-extrabold);
+  line-height: 1.13;
+  letter-spacing: 0;
 }
-
 
 .highlight-green {
   color: var(--text-highlight-color);
   font-weight: var(--font-weight-extrabold);
 }
 
-
-.hero-right {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  padding-top: 15px;
-}
-
 .hero-description {
-  font-size: 1.15rem;
-  color: var(--text-body-color);
-  line-height: var(--text-body-line-height);
+  max-width: 58rem;
   margin: 0;
-  max-width: 480px;
+  color: var(--text-body-color);
+  font-size: clamp(1rem, 1.45vw, 1.25rem);
+  line-height: 1.45;
 }
-
 
 .hero-buttons {
   display: flex;
-  gap: 16px;
   align-items: center;
+  justify-content: center;
+  gap: 16px;
 }
-
 
 .arrow {
   font-size: 1.1rem;
 }
 
-
 @media (max-width: 968px) {
   .hero-container {
-    padding: var(--section-padding-y) var(--section-padding-x);
-  }
-  
-  .hero-content {
-    flex-direction: column;
-    gap: 40px;
-  }
-  
-  .hero-title {
-    font-size: 2.8rem;
-  }
-  
-  .hero-right {
-    padding-top: 0;
-  }
-  
-  .hero-buttons {
-    flex-wrap: wrap;
+    min-height: auto;
+    padding: 7.5rem var(--section-padding-x) 4rem;
   }
 
-  .hero-wave {
-    width: 138vw;
-    height: 360px;
-    top: 38%;
+  .hero-content {
+    gap: 1.5rem;
+  }
+
+  .hero-buttons {
+    flex-wrap: wrap;
   }
 }
 
@@ -154,10 +86,12 @@
   .hero-buttons app-button {
     width: var(--button-stack-width);
   }
-}
 
-@keyframes heroWaveDrift {
-  to {
-    transform: translateX(-36px) translateY(16px) skewY(-2deg);
+  .hero-title {
+    font-size: clamp(2.35rem, 12vw, 3.2rem);
+  }
+
+  .hero-description {
+    font-size: 1rem;
   }
 }

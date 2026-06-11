@@ -1,9 +1,6 @@
 .video-container {
-  background: var(--color-bkg-white);
-  background-size: 24px 24px, auto, cover;
-  background-position: center;
-  background-repeat: repeat, no-repeat, no-repeat;
-  padding: calc(var(--section-padding-y) * 2) var(--section-padding-x);
+  background: var(--color-bkg-black);
+  padding: 92px var(--section-padding-x);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -17,7 +14,7 @@
   width: 100%;
   display: flex;
   align-items: center; 
-  gap: 60px; 
+  gap: clamp(48px, 7vw, 96px); 
 }
 
 
@@ -29,9 +26,9 @@
 .video-wrapper {
   position: relative;
   width: 100%;
-  border-radius: 16px; 
+  border-radius: var(--radius-cards); 
   overflow: hidden;
-  box-shadow: var(--shadow-card); 
+  box-shadow: none; 
   aspect-ratio: 16 / 9; 
   background-color: var(--text-heading-color); 
 }
@@ -48,46 +45,8 @@
   z-index: 1;
 }
 
-.play-overlay-btn {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 70px;
-  height: 70px;
-  background-color: var(--color-overlay-card); 
-  border: none;
-  border-radius: 50%;
-  color: var(--color-white);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  pointer-events: none; 
-  z-index: 2; 
-}
-
-.play-overlay-btn svg {
-  width: 28px;
-  height: 28px;
-  margin-left: 4px; 
-}
-
-.video-wrapper:hover .play-overlay-btn {
-  background-color: var(--text-highlight-color); 
-  transform: translate(-50%, -50%) scale(1.08);
-}
-
 .video-overlay-text {
-  position: absolute;
-  bottom: 35px;
-  left: 35px;
-  color: var(--color-white); 
-  z-index: 2; 
-  font-family: inherit;
-  pointer-events: none; 
-  text-shadow: 0 2px 8px var(--color-overlay-card); 
+  display: none;
 }
 
 .ceo-name {
@@ -115,17 +74,18 @@
 }
 
 .section-title {
-  font-size: 2.8rem;
-  color: var(--text-heading-color);
-  font-weight: var(--font-weight-extrabold);
+  font-family: var(--font-family-base);
+  font-size: clamp(2rem, 3vw, 2.5rem);
+  color: var(--color-white);
+  font-weight: var(--font-weight-semibold);
   line-height: var(--text-heading-line-height);
-  letter-spacing: -1px;
+  letter-spacing: 0;
   margin: 0;
 }
 
 .section-description {
-  font-size: 1.1rem;
-  color: var(--text-body-color);
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.82);
   line-height: var(--text-body-line-height);
   margin: 0;
 }
@@ -154,5 +114,5 @@
   
   .ceo-name { font-size: 1.8rem; }
   .ceo-role { font-size: 1.1rem; }
-  .section-title { font-size: 2.2rem; }
+  .section-title { font-size: clamp(2rem, 8vw, 2.5rem); }
 }

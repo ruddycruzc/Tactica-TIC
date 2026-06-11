@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 
 import { Hero } from '../../components/hero/hero/hero';
-import { InfoRightImage } from '../../components/info-blocks/info-right-image/info-right-image';
 import { ContactForm } from '../../components/forms/contact-form/contact-form';
 import { VideoHero } from '../../components/hero/video-hero/video-hero';
-import { CaseStudiesSection } from "../../components/sections/case-studies-section/case-studies-section";
+import { ProjectCards } from '../../components/sections/project-cards/project-cards';
+import { Project2Section } from '../../components/sections/project2-section/project2-section';
 import { CardsCarousel } from '../../components/ui/carousel/cards-carousel/cards-carousel';
 import { LogosCarousel } from '../../components/ui/carousel/logos-carousel/logos-carousel';
 import { FaqSection } from '../../components/sections/faq-section/faq-section';
@@ -14,10 +14,10 @@ import { FaqSection } from '../../components/sections/faq-section/faq-section';
   standalone: true,
   imports: [
     Hero,
-    InfoRightImage,
+    ProjectCards,
     ContactForm,
     VideoHero,
-    CaseStudiesSection,
+    Project2Section,
     CardsCarousel,
     LogosCarousel,
     FaqSection

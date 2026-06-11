@@ -16,12 +16,17 @@
       <li>
 
         <a
+          class="navbar__link"
+          [class.navbar__link--has-menu]="item.route === '/'"
           [routerLink]="item.route"
           routerLinkActive="active-link"
           [routerLinkActiveOptions]="{ exact: true }"
           (click)="closeMenu()">
 
        {{ item.label | translate }}
+       @if (item.route === '/') {
+        <span class="navbar__chevron" aria-hidden="true"></span>
+       }
 
         </a>
 
@@ -49,6 +54,7 @@
   {{ currentLanguage.toUpperCase() }}
 
 </app-button>
+<span class="navbar__language-icon" aria-hidden="true"></span>
 <div class="navbar__hamburger">
   <app-button
     variant="tertiary"

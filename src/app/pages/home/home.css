@@ -1,11 +1,4 @@
-.home__cards-preview {
-  padding: var(--section-padding-y) var(--section-padding-x) 0;
+:host {
+  display: block;
   background: var(--color-bkg-white);
-}
-
-.home__cards-grid {
-  max-width: var(--page-max-width, 1196px);
-  margin: 0 auto;
-  display: grid;
-  place-items: center;
 }
