@@ -8,7 +8,7 @@
               linear-gradient(135deg, var(--color-bkg-light) 0%, var(--color-border) 100%);
   position: relative;
   overflow: hidden;
-  padding: 120px var(--page-margin, 24px);
+  padding: var(--section-padding-y) var(--section-padding-x);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -40,7 +40,7 @@
   font-weight: var(--font-weight-extrabold);
   line-height: var(--text-heading-line-height);
   letter-spacing: -1.5px;
-  margin: 0 0 24px 0;
+  margin: 0 0 var(--title-subtitle-spacing) 0;
 }
 
 .highlight-green {
@@ -188,9 +188,14 @@
     height: auto;
   }
   .jobs-container {
-    padding: 80px var(--page-margin, 24px);
+    padding: var(--section-padding-y) var(--section-padding-x);
   }
   .jobs-title {
     font-size: 2.6rem;
+  }
+
+  .jobs-footer-banner app-button {
+    width: var(--button-stack-width);
+    max-width: var(--button-stack-max-width);
   }
 }

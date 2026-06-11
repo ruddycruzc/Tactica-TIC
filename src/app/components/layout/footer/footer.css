@@ -1,7 +1,7 @@
 .footer-container {
   background-color: var(--text-heading-color);
   color: var(--color-white);
-  padding: clamp(56px, 7vw, 84px) var(--page-margin, 24px);
+  padding: var(--section-padding-y) var(--section-padding-x);
 }
 
 .footer-content {
@@ -97,7 +97,7 @@
 
 @media (max-width: 768px) {
   .footer-container {
-    padding: 48px var(--page-margin, 24px);
+    padding: var(--section-padding-y) var(--section-padding-x);
   }
 
   .footer-content {

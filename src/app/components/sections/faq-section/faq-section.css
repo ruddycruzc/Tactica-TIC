@@ -1,6 +1,6 @@
 .faq-container {
   background: var(--color-bkg-white);
-  padding: 96px var(--page-margin, 24px);
+  padding: var(--section-padding-y) var(--section-padding-x);
   width: 100%;
   box-sizing: border-box;
 }
@@ -20,7 +20,7 @@
 }
 
 .faq-title {
-  margin: 0 0 16px;
+  margin: 0 0 var(--title-subtitle-spacing);
   color: var(--text-heading-color);
   font-size: clamp(2.2rem, 3vw, 3rem);
   font-weight: var(--font-weight-extrabold);
@@ -113,7 +113,7 @@
 
 @media (max-width: 860px) {
   .faq-container {
-    padding: 72px var(--page-margin, 24px);
+    padding: var(--section-padding-y) var(--section-padding-x);
   }
 
   .faq-content {

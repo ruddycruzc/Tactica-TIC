@@ -4,7 +4,7 @@
 
 .clients-container {
   background-color: var(--color-white);
-  padding: 100px var(--page-margin, 24px);
+  padding: var(--section-padding-y) var(--section-padding-x);
   width: 100%;
   display: flex;
   justify-content: center;
@@ -31,7 +31,7 @@
   font-weight: var(--font-weight-extrabold);
   line-height: var(--text-heading-line-height);
   letter-spacing: -1.5px;
-  margin: 0 0 16px 0;
+  margin: 0 0 var(--title-subtitle-spacing) 0;
 }
 
 .highlight-green {
@@ -118,7 +118,7 @@
 
 @media (max-width: 640px) {
   .clients-container {
-    padding: 60px var(--page-margin, 24px);
+    padding: var(--section-padding-y) var(--section-padding-x);
   }
   .clients-grid {
     grid-template-columns: 1fr; /* 1 columna en móviles */

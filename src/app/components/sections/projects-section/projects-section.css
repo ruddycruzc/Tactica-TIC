@@ -3,9 +3,10 @@
    ========================================================================== */
 
 .projects-container {
-  padding: 60px 20px;
+  padding: var(--section-padding-y) var(--section-padding-x);
   background-color: var(--color-bkg-light); 
   font-family: var(--font-family-base);
+  --project-logo-gap: 15px;
 }
 
 .projects-content {
@@ -23,7 +24,7 @@
   font-size: 2.6rem;
   color: var(--text-heading-color); 
   font-weight: var(--font-weight-extrabold);
-  margin-bottom: 12px;
+  margin-bottom: var(--title-subtitle-spacing);
 }
 
 .highlight-green {
@@ -40,7 +41,7 @@
 /* Control para los logos de la cabecera general */
 .projects-header .project-image {
   height: 55px;
-  margin: 20px 12px 0 12px;
+  margin: var(--title-subtitle-spacing) 12px 0;
 }
 
 /* --- CONTENEDOR DE TARJETAS --- */
@@ -101,7 +102,7 @@
 }
 
 .project-list {
-  padding-left: 20px;
+  padding-left: 1.25rem;
   margin-top: 0;
   margin-bottom: 20px;
 }
@@ -137,7 +138,7 @@
   width: auto;           /* Mantiene la proporción horizontal original sin deformar */
   max-width: 100%;       /* Garantiza que ningún cartel rompa el diseño */
   object-fit: contain;   /* Ajuste limpio dentro del espacio contenedor */
-  margin-right: 15px;    /* Separación entre logos contiguos */
+  margin-right: var(--project-logo-gap);    /* Separación entre logos contiguos */
   margin-top: 15px;      /* Separación del bloque de texto superior */
   vertical-align: middle;
   
@@ -163,8 +164,7 @@
 
 .project-card .project-image.image-large {
   height: 120px;          
-  margin-left: auto;     
-  margin-right: auto;    
+  margin-inline: auto;    
   display: block;        
   filter: none;          
   opacity: 1;            
@@ -176,6 +176,6 @@
   
   .project-image {
     height: 38px; /* Un pelín más pequeños en pantallas muy compactas */
-    margin-right: 10px;
+    --project-logo-gap: 10px;
   }
 }

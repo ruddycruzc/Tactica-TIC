@@ -1,6 +1,6 @@
 .hero-container {
   position: relative;
-  padding: 120px var(--page-margin, 24px) 100px;
+  padding: calc(var(--section-padding-y) * 2) var(--section-padding-x);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -116,7 +116,7 @@
 
 @media (max-width: 968px) {
   .hero-container {
-    padding: 80px var(--page-margin, 24px);
+    padding: var(--section-padding-y) var(--section-padding-x);
   }
   
   .hero-content {
@@ -140,6 +140,19 @@
     width: 138vw;
     height: 360px;
     top: 38%;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-buttons {
+    align-items: stretch;
+    flex-direction: column;
+    width: var(--button-stack-width);
+    max-width: var(--button-stack-max-width);
+  }
+
+  .hero-buttons app-button {
+    width: var(--button-stack-width);
   }
 }
 

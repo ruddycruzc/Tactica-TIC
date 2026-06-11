@@ -1,5 +1,5 @@
 .home__cards-preview {
-  padding: 48px var(--page-margin, 24px) 0;
+  padding: var(--section-padding-y) var(--section-padding-x) 0;
   background: var(--color-bkg-white);
 }
 

@@ -1,5 +1,5 @@
 .hub-container {
-  padding: 80px 20px;
+  padding: var(--section-padding-y) var(--section-padding-x);
   background-color: var(--color-bkg-light); 
   position: relative; 
   overflow: hidden; 
@@ -32,8 +32,7 @@
   text-align: center;
   margin-bottom: 50px;
   max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
+  margin-inline: auto;
 }
 
 .hub-tag {
@@ -54,7 +53,7 @@
   color: var(--text-heading-color);
   font-weight: var(--font-weight-extrabold);
   margin-top: 0;
-  margin-bottom: 15px;
+  margin-bottom: var(--title-subtitle-spacing);
 }
 
 .text-green {
@@ -104,6 +103,10 @@
 @media (max-width: 768px) {
   .hub-row {
     flex-direction: column; /* Se apilan en móvil */
+  }
+
+  .hub-item app-button {
+    width: var(--button-stack-width);
   }
   
   .hub-title {

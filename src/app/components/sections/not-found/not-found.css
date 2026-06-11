@@ -3,7 +3,7 @@
   align-items: center;
   justify-content: center;
   min-height: 80vh; 
-  padding: 40px 24px;
+  padding: var(--section-padding-y) var(--section-padding-x);
   box-sizing: border-box;
   font-family: var(--font-family-base);
 }
@@ -13,7 +13,7 @@
   width: 100%;
   text-align: center;
   background-color: var(--color-white);
-  padding: 60px 40px;
+  padding: var(--section-padding-y) var(--section-padding-x);
   border-radius: 16px;
   box-shadow: var(--shadow-card);
   display: flex;
@@ -61,7 +61,7 @@
 
 @media (max-width: 480px) {
   .error-content {
-    padding: 40px 20px;
+    padding: var(--section-padding-y) var(--section-padding-x);
   }
 
   .error-code {

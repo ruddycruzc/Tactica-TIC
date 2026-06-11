@@ -5,3 +5,16 @@
   align-items: center;
 }
 
+@media (max-width: 640px) {
+  .hero-buttons {
+    align-items: stretch;
+    flex-direction: column;
+    width: var(--button-stack-width);
+    max-width: var(--button-stack-max-width);
+  }
+
+  .hero-buttons app-button {
+    width: var(--button-stack-width);
+  }
+}
+

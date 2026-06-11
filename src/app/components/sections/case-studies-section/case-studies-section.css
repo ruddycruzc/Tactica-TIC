@@ -9,7 +9,7 @@
   background-position: center;
   background-repeat: repeat, no-repeat, no-repeat;
   
-  padding: 120px var(--page-margin, 24px) 100px;
+  padding: var(--section-padding-y) var(--section-padding-x);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -42,7 +42,7 @@
   font-size: 2.4rem;
   color: var(--text-heading-color);
   font-weight: var(--font-weight-bold);
-  margin: 0 0 12px 0;
+  margin: 0 0 var(--title-subtitle-spacing) 0;
   letter-spacing: -1px;
 }
 
@@ -169,7 +169,7 @@
 
 @media (max-width: 640px) {
   .cases-section {
-    padding: 50px var(--page-margin, 24px);
+    padding: var(--section-padding-y) var(--section-padding-x);
   }
   .cases-header {
     flex-direction: column;
