@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="./job-openings-section.css"> 
+<link rel="stylesheet" href="./job-openings-section.css">
 <section class="jobs-container">
   <div class="jobs-content">
     
@@ -13,7 +13,7 @@
       <!-- Bucle dinámico que hereda tu diseño de tarjetas original -->
       <div class="culture-card" *ngFor="let card of cultureCards">
         <div class="card-image-box">
-          <img [src]="card.imgSrc" [alt]="card.altText">
+          <img [src]="card.imgSrc" [alt]="card.altText" loading="lazy" decoding="async">
         </div>
         <div class="card-text-content">
           <h3>{{ card.title }}</h3>

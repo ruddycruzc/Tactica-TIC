@@ -36,35 +36,35 @@ export class CardsCarousel {
 
   readonly cards: TeamCard[] = [
     {
-      image: '/assets/images/cards/handsome-businessman-working-office.jpg',
+      image: '/assets/images/cards/teamcard1.jpeg',
       name: 'Name',
       excerpt: 'Desarrollador Backend Senior',
       details:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
     },
     {
-      image: '/assets/images/cards/medium-shot-smiley-business-woman-desk.jpg',
+      image: '/assets/images/cards/teamcard2.jpeg',
       name: 'Name',
       excerpt: 'Desarrollador Backend Senior',
       details:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
     },
     {
-      image: '/assets/images/cards/young-business-woman-working-her-desk-with-laptop.jpg',
+      image: '/assets/images/cards/teamcard3.jpeg',
       name: 'Name',
       excerpt: 'Desarrollador Backend Senior',
       details:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
     },
     {
-      image: '/assets/images/cards/man-thinking-about-solution.jpg',
+      image: '/assets/images/cards/teamcard4.jpeg',
       name: 'Name',
       excerpt: 'Desarrollador Backend Senior',
       details:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
     },
     {
-      image: '/assets/images/cards/business-startup-people-concept-happy-businessman-creative-male-office-worker-with-tablet-pc-computer.jpg',
+      image: '/assets/images/cards/teamcard5.jpeg',
       name: 'Name',
       excerpt: 'Desarrollador Backend Senior',
       details:

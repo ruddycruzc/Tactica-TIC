@@ -7,8 +7,8 @@
       <p class="projects-subtitle">
         Consultoría para la implantación del ENS Nivel Medio IDE/2024/000398
       </p>
-      <img src="assets/images/logos-proyectos/fondos europeos.png" alt="logo" class="project-image">
-      <img src="assets/images/logos-proyectos/sekuens.png" alt="logo" class="project-image">
+      <img src="/assets/images/logos-proyectos/fondos europeos.png" alt="logo" class="project-image" loading="lazy" decoding="async">
+      <img src="/assets/images/logos-proyectos/sekuens.png" alt="logo" class="project-image" loading="lazy" decoding="async">
     </div>
 
     <div class="projects-grid">
@@ -31,6 +31,8 @@
         <img *ngFor="let imgPath of prj.images" 
              [src]="imgPath" 
              alt="logo" 
+             loading="lazy"
+             decoding="async"
              [class.image-large]="prj.name.includes('Contrato Formativo')"
              class="project-image">
       </article>
