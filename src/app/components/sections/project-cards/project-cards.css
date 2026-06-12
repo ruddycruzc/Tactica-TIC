@@ -1,5 +1,5 @@
 .project-cards {
-  padding: clamp(2.5rem, 4vw, 3.5rem) var(--section-padding-x) clamp(4rem, 7vw, 6rem);
+  padding: clamp(2rem, 3vw, 2.75rem) var(--section-padding-x) clamp(3.5rem, 6vw, 5rem);
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.72), rgba(255, 255, 255, 0.9)),
     url('/assets/images/fondo hero.png') center / cover no-repeat,
@@ -19,8 +19,8 @@
   flex-direction: column;
   flex: 0.82 1 0;
   min-width: 0;
-  min-height: clamp(24rem, 34vw, 34rem);
-  padding: clamp(1.75rem, 2.6vw, 2.5rem);
+  min-height: clamp(20rem, 30vw, 28.5rem);
+  padding: clamp(1.5rem, 2.1vw, 2rem);
   border-radius: var(--radius-cards);
   overflow: hidden;
   color: var(--color-white);
@@ -29,8 +29,13 @@
   transition: flex 360ms ease, background-color 360ms ease, transform 260ms ease;
 }
 
+.project-cards__item:not(.project-cards__item--selected) {
+  flex: 0.86 1 0;
+  background: var(--color-surface-disabled);
+}
+
 .project-cards__item--selected {
-  flex-grow: 2.05;
+  flex: 2 1 0;
   background: var(--color-secondary);
 }
 
@@ -43,10 +48,10 @@
   width: min(100%, 38rem);
 }
 
-.project-cards__copy h2 {
+.project-cards__copy h3 {
   margin: 0;
   color: var(--color-white);
-  font-size: 2.5rem;
+  font-size: clamp(1.8rem, 2.5vw, 2.2rem);
   font-weight: var(--font-weight-semibold);
   line-height: var(--text-heading-line-height);
 }
@@ -65,9 +70,13 @@
   opacity: 1;
 }
 
+.project-cards__item:not(.project-cards__item--selected) .project-cards__copy p {
+  opacity: 0;
+}
+
 .project-cards__item img {
   width: 100%;
-  height: clamp(15rem, 23vw, 23.25rem);
+  height: clamp(12rem, 20vw, 19rem);
   margin-top: auto;
   border-radius: var(--radius-m);
   object-fit: cover;
@@ -88,7 +97,7 @@
   .project-cards__item--selected,
   .project-cards__item:hover {
     flex: none;
-    min-height: 26rem;
+    min-height: 24rem;
     background: var(--color-secondary);
   }
 
@@ -103,15 +112,15 @@
   }
 
   .project-cards__item {
-    min-height: 28rem;
+    min-height: 25rem;
     padding: 1.5rem;
   }
 
   .project-cards__item img {
-    height: 15rem;
+    height: 13rem;
   }
 
-  .project-cards__copy h2 {
-    font-size: clamp(2rem, 10vw, 2.5rem);
+  .project-cards__copy h3 {
+    font-size: clamp(1.8rem, 9vw, 2.2rem);
   }
 }
