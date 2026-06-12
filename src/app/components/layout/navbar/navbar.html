@@ -33,13 +33,29 @@
 
   <div class="navbar__actions">
 
-    <app-button
-      variant="tertiary"
-      iconOnly
-      ariaLabel="Buscar"
-      (buttonClick)="onSearchClick()">
-      <img src="/assets/icons/icon-search.png" alt="">
-    </app-button>
+<div class="navbar__search">
+
+  @if(searchOpen){
+
+    <input
+      type="text"
+      class="navbar__search-input"
+      placeholder="Buscar..."
+      [(ngModel)]="searchTerm">
+
+  }
+
+  <app-button
+    variant="tertiary"
+    iconOnly
+    ariaLabel="Buscar"
+    (buttonClick)="toggleSearch()">
+
+    <img src="/assets/icons/icon-search.png" alt="">
+
+  </app-button>
+
+</div>
 
 <app-button
   variant="tertiary"
