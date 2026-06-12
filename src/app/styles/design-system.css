@@ -37,12 +37,13 @@
 	--container-padding-lg: 4.5rem;
 
 	
-	--color-primary: #87B190;
-	--color-secondary: #5D7864;
-	--color-tertiary: #e2ede5;
-	--color-accent-strong: #4f9d72;
-	--color-accent-soft: #92aa99;
-	--color-accent-muted: #7fae91;
+--color-primary: #f6396e;
+--color-secondary: #d6285d;
+--color-tertiary: #ffe5ed;
+
+--color-accent-strong: #f6396e;
+--color-accent-soft: #f58ca9;
+--color-accent-muted: #e7a2b7;
 	
 	--color-bkg-black: #111;
 	--color-bkg-light: #F8F8F8;
