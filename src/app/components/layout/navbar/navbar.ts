@@ -65,12 +65,18 @@ export class Navbar {
 searchOpen = false;
 searchTerm = '';
 toggleSearch(): void {
+
+  if (window.innerWidth <= 1024) {
+    this.menuOpen = true;
+  }
+
   this.searchOpen = !this.searchOpen;
 }
   onSearchClick(): void {
     console.log('Buscar');
   }
-  closeMenu(): void {
+closeMenu(): void {
   this.menuOpen = false;
+  this.searchOpen = false;
 }
 }
