@@ -28,7 +28,7 @@
   margin: 0;
   color: var(--text-heading-color);
   font-family: var(--font-family-heading);
-  font-size: var(--font-size-hero);
+  font-size: var(--font-size-h1);
   font-weight: var(--font-weight-medium);
   line-height: 1;
   letter-spacing: 0;
@@ -48,7 +48,7 @@
   margin: 0;
   color: var(--text-body-color);
   font-family: var(--font-family-heading);
-  font-size: var(--font-size-hero-description);
+  font-size: var(--font-size-body-large);
   font-weight: var(--font-weight-regular);
   line-height: 1.42;
 }
@@ -62,7 +62,7 @@
 }
 
 .arrow {
-  font-size: 1.1rem;
+  font-size: var(--font-size-body-medium);
 }
 
 @media (max-width: 968px) {
@@ -82,7 +82,7 @@
   }
 
   .hero-title {
-    font-size: clamp(2.5rem, 13vw, 3.35rem);
+    font-size: var(--font-size-h1);
   }
 
   .hero-buttons {

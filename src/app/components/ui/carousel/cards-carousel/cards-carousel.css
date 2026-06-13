@@ -29,7 +29,7 @@
 
    margin: 0;
   color: var(--text-heading-color);
-  font-size: clamp(2rem, 2.25vw, 2.25rem);
+  font-size: var(--font-size-h2);
   font-weight: var(--font-weight-extrabold);
   line-height: 1.05;
   text-align: left;
@@ -40,7 +40,7 @@
   padding-block: var(--title-subtitle-spacing) 1rem;
   margin: 0;
   color: var(--text-body-color);
-  font-size: clamp(0.95rem, 1.05vw, 1.05rem);
+  font-size: var(--font-size-body-medium);
   font-weight: var(--font-weight-regular);
   line-height: var(--text-heading-line-height);
   text-align: left;

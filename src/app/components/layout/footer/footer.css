@@ -21,14 +21,14 @@
 }
 
 .footer-brand {
-  font-size: clamp(2rem, 3vw, 2.75rem);
+  font-size: var(--font-size-h2);
   font-weight: var(--font-weight-bold);
   margin: 0;
   line-height: 1;
 }
 
 .footer-tagline {
-  font-size: 0.98rem;
+  font-size: var(--font-size-body-medium);
   color: var(--color-surface-disabled);
   margin: 0;
   max-width: 320px;
@@ -37,7 +37,7 @@
 
 .footer-copyright {
   margin-top: auto;
-  font-size: 0.85rem;
+  font-size: var(--font-size-sm);
   color: var(--color-primary);
   line-height: var(--text-body-line-height);
 }
@@ -49,7 +49,7 @@
 
 .column-title {
   color: var(--text-highlight-color);
-  font-size: 0.9rem;
+  font-size: var(--font-size-sm);
   font-weight: var(--font-weight-bold);
   letter-spacing: 0.08rem;
   margin: 0 0 18px;
@@ -74,7 +74,7 @@
   color: var(--color-white);
   text-decoration: none;
   transition: color 0.25s ease;
-  font-size: 0.96rem;
+  font-size: var(--font-size-body-medium);
   line-height: var(--text-body-line-height);
 }
 
@@ -110,6 +110,6 @@
   }
 
   .footer-brand {
-    font-size: 2rem;
+    font-size: var(--font-size-h2);
   }
 }

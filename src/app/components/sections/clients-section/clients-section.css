@@ -26,7 +26,7 @@
 }
 
 .clients-title {
-  font-size: 2.8rem;
+  font-size: var(--font-size-h2);
   color: var(--text-heading-color);
   font-weight: var(--font-weight-extrabold);
   line-height: var(--text-heading-line-height);
@@ -39,7 +39,7 @@
 }
 
 .clients-subtitle {
-  font-size: 1.15rem;
+  font-size: var(--font-size-body-medium);
   color: var(--text-body-color);
   line-height: var(--text-body-line-height);
   margin: 0;
@@ -76,7 +76,7 @@
 
 /* Nombre de la marca simulando un logotipo */
 .brand-name {
-  font-size: 1.25rem;
+  font-size: var(--font-size-card-description);
   font-weight: var(--font-weight-bold);
   color: var(--text-body-color);
   letter-spacing: -0.5px;
@@ -101,7 +101,7 @@
 }
 
 .action-text {
-  font-size: 1.05rem;
+  font-size: var(--font-size-body-medium);
   color: var(--text-body-color);
   margin: 0;
 }
@@ -112,7 +112,7 @@
     grid-template-columns: repeat(2, 1fr); /* 2 columnas en tablets */
   }
   .clients-title {
-    font-size: 2.3rem;
+    font-size: var(--font-size-h2);
   }
 }
 

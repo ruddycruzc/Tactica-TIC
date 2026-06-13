@@ -58,7 +58,7 @@
 .home-project-card p {
   margin: var(--project-card-content-gap) 0 1rem;
   color: var(--text-body-color);
-  font-size: var(--font-size-base);
+  font-size: var(--font-size-body-medium);
   line-height: 1.35;
 }
 

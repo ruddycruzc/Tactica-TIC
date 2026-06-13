@@ -40,7 +40,7 @@
 }
 
 .contact-text {
-  font-size: var(--font-size-md);
+  font-size: var(--font-size-body-medium);
   color: var(--text-body-color);
   line-height: var(--text-body-line-height);
   margin: 0;
@@ -80,7 +80,7 @@
 .info-text {
   display: flex;
   flex-direction: column;
-  font-size: 0.95rem;
+  font-size: var(--font-size-sm);
   line-height: var(--text-body-line-height);
   color: var(--text-heading-color);
 }
@@ -134,7 +134,7 @@
   padding: var(--form-input-padding-y) var(--form-input-padding-x);
   border: var(--border-width-hairline) solid var(--color-border);
   border-radius: var(--button-radius);
-  font-size: var(--form-input-font-size);
+  font-size: var(--font-size-sm);
   color: var(--text-body-color);
   background-color: var(--color-white);
   outline: none;

@@ -35,7 +35,7 @@
 }
 
 .jobs-title {
-  font-size: 3.5rem;
+  font-size: var(--font-size-h2);
   color: var(--text-heading-color);
   font-weight: var(--font-weight-extrabold);
   line-height: var(--text-heading-line-height);
@@ -48,7 +48,7 @@
 }
 
 .jobs-lead {
-  font-size: 1.15rem;
+  font-size: var(--font-size-body-medium);
   color: var(--text-body-color);
   line-height: var(--line-height-relaxed);
   margin: 0;
@@ -126,20 +126,20 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.1rem;
+  font-size: var(--font-size-body-medium);
   font-weight: bold;
   align-self: flex-start;
 }
 
 .culture-card h3 {
-  font-size: 1.3rem;
+  font-size: var(--font-size-card-title);
   color: var(--text-heading-color);
   font-weight: var(--font-weight-bold);
   margin: 0;
 }
 
 .culture-card p {
-  font-size: 0.95rem;
+  font-size: var(--font-size-sm);
   color: var(--text-body-color);
   line-height: var(--text-body-line-height);
   margin: 0;
@@ -164,14 +164,14 @@
 }
 
 .jobs-footer-banner h3 {
-  font-size: 1.8rem;
+  font-size: var(--font-size-card-title);
   color: var(--text-heading-color);
   font-weight: var(--font-weight-extrabold);
   margin: 0;
 }
 
 .jobs-footer-banner p {
-  font-size: 1.05rem;
+  font-size: var(--font-size-body-medium);
   color: var(--text-body-color);
   max-width: 600px;
   margin: 0 0 12px 0;
@@ -191,7 +191,7 @@
     padding: var(--section-padding-y) var(--section-padding-x);
   }
   .jobs-title {
-    font-size: 2.6rem;
+    font-size: var(--font-size-h2);
   }
 
   .jobs-footer-banner app-button {

@@ -39,7 +39,7 @@
 }
 
 .cases-section-title {
-  font-size: 2.4rem;
+  font-size: var(--font-size-h2);
   color: var(--text-heading-color);
   font-weight: var(--font-weight-bold);
   margin: 0 0 var(--title-subtitle-spacing) 0;
@@ -47,7 +47,7 @@
 }
 
 .cases-section-subtitle {
-  font-size: 1rem;
+  font-size: var(--font-size-body-medium);
   color: var(--text-body-color);
   line-height: var(--text-body-line-height);
   margin: 0;
@@ -100,14 +100,14 @@
 
 .case-tag {
   display: block;
-  font-size: 1.4rem;
+  font-size: var(--font-size-card-title);
   color: var(--text-heading-color);
   font-weight: var(--font-weight-medium);
   margin-bottom: 4px;
 }
 
 .case-name {
-  font-size: 1.8rem;
+  font-size: var(--font-size-card-title);
   color: var(--text-heading-color);
   font-weight: var(--font-weight-extrabold);
   margin: 0;
@@ -146,7 +146,7 @@
 }
 
 .case-img[alt] {
-  font-size: 0.9rem;
+  font-size: var(--font-size-sm);
   color: var(--text-body-color);
   text-align: center;
   padding: 20px;
@@ -176,10 +176,10 @@
     gap: 16px;
   }
   .cases-section-title {
-    font-size: 2rem;
+    font-size: var(--font-size-h2);
   }
   .case-name {
-    font-size: 1.5rem;
+    font-size: var(--font-size-card-title);
   }
 
   .case-image-wrapper {

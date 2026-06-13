@@ -31,7 +31,7 @@
   margin: 0;
   color: inherit;
   font-family: var(--font-family-heading);
-  font-size: clamp(1.4rem, 2vw, 1.65rem);
+  font-size: var(--font-size-card-title);
   font-weight: var(--font-weight-medium);
   line-height: 1.33;
   letter-spacing: 0;
@@ -43,14 +43,14 @@
 
 .background-color-info-card--large h3 {
   max-width: var(--color-info-text-width-large);
-  font-size: clamp(1.75rem, 3vw, 2.35rem);
+  font-size: var(--font-size-card-title);
 }
 
 .background-color-info-card p {
   max-width: var(--color-info-body-width);
   margin: 0.9rem 0 0;
   color: inherit;
-  font-size: var(--font-size-base);
+  font-size: var(--font-size-body-medium);
   line-height: var(--line-height-base);
 }
 
