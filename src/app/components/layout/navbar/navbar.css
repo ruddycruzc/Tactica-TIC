@@ -35,7 +35,7 @@
   align-items: center;
   justify-content: center;
   justify-self: center;
-  gap: clamp(1.55rem, 2.1vw, 2.25rem);
+  gap: var(--nav-link-gap);
   padding: 0;
   margin: 0;
   list-style: none;
@@ -44,23 +44,22 @@
 .navbar__menu a {
   display: inline-flex;
   align-items: center;
-  padding-bottom: 0.35rem;
-  color: var(--text-heading-color);
-  font-family: var(--font-family-base);
-  font-size: clamp(0.92rem, 1vw, 1.0625rem);
-  font-weight: var(--font-weight-medium);
+  color: var(--nav-link-color);
+  font-family: var(--font-family-heading);
+  font-size: var(--nav-link-font-size);
+  font-weight: var(--nav-link-font-weight);
   line-height: 1;
   text-decoration: none;
-  transition: color var(--transition-base), border-color var(--transition-base);
+  transition: color var(--transition-base), font-weight var(--transition-base);
 }
 
 .navbar__menu a:hover,
 .active-link {
-  color: var(--text-highlight-color);
+  color: var(--nav-link-active-color);
 }
 
 .active-link {
-  border-bottom: 0.125rem solid var(--text-highlight-color);
+  font-weight: var(--nav-link-active-font-weight);
 }
 
 .navbar__actions {
@@ -133,12 +132,8 @@
   }
 
   .active-link {
-    padding: 0.5rem 1rem;
-    border-bottom: none;
-    border-radius: var(--radius-sm);
-    background-color: rgba(225, 61, 98, 0.1);
-    color: var(--text-highlight-color);
-    font-weight: var(--font-weight-semibold);
+    color: var(--nav-link-active-color);
+    font-weight: var(--nav-link-active-font-weight);
   }
 }
 

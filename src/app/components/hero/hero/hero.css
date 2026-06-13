@@ -4,7 +4,7 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  min-height: 34.75rem;
+  min-height: 34.6875rem;
   padding: clamp(11.75rem, 14vw, 13.5rem) var(--section-padding-x) 2.25rem;
   box-sizing: border-box;
   overflow: hidden;
@@ -19,12 +19,12 @@
   align-items: center;
   width: 100%;
   max-width: 68rem;
-  gap: 1.5rem;
+  gap: var(--grid-gap);
   text-align: center;
 }
 
 .hero-title {
-  max-width: 68rem;
+  max-width: 50rem;
   margin: 0;
   color: var(--text-heading-color);
   font-family: var(--font-family-heading);
@@ -48,7 +48,8 @@
   margin: 0;
   color: var(--text-body-color);
   font-family: var(--font-family-heading);
-  font-size: clamp(1.05rem, 1.5vw, 1.5rem);
+  font-size: var(--font-size-hero-description);
+  font-weight: var(--font-weight-regular);
   line-height: 1.42;
 }
 
@@ -57,7 +58,7 @@
   align-items: center;
   justify-content: center;
   gap: 1rem;
-  margin-top: 0.375rem;
+  margin-top: 0.75rem;
 }
 
 .arrow {

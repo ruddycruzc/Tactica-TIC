@@ -4,6 +4,7 @@ import { ContactForm } from '../../components/forms/contact-form/contact-form';
 import { Hero } from '../../components/hero/hero/hero';
 import { VideoHero } from '../../components/hero/video-hero/video-hero';
 import { FinalCtaSection } from '../../components/sections/final-cta-section/final-cta-section';
+import { FaqSection } from '../../components/sections/faq-section/faq-section';
 import { HomeProjectsSection } from '../../components/sections/home-projects-section/home-projects-section';
 import { InfoLeftComponent } from '../../components/sections/info-left/info-left-component/info-left-component';
 import { ProductShowcaseSection } from '../../components/sections/product-showcase-section/product-showcase-section';
@@ -24,6 +25,7 @@ import { LogosCarousel } from '../../components/ui/carousel/logos-carousel/logos
     FinalCtaSection,
     CardsCarousel,
     LogosCarousel,
+    FaqSection,
     ContactForm
   ],
   templateUrl: './home.html',

@@ -25,12 +25,12 @@ export class ProductShowcaseSection {
   readonly products: ProductCard[] = [
     {
       title: 'Verifactu',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
       image: '/assets/images/Porducto.jpg',
     },
     {
       title: 'Nombre de Producto',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
       image: '/assets/images/Porducto2.png',
     },
   ];

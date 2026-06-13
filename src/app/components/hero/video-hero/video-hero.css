@@ -4,9 +4,10 @@
 
 .video-content {
   display: grid;
-  grid-template-columns: minmax(0, 1.18fr) minmax(20rem, 0.86fr);
+  grid-template-columns: minmax(0, var(--video-media-width)) minmax(20rem, 1fr);
   align-items: center;
-  gap: clamp(3rem, 7vw, 6rem);
+  min-height: var(--video-panel-height);
+  gap: clamp(3rem, 7vw, 6.5rem);
   padding: clamp(2.25rem, 4vw, 3rem);
   border-radius: var(--radius-panel);
   background: var(--color-surface-muted);
@@ -18,16 +19,15 @@
   width: 100%;
   overflow: hidden;
   border-radius: var(--radius-cards);
-  aspect-ratio: 1.52 / 1;
+  aspect-ratio: 1.596 / 1;
   background-color: var(--color-bkg-black);
 }
 
-.video-wrapper video {
+.video-wrapper iframe {
   display: block;
   width: 100%;
   height: 100%;
   border: 0;
-  object-fit: cover;
 }
 
 .video-right {
@@ -41,7 +41,7 @@
   margin: 0;
   color: var(--text-heading-color);
   font-family: var(--font-family-heading);
-  font-size: clamp(2.4rem, 4vw, 3.5rem);
+  font-size: var(--font-size-h2);
   font-weight: var(--font-weight-semibold);
   line-height: 1.16;
   letter-spacing: 0;
@@ -51,7 +51,7 @@
   max-width: 36rem;
   margin: 1rem 0 0;
   color: var(--text-body-color);
-  font-size: clamp(1.05rem, 1.45vw, 1.35rem);
+  font-size: var(--font-size-body-large);
   line-height: var(--text-body-line-height);
 }
 
@@ -59,7 +59,7 @@
   max-width: 34rem;
   margin: clamp(2rem, 5vw, 4.75rem) 0 0;
   color: var(--text-highlight-color);
-  font-size: clamp(1.05rem, 1.45vw, 1.35rem);
+  font-size: var(--font-size-body-large);
   font-weight: var(--font-weight-medium);
   line-height: var(--line-height-base);
 }

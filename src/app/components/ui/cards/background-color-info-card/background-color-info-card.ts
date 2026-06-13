@@ -18,4 +18,13 @@ export class BackgroundColorInfoCard {
   @Input() buttonLabel = '';
   @Input() buttonLink = '/contact';
   @Input() tone: 'primary' | 'dark' = 'primary';
+  @Input() emphasis = '';
+
+  get titlePrefix(): string {
+    return this.emphasis ? this.title.split(this.emphasis)[0] ?? '' : this.title;
+  }
+
+  get titleSuffix(): string {
+    return this.emphasis ? this.title.split(this.emphasis)[1] ?? '' : '';
+  }
 }

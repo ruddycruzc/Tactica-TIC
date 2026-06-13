@@ -1,7 +1,5 @@
-
-
 .contact-container {
-  background-color: var(--color-bkg-light); /* Fondo gris claro limpio */
+  background-color: var(--form-section-background);
   padding: var(--section-padding-y) var(--section-padding-x);
   display: flex;
   justify-content: center;
@@ -17,7 +15,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 80px;
+  gap: var(--contact-column-gap);
 }
 
 
@@ -29,47 +27,45 @@
 }
 
 .contact-title {
-  font-size: 3.5rem;
+  font-size: var(--font-size-h2);
   color: var(--text-heading-color);
-  font-weight: var(--font-weight-extrabold);
+  font-weight: var(--font-weight-semibold);
   line-height: var(--text-heading-line-height);
-  letter-spacing: -1px;
+  letter-spacing: 0;
   margin: 0;
 }
 
 .highlight-green {
-  color: var(--text-highlight-color); /* Color verde corporativo de Tactica-TIC */
+  color: var(--text-highlight-color);
 }
 
 .contact-text {
-  font-size: 1.05rem;
+  font-size: var(--font-size-md);
   color: var(--text-body-color);
   line-height: var(--text-body-line-height);
   margin: 0;
-  max-width: 480px;
+  max-width: var(--contact-text-max-width);
 }
 
-/* Bloques de información de contacto */
 .info-blocks {
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  margin-top: 10px;
+  gap: var(--contact-form-gap);
+  margin-top: var(--card-title-description-gap);
 }
 
 .info-item {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: var(--title-subtitle-spacing);
 }
 
-/* Cajas de iconos corporativos verdes */
 .icon-box {
-  width: 46px;
-  height: 46px;
+  width: var(--contact-icon-size);
+  height: var(--contact-icon-size);
   background-color: var(--text-highlight-color);
   color: var(--color-white);
-  border-radius: 6px; /* Bordes sutiles de la imagen */
+  border-radius: var(--radius-sm);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -77,8 +73,8 @@
 }
 
 .info-svg {
-  width: 22px;
-  height: 22px;
+  width: var(--contact-icon-glyph-size);
+  height: var(--contact-icon-glyph-size);
 }
 
 .info-text {
@@ -101,10 +97,10 @@
 .contact-card {
   flex: 1;
   background: var(--card-background);
-  padding: 50px;
+  padding: var(--contact-form-padding);
   border-radius: var(--card-radius);
-  box-shadow: var(--card-shadow); /* Sombra muy difuminada */
-  max-width: 550px;
+  box-shadow: var(--card-shadow);
+  max-width: var(--contact-card-max-width);
   width: 100%;
   box-sizing: border-box;
   border: var(--card-border);
@@ -114,7 +110,7 @@
 .contact-form {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: var(--contact-form-gap);
 }
 
 .form-group {
@@ -124,7 +120,7 @@
 
 .form-row {
   display: flex;
-  gap: 15px;
+  gap: var(--contact-form-gap);
 }
 
 .inline-group {
@@ -135,10 +131,10 @@
 .contact-form input,
 .contact-form textarea {
   width: 100%;
-  padding: 16px 24px;
-  border: 1px solid var(--color-border); /* Borde gris ultra sutil */
-  border-radius: 30px; /* Súper ovalados */
-  font-size: 0.95rem;
+  padding: var(--form-input-padding-y) var(--form-input-padding-x);
+  border: var(--border-width-hairline) solid var(--color-border);
+  border-radius: var(--button-radius);
+  font-size: var(--form-input-font-size);
   color: var(--text-body-color);
   background-color: var(--color-white);
   outline: none;
@@ -161,15 +157,52 @@
 
 .contact-form input:focus,
 .contact-form textarea:focus {
-  border-color: var(--text-highlight-color); /* Se ilumina en verde al pinchar */
+  border-color: var(--text-highlight-color);
 }
 
 
 
 @media (max-width: 968px) {
-  .contact-container { padding: var(--section-padding-y) var(--section-padding-x); }
-  .contact-content { flex-direction: column; gap: 50px; }
-  .contact-title { font-size: 2.8rem; }
-  .contact-card { padding: 30px; }
-  .form-row { flex-direction: column; gap: 20px; }
+  .contact-container {
+    padding: var(--section-padding-y) var(--section-padding-x);
+  }
+
+  .contact-content {
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--contact-column-gap);
+  }
+
+  .contact-info,
+  .contact-card {
+    max-width: none;
+    width: 100%;
+  }
+
+  .contact-card {
+    padding: var(--contact-form-padding);
+  }
+
+  .form-row {
+    flex-direction: column;
+    gap: var(--contact-form-gap);
+  }
+}
+
+@media (max-width: 640px) {
+  .contact-container {
+    padding-inline: var(--section-padding-x);
+  }
+
+  .contact-card {
+    padding: var(--section-padding-x-mobile);
+  }
+
+  .contact-form {
+    gap: var(--title-subtitle-spacing);
+  }
+
+  .info-item {
+    align-items: flex-start;
+  }
 }

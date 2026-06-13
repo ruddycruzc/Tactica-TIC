@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { TypewriterText } from '../../ui/text/typewriter-text/typewriter-text';
+import { TypewriterText, TypewriterTextSegment } from '../../ui/text/typewriter-text/typewriter-text';
 
 @Component({
   selector: 'app-text-info-section',
@@ -10,5 +10,12 @@ import { TypewriterText } from '../../ui/text/typewriter-text/typewriter-text';
   styleUrl: './text-info-section.css',
 })
 export class TextInfoSection {
-  readonly statement = 'Nos negamos a ver el código como algo frío. Cada proyecto social que asumimos busca resolver retos reales y humanos.';
+  readonly statement = 'Transformamos procesos industriales conectando inteligencia artificial, IoT, visión artificial y software a medida para ayudar a las empresas a controlar, automatizar y tomar mejores decisiones.';
+  readonly statementSegments: TypewriterTextSegment[] = [
+    { text: 'Transformamos procesos industriales conectando ', tone: 'muted' },
+    { text: 'inteligencia artificial, IoT, visión artificial y software a medida para ayudar a las empresas ', tone: 'strong' },
+    { text: 'a controlar, ', tone: 'muted' },
+    { text: 'automatizar', tone: 'strong' },
+    { text: ' y tomar mejores decisiones.', tone: 'muted' },
+  ];
 }

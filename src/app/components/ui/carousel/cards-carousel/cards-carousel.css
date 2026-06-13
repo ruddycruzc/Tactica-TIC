@@ -7,13 +7,6 @@
   box-sizing: border-box;
   overflow: hidden;
   user-select: none;
-  --cards-offset-left: var(--section-padding-x);
-  --cards-gap: var(--grid-gap, 24px);
-  --cards-width: min(
-    var(--page-max-width, 1196px),
-    calc(100vw - var(--cards-offset-left) - var(--section-padding-x))
-  );
-  --card-size: calc((var(--cards-width) - (var(--cards-gap) * 2)) / 3);
 }
 
 .cards-carousel__header {
@@ -103,12 +96,6 @@
 }
 
 @media (max-width: 980px) {
-  .cards-carousel {
-    --cards-offset-left: var(--section-padding-x);
-    --cards-width: calc(100vw - var(--cards-offset-left) - var(--section-padding-x));
-    --card-size: min(380px, calc(var(--cards-width) * 0.72));
-  }
-
   .cards-carousel__header {
     flex-direction: column;
     align-items: stretch;
@@ -121,11 +108,6 @@
 }
 
 @media (max-width: 768px) {
-  .cards-carousel {
-    --cards-offset-left: var(--section-padding-x);
-    --cards-gap: 16px;
-  }
-
   .cards-carousel__track {
     gap: var(--cards-gap);
     padding-right: var(--cards-offset-left);

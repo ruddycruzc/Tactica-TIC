@@ -6,7 +6,6 @@
   padding: var(--section-padding-y) var(--section-padding-x);
   background-color: var(--color-bkg-light); 
   font-family: var(--font-family-base);
-  --project-logo-gap: 15px;
 }
 
 .projects-content {
@@ -176,6 +175,6 @@
   
   .project-image {
     height: 38px; /* Un pelín más pequeños en pantallas muy compactas */
-    --project-logo-gap: 10px;
+    margin-right: var(--project-logo-gap-mobile);
   }
 }
