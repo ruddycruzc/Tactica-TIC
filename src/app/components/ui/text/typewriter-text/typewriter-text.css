@@ -1,0 +1,19 @@
+.typewriter-text {
+  white-space: pre-wrap;
+}
+
+.typewriter-text__cursor {
+  display: inline-block;
+  width: 0.08em;
+  height: 0.9em;
+  margin-left: 0.08em;
+  background: var(--color-primary);
+  animation: typewriter-blink 900ms steps(2, start) infinite;
+  transform: translateY(0.08em);
+}
+
+@keyframes typewriter-blink {
+  50% {
+    opacity: 0;
+  }
+}

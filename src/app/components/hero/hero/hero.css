@@ -1,71 +1,73 @@
 .hero-container {
   position: relative;
-  padding: clamp(132px, 13vw, 180px) var(--section-padding-x) 32px;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
-  min-height: 420px;
+  min-height: 34.75rem;
+  padding: clamp(11.75rem, 14vw, 13.5rem) var(--section-padding-x) 2.25rem;
   box-sizing: border-box;
   overflow: hidden;
   background: url('/assets/images/fondo hero.png') center top / cover no-repeat;
 }
 
 .hero-content {
-  max-width: 1120px;
-  width: 100%;
+  position: relative;
+  z-index: 2;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 24px;
-  position: relative;
-  z-index: 2;
+  width: 100%;
+  max-width: 68rem;
+  gap: 1.5rem;
   text-align: center;
 }
 
 .hero-title {
-  max-width: 1120px;
-  font-family: 'Noto Sans', var(--font-family-base);
-  font-size: clamp(2rem, 5vw, 3rem);
-    color: var(--text-heading-color);
-  font-weight: var(--font-weight-bold);
+  max-width: 68rem;
+  margin: 0;
+  color: var(--text-heading-color);
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-hero);
+  font-weight: var(--font-weight-medium);
   line-height: 1;
   letter-spacing: 0;
-  margin: 0;
 }
 
+.hero-title span {
+  display: block;
+}
 
-.highlight-green {
+.hero-title strong {
   color: var(--text-highlight-color);
-  font-weight: var(--font-weight-extrabold);
+  font-weight: var(--font-weight-medium);
 }
-
 
 .hero-description {
-  font-size: clamp(1rem, 1.7vw, 1.375rem);
-  color: var(--text-body-color);
-  line-height: 1.36;
+  max-width: 67rem;
   margin: 0;
-  max-width: 1117px;
+  color: var(--text-body-color);
+  font-family: var(--font-family-heading);
+  font-size: clamp(1.05rem, 1.5vw, 1.5rem);
+  line-height: 1.42;
 }
-
 
 .hero-buttons {
   display: flex;
-  gap: 16px;
   align-items: center;
   justify-content: center;
+  gap: 1rem;
+  margin-top: 0.375rem;
 }
-
 
 .arrow {
   font-size: 1.1rem;
 }
 
-
 @media (max-width: 968px) {
   .hero-container {
-    padding: 112px var(--section-padding-x) 36px;
+    min-height: auto;
+    padding: 8.75rem var(--section-padding-x) 3rem;
   }
 
   .hero-buttons {
@@ -74,6 +76,14 @@
 }
 
 @media (max-width: 640px) {
+  .hero-container {
+    padding-top: 7.5rem;
+  }
+
+  .hero-title {
+    font-size: clamp(2.5rem, 13vw, 3.35rem);
+  }
+
   .hero-buttons {
     align-items: stretch;
     flex-direction: column;

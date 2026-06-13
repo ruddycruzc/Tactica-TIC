@@ -1,0 +1,27 @@
+.text-info {
+  background: var(--color-bkg-light);
+}
+
+.text-info__inner {
+  max-width: 75rem;
+}
+
+.text-info__statement {
+  margin: 0;
+  color: var(--text-heading-color);
+  font-family: var(--font-family-heading);
+  font-size: clamp(2.4rem, 5.25vw, 5rem);
+  font-weight: var(--font-weight-semibold);
+  line-height: 1.12;
+  letter-spacing: 0;
+}
+
+.text-info__statement::first-letter {
+  color: var(--color-primary);
+}
+
+@media (max-width: 640px) {
+  .text-info__statement {
+    font-size: clamp(2rem, 12vw, 3.3rem);
+  }
+}

@@ -1,4 +1,27 @@
 :host {
   display: block;
-  background: var(--color-bkg-white);
+  background: var(--color-bkg-light);
+}
+
+:host > * {
+  animation: home-section-reveal 680ms ease both;
+}
+
+@supports (animation-timeline: view()) {
+  :host > * {
+    animation-timeline: view();
+    animation-range: entry 0% cover 26%;
+  }
+}
+
+@keyframes home-section-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(1.5rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

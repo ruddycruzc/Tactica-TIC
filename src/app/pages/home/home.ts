@@ -1,28 +1,37 @@
 import { Component } from '@angular/core';
 
-import { Hero } from '../../components/hero/hero/hero';
 import { ContactForm } from '../../components/forms/contact-form/contact-form';
+import { Hero } from '../../components/hero/hero/hero';
 import { VideoHero } from '../../components/hero/video-hero/video-hero';
-import { ProjectCards } from '../../components/sections/project-cards/project-cards';
-import { Project2Section } from '../../components/sections/project2-section/project2-section';
+import { FinalCtaSection } from '../../components/sections/final-cta-section/final-cta-section';
+import { HomeProjectsSection } from '../../components/sections/home-projects-section/home-projects-section';
+import { InfoLeftComponent } from '../../components/sections/info-left/info-left-component/info-left-component';
+import { ProductShowcaseSection } from '../../components/sections/product-showcase-section/product-showcase-section';
+import { TextInfoSection } from '../../components/sections/text-info-section/text-info-section';
 import { CardsCarousel } from '../../components/ui/carousel/cards-carousel/cards-carousel';
 import { LogosCarousel } from '../../components/ui/carousel/logos-carousel/logos-carousel';
-import { FaqSection } from '../../components/sections/faq-section/faq-section';
 
 @Component({
   selector: 'app-home',
   standalone: true,
   imports: [
     Hero,
-    ProjectCards,
-    ContactForm,
+    ProductShowcaseSection,
     VideoHero,
-    Project2Section,
+    TextInfoSection,
+    InfoLeftComponent,
+    HomeProjectsSection,
+    FinalCtaSection,
     CardsCarousel,
     LogosCarousel,
-    FaqSection
-],
+    ContactForm
+  ],
   templateUrl: './home.html',
   styleUrl: './home.css'
 })
-export class Home {}
+export class Home {
+  readonly infoLeftParagraphs = [
+    'Nos negamos a ver el código como algo frío. Cada proyecto social que asumimos busca resolver retos reales y humanos.',
+    'Tratamos cada línea de desarrollo con la responsabilidad moral que merece el impacto comunitario.'
+  ];
+}

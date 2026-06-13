@@ -1,0 +1,26 @@
+<section class="home-projects home-section">
+  <div class="home-projects__inner home-section__inner reveal-up">
+    <div class="home-projects__header">
+      <div>
+        <h2>Nuestro proyectos</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>
+
+      <app-button variant="primary" routerLink="/projects">Ver proyectos</app-button>
+    </div>
+
+    <div class="home-projects__grid">
+      @for (project of projects; track project.title) {
+        <article class="home-project-card">
+          <img [src]="project.image" [alt]="project.title" loading="lazy" decoding="async">
+          <h3>{{ project.title }}</h3>
+          <p>{{ project.description }}</p>
+          <app-button variant="tertiary" routerLink="/projects">
+            Ver detalles
+            <span class="arrow">→</span>
+          </app-button>
+        </article>
+      }
+    </div>
+  </div>
+</section>

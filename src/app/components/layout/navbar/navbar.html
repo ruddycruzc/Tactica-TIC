@@ -1,43 +1,24 @@
 <nav class="navbar">
-
-  <a
-    routerLink="/"
-    class="navbar__logo">
-
-<img src="/assets/images/logo-TT.png" alt="Táctica TIC">
-
+  <a routerLink="/" class="navbar__logo" (click)="closeMenu()">
+    <img src="/assets/Logos/logo-tactica.png" alt="Táctica TIC">
   </a>
 
-  <ul class="navbar__menu"
-   [class.navbar__menu--open]="menuOpen">
-
-    @for(item of navigationItems; track item.route){
-
+  <ul class="navbar__menu" [class.navbar__menu--open]="menuOpen">
+    @for(item of navigationItems; track item.route) {
       <li>
-
         <a
           class="navbar__link"
-          [class.navbar__link--has-menu]="item.route === '/'"
           [routerLink]="item.route"
           routerLinkActive="active-link"
           [routerLinkActiveOptions]="{ exact: true }"
           (click)="closeMenu()">
-
-       {{ item.label | translate }}
-       @if (item.route === '/') {
-        <span class="navbar__chevron" aria-hidden="true"></span>
-       }
-
+          {{ item.label | translate }}
         </a>
-
       </li>
-
     }
-
   </ul>
 
   <div class="navbar__actions">
-
     <app-button
       variant="tertiary"
       iconOnly
@@ -46,26 +27,21 @@
       <img src="/assets/icons/icon-search.png" alt="">
     </app-button>
 
-<app-button
-  variant="tertiary"
-  size="sm"
-  (buttonClick)="toggleLanguage()">
+    <app-button
+      variant="tertiary"
+      size="sm"
+      (buttonClick)="toggleLanguage()">
+      {{ currentLanguage.toUpperCase() }}
+    </app-button>
 
-  {{ currentLanguage.toUpperCase() }}
-
-</app-button>
-<div class="navbar__hamburger">
-  <app-button
-    variant="tertiary"
-    iconOnly
-    ariaLabel="abrirmenu"
-    (buttonClick)="toggleMenu()">
-
-    <img src="/assets/icons/menu.svg" alt="menu">
-
-  </app-button>
-</div>
-
+    <div class="navbar__hamburger">
+      <app-button
+        variant="tertiary"
+        iconOnly
+        ariaLabel="Abrir menu"
+        (buttonClick)="toggleMenu()">
+        <img src="/assets/icons/menu.svg" alt="">
+      </app-button>
+    </div>
   </div>
-
 </nav>

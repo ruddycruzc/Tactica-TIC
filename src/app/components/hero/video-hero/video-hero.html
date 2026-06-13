@@ -1,61 +1,25 @@
-<section class="video-container">
-
-  <div class="video-content">
-
+<section class="video-container home-section">
+  <div class="video-content home-section__inner reveal-up">
     <div class="video-left">
-
       <div class="video-wrapper">
-
-        <iframe
-          src="https://www.youtube.com/embed/ma8JDBwat_s"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen>
-        </iframe>
-
-        <div class="video-overlay-text">
-
-          <h3 class="ceo-name">
-
-            {{ videoContent.ceoName | translate }}
-
-          </h3>
-
-          <p class="ceo-role">
-
-            {{ videoContent.ceoRole | translate }}
-
-          </p>
-
-        </div>
-
+        <video controls preload="metadata" poster="/assets/images/interview.jpg">
+          <source src="/assets/Videos/Video.mp4" type="video/mp4">
+        </video>
       </div>
-
     </div>
 
     <div class="video-right">
-
       <h2 class="section-title">
-
         {{ videoContent.title | translate }}
-
       </h2>
 
       <p class="section-description">
-
         {{ videoContent.description | translate }}
-
       </p>
 
       <p class="section-lead">
-
         {{ videoContent.lead | translate }}
-
       </p>
-
     </div>
-
   </div>
-
 </section>

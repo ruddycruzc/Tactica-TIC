@@ -12,7 +12,7 @@
   justify-content: center;
   box-sizing: border-box;
   color: var(--button-text);
-  font: inherit;
+  font-family: var(--font-family-base);
   font-size: var(--button-font-size);
   font-weight: var(--button-font-weight);
   line-height: 1;
@@ -85,13 +85,14 @@
 }
 
 :host(.app-button--primary) {
-  background: var(--color-primary);
-  border-color: var(--text-highlight-color);
+  background: var(--button-primary-bg);
+  border-color: var(--button-primary-bg);
+  color: var(--button-text-inverse);
 }
 
 :host(.app-button--primary:hover) {
-  background: var(--color-secondary);
-  border-color: var(--color-secondary);
+  background: var(--button-primary-bg-hover);
+  border-color: var(--button-primary-bg-hover);
   color: var(--button-text-inverse);
 }
 
@@ -102,18 +103,19 @@
 }
 
 :host(.app-button--secondary) {
-  background: var(--color-white);
+  background: var(--button-secondary-bg);
   border-color: var(--text-highlight-color);
+  color: var(--button-text);
 }
 
 :host(.app-button--secondary:hover) {
-  background: var(--color-tertiary);
-  border-color: var(--color-secondary);
+  background: var(--button-secondary-bg-hover);
+  border-color: var(--text-highlight-color);
 }
 
 :host(.app-button--secondary:active) {
   background: var(--color-tertiary);
-  border-color: var(--color-secondary);
+  border-color: var(--text-highlight-color);
 }
 
 :host(.app-button--tertiary) {
@@ -121,15 +123,15 @@
   padding: 0;
   background: transparent;
   border-color: transparent;
-  color: var(--color-secondary);
+  color: var(--button-tertiary-color);
 }
 
 :host(.app-button--tertiary:hover) {
-  color: var(--text-highlight-color);
+  color: var(--button-tertiary-color-hover);
 }
 
 :host(.app-button--tertiary:active) {
-  color: var(--color-secondary);
+  color: var(--button-tertiary-color);
 }
 
 :host(:active) {
