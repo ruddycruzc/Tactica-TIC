@@ -68,6 +68,8 @@
   box-sizing: border-box;
   cursor: grab;
   touch-action: auto;
+  margin-right: calc(-1 * var(--section-padding-x));
+  padding-right: 1rem;
 }
 
 .cards-carousel__viewport:active {
