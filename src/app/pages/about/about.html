@@ -1,2 +1,57 @@
-<app-about-section></app-about-section>
+<main class="about-page">
+  <section class="about-hero">
+    <div class="about-hero__inner">
+      <header class="about-page__header">
+        <h2>Quiénes somos</h2>
+        <p>
+          Creamos soluciones tecnológicas cercanas, eficientes y diseñadas a la medida de los retos reales de cada negocio.
+        </p>
+      </header>
 
+      <div class="about-media-grid">
+        <img src="/assets/images/about-us/sobre nosotros 1.png" alt="Equipo de Táctica TIC trabajando" loading="lazy" decoding="async">
+        <video src="/assets/Videos/aboutus.mp4" muted loop playsinline controls></video>
+        <img src="/assets/images/about-us/sobre nosotros 2.png" alt="Espacio de trabajo de Táctica TIC" loading="lazy" decoding="async">
+      </div>
+    </div>
+  </section>
+
+  <section class="about-story">
+    <div class="about-story__inner">
+      <header class="about-page__header">
+        <h2>Tecnología con visión humana</h2>
+        <p>
+          Unimos estrategia, ingeniería y acompañamiento para transformar procesos complejos en herramientas útiles.
+        </p>
+      </header>
+
+      <app-info-left-image
+        title="Liderando el cambio digital"
+        description="Nos negamos a ver el código como algo frío. Cada proyecto social que asumimos busca resolver retos reales y humanos, tratando cada línea de desarrollo con responsabilidad, cercanía e impacto."
+        mediaSrc="/assets/images/about-us/sobre nosotros 3.png"
+        mediaAlt="Equipo conversando sobre un proyecto digital"
+        buttonLabel="Conócenos"
+        buttonLink="/contact"
+      />
+    </div>
+  </section>
+
+  <section class="aboutus-info">
+    <div class="aboutus-info__inner">
+      <app-icon-info
+        icon="/assets/icons/linkedin.svg"
+        title="Innovación aplicada"
+        description="Convertimos inteligencia artificial, visión artificial e IoT en soluciones tangibles para optimizar operaciones y tomar mejores decisiones."
+      />
+
+      <app-icon-info
+        icon="/assets/icons/instagram.svg"
+        title="Acompañamiento real"
+        description="Trabajamos cerca de cada equipo, entendiendo sus procesos y construyendo tecnología preparada para crecer con el negocio."
+      />
+    </div>
+  </section>
+
+  <app-cards-carousel></app-cards-carousel>
+  <app-contact-form></app-contact-form>
+</main>

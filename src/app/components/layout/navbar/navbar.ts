@@ -38,10 +38,6 @@ export class Navbar {
       route: '/projects'
     },
     {
-      label: 'NAV.CONTACT',
-      route: '/contact'
-    },
-    {
       label: 'NAV.BLOG',
       route: '/blog'
     },

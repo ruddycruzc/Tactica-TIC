@@ -1,7 +1,7 @@
 .jobs-container {
   width: 100%;
   padding: calc(var(--section-padding-y) + var(--button-height-lg)) var(--section-padding-x) var(--section-padding-y);
-  background: var(--page-hero-background-image) center top / cover no-repeat;
+  background: var(--color-bkg-light);
   box-sizing: border-box;
   font-family: var(--font-family-base);
 }
@@ -53,8 +53,9 @@
   justify-content: center;
   gap: var(--title-subtitle-spacing);
   border-radius: var(--radius-cards);
+  border: var(--border-width-hairline) solid var(--color-border);
   background: var(--card-background);
-  box-shadow: var(--shadow-card);
+  box-shadow: none;
 }
 
 .blog-card__code {

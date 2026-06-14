@@ -1,88 +1,54 @@
 <footer class="footer-container">
   <div class="footer-content">
-
-    <!-- Columna 1: Info de la Empresa -->
     <div class="footer-column brand-column">
       <h2 class="footer-brand">TÁCTICA TIC</h2>
-      <p class="footer-tagline">
-
-        {{ 'FOOTER.TAGLINE' | translate }}
-      </p>
+      <p class="footer-tagline">{{ 'FOOTER.TAGLINE' | translate }}</p>
 
       <p class="footer-copyright">
         {{ 'FOOTER.COPYRIGHT' | translate }}
       </p>
     </div>
 
-    <!-- Columna 2: Tecnología -->
     <div class="footer-column">
-      <h3 class="column-title">
-        {{ 'FOOTER.TECHNOLOGY' | translate }}
-      </h3>
+      <h3 class="column-title">{{ 'FOOTER.TECHNOLOGY' | translate }}</h3>
       <ul class="footer-links">
-
-        @for(link of technologyLinks; track link.label){
-
-        <li>
-
-          <a [routerLink]="link.route">
-
-{{ link.label | translate }}
-
-          </a>
-
-        </li>
-
+        @for(link of technologyLinks; track link.label) {
+          <li>
+            <a [routerLink]="link.route">{{ link.label | translate }}</a>
+          </li>
         }
-
       </ul>
     </div>
 
-    <!-- Columna 3: Empresa -->
     <div class="footer-column">
-<h3 class="column-title">
-  {{ 'FOOTER.COMPANY' | translate }}
-</h3>
+      <h3 class="column-title">{{ 'FOOTER.COMPANY' | translate }}</h3>
       <ul class="footer-links">
-
-        @for(link of companyLinks; track link.label){
-
-        <li>
-
-          <a [routerLink]="link.route">
-{{ link.label | translate }}
-
-          </a>
-
-        </li>
-
+        @for(link of companyLinks; track link.label) {
+          <li>
+            <a [routerLink]="link.route">{{ link.label | translate }}</a>
+          </li>
         }
-
       </ul>
+
+      <div class="footer-socials" aria-label="Redes sociales">
+        <a href="https://www.linkedin.com/company/tactica-tic" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <img src="/assets/icons/linkedin.svg" alt="">
+        </a>
+        <a href="https://www.instagram.com/tacticatic" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <img src="/assets/icons/instagram.svg" alt="">
+        </a>
+      </div>
     </div>
 
-    <!-- Columna 4: Legal -->
     <div class="footer-column">
-<h3 class="column-title">
-  {{ 'FOOTER.LEGAL' | translate }}
-</h3>
+      <h3 class="column-title">{{ 'FOOTER.LEGAL' | translate }}</h3>
       <ul class="footer-links">
-
-        @for(link of legalLinks; track link.label){
-
-        <li>
-
-          <a [routerLink]="link.route">
-{{ link.label | translate }}
-
-          </a>
-
-        </li>
-
+        @for(link of legalLinks; track link.label) {
+          <li>
+            <a [routerLink]="link.route">{{ link.label | translate }}</a>
+          </li>
         }
-
       </ul>
     </div>
-
   </div>
 </footer>
