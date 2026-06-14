@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 
 import { AppButtonComponent } from '../../ui/buttons/app-button/app-button.component';
+import { ProjectCard } from '../../ui/cards/project-card/project-card';
 
 type HomeProject = {
   title: string;
@@ -11,7 +12,7 @@ type HomeProject = {
 @Component({
   selector: 'app-home-projects-section',
   standalone: true,
-  imports: [AppButtonComponent],
+  imports: [AppButtonComponent, ProjectCard],
   templateUrl: './home-projects-section.html',
   styleUrl: './home-projects-section.css',
 })

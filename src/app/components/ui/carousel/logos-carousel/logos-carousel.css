@@ -15,15 +15,17 @@
 }
 
 .logos-carousel__viewport {
-  width: 100%;
+  width: 100vw;
+  margin-left: calc(var(--section-padding-x) * -1);
   overflow: hidden;
-  padding: 3rem var(--section-padding-x);
+  padding: 3rem 0 3rem var(--section-padding-x);
   box-sizing: border-box;
 }
 
 .logos-carousel__track {
   display: flex;
   width: max-content;
+  padding-right: var(--section-padding-x);
   animation: logos-scroll 24s linear infinite;
   will-change: transform;
 }

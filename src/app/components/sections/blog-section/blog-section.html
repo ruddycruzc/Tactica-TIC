@@ -1,36 +1,40 @@
-<section class="blog-container">
-  <div class="blog-content">
-    <div class="blog-header">
-      <h2 class="blog-title">TÁCTICA TIC en los <span class="highlight-green">Medios</span></h2>
-      <p class="blog-subtitle">
+<section class="blog-page-section">
+  <div class="blog-page-section__inner">
+    <header class="blog-page-section__header">
+      <h2>Blogs</h2>
+      <p>
         Compartimos nuestra actividad pública, apariciones en prensa y contribuciones al sector de la ingeniería de software y la innovación.
       </p>
-    </div>
+    </header>
 
-    <!-- Rejilla dinámica optimizada con @for -->
-    <div class="blog-grid">
-      
-      @for (post of posts; track post.title) {
-        <article class="blog-card">
-          <div class="blog-meta">
-            <span class="media-badge">{{ post.badge }}</span>
-          </div>
-          <h3 class="article-title">{{ post.title }}</h3>
-          <p class="article-excerpt">{{ post.excerpt }}</p>
-
-          <div class="article-footer">
-            <app-button variant="tertiary" [href]="post.url" target="_blank" rel="noopener noreferrer">
-              Leer artículo completo <span class="arrow">→</span>
-            </app-button>
-          </div>
-        </article>
+    <div class="blog-page-section__grid">
+      @for (post of posts; track $index) {
+        <app-project-card
+          [image]="post.image"
+          [imageAlt]="post.imageAlt"
+          [title]="post.title"
+          [description]="post.excerpt"
+          buttonLabel="Seguir leyendo"
+          [buttonHref]="post.url"
+          buttonTarget="_blank"
+        />
       }
-
-      
-      <img src="/assets/images/i1.jpeg" alt="reunion" class="blog-placeholder" loading="lazy" decoding="async" />
-      <img src="/assets/images/i2.jpeg" alt="interview" class="blog-placeholder" loading="lazy" decoding="async" />
-      <img src="/assets/images/i3.jpeg" alt="office" class="blog-placeholder" loading="lazy" decoding="async" />
-
     </div>
+
+    <nav class="blog-page-section__controls" aria-label="Paginación de blogs">
+      <app-button variant="primary" iconOnly ariaLabel="Anterior">
+        <span aria-hidden="true">←</span>
+      </app-button>
+
+      <div class="blog-page-section__dots" aria-hidden="true">
+        @for (indicator of indicators; track indicator) {
+          <span class="blog-page-section__dot" [class.blog-page-section__dot--active]="indicator === 0"></span>
+        }
+      </div>
+
+      <app-button variant="primary" iconOnly ariaLabel="Siguiente">
+        <span aria-hidden="true">→</span>
+      </app-button>
+    </nav>
   </div>
 </section>

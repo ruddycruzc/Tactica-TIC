@@ -10,7 +10,7 @@
   min-height: clamp(4.5rem, 5.2vw, 5.75rem);
   padding-inline: clamp(2rem, 4.1vw, 4.875rem);
   border-radius: 999px;
-  background-color: var(--color-glass-light);
+  background-color: var(--color-bkg-white);
   box-shadow: 0 0.25rem 0.77rem rgba(231, 231, 231, 0.25);
   transform: translateX(-50%);
   backdrop-filter: blur(12px);
