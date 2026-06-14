@@ -5,11 +5,11 @@
 
 .icon-info {
   height: 100%;
-  min-height: 18rem;
+  min-height: var(--icon-info-min-height);
   padding: var(--contact-form-padding);
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
   gap: var(--title-subtitle-spacing);
   box-sizing: border-box;
   border-radius: var(--radius-cards);
@@ -17,8 +17,8 @@
 }
 
 .icon-info__icon {
-  width: var(--contact-icon-size);
-  height: var(--contact-icon-size);
+  width: var(--icon-info-icon-size);
+  height: var(--icon-info-icon-size);
   display: grid;
   place-items: center;
   border-radius: var(--radius-sm);
@@ -27,8 +27,8 @@
 
 .icon-info__icon img {
   display: block;
-  width: var(--contact-icon-glyph-size);
-  height: var(--contact-icon-glyph-size);
+  width: var(--contact-icon-size);
+  height: var(--contact-icon-size);
   object-fit: contain;
 }
 
@@ -43,6 +43,6 @@
 .icon-info p {
   margin: 0;
   color: var(--text-body-color);
-  font-size: var(--font-size-body-medium);
+  font-size: var(--font-size-body-large);
   line-height: var(--text-body-line-height);
 }

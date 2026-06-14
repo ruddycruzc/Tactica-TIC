@@ -3,8 +3,7 @@
 }
 
 .about-hero,
-.about-story,
-.aboutus-info {
+.about-story {
   padding: var(--section-padding-y) var(--section-padding-x);
 }
 
@@ -14,11 +13,6 @@
 
 .about-hero__inner,
 .about-story__inner,
-.aboutus-info__inner {
-  width: min(100%, var(--page-max-width));
-  margin-inline: auto;
-}
-
 .about-hero__inner,
 .about-story__inner {
   display: grid;
@@ -60,21 +54,28 @@
   display: block;
   width: 100%;
   height: 100%;
-  aspect-ratio: 0.78 / 1;
+  aspect-ratio: var(--project-card-image-ratio);
   object-fit: cover;
   border-radius: var(--radius-cards);
   background: var(--color-bkg-grey);
 }
 
-.about-media-grid video {
-  aspect-ratio: 0.78 / 1;
-}
-
 .about-story {
-  background: var(--color-bkg-grey);
+  background: var(--color-bkg-light);
 }
 
-.aboutus-info__inner {
+.about-story__title {
+  margin: 0;
+  color: var(--text-heading-color);
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-semibold);
+}
+
+.about-story__title span {
+  color: var(--text-highlight-color);
+}
+
+.aboutus-info {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: var(--grid-gap);
@@ -82,7 +83,7 @@
 
 @media (max-width: 900px) {
   .about-media-grid,
-  .aboutus-info__inner {
+  .aboutus-info {
     grid-template-columns: 1fr;
   }
 

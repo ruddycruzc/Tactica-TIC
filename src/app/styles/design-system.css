@@ -84,6 +84,8 @@
   --form-input-font-size: 0.95rem;
   --contact-icon-size: 3.25rem;
   --contact-icon-glyph-size: 1.375rem;
+  --icon-info-icon-size: 4.25rem;
+  --icon-info-min-height: 13.5rem;
   --faq-header-width: 26.25rem;
   --faq-header-width-tablet: 38.75rem;
   --faq-answer-width: 47.5rem;
@@ -103,7 +105,7 @@
   --blog-dot-size: 0.625rem;
   --cards-offset-left: var(--section-padding-x);
   --cards-gap: var(--grid-gap);
-  --cards-width: min(var(--page-max-width), calc(100vw - var(--cards-offset-left) - var(--section-padding-x)));
+  --cards-width: min(var(--page-max-width), calc(100vw - var(--cards-offset-left)));
   --card-size: calc((var(--cards-width) - (var(--cards-gap) * 2)) / 3);
   --project-logo-gap: 0.9375rem;
   --project-logo-gap-mobile: 0.625rem;
@@ -261,7 +263,7 @@ h2 {
 @media (max-width: 980px) {
   :root {
     --cards-offset-left: var(--section-padding-x);
-    --cards-width: calc(100vw - var(--cards-offset-left) - var(--section-padding-x));
+    --cards-width: calc(100vw - var(--cards-offset-left));
     --card-size: min(23.75rem, calc(var(--cards-width) * 0.72));
   }
 }

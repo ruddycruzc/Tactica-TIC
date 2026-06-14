@@ -2,7 +2,7 @@
   position: relative;
   width: 100%;
   max-width: none;
-   padding: var(--section-padding-y-desktop) var(--section-padding-x-desktop);
+  padding: var(--section-padding-y) 0;
   background: var(--color-bkg-white);
   box-sizing: border-box;
   overflow: hidden;
@@ -14,10 +14,11 @@
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  gap: 24px;
-  width: var(--cards-width);
-  max-width: 100%;
-  margin: 0 0 var(--title-subtitle-spacing);
+  gap: var(--grid-gap);
+  width: min(100%, var(--page-max-width));
+  margin: 0 auto var(--title-subtitle-spacing);
+  padding: 0 var(--section-padding-x);
+  box-sizing: border-box;
 }
 
 .cards-carousel__intro {
@@ -55,10 +56,12 @@
 }
 
 .cards-carousel__viewport {
+  width: 100vw;
   overflow-x: auto;
   overflow-y: hidden;
   scroll-snap-type: x mandatory;
-  padding: 2rem 0 0rem;
+  padding: 2rem 0 0 var(--section-padding-x);
+  box-sizing: border-box;
   cursor: grab;
   touch-action: auto;
 }
@@ -72,7 +75,7 @@
   align-items: stretch;
   gap: var(--cards-gap);
   width: max-content;
-  padding-right: var(--cards-offset-left);
+  padding-right: var(--section-padding-x);
 }
 
 .cards-carousel__slide {
@@ -111,7 +114,7 @@
 @media (max-width: 768px) {
   .cards-carousel__track {
     gap: var(--cards-gap);
-    padding-right: var(--cards-offset-left);
+    padding-right: var(--section-padding-x);
   }
 
   .cards-carousel__slide {
