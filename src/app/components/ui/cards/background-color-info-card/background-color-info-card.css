@@ -23,7 +23,7 @@
 
 .background-color-info-card--large {
   min-height: 29.25rem;
-  padding: clamp(2rem, 3.5vw, 3.25rem);
+  padding: clamp(2rem, 3.5vw, 2rem);
 }
 
 .background-color-info-card h3 {
@@ -32,7 +32,7 @@
   color: inherit;
   font-family: var(--font-family-heading);
   font-size: var(--font-size-card-title);
-  font-weight: var(--font-weight-medium);
+  font-weight: var(--font-weight-regular);
   line-height: 1.33;
   letter-spacing: 0;
 }
@@ -48,7 +48,7 @@
 
 .background-color-info-card p {
   max-width: var(--color-info-body-width);
-  margin: 0.9rem 0 0;
+  margin: 0rem 0 0;
   color: inherit;
   font-size: var(--font-size-body-medium);
   line-height: var(--line-height-base);

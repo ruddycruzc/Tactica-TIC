@@ -1,16 +1,19 @@
 .home-projects {
   background: var(--color-bkg-light);
+  padding-top: 10rem;
+  padding-bottom: 10rem;
 }
 
 .home-projects__inner {
   display: grid;
-  gap: clamp(2rem, 4.3vw, 3.75rem);
+  gap: 4rem;
 }
 
 .home-projects__header {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
+  justify-items: center;
   gap: var(--grid-gap);
 }
 
@@ -18,14 +21,15 @@
   margin: 0;
   color: var(--text-heading-color);
   font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-semibold);
 }
 
 .home-projects__header p {
   max-width: 43rem;
-  margin: var(--card-title-description-gap) 0 0;
   color: var(--text-body-color);
   font-size: var(--font-size-body-large);
-  line-height: 1.22;
+  line-height:  var(--text-body-line-height);
+  padding-top: 1rem;
 }
 
 .home-projects__grid {

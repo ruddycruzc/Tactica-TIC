@@ -1,5 +1,6 @@
 .video-container {
   background: var(--color-bkg-light);
+ padding: 0 var(--section-padding-x-desktop);
 }
 
 .video-content {
@@ -7,8 +8,8 @@
   grid-template-columns: minmax(0, var(--video-media-width)) minmax(20rem, 1fr);
   align-items: center;
   min-height: var(--video-panel-height);
-  gap: clamp(3rem, 7vw, 6.5rem);
-  padding: clamp(2.25rem, 4vw, 3rem);
+  gap: clamp(2rem, 7vw, 4rem);
+  padding: 4rem;
   border-radius: var(--radius-panel);
   background: var(--color-surface-muted);
   box-sizing: border-box;
@@ -49,7 +50,7 @@
 
 .section-description {
   max-width: 36rem;
-  margin: 1rem 0 0;
+  margin: 0 0 0;
   color: var(--text-body-color);
   font-size: var(--font-size-body-large);
   line-height: var(--text-body-line-height);
@@ -57,7 +58,7 @@
 
 .section-lead {
   max-width: 34rem;
-  margin: clamp(2rem, 5vw, 4.75rem) 0 0;
+  margin: 0;
   color: var(--text-highlight-color);
   font-size: var(--font-size-body-large);
   font-weight: var(--font-weight-medium);

@@ -2,11 +2,12 @@
   position: relative;
   width: 100%;
   max-width: none;
-  padding: var(--section-padding-y) 0 var(--section-padding-y) var(--cards-offset-left);
+   padding: var(--section-padding-y-desktop) var(--section-padding-x-desktop);
   background: var(--color-bkg-white);
   box-sizing: border-box;
   overflow: hidden;
   user-select: none;
+  
 }
 
 .cards-carousel__header {
@@ -30,19 +31,19 @@
    margin: 0;
   color: var(--text-heading-color);
   font-size: var(--font-size-h2);
-  font-weight: var(--font-weight-extrabold);
+  font-weight: var(--font-weight-semibold);
   line-height: 1.05;
   text-align: left;
 }
 
 .cards-carousel__subtitle {
   max-width: 700px;
-  padding-block: var(--title-subtitle-spacing) 1rem;
+  padding-block: 1rem;
   margin: 0;
   color: var(--text-body-color);
   font-size: var(--font-size-body-medium);
   font-weight: var(--font-weight-regular);
-  line-height: var(--text-heading-line-height);
+ line-height: var(--text-body-line-height);
   text-align: left;
 }
 
@@ -57,7 +58,7 @@
   overflow-x: auto;
   overflow-y: hidden;
   scroll-snap-type: x mandatory;
-  padding: 0.5rem 0 1.5rem;
+  padding: 2rem 0 0rem;
   cursor: grab;
   touch-action: auto;
 }

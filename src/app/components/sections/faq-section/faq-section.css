@@ -1,6 +1,6 @@
 .faq-container {
   background: var(--color-bkg-white);
-  padding: var(--section-padding-y) var(--section-padding-x);
+  padding: var(--section-padding-y) var(--section-padding-x)  5rem;
   width: 100%;
   box-sizing: border-box;
 }

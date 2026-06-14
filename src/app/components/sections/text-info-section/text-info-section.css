@@ -1,8 +1,9 @@
 .text-info {
   background: var(--color-bkg-light);
-  min-height: clamp(18rem, 32vw, 31rem);
+  min-height: clamp(18rem, 25vw, 33rem);
   display: flex;
   align-items: center;
+ padding: var(--section-padding-y-desktop) var(--section-padding-x-desktop);
 }
 
 .text-info__inner {

@@ -1,5 +1,7 @@
 .info-left-component {
   background: var(--color-bkg-light);
+  padding-top: 0rem;  
+  padding-bottom: 0rem;
 }
 
 .info-left-component__inner {
@@ -7,7 +9,7 @@
   grid-template-columns: minmax(18rem, 0.86fr) minmax(32rem, 1.45fr);
   gap: clamp(3rem, 7vw, 7rem);
   align-items: center;
-  padding: clamp(2.5rem, 4.5vw, 4.75rem) clamp(2rem, 3.5vw, 3.5rem);
+  padding:3rem;
   border-radius: var(--radius-panel);
   background: var(--info-left-background);
 }
@@ -21,10 +23,10 @@
 
 .info-left-component__content p {
   max-width: 36rem;
-  margin: 1.5rem 0 0;
+  margin: 1rem 0 0;
   color: var(--info-left-body-color);
   font-size: var(--font-size-body-large);
-  line-height: var(--line-height-base);
+  line-height: var(--text-body-line-height);
 }
 
 .info-left-component__content app-button {

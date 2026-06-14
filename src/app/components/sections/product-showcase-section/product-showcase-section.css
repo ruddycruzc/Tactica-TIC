@@ -1,5 +1,7 @@
 .product-showcase {
   background: var(--color-bkg-light);
+  padding-top: 0rem;
+  padding-bottom: 4rem;
 }
 
 .product-showcase__inner {

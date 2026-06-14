@@ -13,13 +13,13 @@
   --font-size-3xl: 1.875rem;
   --font-size-4xl: 2.5rem;
   --font-size-5xl: 3.5rem;
-  --font-size-h1: clamp(3rem, 5.4vw, 4.5rem);
-  --font-size-h2: clamp(2.35rem, 3.4vw, 2.75rem);
+  --font-size-h1: clamp(1rem, 5.3vw, 3.5rem);
+  --font-size-h2: clamp(2.35rem, 3vw, 2rem);
   --font-size-hero: var(--font-size-h1);
   --font-size-hero-description: clamp(1.1rem, 1.55vw, 1.5rem);
   --font-size-card-title: clamp(1.35rem, 1.55vw, 1.5rem);
   --font-size-card-description: clamp(1.05rem, 1.3vw, 1.25rem);
-  --font-size-body-large: clamp(1.05rem, 1.3vw, 1.25rem);
+  --font-size-body-large: clamp(1.05rem, 1.3vw, 1rem);
   --font-size-text-info: var(--font-size-h2);
 
   --line-height-tight: 1.04;
@@ -40,7 +40,7 @@
   --section-padding-x-desktop: clamp(6rem, 9vw, 8rem);
   --section-padding-x-tablet: 3rem;
   --section-padding-x-mobile: 1.25rem;
-  --section-padding-y-desktop: 4.5rem;
+  --section-padding-y-desktop: 7rem;
   --section-padding-y-tablet: 3.5rem;
   --section-padding-y-mobile: 2.5rem;
   --section-padding-x: var(--section-padding-x-desktop);
@@ -50,7 +50,8 @@
   --container-padding-sm: var(--section-padding-x-mobile);
   --container-padding: var(--section-padding-x);
   --container-padding-lg: var(--section-padding-x-desktop);
-  --page-margin: var(--section-padding-x);
+ 
+
   --grid-gap: 1.5rem;
   --section-gap: clamp(4rem, 9vw, 7.5rem);
   --title-subtitle-spacing: 1rem;
@@ -87,8 +88,8 @@
   --logo-item-width: clamp(10rem, 14vw, 14.5rem);
   --logo-item-height: clamp(6rem, 8vw, 8.5rem);
   --logos-gap: clamp(2.125rem, 5vw, 5.125rem);
-  --logos-section-padding-top: 2.125rem;
-  --logos-section-padding-bottom: 2.875rem;
+  --logos-section-padding-top: 2rem;
+  --logos-section-padding-bottom: 2rem;
   --logo-item-padding: 0.75rem;
   --cards-offset-left: var(--section-padding-x);
   --cards-gap: var(--grid-gap);

@@ -1,6 +1,7 @@
 .final-cta {
   padding-inline: 0;
   background: var(--color-bkg-black);
+  padding: 3rem var(--section-padding-x-desktop);
 }
 
 .final-cta__inner {

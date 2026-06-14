@@ -3,7 +3,7 @@
 
   <div class="expandable-image-card__content">
     <h3>{{ title }}</h3>
-    @if (description) {
+    @if (expanded && description) {
       <p>{{ description }}</p>
     }
   </div>

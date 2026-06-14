@@ -1,6 +1,6 @@
 .contact-container {
   background-color: var(--form-section-background);
-  padding: var(--section-padding-y) var(--section-padding-x);
+  padding:5rem var(--section-padding-x);
   display: flex;
   justify-content: center;
   align-items: center;

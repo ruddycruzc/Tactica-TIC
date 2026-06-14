@@ -53,12 +53,14 @@
   transition: color var(--transition-base), font-weight var(--transition-base);
 }
 
-.navbar__menu a:hover,
-.active-link {
+.navbar__menu a:hover {
   color: var(--nav-link-active-color);
 }
 
-.active-link {
+.navbar__menu a.active-link,
+.navbar__menu a.active-link:hover,
+.navbar__menu a.active-link:focus-visible {
+  color: var(--nav-link-active-color);
   font-weight: var(--nav-link-active-font-weight);
 }
 
@@ -131,7 +133,9 @@
     gap: 0.85rem;
   }
 
-  .active-link {
+  .navbar__menu a.active-link,
+  .navbar__menu a.active-link:hover,
+  .navbar__menu a.active-link:focus-visible {
     color: var(--nav-link-active-color);
     font-weight: var(--nav-link-active-font-weight);
   }

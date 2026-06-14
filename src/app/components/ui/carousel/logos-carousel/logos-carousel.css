@@ -9,7 +9,7 @@
   margin: 0 0 var(--title-subtitle-spacing);
   color: var(--text-heading-color);
   font-size: var(--font-size-card-title);
-  font-weight: var(--font-weight-semibold);
+  font-weight: var(--font-weight-medium);
   line-height: var(--text-heading-line-height);
   text-align: center;
 }
@@ -17,7 +17,7 @@
 .logos-carousel__viewport {
   width: 100%;
   overflow: hidden;
-  padding: 1rem var(--section-padding-x);
+  padding: 3rem var(--section-padding-x);
   box-sizing: border-box;
 }
 

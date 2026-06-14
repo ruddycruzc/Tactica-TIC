@@ -10,6 +10,7 @@
           class="navbar__link"
           [routerLink]="item.route"
           routerLinkActive="active-link"
+          ariaCurrentWhenActive="page"
           [routerLinkActiveOptions]="{ exact: true }"
           (click)="closeMenu()">
           {{ item.label | translate }}
