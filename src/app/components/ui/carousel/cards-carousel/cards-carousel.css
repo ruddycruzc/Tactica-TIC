@@ -16,8 +16,9 @@
   justify-content: space-between;
   gap: var(--grid-gap);
   width: min(100%, var(--page-max-width));
-  margin: 0 auto var(--title-subtitle-spacing);
+  margin: 0;
   padding: 0 var(--section-padding-x);
+  padding-right: 0;
   box-sizing: border-box;
 }
 
@@ -60,11 +61,13 @@
   overflow-x: auto;
   overflow-y: hidden;
   scroll-snap-type: x mandatory;
-  padding: 2rem 0 0 var(--section-padding-x);
+  padding-left: var(--section-padding-x);
+  
+  padding-top: 2rem;
+  margin-left: var(--section-padding-x);
   box-sizing: border-box;
   cursor: grab;
   touch-action: auto;
-  padding-left: var(--section-padding-x);
 }
 
 .cards-carousel__viewport:active {
@@ -76,7 +79,8 @@
   align-items: stretch;
   gap: var(--cards-gap);
   width: max-content;
- padding-left: 3rem
+  padding-right: var(--section-padding-x);
+  padding-left: var(--section-padding-x);
 }
 
 .cards-carousel__slide {
