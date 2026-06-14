@@ -64,6 +64,7 @@
   box-sizing: border-box;
   cursor: grab;
   touch-action: auto;
+  padding-left: var(--section-padding-x);
 }
 
 .cards-carousel__viewport:active {
@@ -75,7 +76,7 @@
   align-items: stretch;
   gap: var(--cards-gap);
   width: max-content;
-  padding-right: var(--section-padding-x);
+ padding-left: 3rem
 }
 
 .cards-carousel__slide {

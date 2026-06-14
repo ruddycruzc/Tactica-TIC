@@ -53,8 +53,7 @@
 .about-media-grid video {
   display: block;
   width: 100%;
-  height: 100%;
-  aspect-ratio: var(--project-card-image-ratio);
+  height: var(--about-media-height);
   object-fit: cover;
   border-radius: var(--radius-cards);
   background: var(--color-bkg-grey);
@@ -89,6 +88,7 @@
 
   .about-media-grid img,
   .about-media-grid video {
+    height: auto;
     aspect-ratio: var(--project-card-image-ratio);
   }
 }

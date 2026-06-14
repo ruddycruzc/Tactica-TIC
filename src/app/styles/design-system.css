@@ -41,6 +41,7 @@
   --page-max-width: 88.0625rem;
   --content-max-width: 74.75rem;
   --projects-content-width: 53.125rem;
+  --project-detail-card-padding: clamp(2.5rem, 4vw, 4rem);
   --section-padding-x-desktop: clamp(6rem, 9vw, 8rem);
   --section-padding-x-tablet: 3rem;
   --section-padding-x-mobile: 1.25rem;
@@ -73,6 +74,7 @@
   --project-card-image-ratio-mobile: 1.15 / 1;
   --project-card-content-gap: 0.375rem;
   --project-card-padding: 1rem;
+  --about-media-height: clamp(17.5rem, 22vw, 22rem);
   --cta-height: clamp(20rem, 28vw, 26rem);
   --contact-form-gap: 1.5rem;
   --contact-form-padding: clamp(1.5rem, 3vw, 2rem);
