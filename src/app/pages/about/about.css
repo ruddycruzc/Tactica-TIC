@@ -4,7 +4,7 @@
 
 .about-hero,
 .about-story {
-  padding: var(--section-padding-y) var(--section-padding-x);
+  padding: var(--section-padding-y) var(--section-padding-x) 0;
 }
 
 .about-hero {
@@ -53,7 +53,7 @@
 .about-media-grid video {
   display: block;
   width: 100%;
-  height: var(--about-media-height);
+  height: 30rem;
   object-fit: cover;
   border-radius: var(--radius-cards);
   background: var(--color-bkg-grey);
@@ -61,6 +61,7 @@
 
 .about-story {
   background: var(--color-bkg-light);
+  gap: 3rem;
 }
 
 .about-story__title {
