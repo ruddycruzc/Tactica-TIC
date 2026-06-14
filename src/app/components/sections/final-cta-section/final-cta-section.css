@@ -1,16 +1,17 @@
 .final-cta {
-  padding-inline: 0;
   background: var(--color-bkg-black);
-  padding: 3rem var(--section-padding-x-desktop);
+  padding: var(--section-padding-y-mobile) var(--section-padding-x);
+  box-sizing: border-box;
 }
 
 .final-cta__inner {
   position: relative;
   display: grid;
   place-items: center;
-  width: min(calc(100% - (var(--section-padding-x) * 2)), var(--page-max-width));
+  width: min(100%, var(--page-max-width));
+  margin-inline: auto;
   min-height: var(--cta-height);
-  padding: clamp(3rem, 6vw, 5.5rem);
+  padding: var(--project-detail-card-padding);
   overflow: hidden;
   border: 0;
   background: transparent;
@@ -20,7 +21,7 @@
 }
 
 .final-cta h2 {
-  max-width: 45rem;
+  max-width: var(--cta-copy-width);
   margin: 0;
   color: inherit;
   font-size: var(--font-size-h2);
@@ -29,7 +30,7 @@
 }
 
 .final-cta p {
-  max-width: 44rem;
+  max-width: var(--cta-copy-width);
   margin: var(--title-subtitle-spacing) 0 0;
   color: inherit;
   font-size: var(--font-size-body-large);
@@ -37,7 +38,7 @@
 }
 
 .final-cta app-button {
-  margin-top: 2rem;
+  margin-top: var(--grid-gap);
 }
 
 .final-cta__shape {
@@ -50,32 +51,32 @@
 }
 
 .final-cta__shape--one {
-  width: 8rem;
-  height: 8rem;
+  width: var(--cta-shape-size-lg);
+  height: var(--cta-shape-size-lg);
   left: 8%;
   top: 38%;
   transform: rotate(var(--cta-shape-one-rotate));
 }
 
 .final-cta__shape--two {
-  width: 4rem;
-  height: 4rem;
+  width: var(--cta-shape-size-sm);
+  height: var(--cta-shape-size-sm);
   left: 22%;
   top: 16%;
   transform: rotate(var(--cta-shape-two-rotate));
 }
 
 .final-cta__shape--three {
-  width: 6rem;
-  height: 6rem;
+  width: var(--cta-shape-size-md);
+  height: var(--cta-shape-size-md);
   right: 9%;
   top: 35%;
   transform: rotate(var(--cta-shape-three-rotate));
 }
 
 .final-cta__shape--four {
-  width: 3.5rem;
-  height: 3.5rem;
+  width: var(--cta-shape-size-xs);
+  height: var(--cta-shape-size-xs);
   right: 20%;
   bottom: 28%;
   transform: rotate(var(--cta-shape-four-rotate));
@@ -83,7 +84,7 @@
 
 @media (max-width: 760px) {
   .final-cta__inner {
-    min-height: 23rem;
+    min-height: var(--product-card-height-mobile);
   }
 
   .final-cta__shape--one {
@@ -92,6 +93,11 @@
 
   .final-cta__shape--three {
     right: -2rem;
+  }
+
+  .final-cta__shape--two,
+  .final-cta__shape--four {
+    opacity: 0.65;
   }
 }
 

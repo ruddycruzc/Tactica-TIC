@@ -21,7 +21,7 @@
   --font-size-hero-description: clamp(1.1rem, 1.55vw, 1.5rem);
   --font-size-card-title: clamp(1.35rem, 1.55vw, 1.5rem);
   --font-size-card-description: clamp(1.05rem, 1.3vw, 1.25rem);
-  --font-size-body-large: clamp(1.05rem, 1.3vw, 1rem);
+  --font-size-body-large: clamp(1.05rem, 1.3vw, 1.25rem);
   --font-size-body-medium: clamp(1rem, 1.15vw, 1.15rem);
   --font-size-text-info: var(--font-size-h2);
 
@@ -46,7 +46,7 @@
   --section-padding-x-tablet: 3rem;
   --section-padding-x-mobile: 1.25rem;
   --section-padding-y-desktop: 7rem;
-  --section-padding-y-tablet: 3.5rem;
+  --section-padding-y-tablet: 3rem;
   --section-padding-y-mobile: 2.5rem;
   --section-padding-x: var(--section-padding-x-desktop);
   --section-padding-y: var(--section-padding-y-desktop);
@@ -58,6 +58,7 @@
  
 
   --grid-gap: 1.5rem;
+  --grid-gap-wide: clamp(2rem, 6vw, 4rem);
   --section-gap: clamp(4rem, 9vw, 7.5rem);
   --title-subtitle-spacing: 1rem;
   --card-title-description-gap: 0.25rem;
@@ -66,6 +67,9 @@
   --product-card-height-mobile: 23rem;
   --video-panel-height: 30.3125rem;
   --video-media-width: 40.8125rem;
+  --content-text-width-sm: 26rem;
+  --content-text-width-md: 34rem;
+  --content-text-width-lg: 36rem;
   --color-info-text-width: 15.25rem;
   --color-info-text-width-large: 20rem;
   --color-info-body-width: 21rem;
@@ -76,6 +80,11 @@
   --project-card-padding: 1rem;
   --about-media-height: clamp(17.5rem, 22vw, 22rem);
   --cta-height: clamp(20rem, 28vw, 26rem);
+  --cta-copy-width: 45rem;
+  --cta-shape-size-lg: 8rem;
+  --cta-shape-size-md: 6rem;
+  --cta-shape-size-sm: 4rem;
+  --cta-shape-size-xs: 3.5rem;
   --contact-form-gap: 1.5rem;
   --contact-form-padding: clamp(1.5rem, 3vw, 2rem);
   --contact-column-gap: clamp(2rem, 5vw, 4.5rem);
