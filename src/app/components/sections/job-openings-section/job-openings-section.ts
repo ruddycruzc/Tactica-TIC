@@ -1,33 +1,26 @@
 import { Component } from '@angular/core';
 import { NgFor } from '@angular/common'; 
-import { AppButtonComponent } from '../../ui/buttons/app-button/app-button.component';
 
 @Component({
   selector: 'app-job-openings-section',
   standalone: true,
-  imports: [AppButtonComponent, NgFor], 
+  imports: [NgFor], 
   templateUrl: './job-openings-section.html',
   styleUrl: './job-openings-section.css'
 })
 export class JobOpeningsSection {
-  readonly cultureCards = [
+  readonly jobCards = [
     {
-      imgSrc: '/assets/images/i4.jpeg',
-      altText: 'Atracción de Nuevo Talento',
-      title: 'Atracción de Nuevo Talento',
-      description: 'Buscamos mentes inquietas, profesionales de la ingeniería y apasionados del ecosistema digital que quieran desarrollar una carrera profesional sólida y dinámica. Creamos un entorno diáfano y atractivo idóneo para perfiles jóvenes y experimentados que deseen aportar frescura y soluciones reales al sector tecnológico.'
+      title: 'Táctica TIC, tecnología innovadora para la transformación digital de empresas',
+      description: 'Gracias a la inteligencia artificial, la visión por computador y la programación, Táctica TIC ha logrado optimizar los procesos y aumentar la eficiencia de las empresas.'
     },
     {
-      imgSrc: '/assets/images/i5.jpeg',
-      altText: 'Reconocimiento y Esfuerzo',
-      title: 'Reconocimiento y Esfuerzo',
-      description: 'Creemos firmemente en una cultura corporativa que premia el esfuerzo, la flexibilidad y el compromiso mutuo. Aquí, "hacer tecnología" significa mancharse las manos en equipo; por ello, fomentamos un ambiente de trabajo saludable donde el rendimiento y la implicación directa se traducen en oportunidades reales de crecimiento y promoción interna.'
+      title: 'La empresa asturiana TÁCTICA TIC, premio ANCES Open Innova 2021',
+      description: 'La empresa asturiana Táctica TIC ha sido una de las galardonadas en el programa nacional Ances Open Innovation, que ha fallado esta mañana.'
     },
     {
-      imgSrc: '/assets/images/i6.jpeg',
-      altText: 'Vanguardia e Innovación Activa',
-      title: 'Vanguardia e Innovación Activa',
-      description: 'El sector tecnológico avanza a pasos agigantados. Para mantenernos competitivos, nuestro equipo participa activamente en proyectos de I+D+i, formación continua y adopción de metodologías emergentes. Estar actualizados no es una opción, es nuestra esencia para diseñar el software robusto y eficiente que el mercado exige.'
+      title: 'TÁCTICA TIC, una gran casona para la economía verde en Gijón Oeste',
+      description: 'La empresa Táctica TIC, ubicada en la Quinta desde su apertura, es el claro ejemplo de la importancia que tiene para los emprendedores disponer de espacios de innovación.'
     }
   ];
 }

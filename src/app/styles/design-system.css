@@ -14,7 +14,9 @@
   --font-size-4xl: 2.5rem;
   --font-size-5xl: 3.5rem;
   --font-size-h1: clamp(1rem, 5.3vw, 3.5rem);
-  --font-size-h2: clamp(2.35rem, 3vw, 2rem);
+  --font-size-h2: 2rem;
+  --font-size-h3: 1.25rem;
+
   --font-size-hero: var(--font-size-h1);
   --font-size-hero-description: clamp(1.1rem, 1.55vw, 1.5rem);
   --font-size-card-title: clamp(1.35rem, 1.55vw, 1.5rem);
@@ -38,6 +40,7 @@
 
   --page-max-width: 88.0625rem;
   --content-max-width: 74.75rem;
+  --projects-content-width: 53.125rem;
   --section-padding-x-desktop: clamp(6rem, 9vw, 8rem);
   --section-padding-x-tablet: 3rem;
   --section-padding-x-mobile: 1.25rem;
@@ -69,6 +72,7 @@
   --project-card-image-ratio: 1.365 / 1;
   --project-card-image-ratio-mobile: 1.15 / 1;
   --project-card-content-gap: 0.375rem;
+  --project-card-padding: 1rem;
   --cta-height: clamp(20rem, 28vw, 26rem);
   --contact-form-gap: 1.5rem;
   --contact-form-padding: clamp(1.5rem, 3vw, 2rem);
@@ -159,6 +163,7 @@
   --shadow-soft: 0 0.25rem 1.25rem rgba(17, 17, 17, 0.04);
   --shadow-card: 0 1.125rem 2.8125rem rgba(17, 17, 17, 0.08);
   --shadow-focus: 0 0 0 0.25rem rgba(225, 61, 98, 0.18);
+  --page-hero-background-image: url('/assets/images/fondo hero.png');
 
   --transition-base: 220ms ease;
   --transition-slow: 360ms ease;
@@ -187,7 +192,7 @@
   --button-primary-bg-hover: var(--color-primary-hover);
   --button-secondary-bg: var(--color-white);
   --button-secondary-bg-hover: var(--color-tertiary);
-  --button-tertiary-color: var(--color-secondary);
+  --button-tertiary-color: var(--color-primary);
   --button-tertiary-color-hover: var(--color-primary-hover);
   --button-height: 3.5rem;
   --button-height-sm: 2rem;

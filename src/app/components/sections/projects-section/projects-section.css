@@ -3,26 +3,26 @@
    ========================================================================== */
 
 .projects-container {
-  padding: var(--section-padding-y) var(--section-padding-x);
-  background-color: var(--color-bkg-light); 
+  padding: calc(var(--section-padding-y) + var(--button-height-lg)) var(--section-padding-x) var(--section-padding-y);
+  background: var(--page-hero-background-image) center top / cover no-repeat;
   font-family: var(--font-family-base);
 }
 
 .projects-content {
-  max-width: 850px; 
+  max-width: var(--projects-content-width); 
   margin: 0 auto;
 }
 
 /* --- CABECERA DE LA SECCIÓN --- */
 .projects-header {
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: var(--section-padding-y-mobile);
 }
 
 .projects-title {
   font-size: var(--font-size-h2);
   color: var(--text-heading-color); 
-  font-weight: var(--font-weight-extrabold);
+  font-weight: var(--font-weight-semibold);
   margin-bottom: var(--title-subtitle-spacing);
 }
 
@@ -40,7 +40,7 @@
 /* Control para los logos de la cabecera general */
 .projects-header .project-image {
   height: 55px;
-  margin: var(--title-subtitle-spacing) 12px 0;
+  margin: var(--title-subtitle-spacing) var(--card-title-description-gap) 0;
 }
 
 /* --- CONTENEDOR DE TARJETAS --- */
@@ -55,8 +55,8 @@
   background: var(--card-background);
   border: var(--card-border);
   border-radius: var(--card-radius);
-  padding: 40px;
-  box-shadow: var(--card-shadow);
+  padding: var(--contact-form-padding);
+  box-shadow: var(--shadow-card);
   transition: none;
   
   /* Forzamos comportamiento flex interno para empujar los logos abajo */
@@ -66,7 +66,7 @@
 
 .project-card:hover {
   transform: none;
-  box-shadow: var(--card-shadow);
+  box-shadow: var(--shadow-card);
   border-color: var(--color-border-alpha);
 }
 
@@ -76,8 +76,8 @@
   font-weight: var(--font-weight-bold);
   line-height: var(--text-body-line-height);
   margin-top: 0;
-  margin-bottom: 20px;
-  padding-bottom: 12px;
+  margin-bottom: var(--title-subtitle-spacing);
+  padding-bottom: var(--title-subtitle-spacing);
   border-bottom: 2px solid var(--color-border); 
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -90,7 +90,7 @@
   color: var(--text-body-color);
   line-height: var(--line-height-relaxed);
   margin-top: 0;
-  margin-bottom: 20px; /* Margen unificado para que respire antes de los logos */
+  margin-bottom: var(--title-subtitle-spacing);
 }
 
 /* Evitamos que el último elemento de texto choque si no hay imágenes */
@@ -103,24 +103,24 @@
 .project-list {
   padding-left: 1.25rem;
   margin-top: 0;
-  margin-bottom: 20px;
+  margin-bottom: var(--title-subtitle-spacing);
 }
 
 .project-list li {
   font-size: var(--font-size-body-medium);
   color: var(--text-body-color);
   line-height: var(--text-body-line-height);
-  margin-bottom: 10px;
+  margin-bottom: var(--card-title-description-gap);
   list-style-type: square; 
 }
 
 .project-info-box {
   background-color: var(--color-glass-soft);
   border-left: 4px solid var(--color-accent-muted);
-  padding: 16px 20px;
-  border-radius: 4px;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  padding: var(--title-subtitle-spacing) var(--font-size-body-large);
+  border-radius: var(--radius-sm);
+  margin-top: var(--title-subtitle-spacing);
+  margin-bottom: var(--title-subtitle-spacing);
 }
 
 .funding {
@@ -138,7 +138,7 @@
   max-width: 100%;       /* Garantiza que ningún cartel rompa el diseño */
   object-fit: contain;   /* Ajuste limpio dentro del espacio contenedor */
   margin-right: var(--project-logo-gap);    /* Separación entre logos contiguos */
-  margin-top: 15px;      /* Separación del bloque de texto superior */
+  margin-top: var(--title-subtitle-spacing);      /* Separación del bloque de texto superior */
   vertical-align: middle;
   
   /* Filtro sutil para homogeneizar los colores institucionales */

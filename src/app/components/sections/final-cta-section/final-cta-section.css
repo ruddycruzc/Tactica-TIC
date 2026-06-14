@@ -28,6 +28,14 @@
   letter-spacing: 0;
 }
 
+.final-cta p {
+  max-width: 44rem;
+  margin: var(--title-subtitle-spacing) 0 0;
+  color: inherit;
+  font-size: var(--font-size-body-large);
+  line-height: var(--text-body-line-height);
+}
+
 .final-cta app-button {
   margin-top: 2rem;
 }

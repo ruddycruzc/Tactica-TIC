@@ -1,32 +1,18 @@
-<link rel="stylesheet" href="./job-openings-section.css">
 <section class="jobs-container">
   <div class="jobs-content">
-    
-    <div class="jobs-main-header">
-      <h2 class="jobs-title">Portal de <span class="highlight-green">Empleo e Innovación</span></h2>
+    <header class="jobs-main-header">
+      <h2 class="jobs-title">Portal de Empleo e Innovación</h2>
       <p class="jobs-lead">
-        Este es el espacio dedicado a la proyección de nuestras ofertas laborales activas y a la incorporación de nuevo talento cualificado. En TÁCTICA TIC entendemos que el motor de la ingeniería de software no son solo las máquinas, sino el factor humano que las hace posibles.
+        Compartimos nuestra actividad pública, apariciones en prensa y contribuciones al sector de la ingeniería de software y la innovación.
       </p>
-    </div>
+    </header>
 
-    <div class="culture-grid">
-      <!-- Bucle dinámico que hereda tu diseño de tarjetas original -->
-      <div class="culture-card" *ngFor="let card of cultureCards">
-        <div class="card-image-box">
-          <img [src]="card.imgSrc" [alt]="card.altText" loading="lazy" decoding="async">
-        </div>
-        <div class="card-text-content">
-          <h3>{{ card.title }}</h3>
-          <p>{{ card.description }}</p>
-        </div>
-      </div>
+    <div class="jobs-grid">
+      <article class="blog-card" *ngFor="let card of jobCards">
+        <span class="blog-card__code" aria-hidden="true">&lt;/&gt;</span>
+        <h3>{{ card.title }}</h3>
+        <p>{{ card.description }}</p>
+      </article>
     </div>
-
-    <div class="jobs-footer-banner">
-      <h3>¿Quieres formar parte del mañana?</h3>
-      <p>Permanecemos en constante expansión y recepción de currículums para futuras vacantes en nuestras oficinas de Gijón.</p>
-      <app-button variant="primary" href="#">Enviar Candidatura Espontánea</app-button>
-    </div>
-
   </div>
 </section>
