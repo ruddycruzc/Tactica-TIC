@@ -1,0 +1,101 @@
+.about-page {
+  background: var(--color-bkg-light);
+}
+
+.about-hero,
+.about-story {
+  padding: var(--section-padding-y) var(--section-padding-x) 0;
+}
+
+.about-hero {
+  padding-top: calc(var(--section-padding-y) + var(--button-height-lg));
+}
+
+.about-hero__inner,
+.about-story__inner,
+.about-hero__inner,
+.about-story__inner {
+  display: grid;
+  gap: var(--section-padding-y-mobile);
+}
+
+.about-page__header {
+  width: min(100%, var(--content-max-width));
+  margin-inline: auto;
+  display: grid;
+  gap: var(--title-subtitle-spacing);
+  text-align: center;
+}
+
+.about-page__header h2 {
+  margin: 0;
+  color: var(--text-heading-color);
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-semibold);
+}
+
+.about-page__header p {
+  width: min(100%, 54rem);
+  margin: 0 auto;
+  color: var(--text-body-color);
+  font-size: var(--font-size-body-large);
+  line-height: var(--text-body-line-height);
+}
+
+.about-media-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--grid-gap);
+  align-items: stretch;
+}
+
+.about-media-grid img,
+.about-media-grid video {
+  display: block;
+  width: 100%;
+  height: 30rem;
+  object-fit: cover;
+  border-radius: var(--radius-cards);
+  background: var(--color-bkg-grey);
+}
+
+.about-story {
+  background: var(--color-bkg-light);
+  gap: 3rem;
+}
+
+.about-story__title {
+  margin: 0;
+  color: var(--text-heading-color);
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-semibold);
+}
+
+.about-story__title span {
+  color: var(--text-highlight-color);
+}
+
+.aboutus-info {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--grid-gap);
+}
+
+@media (max-width: 900px) {
+  .about-media-grid,
+  .aboutus-info {
+    grid-template-columns: 1fr;
+  }
+
+  .about-media-grid img,
+  .about-media-grid video {
+    height: auto;
+    aspect-ratio: var(--project-card-image-ratio);
+  }
+}
+
+@media (max-width: 640px) {
+  .about-hero {
+    padding-top: calc(var(--section-padding-y) + var(--button-height));
+  }
+}

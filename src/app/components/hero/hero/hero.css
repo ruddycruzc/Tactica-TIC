@@ -1,150 +1,98 @@
 .hero-container {
   position: relative;
-  padding: 120px var(--page-margin, 24px) 100px;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
-  min-height: 550px;
+  min-height: 34.6875rem;
+  padding: clamp(3rem, 5vw, 10rem) 20rem 0;
   box-sizing: border-box;
   overflow: hidden;
-  background: var(--color-bkg-light);
-  --hero-x: 50%;
-  --hero-y: 50%;
-}
-
-.hero-wave {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  width: 120vw;
-  height: clamp(320px, 42vw, 560px);
-  transform:
-    translate(-50%, -50%)
-    translate(
-      calc((var(--hero-x, 50%) - 50%) * 0.04),
-      calc((var(--hero-y, 50%) - 50%) * 0.03)
-    );
-  pointer-events: none;
-  transition: transform 360ms ease;
-  z-index: 1;
-}
-
-.hero-wave__svg {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  fill: none;
-  animation: heroWaveDrift 16s ease-in-out infinite alternate;
-}
-
-.hero-wave__svg path {
-  stroke: var(--color-border-alpha);
-  stroke-width: 0.72;
-  opacity: 0.55;
-  vector-effect: non-scaling-stroke;
-}
-
-.hero-wave__svg--focus {
-  mask-image: radial-gradient(circle at var(--hero-x, 50%) var(--hero-y, 50%), var(--color-bkg-black) 0 12%, transparent 30%);
-  -webkit-mask-image: radial-gradient(circle at var(--hero-x, 50%) var(--hero-y, 50%), var(--color-bkg-black) 0 12%, transparent 30%);
-  transform: scale(1.025);
-}
-
-.hero-wave__svg--focus path {
-  stroke: var(--color-primary);
-  stroke-width: 0.95;
-  opacity: 0.22;
+  background: url('/assets/images/fondo hero.png') center top / cover no-repeat;
 }
 
 .hero-content {
-  max-width: var(--page-max-width, 1196px);
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 60px;
   position: relative;
   z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 68rem;
+  gap: var(--grid-gap);
+  text-align: center;
 }
 
 .hero-title {
-  font-size: 4rem;
-  color: var(--text-heading-color);
-  font-weight: var(--font-weight-extrabold);
-  line-height: var(--text-heading-line-height);
-  letter-spacing: -1.5px;
+  max-width: 50rem;
   margin: 0;
+  color: var(--text-heading-color);
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-h1);
+  font-weight: var(--font-weight-medium);
+  line-height: 1;
+  letter-spacing: 0;
 }
 
+.hero-title span {
+  display: block;
+}
 
-.highlight-green {
+.hero-title strong {
   color: var(--text-highlight-color);
-  font-weight: var(--font-weight-extrabold);
-}
-
-
-.hero-right {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  padding-top: 15px;
+  font-weight: var(--font-weight-medium);
 }
 
 .hero-description {
-  font-size: 1.15rem;
-  color: var(--text-body-color);
-  line-height: var(--text-body-line-height);
+  max-width: 67rem;
   margin: 0;
-  max-width: 480px;
+  color: var(--text-body-color);
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-body-large);
+  font-weight: var(--font-weight-regular);
+  line-height: 1.42;
 }
-
 
 .hero-buttons {
   display: flex;
-  gap: 16px;
   align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 0.75rem;
 }
-
 
 .arrow {
-  font-size: 1.1rem;
+  font-size: var(--font-size-body-medium);
 }
-
 
 @media (max-width: 968px) {
   .hero-container {
-    padding: 80px var(--page-margin, 24px);
+    min-height: auto;
+    padding: 8.75rem var(--section-padding-x) 3rem;
   }
-  
-  .hero-content {
-    flex-direction: column;
-    gap: 40px;
-  }
-  
-  .hero-title {
-    font-size: 2.8rem;
-  }
-  
-  .hero-right {
-    padding-top: 0;
-  }
-  
+
   .hero-buttons {
     flex-wrap: wrap;
   }
-
-  .hero-wave {
-    width: 138vw;
-    height: 360px;
-    top: 38%;
-  }
 }
 
-@keyframes heroWaveDrift {
-  to {
-    transform: translateX(-36px) translateY(16px) skewY(-2deg);
+@media (max-width: 640px) {
+  .hero-container {
+    padding-top: 7.5rem;
+  }
+
+  .hero-title {
+    font-size: var(--font-size-h1);
+  }
+
+  .hero-buttons {
+    align-items: stretch;
+    flex-direction: column;
+    width: var(--button-stack-width);
+    max-width: var(--button-stack-max-width);
+  }
+
+  .hero-buttons app-button {
+    width: var(--button-stack-width);
   }
 }

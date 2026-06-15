@@ -1,0 +1,30 @@
+<section class="info-left-component home-section">
+  <div class="info-left-component__inner home-section__inner reveal-up">
+    <div class="info-left-component__content">
+      <h2>{{ title }}</h2>
+
+      @for (paragraph of paragraphs; track paragraph) {
+        <p>{{ paragraph }}</p>
+      }
+
+      @if (buttonLabel) {
+        <app-button variant="primary" [routerLink]="buttonLink">
+          {{ buttonLabel }}
+          <span class="arrow">→</span>
+        </app-button>
+      }
+    </div>
+
+    <div class="info-left-component__visuals">
+      <img [src]="image" [alt]="imageAlt || title" loading="lazy" decoding="async">
+
+      <app-background-color-info-card
+        variant="large"
+        [title]="cardTitle"
+        emphasis="jornada mejorar"
+        [buttonLabel]="cardButtonLabel"
+        [buttonLink]="cardButtonLink">
+      </app-background-color-info-card>
+    </div>
+  </div>
+</section>

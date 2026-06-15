@@ -3,7 +3,7 @@
   align-items: center;
   justify-content: center;
   min-height: 80vh; 
-  padding: 40px 24px;
+  padding: var(--section-padding-y) var(--section-padding-x);
   box-sizing: border-box;
   font-family: var(--font-family-base);
 }
@@ -13,7 +13,7 @@
   width: 100%;
   text-align: center;
   background-color: var(--color-white);
-  padding: 60px 40px;
+  padding: var(--section-padding-y) var(--section-padding-x);
   border-radius: 16px;
   box-shadow: var(--shadow-card);
   display: flex;
@@ -23,7 +23,7 @@
 }
 
 .error-code {
-  font-size: 8.5rem;
+  font-size: var(--font-size-h1);
   font-weight: 900;
   line-height: 1;
   letter-spacing: -4px;
@@ -35,7 +35,7 @@
 
 /* Título del error */
 .error-title {
-  font-size: 2.2rem;
+  font-size: var(--font-size-h2);
   color: var(--text-heading-color);
   font-weight: var(--font-weight-extrabold);
   letter-spacing: -0.5px;
@@ -43,7 +43,7 @@
 }
 
 .error-description {
-  font-size: 1.1rem;
+  font-size: var(--font-size-body-medium);
   color: var(--text-body-color);
   line-height: var(--text-body-line-height);
   max-width: 480px;
@@ -61,18 +61,18 @@
 
 @media (max-width: 480px) {
   .error-content {
-    padding: 40px 20px;
+    padding: var(--section-padding-y) var(--section-padding-x);
   }
 
   .error-code {
-    font-size: 6rem;
+    font-size: var(--font-size-h1);
   }
 
   .error-title {
-    font-size: 1.8rem;
+    font-size: var(--font-size-card-title);
   }
 
   .error-description {
-    font-size: 1rem;
+    font-size: var(--font-size-body-medium);
   }
 }

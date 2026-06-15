@@ -1,0 +1,10 @@
+<article class="icon-info">
+  <div class="icon-info__icon">
+    @if (icon) {
+      <img [src]="icon" [alt]="title" loading="lazy" decoding="async">
+    }
+  </div>
+
+  <h3>{{ title }}</h3>
+  <p>{{ description }}</p>
+</article>

@@ -1,5 +1,6 @@
 export interface BlogPost {
-  badge: string;
+  image: string;
+  imageAlt: string;
   title: string;
   excerpt: string;
   url: string;

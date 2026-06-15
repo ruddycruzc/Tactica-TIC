@@ -1,1 +1,21 @@
-<p>info-left-image works!</p>
+<section class="info-left-image">
+  <div class="info-left-image__media">
+    @if (mediaType === 'video') {
+      <video [src]="mediaSrc" muted loop playsinline controls></video>
+    } @else {
+      <img [src]="mediaSrc" [alt]="mediaAlt || title" loading="lazy" decoding="async">
+    }
+  </div>
+
+  <div class="info-left-image__content">
+    <h2>{{ title }}</h2>
+    <p>{{ description }}</p>
+
+    @if (buttonLabel) {
+      <app-button variant="primary" [routerLink]="buttonLink">
+        {{ buttonLabel }}
+        <span class="arrow" aria-hidden="true">→</span>
+      </app-button>
+    }
+  </div>
+</section>

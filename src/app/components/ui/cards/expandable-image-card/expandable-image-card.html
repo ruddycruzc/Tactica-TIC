@@ -1,0 +1,10 @@
+<article class="expandable-image-card" [class.expandable-image-card--expanded]="expanded">
+  <img [src]="image" [alt]="imageAlt || title" loading="lazy" decoding="async">
+
+  <div class="expandable-image-card__content">
+    <h3>{{ title }}</h3>
+    @if (expanded && description) {
+      <p>{{ description }}</p>
+    }
+  </div>
+</article>

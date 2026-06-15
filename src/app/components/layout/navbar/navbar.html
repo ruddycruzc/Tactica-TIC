@@ -1,9 +1,6 @@
 <nav class="navbar">
-
-  <a routerLink="/" class="navbar__logo">
-
-    <img src="/assets/images/logo-TT-rosa.png" alt="Táctica TIC">
-
+  <a routerLink="/" class="navbar__logo" (click)="closeMenu()">
+    <img src="/assets/Logos/logo-tactica.png" alt="Táctica TIC">
   </a>
 
   <ul class="navbar__menu" [class.navbar__menu--open]="menuOpen">
@@ -33,7 +30,6 @@
     </li>
 
     }
-
   </ul>
 
   <div class="navbar__actions">
@@ -68,5 +64,4 @@
     </div>
 
   </div>
-
 </nav>

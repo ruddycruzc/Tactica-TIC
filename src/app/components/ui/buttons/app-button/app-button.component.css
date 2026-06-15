@@ -1,10 +1,7 @@
 :host {
-  --_height: var(--button-height);
-  --_padding: var(--button-padding);
-
-  min-height: var(--_height);
+  min-height: var(--button-height);
   min-width: max-content;
-  padding: 0 var(--_padding);
+  padding: 0 var(--button-padding);
   border: var(--button-border-width) solid transparent;
   border-radius: var(--button-radius);
   display: inline-flex;
@@ -12,8 +9,8 @@
   justify-content: center;
   box-sizing: border-box;
   color: var(--button-text);
-  font: inherit;
-  font-size: var(--button-font-size);
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-body-medium);
   font-weight: var(--button-font-weight);
   line-height: 1;
   text-decoration: none;
@@ -58,14 +55,12 @@
 }
 
 :host(.app-button--sm) {
-  --_height: var(--button-height-sm);
-  --_padding: var(--button-padding);
+  min-height: var(--button-height-sm);
   font-size: var(--font-size-sm);
 }
 
 :host(.app-button--lg) {
-  --_height: var(--button-height-lg);
-  --_padding: var(--button-padding);
+  min-height: var(--button-height-lg);
 }
 
 :host(.app-button--full) {
@@ -73,10 +68,20 @@
 }
 
 :host(.app-button--icon-only) {
-  width: var(--_height);
-  min-width: var(--_height);
+  width: var(--button-height);
+  min-width: var(--button-height);
   padding: 0;
   border-radius: 50%;
+}
+
+:host(.app-button--sm.app-button--icon-only) {
+  width: var(--button-height-sm);
+  min-width: var(--button-height-sm);
+}
+
+:host(.app-button--lg.app-button--icon-only) {
+  width: var(--button-height-lg);
+  min-width: var(--button-height-lg);
 }
 
 :host(.app-button--icon-only) .app-button__content {
@@ -85,35 +90,37 @@
 }
 
 :host(.app-button--primary) {
-  background: var(--color-primary);
-  border-color: var(--text-highlight-color);
+  background: var(--button-primary-bg);
+  border-color: var(--button-primary-bg);
+  color: var(--button-text-inverse);
 }
 
 :host(.app-button--primary:hover) {
-  background: var(--color-secondary);
-  border-color: var(--color-secondary);
+  background: var(--button-primary-bg-hover);
+  border-color: var(--button-primary-bg-hover);
   color: var(--button-text-inverse);
 }
 
 :host(.app-button--primary:active) {
-  background: var(--color-secondary);
-  border-color: var(--color-secondary);
+  background: var(--button-primary-bg-hover);
+  border-color: var(--button-primary-bg-hover);
   color: var(--button-text-inverse);
 }
 
 :host(.app-button--secondary) {
-  background: var(--color-white);
+  background: var(--button-secondary-bg);
   border-color: var(--text-highlight-color);
+  color: var(--button-text);
 }
 
 :host(.app-button--secondary:hover) {
-  background: var(--color-tertiary);
-  border-color: var(--color-secondary);
+  background: var(--button-secondary-bg-hover);
+  border-color: var(--text-highlight-color);
 }
 
 :host(.app-button--secondary:active) {
   background: var(--color-tertiary);
-  border-color: var(--color-secondary);
+  border-color: var(--text-highlight-color);
 }
 
 :host(.app-button--tertiary) {
@@ -121,15 +128,15 @@
   padding: 0;
   background: transparent;
   border-color: transparent;
-  color: var(--color-secondary);
+  color: var(--button-tertiary-color);
 }
 
 :host(.app-button--tertiary:hover) {
-  color: var(--text-highlight-color);
+  color: var(--button-tertiary-color-hover);
 }
 
 :host(.app-button--tertiary:active) {
-  color: var(--color-secondary);
+  color: var(--button-tertiary-color);
 }
 
 :host(:active) {

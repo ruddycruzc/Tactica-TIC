@@ -1,0 +1,29 @@
+.text-info {
+  background: var(--color-bkg-light);
+  min-height: clamp(18rem, 25vw, 33rem);
+  display: flex;
+  align-items: center;
+  padding: var(--section-padding-y) var(--section-padding-x);
+}
+
+.text-info__inner {
+  max-width: var(--page-max-width);
+}
+
+.text-info__statement {
+  margin: 0;
+  color: var(--text-heading-color);
+  font-size: var(--font-size-text-info);
+  text-align: center;
+  line-height: 1.36;
+}
+
+.text-info__statement app-typewriter-text {
+  display: block;
+}
+
+@media (max-width: 640px) {
+  .text-info__statement {
+    line-height: 1.22;
+  }
+}

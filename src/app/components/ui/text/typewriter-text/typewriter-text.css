@@ -1,0 +1,15 @@
+.typewriter-text {
+  white-space: pre-wrap;
+}
+
+.typewriter-text__segment {
+  color: var(--text-heading-color);
+}
+
+.typewriter-text__segment--muted {
+  color: var(--color-text-subtle);
+}
+
+.typewriter-text__segment--strong {
+  color: var(--text-heading-color);
+}

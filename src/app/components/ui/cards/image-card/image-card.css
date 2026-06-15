@@ -85,14 +85,14 @@
 .image-card__role {
   margin: 0 0 6px;
   color: var(--color-white);
-  font-size: clamp(1rem, 1.1vw, 1.18rem);
+  font-size: var(--font-size-body-medium);
   font-weight: var(--font-weight-extrabold);
   line-height: var(--text-heading-line-height);
 }
 
 .image-card__title {
   margin: 0 0 4px;
-  font-size: clamp(1.45rem, 1.7vw, 1.85rem);
+  font-size: var(--font-size-card-title);
   line-height: 1.05;
   color: var(--text-highlight-color);
   font-weight: var(--font-weight-extrabold);
@@ -101,7 +101,7 @@
 .image-card__description {
   margin: 0;
   color: var(--color-white);
-  font-size: clamp(1rem, 1.15vw, 1.18rem);
+  font-size: var(--font-size-body-medium);
   line-height: var(--text-heading-line-height);
   font-weight: var(--font-weight-regular);
 }

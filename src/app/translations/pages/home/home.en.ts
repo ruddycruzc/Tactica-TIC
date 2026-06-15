@@ -6,7 +6,7 @@ export const homeEn = {
           TITLE_LINE_2: 'with you',
           DESCRIPTION: 'We combine technology, automation and digital strategy to help you optimize processes, connect tools and grow your business intelligently and progressively.',
           ABOUT_BUTTON: 'Get to know us',
-          VISION_BUTTON: 'Our vision'
+          VISION_BUTTON: 'View projects'
         },
 
         INFO: {
