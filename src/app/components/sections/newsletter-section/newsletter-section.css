@@ -1,9 +1,9 @@
 .hub-container {
-  padding: var(--section-padding-y) var(--section-padding-x);
+  padding: 10rem var(--section-padding-x);
   background-color: var(--color-bkg-light); 
   position: relative; 
-  overflow: hidden; 
-  font-family: var(--font-family-base);
+  overflow: hiddens; 
+  font-weight: var(--font-weight-regular);
 }
 
 .hub-container::before {
@@ -51,7 +51,7 @@
 .hub-title {
   font-size: var(--font-size-h2);
   color: var(--text-heading-color);
-  font-weight: var(--font-weight-extrabold);
+  font-weight: var(--font-weight-medium);
   margin-top: 0;
   margin-bottom: var(--title-subtitle-spacing);
 }

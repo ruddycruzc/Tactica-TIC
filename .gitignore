@@ -40,6 +40,8 @@ testem.log
 __screenshots__/
 .codex-temp/*.jpg
 .codex-temp/*.log
+.codex/
+.codex-temp/
 
 
 # System files
