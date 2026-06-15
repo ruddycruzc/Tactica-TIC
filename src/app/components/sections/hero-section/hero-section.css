@@ -1,0 +1,25 @@
+.hero-section {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 34.6875rem;
+  padding: clamp(3rem, 5vw, 10rem) 20rem 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  background: url('/assets/images/fondo hero.png') center top / cover no-repeat;
+}
+
+@media (max-width: 968px) {
+  .hero-section {
+    min-height: auto;
+    padding: 8.75rem var(--section-padding-x) 3rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-section {
+    padding-top: 7.5rem;
+  }
+}

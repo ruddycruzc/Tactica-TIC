@@ -1,8 +1,6 @@
 .logos-carousel {
   width: 100%;
-  padding: var(--logos-section-padding-top) 0 var(--logos-section-padding-bottom);
   overflow: hidden;
-  background: var(--color-bkg-white);
 }
 
 .logos-carousel__title {
@@ -73,10 +71,6 @@
 }
 
 @media (max-width: 768px) {
-  .logos-carousel {
-    padding: var(--section-padding-y) 0;
-  }
-
   .logos-carousel__title {
     margin-bottom: var(--title-subtitle-spacing);
     font-size: var(--font-size-body-large);
