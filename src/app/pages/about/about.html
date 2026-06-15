@@ -1,48 +1,6 @@
 <main class="about-page">
-  <section class="about-hero">
-    <div class="about-hero__inner">
-      <header class="about-page__header">
-        <h2>Sobre nosotros</h2>
-        <p>
-          Compartimos nuestra actividad pública, apariciones en prensa y contribuciones al sector de la ingeniería de software y la innovación.
-        </p>
-      </header>
-
-      <div class="about-media-grid">
-        <img src="/assets/images/about-us/sobre nosotros 1.png" alt="Equipo de Táctica TIC trabajando" loading="lazy" decoding="async">
-        <video src="/assets/videos/aboutus.mp4" autoplay muted loop playsinline></video>
-        <img src="/assets/images/about-us/sobre nosotros 3.png" alt="Espacio de trabajo de Táctica TIC" loading="lazy" decoding="async">
-      </div>
-    </div>
-  </section>
-
-  <section class="about-story">
-    <div class="about-story__inner">
-      <h2 class="about-story__title">Quiénes <span>somos</span></h2>
-
-      <app-info-left-image
-        title="Nuestra historia"
-        description="En 2016 asumimos un reto que nos ilusionaba y nos ponía a prueba: fundar una empresa tecnológica diferente. Nuestro objetivo era claro: ser el aliado estratégico que ayudara a otras empresas a evolucionar. Hoy mantenemos esa esencia forjada en la experiencia, el rigor y la pasión por crear software robusto, ético y eficiente."
-        mediaSrc="/assets/images/about-us/Foto sobe nsootros 4.png"
-        mediaAlt="Equipo conversando sobre un proyecto digital"
-      />
-
-      <div class="aboutus-info">
-        <app-icon-info
-          icon="/assets/icons/solar_eye-linear.svg"
-          title="Nuestra visión"
-          description="Nos negamos a ver el código como algo frío. Cada proyecto social que asumimos busca resolver retos reales y humanos."
-        />
-
-        <app-icon-info
-          icon="/assets/icons/pajamas_issue-type-objective.svg"
-          title="Visión"
-          description="Tratamos cada línea de desarrollo con la responsabilidad moral que merece el impacto comunitario."
-        />
-      </div>
-    </div>
-  </section>
-
-  <app-cards-carousel></app-cards-carousel>
-  <app-contact-form></app-contact-form>
+  <app-hero-aboutus></app-hero-aboutus>
+  <app-about-story-section></app-about-story-section>
+  <app-team-carousel-section></app-team-carousel-section>
+  <app-contact-form-section></app-contact-form-section>
 </main>
