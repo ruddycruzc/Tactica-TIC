@@ -6,8 +6,7 @@ import { About } from './pages/about/about';
 import { Careers } from './pages/careers/careers';
 import { Blog } from './pages/blog/blog';
 import { Contact } from './pages/contact/contact';
-import { Navbar } from './components/layout/navbar/navbar';
-
+import { NotFound } from './pages/not-found/not-found';
 export const routes: Routes = [
   {
     path: '',
@@ -35,6 +34,6 @@ export const routes: Routes = [
   },
   {
     path: '**',
-    redirectTo: ''
+    component: NotFound
   }
 ];
