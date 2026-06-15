@@ -1,0 +1,11 @@
+.video-hero-section {
+  background: var(--color-bkg-light);
+  padding: 0 var(--section-padding-x);
+  box-sizing: border-box;
+}
+
+@media (max-width: 968px) {
+  .video-hero-section {
+    padding-block: var(--section-padding-y-mobile);
+  }
+}
