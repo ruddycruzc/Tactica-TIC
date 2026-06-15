@@ -20,6 +20,7 @@ export class InfoLeftSection {
   readonly image = '/assets/images/info-left/Rectangle 8.png';
   readonly imageAlt = 'Profesional usando un ordenador';
   readonly cardTitle = '¿Puede el control de jornada mejorar la gestión laboral de tu equipo?';
+  readonly cardEmphasis = 'jornada mejorar';
   readonly cardButtonLabel = 'Conoce más';
   readonly cardButtonLink = '/contact';
 }

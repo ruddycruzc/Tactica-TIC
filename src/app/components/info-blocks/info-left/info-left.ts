@@ -21,6 +21,7 @@ export class InfoLeft {
   @Input() image = '';
   @Input() imageAlt = '';
   @Input() cardTitle = '';
+  @Input() cardEmphasis = '';
   @Input() cardButtonLabel = '';
   @Input() cardButtonLink = '/contact';
 }
