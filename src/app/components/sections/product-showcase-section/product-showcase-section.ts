@@ -26,12 +26,12 @@ export class ProductShowcaseSection {
     {
       title: 'Verifactu',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-      image: '/assets/images/Porducto.jpg',
+      image: '/assets/images/product-showcase/Porducto.jpg',
     },
     {
       title: 'Nombre de Producto',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-      image: '/assets/images/Porducto2.png',
+      image: '/assets/images/product-showcase/Porducto2.png',
     },
   ];
 

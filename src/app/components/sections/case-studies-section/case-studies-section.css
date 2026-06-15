@@ -3,7 +3,7 @@
   background-image: 
     radial-gradient(var(--color-border-alpha) 1px, transparent 1px), 
     linear-gradient(var(--color-background-image-muted), var(--color-background-image-muted)),
-    url('../../../../assets/images/lineas.png');
+    url('../../../../assets/images/backgrounds/lineas.png');
   
   background-size: 24px 24px, auto, cover;
   background-position: center;

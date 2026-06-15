@@ -17,7 +17,7 @@ export class InfoLeftSection {
   ];
   readonly buttonLabel = 'Conócenos';
   readonly buttonLink = '/about';
-  readonly image = '/assets/images/Rectangle 8.png';
+  readonly image = '/assets/images/info-left/Rectangle 8.png';
   readonly imageAlt = 'Profesional usando un ordenador';
   readonly cardTitle = '¿Puede el control de jornada mejorar la gestión laboral de tu equipo?';
   readonly cardButtonLabel = 'Conoce más';

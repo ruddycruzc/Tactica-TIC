@@ -13,11 +13,11 @@ import { TranslateModule } from '@ngx-translate/core';
 export class LogosCarousel {
 
   readonly logos: LogoItem[] = [
-    { src: '/assets/Logos/Arriba-1.png', alt: 'Capsa Food' },
-    { src: '/assets/Logos/Arriba-2.png', alt: 'Emulsa' },
-    { src: '/assets/Logos/Arriba-3.png', alt: 'Grupo El Gaitero' },
-    { src: '/assets/Logos/Arriba-4.png', alt: 'Puerto de Aviles' },
-    { src: '/assets/Logos/Arriba-5.png', alt: 'Axalta' }
+    { src: '/assets/logos/Arriba-1.png', alt: 'Capsa Food' },
+    { src: '/assets/logos/Arriba-2.png', alt: 'Emulsa' },
+    { src: '/assets/logos/Arriba-3.png', alt: 'Grupo El Gaitero' },
+    { src: '/assets/logos/Arriba-4.png', alt: 'Puerto de Aviles' },
+    { src: '/assets/logos/Arriba-5.png', alt: 'Axalta' }
   ];
 
 }

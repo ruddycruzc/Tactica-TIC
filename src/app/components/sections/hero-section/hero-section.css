@@ -8,7 +8,7 @@
   padding: clamp(3rem, 5vw, 10rem) 20rem 0;
   box-sizing: border-box;
   overflow: hidden;
-  background: url('/assets/images/fondo hero.png') center top / cover no-repeat;
+  background: url('/assets/images/hero/fondo hero.png') center top / cover no-repeat;
 }
 
 @media (max-width: 968px) {
