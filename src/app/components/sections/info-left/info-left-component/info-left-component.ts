@@ -14,13 +14,16 @@ import { BackgroundColorInfoCard } from '../../../ui/cards/background-color-info
   styleUrl: './info-left-component.css',
 })
 export class InfoLeftComponent {
-  @Input() title = '';
-  @Input() paragraphs: string[] = [];
-  @Input() buttonLabel = '';
+  @Input() title = 'Liderando el cambio digital';
+  @Input() paragraphs: string[] = [
+    'Nos negamos a ver el código como algo frío. Cada proyecto social que asumimos busca resolver retos reales y humanos.',
+    'Tratamos cada línea de desarrollo con la responsabilidad moral que merece el impacto comunitario.'
+  ];
+  @Input() buttonLabel = 'Conócenos';
   @Input() buttonLink = '/about';
-  @Input() image = '';
-  @Input() imageAlt = '';
-  @Input() cardTitle = '';
-  @Input() cardButtonLabel = '';
+  @Input() image = '/assets/images/Rectangle 8.png';
+  @Input() imageAlt = 'Profesional usando un ordenador';
+  @Input() cardTitle = '¿Puede el control de jornada mejorar la gestión laboral de tu equipo?';
+  @Input() cardButtonLabel = 'Conoce más';
   @Input() cardButtonLink = '/contact';
 }
