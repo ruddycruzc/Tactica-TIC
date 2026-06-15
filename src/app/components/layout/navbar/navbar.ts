@@ -41,6 +41,10 @@ export class Navbar {
       label: 'NAV.BLOG',
       route: '/blog'
     },
+     {
+      label: 'NAV.CONTACT',
+      route: '/contact'
+    },
     {
       label: 'NAV.CAREERS',
       route: '/careers'
