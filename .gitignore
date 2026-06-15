@@ -39,6 +39,8 @@ testem.log
 /typings
 __screenshots__/
 .codex-temp/*.jpg
+.codex-temp/*.log
+
 
 # System files
 .DS_Store
