@@ -24,7 +24,7 @@ export class NewsletterSection {
       cssClass: 'item-instagram',
       title: 'Cultura & Equipo',
       description: 'Echa un vistazo a nuestros eventos, el día a día en la oficina y ambiente real.',
-      buttonVariant: 'secondary', // <-- TypeScript validará que es correcto
+      buttonVariant: 'primary', // <-- TypeScript validará que es correcto
       link: 'https://www.instagram.com/tactica_tic/',
       buttonText: 'Ver en Instagram'
     }

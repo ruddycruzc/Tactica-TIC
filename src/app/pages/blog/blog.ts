@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
 import { BlogSectionComponent } from '../../components/sections/blog-section/blog-section';
-import { ContactForm } from '../../components/forms/contact-form/contact-form';
 @Component({
   selector: 'app-blog',
-  imports: [BlogSectionComponent, ContactForm],
+  imports: [BlogSectionComponent],
   templateUrl: './blog.html',
   styleUrl: './blog.css',
 })

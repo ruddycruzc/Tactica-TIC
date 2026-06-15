@@ -8,11 +8,13 @@
     </header>
 
     <div class="jobs-grid">
-      <article class="blog-card" *ngFor="let card of jobCards">
-        <span class="blog-card__code" aria-hidden="true">&lt;/&gt;</span>
-        <h3>{{ card.title }}</h3>
-        <p>{{ card.description }}</p>
-      </article>
+      <app-image-text-card
+        *ngFor="let card of jobCards"
+        [image]="card.imgSrc"
+        [imageAlt]="card.altText"
+        [title]="card.title"
+        [description]="card.description">
+      </app-image-text-card>
     </div>
   </div>
 </section>
