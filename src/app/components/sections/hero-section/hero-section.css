@@ -8,7 +8,12 @@
   padding: clamp(3rem, 5vw, 10rem) 20rem 0;
   box-sizing: border-box;
   overflow: hidden;
-  background: url('/assets/images/hero/fondo hero.png') center top / cover no-repeat;
+  background: var(--color-bkg-light);
+}
+
+.hero-section app-hero {
+  position: relative;
+  z-index: 2;
 }
 
 @media (max-width: 968px) {
