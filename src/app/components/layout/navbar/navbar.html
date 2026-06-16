@@ -1,66 +1,67 @@
 <nav class="navbar">
-
-  <a
-    routerLink="/"
-    class="navbar__logo">
-
-<img src="/assets/images/logo-TT-rosa.png" alt="Táctica TIC">
-
+  <a routerLink="/" class="navbar__logo" (click)="closeMenu()">
+    <img src="/assets/images/brand/logo-TT-rosa.png" alt="Táctica TIC">
   </a>
 
-  <ul class="navbar__menu"
-   [class.navbar__menu--open]="menuOpen">
+  <ul class="navbar__menu" [class.navbar__menu--open]="menuOpen">
+@if(menuOpen && searchOpen){
 
+  <li class="navbar__search-mobile">
+
+    <input
+      type="text"
+      placeholder="Buscar..."
+      [(ngModel)]="searchTerm">
+
+  </li>
+
+}
     @for(item of navigationItems; track item.route){
 
-      <li>
+    <li>
 
-        <a
-          [routerLink]="item.route"
-          routerLinkActive="active-link"
-          [routerLinkActiveOptions]="{ exact: true }"
-          (click)="closeMenu()">
+      <a [routerLink]="item.route" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }"
+        (click)="closeMenu()">
 
-       {{ item.label | translate }}
+        {{ item.label | translate }}
 
-        </a>
+      </a>
 
-      </li>
+    </li>
 
     }
-
   </ul>
 
   <div class="navbar__actions">
 
-    <app-button
-      variant="tertiary"
-      iconOnly
-      ariaLabel="Buscar"
-      (buttonClick)="onSearchClick()">
-      <img src="/assets/icons/icon-search.png" alt="">
+    <div class="navbar__search">
+
+      @if(searchOpen){
+
+      <input type="text" class="navbar__search-input" placeholder="Buscar..." [(ngModel)]="searchTerm">
+
+      }
+
+      <app-button variant="tertiary" iconOnly ariaLabel="Buscar" (buttonClick)="toggleSearch()">
+
+        <img src="/assets/icons/icon-search.png" alt="">
+
+      </app-button>
+
+    </div>
+
+    <app-button variant="tertiary" size="sm" (buttonClick)="toggleLanguage()">
+
+      {{ currentLanguage.toUpperCase() }}
+
     </app-button>
+    <div class="navbar__hamburger">
+      <app-button variant="tertiary" iconOnly ariaLabel="abrirmenu" (buttonClick)="toggleMenu()">
 
-<app-button
-  variant="tertiary"
-  size="sm"
-  (buttonClick)="toggleLanguage()">
+        <img src="/assets/icons/menu.svg" alt="menu">
 
-  {{ currentLanguage.toUpperCase() }}
-
-</app-button>
-<div class="navbar__hamburger">
-  <app-button
-    variant="tertiary"
-    iconOnly
-    ariaLabel="abrirmenu"
-    (buttonClick)="toggleMenu()">
-
-    <img src="/assets/icons/menu.svg" alt="menu">
-
-  </app-button>
-</div>
+      </app-button>
+    </div>
 
   </div>
-
 </nav>

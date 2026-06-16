@@ -3,7 +3,7 @@
 .services-container {
   background: linear-gradient(135deg, var(--color-bkg-light) 0%, var(--color-border) 50%, var(--color-border) 100%);
   position: relative;
-  padding: 100px var(--page-margin, 24px);
+  padding: var(--section-padding-y) var(--section-padding-x);
   font-family: var(--font-family-base);
   display: flex;
   justify-content: center;
@@ -43,10 +43,10 @@
 }
 
 .services-title {
-  font-size: 3rem;
+  font-size: var(--font-size-h2);
   color: var(--text-heading-color);
   font-weight: var(--font-weight-extrabold);
-  margin-bottom: 20px;
+  margin-bottom: var(--title-subtitle-spacing);
   letter-spacing: -1.5px;
 }
 
@@ -58,7 +58,7 @@
 }
 
 .services-subtitle {
-  font-size: 1.2rem;
+  font-size: var(--font-size-body-large);
   color: var(--text-body-color);
   line-height: var(--text-body-line-height);
   margin: 0;
@@ -109,7 +109,7 @@
 .service-card:nth-child(1) .service-icon::before {
   content: "</>";
   font-family: var(--font-family-base);
-  font-size: 1.2rem;
+  font-size: var(--font-size-body-large);
   font-weight: var(--font-weight-bold);
   color: var(--text-highlight-color);
 }
@@ -128,7 +128,7 @@
 
 .service-card:nth-child(3) .service-icon::before {
   content: "↗";
-  font-size: 1.5rem;
+  font-size: var(--font-size-card-title);
   font-weight: var(--font-weight-bold);
   color: var(--text-highlight-color);
 }
@@ -145,14 +145,14 @@
 }
 
 .service-card h3 {
-  font-size: 1.5rem;
+  font-size: var(--font-size-card-title);
   color: var(--text-heading-color);
   font-weight: var(--font-weight-bold);
   margin: 0 0 15px 0;
 }
 
 .service-description {
-  font-size: 1rem;
+  font-size: var(--font-size-body-medium);
   color: var(--text-body-color);
   line-height: var(--text-body-line-height);
   margin: 0 0 25px 0;
@@ -170,7 +170,7 @@
 }
 
 .service-features li {
-  font-size: 0.95rem;
+  font-size: var(--font-size-sm);
   color: var(--text-heading-color);
   font-weight: var(--font-weight-medium);
   display: flex;
@@ -190,8 +190,8 @@
 }
 
 @media (max-width: 768px) {
-  .services-container { padding: 80px var(--page-margin, 24px); }
-  .services-title { font-size: 2.3rem; }
+  .services-container { padding: var(--section-padding-y) var(--section-padding-x); }
+  .services-title { font-size: var(--font-size-h2); }
   .services-grid { grid-template-columns: 1fr; gap: 20px; }
   .service-card { padding: 30px; }
 }

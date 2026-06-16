@@ -7,7 +7,7 @@ export const homeEs = {
           TITLE_LINE_2: 'contigo',
           DESCRIPTION: 'Combinamos tecnología, automatización y estrategia digital para ayudarte a optimizar procesos, conectar herramientas y hacer crecer tu negocio de forma inteligente y progresiva.',
           ABOUT_BUTTON: 'Conócenos',
-          VISION_BUTTON: 'Nuestra visión'
+          VISION_BUTTON: 'Ver proyectos'
         },
 
      INFO: {
@@ -26,7 +26,7 @@ export const homeEs = {
           LEAD: "Descubre a través de nuestra CEO cómo impulsamos la estrategia digital de forma inteligente y progresiva."
         },
      CASE_STUDIES: {
-          TITLE: "Nuestros proyectos",
+            TITLE: "Nuestro proyectos",
           SUBTITLE: "Descubre cómo resolvemos desafíos complejos de ingeniería y transformamos ideas en soluciones tecnológicas reales.",
           VIEW_ALL: "Ver todos los proyectos",
           TAG: "I+D+i",

@@ -1,0 +1,44 @@
+:host {
+  display: block;
+  min-width: 0;
+}
+
+.project-card {
+  min-width: 0;
+  display: block;
+  padding: var(--project-card-padding);
+
+  box-shadow: none;
+}
+
+.project-card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: var(--project-card-image-ratio);
+  object-fit: cover;
+  border-radius: var(--radius-cards);
+}
+
+.project-card h3 {
+  margin: var(--title-subtitle-spacing) 0 0;
+  color: var(--text-heading-color);
+  font-family: var(--font-family-heading);
+  font-size:var(--font-size-h3);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-heading);
+}
+
+.project-card p {
+  margin: var(--project-card-content-gap) 0 var(--title-subtitle-spacing);
+  color: var(--text-body-color);
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-body-medium);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--text-body-line-height);
+}
+
+@media (max-width: 640px) {
+  .project-card img {
+    aspect-ratio: var(--project-card-image-ratio-mobile);
+  }
+}

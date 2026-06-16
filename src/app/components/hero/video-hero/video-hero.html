@@ -1,75 +1,26 @@
-<section class="video-container">
-
-  <div class="video-content">
-
-    <div class="video-left">
-
-      <div class="video-wrapper">
-
-        <iframe
-          src="https://www.youtube.com/embed/ma8JDBwat_s"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen>
-        </iframe>
-
-        <button
-          class="play-overlay-btn"
-          [attr.aria-label]="videoContent.playVideo | translate">
-
-          <svg
-            viewBox="0 0 24 24"
-            fill="currentColor">
-
-            <path d="M8 5v14l11-7z"/>
-
-          </svg>
-
-        </button>
-
-        <div class="video-overlay-text">
-
-          <h3 class="ceo-name">
-
-            {{ videoContent.ceoName | translate }}
-
-          </h3>
-
-          <p class="ceo-role">
-
-            {{ videoContent.ceoRole | translate }}
-
-          </p>
-
-        </div>
-
-      </div>
-
+<div class="video-content reveal-up">
+  <div class="video-left">
+    <div class="video-wrapper">
+      <iframe
+        src="https://www.youtube.com/embed/ma8JDBwat_s?start=19&rel=0"
+        title="Liderando el cambio digital"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen>
+      </iframe>
     </div>
-
-    <div class="video-right">
-
-      <h2 class="section-title">
-
-        {{ videoContent.title | translate }}
-
-      </h2>
-
-      <p class="section-description">
-
-        {{ videoContent.description | translate }}
-
-      </p>
-
-      <p class="section-lead">
-
-        {{ videoContent.lead | translate }}
-
-      </p>
-
-    </div>
-
   </div>
 
-</section>
+  <div class="video-right">
+    <h2 class="section-title">
+      {{ videoContent.title | translate }}
+    </h2>
+
+    <p class="section-description">
+      {{ videoContent.description | translate }}
+    </p>
+
+    <p class="section-lead">
+      {{ videoContent.lead | translate }}
+    </p>
+  </div>
+</div>

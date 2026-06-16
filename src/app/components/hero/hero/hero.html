@@ -1,98 +1,24 @@
-<section
-  class="hero-container"
-  [class.hero-container--active]="isPointerActive"
-  [style.--hero-x.%]="cursorX"
-  [style.--hero-y.%]="cursorY"
-  (pointermove)="onPointerMove($event)"
-  (pointerleave)="onPointerLeave()"
->
+<div class="hero-content">
+  <h1 class="hero-title reveal-up">
+    <span>{{ heroContent.titleLine1 | translate }}</span>
+    <span>
+      <strong>{{ heroContent.titleHighlight | translate }}</strong>
+      {{ heroContent.titleLine2 | translate }}
+    </span>
+  </h1>
 
-  <div class="hero-wave" aria-hidden="true">
+  <p class="hero-description reveal-up">
+    {{ heroContent.description | translate }}
+  </p>
 
-    <svg
-      class="hero-wave__svg hero-wave__svg--base"
-      viewBox="0 0 1200 360"
-      preserveAspectRatio="none">
+  <div class="hero-buttons reveal-up">
+    <app-button variant="primary" routerLink="/about">
+      {{ heroContent.aboutButton | translate }}
+      <span class="arrow">→</span>
+    </app-button>
 
-      @for (path of wavePaths; track path) {
-
-        <path [attr.d]="path"></path>
-
-      }
-
-    </svg>
-
-    <svg
-      class="hero-wave__svg hero-wave__svg--focus"
-      viewBox="0 0 1200 360"
-      preserveAspectRatio="none">
-
-      @for (path of wavePaths; track path) {
-
-        <path [attr.d]="path"></path>
-
-      }
-
-    </svg>
-
+    <app-button variant="secondary" routerLink="/projects">
+      {{ heroContent.visionButton | translate }}
+    </app-button>
   </div>
-
-  <div class="hero-content">
-
-    <div class="hero-left">
-
-      <h1 class="hero-title">
-
-        {{ heroContent.titleLine1 | translate }}
-
-        <br>
-
-        <span class="highlight-green">
-
-          {{ heroContent.titleHighlight | translate }}
-
-        </span>
-
-        {{ heroContent.titleLine2 | translate }}
-
-      </h1>
-
-    </div>
-
-    <div class="hero-right">
-
-      <p class="hero-description">
-
-        {{ heroContent.description | translate }}
-
-      </p>
-
-      <div class="hero-buttons">
-
-        <app-button
-          variant="primary"
-          routerLink="/about">
-
-          {{ heroContent.aboutButton | translate }}
-
-          <span class="arrow">→</span>
-
-        </app-button>
-
-        <app-button
-          variant="secondary"
-          routerLink="/projects">
-
-          {{ heroContent.visionButton | translate }}
-
-          <span class="arrow">→</span>
-
-        </app-button>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
+</div>

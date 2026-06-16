@@ -7,7 +7,7 @@ import { TranslateModule } from '@ngx-translate/core';
 import { NavItem } from '../../../interfaces/nav-item.interface';
 import { TranslationService } from '../../../services/translation-service/translation.service';
 import { AppButtonComponent } from '../../ui/buttons/app-button/app-button.component';
-
+import { FormsModule } from '@angular/forms';
 @Component({
   selector: 'app-navbar',
   standalone: true,
@@ -15,7 +15,7 @@ import { AppButtonComponent } from '../../ui/buttons/app-button/app-button.compo
     RouterLink,
     RouterLinkActive,
     TranslateModule,
-    AppButtonComponent
+    AppButtonComponent,FormsModule
   ],
   templateUrl: './navbar.html',
   styleUrl: './navbar.css'
@@ -38,12 +38,12 @@ export class Navbar {
       route: '/projects'
     },
     {
-      label: 'NAV.CONTACT',
-      route: '/contact'
-    },
-    {
       label: 'NAV.BLOG',
       route: '/blog'
+    },
+     {
+      label: 'NAV.CONTACT',
+      route: '/contact'
     },
     {
       label: 'NAV.CAREERS',
@@ -62,11 +62,21 @@ export class Navbar {
   toggleMenu(): void {
     this.menuOpen = !this.menuOpen;
   }
+searchOpen = false;
+searchTerm = '';
+toggleSearch(): void {
 
+  if (window.innerWidth <= 1024) {
+    this.menuOpen = true;
+  }
+
+  this.searchOpen = !this.searchOpen;
+}
   onSearchClick(): void {
     console.log('Buscar');
   }
-  closeMenu(): void {
+closeMenu(): void {
   this.menuOpen = false;
+  this.searchOpen = false;
 }
 }

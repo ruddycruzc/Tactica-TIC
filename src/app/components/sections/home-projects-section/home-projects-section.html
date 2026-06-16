@@ -1,0 +1,24 @@
+<section class="home-projects home-section">
+  <div class="home-projects__inner home-section__inner reveal-up">
+    <div class="home-projects__header">
+      <div>
+        <h2>Nuestro proyectos</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>
+
+      <app-button variant="primary" routerLink="/projects">Ver proyectos</app-button>
+    </div>
+
+    <div class="home-projects__grid">
+      @for (project of projects; track project.title) {
+        <app-project-card
+          [image]="project.image"
+          [title]="project.title"
+          [description]="project.description"
+          buttonLabel="Ver detalles"
+          buttonRouterLink="/projects"
+        />
+      }
+    </div>
+  </div>
+</section>

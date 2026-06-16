@@ -1,0 +1,37 @@
+.hero-aboutus {
+  padding: calc(var(--section-padding-y) + var(--button-height-lg)) var(--section-padding-x) 0;
+}
+
+.hero-aboutus__inner {
+  display: grid;
+  gap: var(--section-padding-y-mobile);
+}
+
+.hero-aboutus__header {
+  display: grid;
+  width: min(100%, var(--content-max-width));
+  margin-inline: auto;
+  gap: var(--title-subtitle-spacing);
+  text-align: center;
+}
+
+.hero-aboutus__header h2 {
+  margin: 0;
+  color: var(--text-heading-color);
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-semibold);
+}
+
+.hero-aboutus__header p {
+  width: min(100%, 54rem);
+  margin: 0 auto;
+  color: var(--text-body-color);
+  font-size: var(--font-size-body-large);
+  line-height: var(--text-body-line-height);
+}
+
+@media (max-width: 640px) {
+  .hero-aboutus {
+    padding-top: calc(var(--section-padding-y) + var(--button-height));
+  }
+}

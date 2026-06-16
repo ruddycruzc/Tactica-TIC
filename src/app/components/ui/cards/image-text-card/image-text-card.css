@@ -1,0 +1,55 @@
+:host {
+  display: block;
+  height: 100%;
+}
+
+.image-text-card {
+  position: relative;
+  display: flex;
+  height: 100%;
+  min-height: 0;
+  overflow: hidden;
+  flex-direction: column;
+  border: var(--border-width-hairline) solid var(--color-border);
+  border-radius: var(--radius-cards);
+  background: var(--card-background);
+  box-shadow: var(--shadow-card);
+}
+
+.image-text-card img {
+  display: block;
+  width: 100%;
+  height: clamp(13rem, 18vw, 18.75rem);
+  object-fit: cover;
+  background: var(--color-bkg-grey);
+}
+
+.image-text-card__content {
+  display: grid;
+  flex: 1;
+  align-content: start;
+  gap: clamp(1.5rem, 2vw, 2.25rem);
+  padding: clamp(2rem, 3vw, 3.5rem) clamp(1.5rem, 2.4vw, 2.75rem);
+}
+
+.image-text-card h3 {
+  margin: 0;
+  color: var(--text-heading-color);
+  font-size: var(--font-size-card-title);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-heading);
+}
+
+.image-text-card p {
+  margin: 0;
+  color: var(--text-body-color);
+  font-size: var(--font-size-body-medium);
+  line-height: var(--text-body-line-height);
+}
+
+@media (max-width: 640px) {
+  .image-text-card img {
+    height: auto;
+    aspect-ratio: var(--project-card-image-ratio);
+  }
+}

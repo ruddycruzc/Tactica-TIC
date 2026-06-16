@@ -4,11 +4,13 @@ import { homeEn } from './pages/home/home.en';
 
 import { contactFormEn } from './pages/contact/contact-form.en';
 import { footerEn } from './shared/footer.en';
+import { notFoundEn } from './pages/not-found/not-found.en';
 
 export const enTranslations = {
   ...navEn,
   ...aboutEn,
   ...homeEn,
   ...contactFormEn,
-  ...footerEn
+  ...footerEn,
+  ...notFoundEn
 };
