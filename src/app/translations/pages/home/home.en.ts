@@ -50,6 +50,30 @@ export const homeEn = {
           ' and make better decisions.'
       }
        },
+       INFO_LEFT: {
+  TITLE: 'Leading digital transformation',
+
+  PARAGRAPHS: {
+    PARAGRAPH_1:
+      'We refuse to see code as something cold. Every social project we undertake seeks to solve real human challenges.',
+
+    PARAGRAPH_2:
+      'We treat every line of development with the moral responsibility that community impact deserves.'
+  },
+
+  BUTTON_LABEL: 'Get to know us',
+
+  IMAGE_ALT: 'Professional using a computer',
+
+  CARD: {
+    TITLE:
+      'Can time tracking improve your team workforce management?',
+
+    EMPHASIS: 'time tracking',
+
+    BUTTON_LABEL: 'Learn more'
+  }
+},
     INFO: {
           TAG: 'Technological innovation',
           TITLE: 'Digital growth',

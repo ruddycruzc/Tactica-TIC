@@ -2,13 +2,15 @@ import { Component, Input } from '@angular/core';
 
 import { AppButtonComponent } from '../../ui/buttons/app-button/app-button.component';
 import { BackgroundColorInfoCard } from '../../ui/cards/background-color-info-card/background-color-info-card';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-info-left',
   standalone: true,
   imports: [
     AppButtonComponent,
-    BackgroundColorInfoCard
+    BackgroundColorInfoCard,
+    TranslateModule
   ],
   templateUrl: './info-left.html',
   styleUrl: './info-left.css',

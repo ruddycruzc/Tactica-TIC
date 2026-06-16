@@ -50,6 +50,30 @@ TEXT_INFO: {
       ' y tomar mejores decisiones.'
   }
 },
+INFO_LEFT: {
+  TITLE: 'Liderando el cambio digital',
+
+  PARAGRAPHS: {
+    PARAGRAPH_1:
+      'Nos negamos a ver el código como algo frío. Cada proyecto social que asumimos busca resolver retos reales y humanos.',
+
+    PARAGRAPH_2:
+      'Tratamos cada línea de desarrollo con la responsabilidad moral que merece el impacto comunitario.'
+  },
+
+  BUTTON_LABEL: 'Conócenos',
+
+  IMAGE_ALT: 'Profesional usando un ordenador',
+
+  CARD: {
+    TITLE:
+      '¿Puede el control de jornada mejorar la gestión laboral de tu equipo?',
+
+    EMPHASIS: 'jornada mejorar',
+
+    BUTTON_LABEL: 'Conoce más'
+  }
+},
      INFO: {
           TAG: 'Innovación tecnológica',
           TITLE: 'Crecimiento digital',

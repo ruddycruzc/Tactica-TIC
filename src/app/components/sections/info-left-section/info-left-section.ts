@@ -1,26 +1,46 @@
 import { Component } from '@angular/core';
 
 import { InfoLeft } from '../../info-blocks/info-left/info-left';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-info-left-section',
   standalone: true,
-  imports: [InfoLeft],
+  imports: [InfoLeft,TranslateModule],
   templateUrl: './info-left-section.html',
   styleUrl: './info-left-section.css',
 })
 export class InfoLeftSection {
-  readonly title = 'Liderando el cambio digital';
+
+  readonly title =
+    'HOME.INFO_LEFT.TITLE';
+
   readonly paragraphs = [
-    'Nos negamos a ver el código como algo frío. Cada proyecto social que asumimos busca resolver retos reales y humanos.',
-    'Tratamos cada línea de desarrollo con la responsabilidad moral que merece el impacto comunitario.'
+    'HOME.INFO_LEFT.PARAGRAPHS.PARAGRAPH_1',
+    'HOME.INFO_LEFT.PARAGRAPHS.PARAGRAPH_2'
   ];
-  readonly buttonLabel = 'Conócenos';
-  readonly buttonLink = '/about';
-  readonly image = '/assets/images/info-left/Rectangle 8.png';
-  readonly imageAlt = 'Profesional usando un ordenador';
-  readonly cardTitle = '¿Puede el control de jornada mejorar la gestión laboral de tu equipo?';
-  readonly cardEmphasis = 'jornada mejorar';
-  readonly cardButtonLabel = 'Conoce más';
-  readonly cardButtonLink = '/contact';
+
+  readonly buttonLabel =
+    'HOME.INFO_LEFT.BUTTON_LABEL';
+
+  readonly buttonLink =
+    '/about';
+
+  readonly image =
+    '/assets/images/info-left/Rectangle 8.png';
+
+  readonly imageAlt =
+    'HOME.INFO_LEFT.IMAGE_ALT';
+
+  readonly cardTitle =
+    'HOME.INFO_LEFT.CARD.TITLE';
+
+  readonly cardEmphasis =
+    'HOME.INFO_LEFT.CARD.EMPHASIS';
+
+  readonly cardButtonLabel =
+    'HOME.INFO_LEFT.CARD.BUTTON_LABEL';
+
+  readonly cardButtonLink =
+    '/contact';
 }
