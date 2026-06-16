@@ -29,6 +29,27 @@ export const homeEs = {
             BUTTON_LABEL: 'Conoce más'
           }
         },
+TEXT_INFO: {
+  STATEMENT:
+    'Transformamos procesos industriales conectando inteligencia artificial, IoT, visión artificial y software a medida para ayudar a las empresas a controlar, automatizar y tomar mejores decisiones.',
+
+  SEGMENTS: {
+    PART_1:
+      'Transformamos procesos industriales conectando ',
+
+    PART_2:
+      'inteligencia artificial, IoT, visión artificial y software a medida para ayudar a las empresas ',
+
+    PART_3:
+      'a controlar, ',
+
+    PART_4:
+      'automatizar',
+
+    PART_5:
+      ' y tomar mejores decisiones.'
+  }
+},
      INFO: {
           TAG: 'Innovación tecnológica',
           TITLE: 'Crecimiento digital',

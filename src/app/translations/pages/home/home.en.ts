@@ -28,14 +28,36 @@ export const homeEn = {
           BUTTON_LABEL: 'Learn more'
         }
       },
-        INFO: {
+
+   TEXT_INFO: {
+      STATEMENT:
+        'We transform industrial processes by connecting artificial intelligence, IoT, computer vision, and custom software to help companies monitor, automate, and make better decisions.',
+
+      SEGMENTS: {
+        PART_1:
+          'We transform industrial processes by connecting ',
+
+        PART_2:
+          'artificial intelligence, IoT, computer vision, and custom software to help companies ',
+
+        PART_3:
+          'monitor, ',
+
+        PART_4:
+          'automate',
+
+        PART_5:
+          ' and make better decisions.'
+      }
+       },
+    INFO: {
           TAG: 'Technological innovation',
           TITLE: 'Digital growth',
           DESCRIPTION: 'We help companies optimize processes, integrate tools and accelerate their digital transformation through technology solutions tailored to their needs.',
           BUTTON: 'Get to know us',
           IMAGE_ALT: 'Digital technology'
         },
-        VIDEO: {
+    VIDEO: {
           PLAY_VIDEO: "Play video",
           CEO_NAME: "Isabel Santos",
           CEO_ROLE: "CEO",
@@ -45,7 +67,7 @@ export const homeEn = {
         },
 
 
-      CASE_STUDIES: {
+    CASE_STUDIES: {
         
             TITLE: "Our projects",
             SUBTITLE: "Discover how we solve complex engineering challenges and transform ideas into real technological solutions.",
@@ -56,7 +78,7 @@ export const homeEn = {
         },
 
 
-        TEAM: {
+    TEAM: {
            TITLE: "Our team",
            SUBTITLE: "Meet the people who drive our projects and turn technological challenges into real solutions.",
            PREVIOUS: "Previous",

@@ -1,21 +1,55 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 
 import { TypewriterText, TypewriterTextSegment } from '../../ui/text/typewriter-text/typewriter-text';
+import { TranslateModule,TranslateService} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-text-info-section',
   standalone: true,
-  imports: [TypewriterText],
+  imports: [TypewriterText, TranslateModule],
   templateUrl: './text-info-section.html',
   styleUrl: './text-info-section.css',
 })
 export class TextInfoSection {
-  readonly statement = 'Transformamos procesos industriales conectando inteligencia artificial, IoT, visión artificial y software a medida para ayudar a las empresas a controlar, automatizar y tomar mejores decisiones.';
+
+  private readonly translate = inject(TranslateService);
+
+  readonly statement =
+    this.translate.instant(
+      'HOME.TEXT_INFO.STATEMENT'
+    );
+
   readonly statementSegments: TypewriterTextSegment[] = [
-    { text: 'Transformamos procesos industriales conectando ', tone: 'muted' },
-    { text: 'inteligencia artificial, IoT, visión artificial y software a medida para ayudar a las empresas ', tone: 'strong' },
-    { text: 'a controlar, ', tone: 'muted' },
-    { text: 'automatizar', tone: 'strong' },
-    { text: ' y tomar mejores decisiones.', tone: 'muted' },
+    {
+      text: this.translate.instant(
+        'HOME.TEXT_INFO.SEGMENTS.PART_1'
+      ),
+      tone: 'muted'
+    },
+    {
+      text: this.translate.instant(
+        'HOME.TEXT_INFO.SEGMENTS.PART_2'
+      ),
+      tone: 'strong'
+    },
+    {
+      text: this.translate.instant(
+        'HOME.TEXT_INFO.SEGMENTS.PART_3'
+      ),
+      tone: 'muted'
+    },
+    {
+      text: this.translate.instant(
+        'HOME.TEXT_INFO.SEGMENTS.PART_4'
+      ),
+      tone: 'strong'
+    },
+    {
+      text: this.translate.instant(
+        'HOME.TEXT_INFO.SEGMENTS.PART_5'
+      ),
+      tone: 'muted'
+    }
   ];
+
 }
