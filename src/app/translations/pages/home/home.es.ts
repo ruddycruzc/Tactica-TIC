@@ -9,7 +9,26 @@ export const homeEs = {
           ABOUT_BUTTON: 'Conócenos',
           VISION_BUTTON: 'Ver proyectos'
         },
+    PRODUCT_SHOWCASE: {
+          PRODUCT_1: {
+            TITLE: 'Verifactu',
+            DESCRIPTION:
+              'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+          },
 
+          PRODUCT_2: {
+            TITLE: 'Nombre de Producto',
+            DESCRIPTION:
+              'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+          },
+
+          SIDE_CARD: {
+            TITLE:
+              '¿Puede el control de jornada mejorar la gestión laboral de tu equipo?',
+            EMPHASIS: 'control de jornada',
+            BUTTON_LABEL: 'Conoce más'
+          }
+        },
      INFO: {
           TAG: 'Innovación tecnológica',
           TITLE: 'Crecimiento digital',

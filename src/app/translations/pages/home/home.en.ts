@@ -8,7 +8,26 @@ export const homeEn = {
           ABOUT_BUTTON: 'Get to know us',
           VISION_BUTTON: 'View projects'
         },
+    PRODUCT_SHOWCASE: {
+        PRODUCT_1: {
+          TITLE: 'Verifactu',
+          DESCRIPTION:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+        },
 
+        PRODUCT_2: {
+          TITLE: 'Product Name',
+          DESCRIPTION:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+        },
+
+        SIDE_CARD: {
+          TITLE:
+            'Can time tracking improve your team workforce management?',
+          EMPHASIS: 'time tracking',
+          BUTTON_LABEL: 'Learn more'
+        }
+      },
         INFO: {
           TAG: 'Technological innovation',
           TITLE: 'Digital growth',
