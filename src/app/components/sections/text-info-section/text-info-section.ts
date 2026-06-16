@@ -1,12 +1,22 @@
 import { Component, inject } from '@angular/core';
 
-import { TypewriterText, TypewriterTextSegment } from '../../ui/text/typewriter-text/typewriter-text';
-import { TranslateModule,TranslateService} from '@ngx-translate/core';
+import {
+  TypewriterText,
+  TypewriterTextSegment
+} from '../../ui/text/typewriter-text/typewriter-text';
+
+import {
+  TranslateModule,
+  TranslateService
+} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-text-info-section',
   standalone: true,
-  imports: [TypewriterText, TranslateModule],
+  imports: [
+    TypewriterText,
+    TranslateModule
+  ],
   templateUrl: './text-info-section.html',
   styleUrl: './text-info-section.css',
 })
@@ -51,5 +61,4 @@ export class TextInfoSection {
       tone: 'muted'
     }
   ];
-
 }
