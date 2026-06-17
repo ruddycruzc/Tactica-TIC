@@ -39,6 +39,8 @@
 }
 
 .jobs-grid {
+  --reveal-duration: 840ms;
+  --reveal-stagger: 130ms;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: var(--grid-gap);

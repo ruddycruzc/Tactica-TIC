@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 import { NgFor } from '@angular/common';
 import { AppButtonComponent } from '../../ui/buttons/app-button/app-button.component';
 import { HubItem } from '../../../interfaces/newsletter-section.interface';
+import { ScrollRevealDirective } from '../../../directives/scroll-reveal.directive';
 
 @Component({
   selector: 'app-newsletter-section',
   standalone: true,
-  imports: [AppButtonComponent, NgFor],
+  imports: [AppButtonComponent, NgFor, ScrollRevealDirective],
   templateUrl: './newsletter-section.html',
   styleUrl: './newsletter-section.css'
 })

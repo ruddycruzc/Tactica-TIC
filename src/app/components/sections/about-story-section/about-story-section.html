@@ -1,5 +1,10 @@
 <section class="about-story-section">
-  <div class="about-story-section__inner">
+  <div
+    class="about-story-section__inner"
+    [style.--about-story-reveal-progress]="scrollProgress"
+    [style.--about-story-reveal-scale]="revealScale"
+    [style.--about-story-reveal-y]="revealOffset"
+    [style.--about-story-reveal-opacity]="revealOpacity">
     <h2 class="about-story-section__title">{{ title }} <span>{{ titleHighlight }}</span></h2>
 
     <app-info-left-image

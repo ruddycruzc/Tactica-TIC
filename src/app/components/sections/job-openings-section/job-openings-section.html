@@ -7,9 +7,15 @@
       </p>
     </header>
 
-    <div class="jobs-grid">
+    <div
+      class="jobs-grid"
+      appScrollReveal
+      scrollRevealRootMargin="0px 0px -18% 0px"
+      [scrollRevealThreshold]="0.2">
       <app-image-text-card
-        *ngFor="let card of jobCards"
+        *ngFor="let card of jobCards; let index = index"
+        class="tt-card-reveal"
+        [style.--reveal-index]="index"
         [image]="card.imgSrc"
         [imageAlt]="card.altText"
         [title]="card.title"

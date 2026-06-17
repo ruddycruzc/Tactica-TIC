@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 import { NgFor } from '@angular/common'; 
 import { JobCultureCard } from '../../../interfaces/jobs-openings-section.interface';
 import { ImageTextCard } from '../../ui/cards/image-text-card/image-text-card';
+import { ScrollRevealDirective } from '../../../directives/scroll-reveal.directive';
 
 @Component({
   selector: 'app-job-openings-section',
   standalone: true,
-  imports: [NgFor, ImageTextCard], 
+  imports: [NgFor, ImageTextCard, ScrollRevealDirective], 
   templateUrl: './job-openings-section.html',
   styleUrl: './job-openings-section.css'
 })

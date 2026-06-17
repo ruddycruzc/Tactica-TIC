@@ -21,7 +21,7 @@ export class HeroAboutusSection {
       type: 'image'
     },
     {
-      src: '/assets/videos/aboutus.mp4',
+      src: '/assets/Videos/aboutus.mp4',
       type: 'video'
     },
     {

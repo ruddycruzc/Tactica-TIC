@@ -1,7 +1,5 @@
 <section class="home-projects home-section">
-  <div
-    class="home-projects__inner home-section__inner"
-    [class.home-projects__inner--visible]="isVisible">
+  <div class="home-projects__inner home-section__inner">
     <div class="home-projects__header">
       <div>
         <h2>Nuestro proyectos</h2>
@@ -11,11 +9,15 @@
       <app-button variant="primary" routerLink="/projects">Ver proyectos</app-button>
     </div>
 
-    <div class="home-projects__grid">
+    <div
+      class="home-projects__grid"
+      appScrollReveal
+      scrollRevealRootMargin="0px 0px -22% 0px"
+      [scrollRevealThreshold]="0.28">
       @for (project of projects; track project.title; let index = $index) {
         <div
-          class="home-projects__card"
-          [style.--home-project-index]="index">
+          class="home-projects__card tt-card-reveal"
+          [style.--reveal-index]="index">
           <app-project-card
             [image]="project.image"
             [title]="project.title"

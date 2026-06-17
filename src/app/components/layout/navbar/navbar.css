@@ -108,7 +108,7 @@
 
 .navbar__menu a.active-link::before,
 .navbar__menu a.active-link::after {
-  transform: scaleX(1);
+  transform: scaleX(0);
 }
 
 
@@ -247,9 +247,8 @@
   .navbar__menu a.active-link:focus-visible {
     color: var(--nav-link-active-color);
     font-weight: var(--nav-link-active-font-weight);
-    background: rgba(246, 57, 110, 0.08);
-    border-radius: 10px;
-    padding: .75rem 1.25rem;
+    background: transparent;
+    border-radius: 0;
   }
 
 
