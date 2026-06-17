@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 import { TranslateModule } from '@ngx-translate/core';
 
-import { FaqItem } from '../../../interfaces/faq-item.interface';
+import { FaqItem } from '../../../interfaces/data/faq-item.interface';
 
 @Component({
   selector: 'app-faq-section',

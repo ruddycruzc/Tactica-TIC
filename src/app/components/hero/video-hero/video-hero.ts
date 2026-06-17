@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
-import { VideoContent } from '../../../interfaces/video-content.interface';
+import { VideoContent } from '../../../interfaces/translations/video-content.interface';
 
 @Component({
   selector: 'app-video-hero',

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NgFor } from '@angular/common';
 import { AppButtonComponent } from '../../ui/buttons/app-button/app-button.component';
-import { HubItem } from '../../../interfaces/newsletter-section.interface';
+import { HubItem } from '../../../interfaces/translations/newsletter-section.interface';
 
 @Component({
   selector: 'app-newsletter-section',

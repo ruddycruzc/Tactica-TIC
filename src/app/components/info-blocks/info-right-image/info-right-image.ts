@@ -4,7 +4,7 @@ import { TranslateModule } from '@ngx-translate/core';
 
 import { AppButtonComponent } from '../../ui/buttons/app-button/app-button.component';
 
-import { InfoContent } from '../../../interfaces/info-content.interface';
+import { InfoContent } from '../../../interfaces/translations/info-content.interface';
 
 @Component({
   selector: 'app-info-right-image',

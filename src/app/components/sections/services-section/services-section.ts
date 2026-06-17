@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ServiceCard } from '../../../interfaces/services-section.interface';
+import { ServiceCard } from '../../../interfaces/translations/services-section.interface';
 
 @Component({
   selector: 'app-services-section',

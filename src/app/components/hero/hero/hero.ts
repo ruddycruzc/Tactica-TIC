@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 
-import { HeroContent } from '../../../interfaces/hero-content.interface';
+import { HeroContent } from '../../../interfaces/translations/hero-content.interface';
 import { AppButtonComponent } from '../../ui/buttons/app-button/app-button.component';
 
 @Component({

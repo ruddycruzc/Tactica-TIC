@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NgFor } from '@angular/common'; 
-import { JobCultureCard } from '../../../interfaces/jobs-openings-section.interface';
+import { JobCultureCard } from '../../../interfaces/translations/jobs-openings-section.interface';
 import { ImageTextCard } from '../../ui/cards/image-text-card/image-text-card';
 
 @Component({

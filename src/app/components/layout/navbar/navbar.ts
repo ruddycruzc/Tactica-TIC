@@ -4,7 +4,7 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
 
 
-import { NavItem } from '../../../interfaces/nav-item.interface';
+import { NavItem } from '../../../interfaces/data/nav-item.interface';
 import { TranslationService } from '../../../services/translation-service/translation.service';
 import { AppButtonComponent } from '../../ui/buttons/app-button/app-button.component';
 import { FormsModule } from '@angular/forms';

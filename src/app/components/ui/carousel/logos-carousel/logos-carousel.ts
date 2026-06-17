@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { LogoItem } from '../../../../interfaces/logos-carousel.interface';
+import { LogoItem } from '../../../../interfaces/data/logos-carousel.interface';
 import { TranslateModule } from '@ngx-translate/core';
 
 @Component({

@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { NgFor, NgIf } from '@angular/common'; 
-import { ProjectCard } from '../../../interfaces/project.interface';
-
+import { Project } from '../../../interfaces/data/project.interface';
 @Component({
   selector: 'app-projects-section',
   standalone: true,
@@ -10,7 +9,7 @@ import { ProjectCard } from '../../../interfaces/project.interface';
   styleUrl: './projects-section.css'
 })
 export class ProjectsSection {
-  readonly projects: ProjectCard[] = [
+  readonly projects: Project[] = [
     {
       name: 'MINIASSIST',
       text: 'Miniassist es un asistente virtual con voz destinado a personas mayores en zonas rurales de Asturias, que facilite la comunicación, el acompañamiento y el seguimiento asistencial mediante IA y conectividad sencilla. Los objetivos del proyecto son:',
