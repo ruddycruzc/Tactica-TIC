@@ -10,8 +10,11 @@ import { TranslateModule } from '@ngx-translate/core';
 
 import { ImageCard } from '../../cards/image-card/image-card';
 import { AppButtonComponent } from '../../buttons/app-button/app-button.component';
-import { TeamCard } from '../../../../interfaces/data/team-card.interface';
+import {TeamMember } from '../../../../interfaces/data/team-member.interface';
 import { TeamCarouselContent } from '../../../../interfaces/translations/team-carousel-content.interface';
+import { TEAM_MEMBERS }
+from '../../../../data/team/team.data';
+
 @Component({
   selector: 'app-cards-carousel',
   standalone: true,
@@ -33,46 +36,9 @@ export class CardsCarousel {
     previous: 'HOME.TEAM.PREVIOUS',
     next: 'HOME.TEAM.NEXT'
   };
+readonly cards = TEAM_MEMBERS;
 
-  readonly cards: TeamCard[] = [
-    {
-      image: '/assets/images/cards/teamcard1.jpeg',
-      name: 'Name',
-      excerpt: 'Desarrollador Backend Senior',
-      details:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
-    },
-    {
-      image: '/assets/images/cards/teamcard2.jpeg',
-      name: 'Name',
-      excerpt: 'Desarrollador Backend Senior',
-      details:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
-    },
-    {
-      image: '/assets/images/cards/teamcard3.jpeg',
-      name: 'Name',
-      excerpt: 'Desarrollador Backend Senior',
-      details:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
-    },
-    {
-      image: '/assets/images/cards/teamcard4.jpeg',
-      name: 'Name',
-      excerpt: 'Desarrollador Backend Senior',
-      details:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
-    },
-    {
-      image: '/assets/images/cards/teamcard5.jpeg',
-      name: 'Name',
-      excerpt: 'Desarrollador Backend Senior',
-      details:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
-    }
-  ];
-
-  get displayCards(): TeamCard[] {
+  get displayCards(): TeamMember[] {
 
     if (this.cards.length === 0) {
       return [];
