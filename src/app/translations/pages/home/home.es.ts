@@ -136,6 +136,15 @@ INFO_LEFT: {
 
             QUESTION_4: "¿Vuestras soluciones tecnológicas se integran con herramientas que ya usamos?",
             ANSWER_4: "¡Por supuesto! Uno de nuestros pilares es conectar herramientas y optimizar procesos. Diseñamos software robusto capaz de integrarse mediante APIs con tus sistemas actuales (ERPs, CRMs o maquinaria industrial) para que la transición sea fluida e inteligente."
-}
+},
+    FINAL_CTA: {
+          TITLE:
+            'Transforma el potencial de tu negocio con nosotros',
+
+          DESCRIPTION: '',
+
+          BUTTON_LABEL:
+            'Contáctanos'
+        }
 
  } };

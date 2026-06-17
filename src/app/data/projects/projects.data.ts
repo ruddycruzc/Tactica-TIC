@@ -1,4 +1,6 @@
-export const PROJECTS = [
+import { Project } from "../../interfaces/data/project.interface";
+
+export const PROJECTS : Project[] = [
      {
       name: 'MINIASSIST',
       text: 'Miniassist es un asistente virtual con voz destinado a personas mayores en zonas rurales de Asturias, que facilite la comunicación, el acompañamiento y el seguimiento asistencial mediante IA y conectividad sencilla. Los objetivos del proyecto son:',

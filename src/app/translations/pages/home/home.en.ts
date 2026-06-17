@@ -144,7 +144,16 @@ export const homeEn = {
         ANSWER_4: "Absolutely! One of our core principles is connecting tools and optimizing processes. We design robust software capable of integrating with your existing systems (ERPs, CRMs, or industrial machinery) through APIs to ensure a smooth and intelligent transition."
      
      
-      }
+      },
+      FINAL_CTA: {
+          TITLE:
+            'Transform your business potential with us',
+
+          DESCRIPTION: '',
+
+          BUTTON_LABEL:
+            'Contact us'
+        }
     
 
 
