@@ -2,22 +2,23 @@
   <div class="home-projects__inner home-section__inner reveal-up">
     <div class="home-projects__header">
       <div>
-        <h2>Nuestro proyectos</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <h2>
+          {{ 'HOME.HOME_PROJECTS.TITLE' | translate }}
+        </h2>
+        <p>
+          {{ 'HOME.HOME_PROJECTS.DESCRIPTION' | translate }}
+        </p>
       </div>
 
-      <app-button variant="primary" routerLink="/projects">Ver proyectos</app-button>
+<app-button variant="primary" routerLink="/projects">
+  {{ 'HOME.HOME_PROJECTS.BUTTON_LABEL' | translate }}
+</app-button>
     </div>
 
     <div class="home-projects__grid">
       @for (project of projects; track project.title) {
-        <app-project-card
-          [image]="project.image"
-          [title]="project.title"
-          [description]="project.description"
-          buttonLabel="Ver detalles"
-          buttonRouterLink="/projects"
-        />
+      <app-project-card [image]="project.image" [title]="project.title" [description]="project.description"
+       buttonLabel="HOME.HOME_PROJECTS.CARD_BUTTON" buttonRouterLink="/projects" />
       }
     </div>
   </div>

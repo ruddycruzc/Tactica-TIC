@@ -1,4 +1,4 @@
-export interface ProjectCard {
+export interface Project {
   name: string;
   text?: string;              
   additionalParagraphs?: string[]; 

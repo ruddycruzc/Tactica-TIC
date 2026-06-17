@@ -1,13 +1,8 @@
 import { Component } from '@angular/core';
-
+import { PROJECTS } from '../../../data/projects/projects.data';
 import { AppButtonComponent } from '../../ui/buttons/app-button/app-button.component';
 import { ProjectCard } from '../../ui/cards/project-card/project-card';
-
-type HomeProject = {
-  title: string;
-  description: string;
-  image: string;
-};
+import { Projects } from '../../../pages/projects/projects';
 
 @Component({
   selector: 'app-home-projects-section',
@@ -17,21 +12,6 @@ type HomeProject = {
   styleUrl: './home-projects-section.css',
 })
 export class HomeProjectsSection {
-  readonly projects: HomeProject[] = [
-    {
-      title: 'MINIASSIST',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-      image: '/assets/images/home-projects/image-2.png',
-    },
-    {
-      title: 'MINIBAI',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-      image: '/assets/images/home-projects/image-1.png',
-    },
-    {
-      title: 'Smartcrane II',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-      image: '/assets/images/home-projects/image.png',
-    },
-  ];
+  readonly projects: PROJECTS;
+   
 }

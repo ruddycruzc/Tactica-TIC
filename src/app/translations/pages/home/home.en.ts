@@ -100,7 +100,18 @@ export const homeEn = {
             PROJECT_1_ALT: "MINIASSIST project",
             PROJECT_2_ALT: "EPISOT project"
         },
+    HOME_PROJECTS: {
+        TITLE: 'Our projects',
 
+        DESCRIPTION:
+          'Discover how we solve complex engineering challenges and transform ideas into real technological solutions.',
+
+        BUTTON_LABEL:
+          'View projects',
+
+        CARD_BUTTON:
+          'View details'
+        },
 
     TEAM: {
            TITLE: "Our team",

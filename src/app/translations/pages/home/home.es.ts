@@ -104,6 +104,18 @@ INFO_LEFT: {
           NEXT: "Siguiente",
           CAROUSEL_CONTROLS: "Controles del carrusel"
           },
+    HOME_PROJECTS: {
+        TITLE: 'Nuestros proyectos',
+
+        DESCRIPTION:
+          'Descubre cómo resolvemos desafíos complejos de ingeniería y transformamos ideas en soluciones tecnológicas reales.',
+
+        BUTTON_LABEL:
+          'Ver proyectos',
+
+        CARD_BUTTON:
+          'Ver detalles'
+        },
      LOGOS: {
             TITLE: "Empresas que confían en nosotros",
             PARTNERS_LABEL: "Empresas colaboradoras"
