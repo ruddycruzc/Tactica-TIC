@@ -1,5 +1,7 @@
 <section class="home-projects home-section">
-  <div class="home-projects__inner home-section__inner reveal-up">
+  <div
+    class="home-projects__inner home-section__inner"
+    [class.home-projects__inner--visible]="isVisible">
     <div class="home-projects__header">
       <div>
         <h2>Nuestro proyectos</h2>
@@ -10,14 +12,18 @@
     </div>
 
     <div class="home-projects__grid">
-      @for (project of projects; track project.title) {
-        <app-project-card
-          [image]="project.image"
-          [title]="project.title"
-          [description]="project.description"
-          buttonLabel="Ver detalles"
-          buttonRouterLink="/projects"
-        />
+      @for (project of projects; track project.title; let index = $index) {
+        <div
+          class="home-projects__card"
+          [style.--home-project-index]="index">
+          <app-project-card
+            [image]="project.image"
+            [title]="project.title"
+            [description]="project.description"
+            buttonLabel="Ver detalles"
+            buttonRouterLink="/projects"
+          />
+        </div>
       }
     </div>
   </div>

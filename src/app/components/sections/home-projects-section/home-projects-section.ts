@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnDestroy, inject } from '@angular/core';
 
 import { AppButtonComponent } from '../../ui/buttons/app-button/app-button.component';
 import { ProjectCard } from '../../ui/cards/project-card/project-card';
@@ -16,7 +16,12 @@ type HomeProject = {
   templateUrl: './home-projects-section.html',
   styleUrl: './home-projects-section.css',
 })
-export class HomeProjectsSection {
+export class HomeProjectsSection implements AfterViewInit, OnDestroy {
+  private readonly elementRef = inject(ElementRef<HTMLElement>);
+  private revealObserver: IntersectionObserver | null = null;
+
+  isVisible = false;
+
   readonly projects: HomeProject[] = [
     {
       title: 'MINIASSIST',
@@ -34,4 +39,33 @@ export class HomeProjectsSection {
       image: '/assets/images/home-projects/image.png',
     },
   ];
+
+  ngAfterViewInit(): void {
+    if (!('IntersectionObserver' in window)) {
+      this.isVisible = true;
+      return;
+    }
+
+    this.revealObserver = new IntersectionObserver(
+      ([entry]) => {
+        if (!entry.isIntersecting) {
+          return;
+        }
+
+        this.isVisible = true;
+        this.revealObserver?.disconnect();
+        this.revealObserver = null;
+      },
+      {
+        threshold: 0.2,
+        rootMargin: '0px 0px -14% 0px',
+      }
+    );
+
+    this.revealObserver.observe(this.elementRef.nativeElement);
+  }
+
+  ngOnDestroy(): void {
+    this.revealObserver?.disconnect();
+  }
 }
