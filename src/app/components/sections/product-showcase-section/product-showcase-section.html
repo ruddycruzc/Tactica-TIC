@@ -1,17 +1,25 @@
 <section class="product-showcase home-section">
+ 
   <div class="product-showcase__inner home-section__inner reveal-up">
-    @for (product of products; track product.titleKey; let index = $index) {
-    <div class="product-showcase__slot" [class.product-showcase__slot--expanded]="activeIndex === index"
-      (mouseenter)="setActive(index)" (focusin)="setActive(index)" tabindex="0">
-      <app-expandable-image-card 
-        [title]="product.titleKey | translate"
-        [description]="product.descriptionKey | translate" 
-        [image]="product.image" 
-        [expanded]="activeIndex === index">
-      </app-expandable-image-card>
-    </div>
-    }
 
+    @for (product of products; track product.id; let index = $index) {
+
+  <div
+    class="product-showcase__slot"
+    [class.product-showcase__slot--expanded]="activeIndex === index"
+    (mouseenter)="setActive(index)"
+    (focusin)="setActive(index)"
+    tabindex="0">
+
+    <app-expandable-image-card
+      [title]="product.title"
+      [description]="product.description"
+      [image]="product.image"
+      [expanded]="activeIndex === index">
+    </app-expandable-image-card>
+
+  </div>
+}
     <div class="product-showcase__slot product-showcase__slot--static">
       <app-background-color-info-card tone="dark" variant="small"
       [title]="'HOME.PRODUCT_SHOWCASE.SIDE_CARD.TITLE' | translate"
