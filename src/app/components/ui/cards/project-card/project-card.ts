@@ -1,9 +1,9 @@
 import { Component, Input } from '@angular/core';
 import { AppButtonComponent } from '../../buttons/app-button/app-button.component';
-
+import { TranslateModule } from '@ngx-translate/core';
 @Component({
   selector: 'app-project-card',
-  imports: [AppButtonComponent],
+  imports: [AppButtonComponent, TranslateModule],
   templateUrl: './project-card.html',
   styleUrl: './project-card.css',
 })
@@ -12,7 +12,7 @@ export class ProjectCard {
   @Input() imageAlt = '';
   @Input({ required: true }) title = '';
   @Input({ required: true }) description = '';
-  @Input() buttonLabel = 'Ver detalles';
+  @Input() buttonLabel = '';
   @Input() buttonRouterLink: string | unknown[] | null = null;
   @Input() buttonHref: string | null = null;
   @Input() buttonTarget: string | null = null;

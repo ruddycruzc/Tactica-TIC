@@ -8,15 +8,80 @@ export const homeEn = {
           ABOUT_BUTTON: 'Get to know us',
           VISION_BUTTON: 'View projects'
         },
+    PRODUCT_SHOWCASE: {
+        PRODUCT_1: {
+          TITLE: 'Verifactu',
+          DESCRIPTION:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+        },
 
-        INFO: {
+        PRODUCT_2: {
+          TITLE: 'Product Name',
+          DESCRIPTION:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+        },
+
+        SIDE_CARD: {
+          TITLE:
+            'Can time tracking improve your team workforce management?',
+          EMPHASIS: 'time tracking',
+          BUTTON_LABEL: 'Learn more'
+        }
+      },
+
+   TEXT_INFO: {
+      STATEMENT:
+        'We transform industrial processes by connecting artificial intelligence, IoT, computer vision, and custom software to help companies monitor, automate, and make better decisions.',
+
+      SEGMENTS: {
+        PART_1:
+          'We transform industrial processes by connecting ',
+
+        PART_2:
+          'artificial intelligence, IoT, computer vision, and custom software to help companies ',
+
+        PART_3:
+          'monitor, ',
+
+        PART_4:
+          'automate',
+
+        PART_5:
+          ' and make better decisions.'
+      }
+       },
+       INFO_LEFT: {
+  TITLE: 'Leading digital transformation',
+
+  PARAGRAPHS: {
+    PARAGRAPH_1:
+      'We refuse to see code as something cold. Every social project we undertake seeks to solve real human challenges.',
+
+    PARAGRAPH_2:
+      'We treat every line of development with the moral responsibility that community impact deserves.'
+  },
+
+  BUTTON_LABEL: 'Get to know us',
+
+  IMAGE_ALT: 'Professional using a computer',
+
+  CARD: {
+    TITLE:
+      'Can time tracking improve your team workforce management?',
+
+    EMPHASIS: 'time tracking',
+
+    BUTTON_LABEL: 'Learn more'
+  }
+},
+    INFO: {
           TAG: 'Technological innovation',
           TITLE: 'Digital growth',
           DESCRIPTION: 'We help companies optimize processes, integrate tools and accelerate their digital transformation through technology solutions tailored to their needs.',
           BUTTON: 'Get to know us',
           IMAGE_ALT: 'Digital technology'
         },
-        VIDEO: {
+    VIDEO: {
           PLAY_VIDEO: "Play video",
           CEO_NAME: "Isabel Santos",
           CEO_ROLE: "CEO",
@@ -26,7 +91,7 @@ export const homeEn = {
         },
 
 
-      CASE_STUDIES: {
+    CASE_STUDIES: {
         
             TITLE: "Our projects",
             SUBTITLE: "Discover how we solve complex engineering challenges and transform ideas into real technological solutions.",
@@ -35,9 +100,20 @@ export const homeEn = {
             PROJECT_1_ALT: "MINIASSIST project",
             PROJECT_2_ALT: "EPISOT project"
         },
+    HOME_PROJECTS: {
+        TITLE: 'Our projects',
 
+        DESCRIPTION:
+          'Discover how we solve complex engineering challenges and transform ideas into real technological solutions.',
 
-        TEAM: {
+        BUTTON_LABEL:
+          'View projects',
+
+        CARD_BUTTON:
+          'View details'
+        },
+
+    TEAM: {
            TITLE: "Our team",
            SUBTITLE: "Meet the people who drive our projects and turn technological challenges into real solutions.",
            PREVIOUS: "Previous",
@@ -68,7 +144,16 @@ export const homeEn = {
         ANSWER_4: "Absolutely! One of our core principles is connecting tools and optimizing processes. We design robust software capable of integrating with your existing systems (ERPs, CRMs, or industrial machinery) through APIs to ensure a smooth and intelligent transition."
      
      
-      }
+      },
+      FINAL_CTA: {
+          TITLE:
+            'Transform your business potential with us',
+
+          DESCRIPTION: '',
+
+          BUTTON_LABEL:
+            'Contact us'
+        }
     
 
 

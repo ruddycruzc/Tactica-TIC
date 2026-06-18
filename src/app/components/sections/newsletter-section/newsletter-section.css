@@ -1,9 +1,9 @@
 .hub-container {
-  padding: var(--section-padding-y) var(--section-padding-x);
+  padding: 10rem var(--section-padding-x);
   background-color: var(--color-bkg-light); 
   position: relative; 
   overflow: hidden; 
-  font-family: var(--font-family-base);
+  font-weight: var(--font-weight-regular);
 }
 
 .hub-container::before {
@@ -13,7 +13,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('/assets/images/lineas.png'); 
+  background-image: url('/assets/images/backgrounds/lineas.png'); 
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -51,7 +51,7 @@
 .hub-title {
   font-size: var(--font-size-h2);
   color: var(--text-heading-color);
-  font-weight: var(--font-weight-extrabold);
+  font-weight: var(--font-weight-medium);
   margin-top: 0;
   margin-bottom: var(--title-subtitle-spacing);
 }
@@ -68,6 +68,8 @@
 }
 
 .hub-row {
+  --reveal-duration: 820ms;
+  --reveal-stagger: 140ms;
   display: flex;
   gap: 30px;
 }

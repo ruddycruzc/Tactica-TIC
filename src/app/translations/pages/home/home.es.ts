@@ -9,7 +9,71 @@ export const homeEs = {
           ABOUT_BUTTON: 'Conócenos',
           VISION_BUTTON: 'Ver proyectos'
         },
+    PRODUCT_SHOWCASE: {
+          PRODUCT_1: {
+            TITLE: 'Verifactu',
+            DESCRIPTION:
+              'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+          },
 
+          PRODUCT_2: {
+            TITLE: 'Nombre de Producto',
+            DESCRIPTION:
+              'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+          },
+
+          SIDE_CARD: {
+            TITLE:
+              '¿Puede el control de jornada mejorar la gestión laboral de tu equipo?',
+            EMPHASIS: 'control de jornada',
+            BUTTON_LABEL: 'Conoce más'
+          }
+        },
+TEXT_INFO: {
+  STATEMENT:
+    'Transformamos procesos industriales conectando inteligencia artificial, IoT, visión artificial y software a medida para ayudar a las empresas a controlar, automatizar y tomar mejores decisiones.',
+
+  SEGMENTS: {
+    PART_1:
+      'Transformamos procesos industriales conectando ',
+
+    PART_2:
+      'inteligencia artificial, IoT, visión artificial y software a medida para ayudar a las empresas ',
+
+    PART_3:
+      'a controlar, ',
+
+    PART_4:
+      'automatizar',
+
+    PART_5:
+      ' y tomar mejores decisiones.'
+  }
+},
+INFO_LEFT: {
+  TITLE: 'Liderando el cambio digital',
+
+  PARAGRAPHS: {
+    PARAGRAPH_1:
+      'Nos negamos a ver el código como algo frío. Cada proyecto social que asumimos busca resolver retos reales y humanos.',
+
+    PARAGRAPH_2:
+      'Tratamos cada línea de desarrollo con la responsabilidad moral que merece el impacto comunitario.'
+  },
+
+  BUTTON_LABEL: 'Conócenos',
+
+  IMAGE_ALT: 'Profesional usando un ordenador',
+
+  CARD: {
+    TITLE:
+      '¿Puede el control de jornada mejorar la gestión laboral de tu equipo?',
+
+    EMPHASIS: 'jornada mejorar',
+
+    BUTTON_LABEL: 'Conoce más'
+  }
+},
      INFO: {
           TAG: 'Innovación tecnológica',
           TITLE: 'Crecimiento digital',
@@ -40,6 +104,18 @@ export const homeEs = {
           NEXT: "Siguiente",
           CAROUSEL_CONTROLS: "Controles del carrusel"
           },
+    HOME_PROJECTS: {
+        TITLE: 'Nuestros proyectos',
+
+        DESCRIPTION:
+          'Descubre cómo resolvemos desafíos complejos de ingeniería y transformamos ideas en soluciones tecnológicas reales.',
+
+        BUTTON_LABEL:
+          'Ver proyectos',
+
+        CARD_BUTTON:
+          'Ver detalles'
+        },
      LOGOS: {
             TITLE: "Empresas que confían en nosotros",
             PARTNERS_LABEL: "Empresas colaboradoras"
@@ -60,6 +136,15 @@ export const homeEs = {
 
             QUESTION_4: "¿Vuestras soluciones tecnológicas se integran con herramientas que ya usamos?",
             ANSWER_4: "¡Por supuesto! Uno de nuestros pilares es conectar herramientas y optimizar procesos. Diseñamos software robusto capaz de integrarse mediante APIs con tus sistemas actuales (ERPs, CRMs o maquinaria industrial) para que la transición sea fluida e inteligente."
-}
+},
+    FINAL_CTA: {
+          TITLE:
+            'Transforma el potencial de tu negocio con nosotros',
+
+          DESCRIPTION: '',
+
+          BUTTON_LABEL:
+            'Contáctanos'
+        }
 
  } };

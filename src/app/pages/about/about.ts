@@ -1,12 +1,18 @@
 import { Component } from '@angular/core';
-import { ContactForm } from '../../components/forms/contact-form/contact-form';
-import { InfoLeftImage } from '../../components/info-blocks/info-left-image/info-left-image';
-import { CardsCarousel } from '../../components/ui/carousel/cards-carousel/cards-carousel';
-import { IconInfo } from '../../components/ui/cards/icon-info/icon-info';
+
+import { AboutStorySection } from '../../components/sections/about-story-section/about-story-section';
+import { ContactFormSection } from '../../components/sections/contact-form-section/contact-form-section';
+import { HeroAboutusSection } from '../../components/sections/hero-aboutus-section/hero-aboutus-section';
+import { TeamCarouselSection } from '../../components/sections/team-carousel-section/team-carousel-section';
 
 @Component({
   selector: 'app-about',
-  imports: [InfoLeftImage, IconInfo, CardsCarousel, ContactForm],
+  imports: [
+    HeroAboutusSection,
+    AboutStorySection,
+    TeamCarouselSection,
+    ContactFormSection
+  ],
   templateUrl: './about.html',
   styleUrl: './about.css',
 })

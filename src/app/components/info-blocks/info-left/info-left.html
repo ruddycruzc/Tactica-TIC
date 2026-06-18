@@ -1,0 +1,29 @@
+<div class="info-left">
+  <div class="info-left__content">
+<h2>{{ title | translate }}</h2>
+@for (paragraph of paragraphs; track paragraph) {
+  <p>{{ paragraph | translate }}</p>
+}
+
+    @if (buttonLabel) {
+      <app-button variant="primary" [routerLink]="buttonLink">
+     {{ buttonLabel | translate }}
+        <span class="arrow">→</span>
+      </app-button>
+    }
+  </div>
+
+  <div class="info-left__visuals">
+  <img
+  [src]="image"
+  [alt]="(imageAlt | translate) || (title | translate)">
+
+
+<app-background-color-info-card
+  [title]="cardTitle | translate"
+  [emphasis]="cardEmphasis | translate"
+  [buttonLabel]="cardButtonLabel | translate"
+  [buttonLink]="cardButtonLink">
+</app-background-color-info-card>
+  </div>
+</div>

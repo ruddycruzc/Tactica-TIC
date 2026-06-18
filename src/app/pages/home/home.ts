@@ -1,39 +1,32 @@
 import { Component } from '@angular/core';
 
-import { ContactForm } from '../../components/forms/contact-form/contact-form';
-import { Hero } from '../../components/hero/hero/hero';
-import { VideoHero } from '../../components/hero/video-hero/video-hero';
 import { FinalCtaSection } from '../../components/sections/final-cta-section/final-cta-section';
 import { FaqSection } from '../../components/sections/faq-section/faq-section';
+import { HeroSection } from '../../components/sections/hero-section/hero-section';
 import { HomeProjectsSection } from '../../components/sections/home-projects-section/home-projects-section';
-import { InfoLeftComponent } from '../../components/sections/info-left/info-left-component/info-left-component';
+import { InfoLeftSection } from '../../components/sections/info-left-section/info-left-section';
+import { LogosSection } from '../../components/sections/logos-section/logos-section';
 import { ProductShowcaseSection } from '../../components/sections/product-showcase-section/product-showcase-section';
+import { TeamCarouselSection } from '../../components/sections/team-carousel-section/team-carousel-section';
 import { TextInfoSection } from '../../components/sections/text-info-section/text-info-section';
-import { CardsCarousel } from '../../components/ui/carousel/cards-carousel/cards-carousel';
-import { LogosCarousel } from '../../components/ui/carousel/logos-carousel/logos-carousel';
+import { VideoHeroSection } from '../../components/sections/video-hero-section/video-hero-section';
 
 @Component({
   selector: 'app-home',
   standalone: true,
   imports: [
-    Hero,
+    HeroSection,
     ProductShowcaseSection,
-    VideoHero,
+    VideoHeroSection,
     TextInfoSection,
-    InfoLeftComponent,
+    InfoLeftSection,
     HomeProjectsSection,
     FinalCtaSection,
-    CardsCarousel,
-    LogosCarousel,
-    FaqSection,
-    ContactForm
+    TeamCarouselSection,
+    LogosSection,
+    FaqSection
   ],
   templateUrl: './home.html',
   styleUrl: './home.css'
 })
-export class Home {
-  readonly infoLeftParagraphs = [
-    'Nos negamos a ver el código como algo frío. Cada proyecto social que asumimos busca resolver retos reales y humanos.',
-    'Tratamos cada línea de desarrollo con la responsabilidad moral que merece el impacto comunitario.'
-  ];
-}
+export class Home {}

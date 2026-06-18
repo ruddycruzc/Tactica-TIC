@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { AppButtonComponent } from '../../ui/buttons/app-button/app-button.component';
 import { ProjectCard } from '../../ui/cards/project-card/project-card';
-import { BlogPost } from '../../../interfaces/blog-section.interface';
+import { BlogPost } from '../../../interfaces/translations/blog-section.interface';
 
 @Component({
   selector: 'app-blog-section',

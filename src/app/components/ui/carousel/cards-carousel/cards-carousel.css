@@ -2,8 +2,6 @@
   position: relative;
   width: 100%;
   max-width: none;
-  padding: var(--section-padding-y) 0;
-  background: var(--color-bkg-white);
   box-sizing: border-box;
   overflow: hidden;
   user-select: none;

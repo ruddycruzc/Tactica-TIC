@@ -1,13 +1,13 @@
 .navbar {
   position: fixed;
-  top: 1.5rem;
+  top: 1rem;
   left: 50%;
   z-index: 1000;
   display: grid;
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
   width: min(calc(100% - (var(--section-padding-x) * 2)), var(--page-max-width));
-  min-height: clamp(4.5rem, 5.2vw, 5.75rem);
+  min-height: clamp(4.5rem, 5.2vw, .75rem);
   padding-inline: clamp(2rem, 4.1vw, 4.875rem);
   border-radius: 999px;
   background-color: var(--color-bkg-white);
@@ -25,7 +25,7 @@
 }
 
 .navbar__logo img {
-  height: 8rem;
+  height: 4rem;
   width: auto;
   transition:
     transform .3s ease;
@@ -99,13 +99,16 @@
   transform: scaleX(1);
 }
 
-.active-link {
-  color: var(--text-highlight-color);
+.navbar__menu a.active-link,
+.navbar__menu a.active-link:hover,
+.navbar__menu a.active-link:focus-visible {
+  color: var(--nav-link-active-color);
+  font-weight: var(--nav-link-active-font-weight);
 }
 
-.active-link::before,
-.active-link::after {
-  transform: scaleX(1);
+.navbar__menu a.active-link::before,
+.navbar__menu a.active-link::after {
+  transform: scaleX(0);
 }
 
 
@@ -163,7 +166,8 @@
 
   outline: none;
 
-  animation: searchExpand .25s ease;
+ transition:
+    transform .3s ease;
 }
 
 .navbar__search-input:focus {
@@ -226,7 +230,7 @@
   }
 
   .navbar__logo img {
-    height: 6rem;
+    height: 3.5rem;
   }
 
   .navbar__actions {
@@ -238,15 +242,13 @@
     display: none;
   }
 
-  .active-link {
-    color: var(--color-primary);
-
-    background: rgba(246, 57, 110, 0.08);
-
-    font-weight: 600;
-
-    border-radius: 10px;
-    padding: .75rem 1.25rem;
+  .navbar__menu a.active-link,
+  .navbar__menu a.active-link:hover,
+  .navbar__menu a.active-link:focus-visible {
+    color: var(--nav-link-active-color);
+    font-weight: var(--nav-link-active-font-weight);
+    background: transparent;
+    border-radius: 0;
   }
 
 
@@ -282,12 +284,6 @@
 
   }
 
-  .navbar__menu a.active-link,
-  .navbar__menu a.active-link:hover,
-  .navbar__menu a.active-link:focus-visible {
-    color: var(--nav-link-active-color);
-    font-weight: var(--nav-link-active-font-weight);
-  }
 }
 
 @media (max-width: 640px) {
@@ -298,7 +294,7 @@
   }
 
   .navbar__logo img {
-    height: 4rem;
+   height: 3.5rem;
   }
 
   .navbar__actions {
@@ -317,7 +313,7 @@
   }
 
   .navbar__logo img {
-    height: 3rem;
+    height: 3.5rem;
   }
 
   .navbar__actions {

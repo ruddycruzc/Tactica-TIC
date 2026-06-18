@@ -1,0 +1,27 @@
+<section class="about-story-section">
+  <div
+    class="about-story-section__inner"
+    [style.--about-story-reveal-progress]="scrollProgress"
+    [style.--about-story-reveal-scale]="revealScale"
+    [style.--about-story-reveal-y]="revealOffset"
+    [style.--about-story-reveal-opacity]="revealOpacity">
+    <h2 class="about-story-section__title">{{ title }} <span>{{ titleHighlight }}</span></h2>
+
+    <app-info-left-image
+      [title]="story.title"
+      [description]="story.description"
+      [mediaSrc]="story.mediaSrc"
+      [mediaAlt]="story.mediaAlt"
+    />
+
+    <div class="about-story-section__info">
+      @for (item of infoItems; track item.title) {
+        <app-icon-info
+          [icon]="item.icon"
+          [title]="item.title"
+          [description]="item.description"
+        />
+      }
+    </div>
+  </div>
+</section>

@@ -5,6 +5,9 @@
 }
 
 .product-showcase__inner {
+  --reveal-delay: 140ms;
+  --reveal-duration: 820ms;
+  --reveal-stagger: 120ms;
   display: grid;
   grid-template-columns: minmax(0, 1.95fr) minmax(0, 1fr) minmax(0, 1fr);
   gap: var(--grid-gap);
@@ -14,6 +17,8 @@
 .product-showcase__slot {
   min-width: 0;
   height: var(--product-card-height);
+  animation: tt-card-reveal var(--reveal-duration) cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: calc(var(--reveal-delay) + (var(--showcase-index, 0) * var(--reveal-stagger)));
   transition: transform var(--transition-card);
 }
 
@@ -45,5 +50,12 @@
 @media (max-width: 640px) {
   .product-showcase__slot {
     min-height: 23rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .product-showcase__slot {
+    animation: none;
+    transition: none;
   }
 }

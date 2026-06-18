@@ -33,9 +33,15 @@
 }
 
 .home-projects__grid {
+  --reveal-duration: 880ms;
+  --reveal-stagger: 150ms;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: clamp(1.5rem, 2.15vw, 2.25rem);
+}
+
+.home-projects__card {
+  min-width: 0;
 }
 
 @media (max-width: 900px) {
@@ -47,3 +53,4 @@
     grid-template-columns: 1fr;
   }
 }
+

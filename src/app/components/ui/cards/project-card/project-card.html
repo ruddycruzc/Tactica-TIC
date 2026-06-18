@@ -6,12 +6,12 @@
 
   @if (buttonHref) {
     <app-button variant="tertiary" [href]="buttonHref" [target]="buttonTarget" rel="noopener noreferrer">
-      {{ buttonLabel }}
+{{ buttonLabel | translate }}
       <span class="arrow" aria-hidden="true">→</span>
     </app-button>
   } @else {
     <app-button variant="tertiary" [routerLink]="buttonRouterLink">
-      {{ buttonLabel }}
+{{ buttonLabel | translate }}
       <span class="arrow" aria-hidden="true">→</span>
     </app-button>
   }

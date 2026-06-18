@@ -1,17 +1,21 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 
-import { AppButtonComponent } from '../../ui/buttons/app-button/app-button.component';
+import { FinalCta, FinalCtaContent } from '../../info-blocks/final-cta/final-cta';
 
 @Component({
   selector: 'app-final-cta-section',
   standalone: true,
-  imports: [AppButtonComponent],
+  imports: [FinalCta],
   templateUrl: './final-cta-section.html',
   styleUrl: './final-cta-section.css',
 })
 export class FinalCtaSection {
-  @Input() title = 'Transforma el potencial de tu negocio con nosotros';
-  @Input() description = '';
-  @Input() buttonLabel = 'Contáctanos';
-  @Input() buttonLink: string | unknown[] = '/contact';
+
+  readonly ctaContent: FinalCtaContent = {
+    title: 'HOME.FINAL_CTA.TITLE',
+    description: 'HOME.FINAL_CTA.DESCRIPTION',
+    buttonLabel: 'HOME.FINAL_CTA.BUTTON_LABEL',
+    buttonLink: '/contact'
+  };
+
 }

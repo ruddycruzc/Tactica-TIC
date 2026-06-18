@@ -39,48 +39,16 @@
 }
 
 .jobs-grid {
+  --reveal-duration: 840ms;
+  --reveal-stagger: 130ms;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: var(--grid-gap);
 }
 
-.blog-card {
-  position: relative;
-  min-height: 24rem;
-  padding: clamp(2rem, 3vw, 3.5rem);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: var(--title-subtitle-spacing);
-  border-radius: var(--radius-cards);
-  border: var(--border-width-hairline) solid var(--color-border);
-  background: var(--card-background);
-  box-shadow: none;
-}
-
-.blog-card__code {
-  position: absolute;
-  top: var(--contact-form-padding);
-  right: var(--contact-form-padding);
-  color: var(--color-primary);
-  font-size: var(--font-size-body-medium);
-  font-weight: var(--font-weight-semibold);
-  opacity: 0.12;
-}
-
-.blog-card h3 {
-  margin: 0;
-  color: var(--text-heading-color);
-  font-size: var(--font-size-card-title);
-  font-weight: var(--font-weight-semibold);
-  line-height: var(--line-height-heading);
-}
-
-.blog-card p {
-  margin: 0;
-  color: var(--text-body-color);
-  font-size: var(--font-size-body-medium);
-  line-height: var(--text-body-line-height);
+:host ::ng-deep app-image-text-card {
+  display: block;
+  min-width: 0;
 }
 
 @media (max-width: 1024px) {
@@ -98,7 +66,4 @@
     grid-template-columns: 1fr;
   }
 
-  .blog-card {
-    min-height: 18rem;
-  }
 }

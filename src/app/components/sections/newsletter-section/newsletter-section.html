@@ -9,9 +9,16 @@
       </p>
     </div>
 
-    <div class="hub-row">
+    <div
+      class="hub-row"
+      appScrollReveal
+      scrollRevealRootMargin="0px 0px -18% 0px"
+      [scrollRevealThreshold]="0.2">
       
-      <div [class]="'hub-item ' + item.cssClass" *ngFor="let item of hubItems">
+      <div
+        [class]="'hub-item tt-card-reveal ' + item.cssClass"
+        *ngFor="let item of hubItems; let index = index"
+        [style.--reveal-index]="index">
         <div class="hub-meta">
           <div class="hub-text-group">
             <h3>{{ item.title }}</h3>

@@ -1,0 +1,10 @@
+.logos-section {
+  padding: var(--logos-section-padding-top) 0 var(--logos-section-padding-bottom);
+  background: var(--color-bkg-white);
+}
+
+@media (max-width: 768px) {
+  .logos-section {
+    padding: var(--section-padding-y) 0;
+  }
+}

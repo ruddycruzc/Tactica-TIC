@@ -1,0 +1,34 @@
+.three-column-media {
+  --reveal-duration: 820ms;
+  --reveal-stagger: 130ms;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--grid-gap);
+  align-items: stretch;
+}
+
+.three-column-media__item {
+  min-width: 0;
+}
+
+.three-column-media img,
+.three-column-media video {
+  display: block;
+  width: 100%;
+  height: 30rem;
+  object-fit: cover;
+  border-radius: var(--radius-cards);
+  background: var(--color-bkg-grey);
+}
+
+@media (max-width: 900px) {
+  .three-column-media {
+    grid-template-columns: 1fr;
+  }
+
+  .three-column-media img,
+  .three-column-media video {
+    height: auto;
+    aspect-ratio: var(--project-card-image-ratio);
+  }
+}

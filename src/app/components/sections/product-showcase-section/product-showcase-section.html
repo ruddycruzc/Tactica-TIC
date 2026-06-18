@@ -1,30 +1,24 @@
 <section class="product-showcase home-section">
-  <div class="product-showcase__inner home-section__inner reveal-up">
+  <div class="product-showcase__inner home-section__inner">
     @for (product of products; track product.title; let index = $index) {
-      <div
-        class="product-showcase__slot"
-        [class.product-showcase__slot--expanded]="activeIndex === index"
-        (mouseenter)="setActive(index)"
-        (focusin)="setActive(index)"
-        tabindex="0">
-        <app-expandable-image-card
-          [title]="product.title"
-          [description]="product.description"
-          [image]="product.image"
-          [expanded]="activeIndex === index">
-        </app-expandable-image-card>
-      </div>
+    <div class="product-showcase__slot" [class.product-showcase__slot--expanded]="activeIndex === index"
+      [style.--showcase-index]="index" (mouseenter)="setActive(index)" (focusin)="setActive(index)" tabindex="0">
+      <app-expandable-image-card [title]="product.title" [description]="product.description" [image]="product.image"
+        [expanded]="activeIndex === index">
+      </app-expandable-image-card>
+    </div>
     }
 
-    <div class="product-showcase__slot product-showcase__slot--static">
-      <app-background-color-info-card
-        tone="dark"
-        variant="small"
-        title="¿Puede el control de jornada mejorar la gestión laboral de tu equipo?"
-        emphasis="control de jornada"
-        buttonLabel="Conoce más"
-        buttonLink="/contact">
+    <div class="product-showcase__slot product-showcase__slot--static" style="--showcase-index: 2">
+      <app-background-color-info-card tone="dark" variant="small"
+        [title]="'HOME.PRODUCT_SHOWCASE.SIDE_CARD.TITLE' | translate"
+        [emphasis]="'HOME.PRODUCT_SHOWCASE.SIDE_CARD.EMPHASIS' | translate"
+        [buttonLabel]="'HOME.PRODUCT_SHOWCASE.SIDE_CARD.BUTTON_LABEL' | translate">
       </app-background-color-info-card>
+
+
+
+
     </div>
   </div>
 </section>

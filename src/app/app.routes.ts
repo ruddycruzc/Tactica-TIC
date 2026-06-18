@@ -7,7 +7,6 @@ import { Careers } from './pages/careers/careers';
 import { Blog } from './pages/blog/blog';
 import { Contact } from './pages/contact/contact';
 import { NotFound } from './pages/not-found/not-found';
-
 export const routes: Routes = [
   {
     path: '',

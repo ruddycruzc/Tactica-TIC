@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
-import { FooterLink } from '../../../interfaces/footer-link.interface';
+import { FooterLink } from '../../../interfaces/data/footer-link.interface';
 import { TranslateModule } from '@ngx-translate/core';
 
 @Component({

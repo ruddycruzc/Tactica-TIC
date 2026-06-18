@@ -1,0 +1,83 @@
+:host {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: block;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.animated-background {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  --hero-x: 50%;
+  --hero-y: 50%;
+}
+
+.animated-background__wave {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 120vw;
+  height: clamp(20rem, 42vw, 35rem);
+  pointer-events: none;
+  transform:
+    translate(-50%, -50%)
+    translate(
+      calc((var(--hero-x, 50%) - 50%) * 0.04),
+      calc((var(--hero-y, 50%) - 50%) * 0.03)
+    );
+  transition: transform 360ms ease;
+}
+
+.animated-background__svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  fill: none;
+  animation: animatedBackgroundDrift 16s ease-in-out infinite alternate;
+}
+
+.animated-background__svg path {
+  stroke: var(--color-border-alpha);
+  stroke-width: 0.72;
+  opacity: 0.55;
+  vector-effect: non-scaling-stroke;
+}
+
+.animated-background__svg--focus {
+  mask-image: radial-gradient(
+    circle at var(--hero-x, 50%) var(--hero-y, 50%),
+    var(--color-bkg-black) 0 12%,
+    transparent 30%
+  );
+  -webkit-mask-image: radial-gradient(
+    circle at var(--hero-x, 50%) var(--hero-y, 50%),
+    var(--color-bkg-black) 0 12%,
+    transparent 30%
+  );
+  transform: scale(1.025);
+}
+
+.animated-background__svg--focus path {
+  stroke: var(--color-primary);
+  stroke-width: 0.95;
+  opacity: 0.22;
+}
+
+@media (max-width: 968px) {
+  .animated-background__wave {
+    top: 38%;
+    width: 138vw;
+    height: 22.5rem;
+  }
+}
+
+@keyframes animatedBackgroundDrift {
+  to {
+    transform: translateX(-2.25rem) translateY(1rem) skewY(-2deg);
+  }
+}

@@ -1,26 +1,24 @@
-<section class="hero-container">
-  <div class="hero-content">
-    <h1 class="hero-title reveal-up">
-      <span>{{ heroContent.titleLine1 | translate }}</span>
-      <span>
-        <strong>{{ heroContent.titleHighlight | translate }}</strong>
-        {{ heroContent.titleLine2 | translate }}
-      </span>
-    </h1>
+<div class="hero-content">
+  <h1 class="hero-title reveal-up">
+    <span>{{ heroContent.titleLine1 | translate }}</span>
+    <span>
+      <strong>{{ heroContent.titleHighlight | translate }}</strong>
+      {{ heroContent.titleLine2 | translate }}
+    </span>
+  </h1>
 
-    <p class="hero-description reveal-up">
-      {{ heroContent.description | translate }}
-    </p>
+  <p class="hero-description reveal-up">
+    {{ heroContent.description | translate }}
+  </p>
 
-    <div class="hero-buttons reveal-up">
-      <app-button variant="primary" routerLink="/about">
-        {{ heroContent.aboutButton | translate }}
-        <span class="arrow">→</span>
-      </app-button>
+  <div class="hero-buttons reveal-up">
+    <app-button variant="primary" routerLink="/about">
+      {{ heroContent.aboutButton | translate }}
+      <span class="arrow">→</span>
+    </app-button>
 
-      <app-button variant="secondary" routerLink="/projects">
-        {{ heroContent.visionButton | translate }}
-      </app-button>
-    </div>
+    <app-button variant="secondary" routerLink="/projects">
+      {{ heroContent.visionButton | translate }}
+    </app-button>
   </div>
-</section>
+</div>

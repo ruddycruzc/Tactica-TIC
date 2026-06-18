@@ -1,0 +1,17 @@
+<div
+  class="three-column-media"
+  appScrollReveal
+  scrollRevealRootMargin="0px 0px -18% 0px"
+  [scrollRevealThreshold]="0.2">
+  @for (item of items; track item.src; let index = $index) {
+    <div
+      class="three-column-media__item tt-card-reveal"
+      [style.--reveal-index]="index">
+      @if (item.type === 'video') {
+        <video [src]="item.src" autoplay muted loop playsinline></video>
+      } @else {
+        <img [src]="item.src" [alt]="item.alt || ''" loading="lazy" decoding="async">
+      }
+    </div>
+  }
+</div>

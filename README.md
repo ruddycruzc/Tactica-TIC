@@ -30,6 +30,8 @@ ng serve
 * Componentes UI reutilizables.
 * Sistema de internacionalización ES/EN.
 * Selector de idioma persistente.
+* Sistema de datos desacoplado mediante `data/`.
+* Interfaces centralizadas.
 * Carruseles reutilizables.
 * Diseño responsive.
 * Hosting y despliegue mediante Firebase.
@@ -53,11 +55,11 @@ TT-35 Implementar carrusel de logos
 
 ---
 
-## 2. Actualizar rama de desarrollo
+## 2. Actualizar rama principal
 
 ```bash
-git checkout dev
-git pull origin dev
+git checkout main
+git pull origin main
 ```
 
 ---
@@ -116,11 +118,11 @@ git commit -m "Implement logos carousel"
 
 ---
 
-## 6. Integrar cambios en dev
+## 6. Integrar cambios
 
 ```bash
-git checkout dev
-git pull origin dev
+git checkout main
+git pull origin main
 git merge TT-35-logos-carousel
 ```
 
@@ -144,7 +146,7 @@ git commit
 ## 8. Subir cambios
 
 ```bash
-git push origin dev
+git push origin main
 ```
 
 ---
@@ -175,28 +177,23 @@ src
 │   ├── components
 │   │
 │   │   ├── forms
-│   │   │   └── contact-form
-│   │   │
 │   │   ├── hero
-│   │   │
 │   │   ├── info-blocks
-│   │   │
 │   │   ├── layout
-│   │   │   ├── navbar
-│   │   │   ├── body
-│   │   │   └── footer
-│   │   │
 │   │   ├── media
-│   │   │
 │   │   ├── sections
-│   │   │
 │   │   └── ui
-│   │       ├── buttons
-│   │       ├── cards
-│   │       ├── carousel
-│   │       └── grids
+│   │
+│   ├── data
+│   │   ├── logos
+│   │   ├── products
+│   │   ├── projects
+│   │   └── team
 │   │
 │   ├── interfaces
+│   │   ├── data
+│   │   ├── translations
+│   │   └── ui
 │   │
 │   ├── pages
 │   │   ├── about
@@ -204,10 +201,10 @@ src
 │   │   ├── careers
 │   │   ├── contact
 │   │   ├── home
+│   │   ├── not-found
 │   │   └── projects
 │   │
 │   ├── services
-│   │   └── translation-service
 │   │
 │   ├── styles
 │   │
@@ -228,11 +225,17 @@ src
 
 ---
 
-# Organización
+# Organización del proyecto
 
 ## Components
 
-Contienen todos los componentes reutilizables y componentes de negocio del proyecto.
+Contienen los componentes visuales y la lógica de presentación.
+
+```text
+src/app/components
+```
+
+Los componentes deben ser reutilizables y estar desacoplados de los datos.
 
 ### UI
 
@@ -246,6 +249,7 @@ Contiene componentes genéricos reutilizables:
 * Cards
 * Carousel
 * Grids
+* Text
 
 ### Sections
 
@@ -253,15 +257,55 @@ Contiene componentes genéricos reutilizables:
 components/sections
 ```
 
-Contiene secciones completas construidas a partir de componentes UI.
+Contiene secciones completas construidas mediante componentes UI.
 
 Ejemplos:
 
-* AboutSection
-* CaseStudiesSection
-* ClientsSection
-* ServicesSection
+* HeroSection
+* ProductShowcaseSection
+* HomeProjectsSection
+* TeamCarouselSection
 * FAQSection
+
+---
+
+## Data
+
+```text
+src/app/data
+```
+
+Contiene la información estructurada utilizada por los componentes.
+
+Ejemplos:
+
+```text
+data
+├── logos
+├── products
+├── projects
+└── team
+```
+
+### Regla
+
+Los datos NO deben almacenarse directamente dentro de los componentes.
+
+Incorrecto:
+
+```ts
+readonly products = [
+  ...
+];
+```
+
+Correcto:
+
+```ts
+import { PRODUCTS } from '../../../data/products/products.data';
+
+readonly products = PRODUCTS;
+```
 
 ---
 
@@ -273,16 +317,41 @@ Todas las interfaces compartidas deben almacenarse en:
 src/app/interfaces
 ```
 
+Organizadas por responsabilidad:
+
+```text
+interfaces
+├── data
+├── translations
+└── ui
+```
+
+### data
+
+Modelos de negocio.
+
 Ejemplos:
 
 ```text
-nav-item.interface.ts
-footer-link.interface.ts
-team-card.interface.ts
 project.interface.ts
+team-card.interface.ts
+logo-item.interface.ts
 ```
 
-No se deben declarar interfaces reutilizables dentro de los componentes.
+### translations
+
+Contratos para estructuras de traducción.
+
+Ejemplos:
+
+```text
+hero-content.interface.ts
+video-content.interface.ts
+```
+
+### ui
+
+Interfaces utilizadas por componentes visuales reutilizables.
 
 ---
 
@@ -297,6 +366,7 @@ Projects
 Blog
 Careers
 Contact
+NotFound
 ```
 
 ---
@@ -320,13 +390,104 @@ translations
     └── footer
 ```
 
-La gestión del idioma se realiza mediante:
+---
 
-```text
-TranslationService
+## Regla de traducciones
+
+Los textos traducibles NO deben escribirse directamente en los componentes.
+
+Incorrecto:
+
+```ts
+title = 'Transforma tu negocio';
 ```
 
-con persistencia del idioma seleccionado.
+Correcto:
+
+```ts
+title = 'HOME.FINAL_CTA.TITLE';
+```
+
+```html
+{{ title | translate }}
+```
+
+---
+
+# Creación de nuevas funcionalidades
+
+## Flujo recomendado
+
+### 1. Crear interfaz
+
+```text
+src/app/interfaces
+```
+
+---
+
+### 2. Crear datos (si aplica)
+
+```text
+src/app/data
+```
+
+Ejemplos:
+
+* Productos
+* Proyectos
+* Equipo
+* Logos
+
+---
+
+### 3. Crear traducciones
+
+```text
+src/app/translations
+```
+
+---
+
+### 4. Crear componente
+
+```text
+src/app/components
+```
+
+---
+
+### 5. Integrar en la página correspondiente
+
+```text
+src/app/pages
+```
+
+---
+
+# Landing Pages
+
+Las nuevas landing pages deben reutilizar componentes existentes siempre que sea posible.
+
+Ejemplos:
+
+* Hero
+* FAQ
+* Logos
+* CTA
+* Team
+* Projects
+
+Evitar duplicar componentes para funcionalidades ya existentes.
+
+Los cambios de contenido deben realizarse mediante:
+
+```text
+data/
+translations/
+```
+
+y no creando nuevos componentes.
 
 ---
 
@@ -381,23 +542,36 @@ en lugar de:
 *ngFor
 ```
 
+y
+
+```html
+@if(...)
+```
+
+en lugar de:
+
+```html
+*ngIf
+```
+
 ---
 
 ## Home
 
-La página Home debe construirse mediante componentes independientes y reutilizables.
-
-Ejemplo actual:
+La página Home se compone actualmente de:
 
 ```text
 Home
-├── Hero
-├── InfoRightImage
-├── VideoHero
-├── CaseStudiesSection
-├── CardsCarousel
-├── LogosCarousel
-└── ContactForm
+├── HeroSection
+├── ProductShowcaseSection
+├── VideoHeroSection
+├── TextInfoSection
+├── InfoLeftSection
+├── HomeProjectsSection
+├── TeamCarouselSection
+├── LogosSection
+├── FAQSection
+└── FinalCTASection
 ```
 
 ---
@@ -420,7 +594,7 @@ firebase deploy
 
 # Normas del equipo
 
-* No trabajar directamente sobre `dev`.
+* No trabajar directamente sobre `main`.
 * Una tarea = una rama.
 * Toda tarea debe existir previamente en Jira.
 * Ejecutar siempre:
@@ -431,9 +605,11 @@ ng build
 
 antes de realizar un commit.
 
-* Resolver conflictos antes de fusionar con `dev`.
+* Resolver conflictos antes de fusionar con `main`.
 * Eliminar las ramas una vez finalizada la tarea.
 * Mantener las interfaces centralizadas.
+* Mantener los datos centralizados en `data/`.
+* Mantener las traducciones centralizadas en `translations/`.
 * Mantener componentes reutilizables y desacoplados.
 * Mantener una arquitectura basada en Angular Standalone Components.
 

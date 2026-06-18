@@ -1,12 +1,14 @@
 import { Component } from '@angular/core';
 import { NgFor } from '@angular/common';
 import { AppButtonComponent } from '../../ui/buttons/app-button/app-button.component';
-import { HubItem } from '../../../interfaces/newsletter-section.interface';
+
+import { ScrollRevealDirective } from '../../../directives/scroll-reveal.directive';
+import { HubItem } from '../../../interfaces/translations/newsletter-section.interface';
 
 @Component({
   selector: 'app-newsletter-section',
   standalone: true,
-  imports: [AppButtonComponent, NgFor],
+  imports: [AppButtonComponent, NgFor, ScrollRevealDirective],
   templateUrl: './newsletter-section.html',
   styleUrl: './newsletter-section.css'
 })
@@ -24,7 +26,7 @@ export class NewsletterSection {
       cssClass: 'item-instagram',
       title: 'Cultura & Equipo',
       description: 'Echa un vistazo a nuestros eventos, el día a día en la oficina y ambiente real.',
-      buttonVariant: 'secondary', // <-- TypeScript validará que es correcto
+      buttonVariant: 'primary', // <-- TypeScript validará que es correcto
       link: 'https://www.instagram.com/tactica_tic/',
       buttonText: 'Ver en Instagram'
     }
