@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { MediaItem } from '../../../interfaces/media-item.interface';
+import { MediaItem } from '../../../interfaces/data/media-item.interface';
 import { ThreeColumnMedia } from '../../media/three-column-media/three-column-media';
 
 @Component({

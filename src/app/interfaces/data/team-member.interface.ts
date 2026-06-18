@@ -1,4 +1,4 @@
-export interface TeamCard {
+export interface TeamMember {
   image: string;
   name: string;
   excerpt: string;

@@ -10,10 +10,12 @@ import { FinalCta, FinalCtaContent } from '../../info-blocks/final-cta/final-cta
   styleUrl: './final-cta-section.css',
 })
 export class FinalCtaSection {
+
   readonly ctaContent: FinalCtaContent = {
-    title: 'Transforma el potencial de tu negocio con nosotros',
-    description: '',
-    buttonLabel: 'Contáctanos',
+    title: 'HOME.FINAL_CTA.TITLE',
+    description: 'HOME.FINAL_CTA.DESCRIPTION',
+    buttonLabel: 'HOME.FINAL_CTA.BUTTON_LABEL',
     buttonLink: '/contact'
   };
+
 }

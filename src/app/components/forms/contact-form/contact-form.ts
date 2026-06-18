@@ -4,7 +4,7 @@ import { TranslateModule } from '@ngx-translate/core';
 
 import { AppButtonComponent } from '../../ui/buttons/app-button/app-button.component';
 
-import { ContactInfoItem } from '../../../interfaces/contact-info-item.interface';
+import { ContactInfoItem } from '../../../interfaces/data/contact-info-item.interface';
 
 @Component({
   selector: 'app-contact-form',

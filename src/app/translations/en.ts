@@ -5,6 +5,7 @@ import { homeEn } from './pages/home/home.en';
 import { contactFormEn } from './pages/contact/contact-form.en';
 import { footerEn } from './shared/footer.en';
 import { notFoundEn } from './pages/not-found/not-found.en';
+import { ProductShowcaseSection } from '../components/sections/product-showcase-section/product-showcase-section';
 
 export const enTranslations = {
   ...navEn,

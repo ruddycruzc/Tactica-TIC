@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 import { TranslateModule } from '@ngx-translate/core';
 
-import { FaqItem } from '../../../interfaces/faq-item.interface';
+import { FaqItem } from '../../../interfaces/data/faq-item.interface';
 
 @Component({
   selector: 'app-faq-section',
@@ -21,9 +21,9 @@ export class FaqSection {
     subtitle: 'HOME.FAQ.SUBTITLE'
   };
 
-  readonly faqItems: FaqItem[] = [  //para añadir cualquier pregunta mas hay que añadirla en la ruta: src/app/translations/pages/home/home.en.ts ó home.es.ts recordando que tiene que tener su respectiva traduccion 
-    {
-      question: 'HOME.FAQ.QUESTION_1',
+  readonly faqItems: FaqItem[] = [ // Configuración del acordeón FAQ.
+// Las preguntas y respuestas se gestionan desde los archivos de traducción.
+    {  question: 'HOME.FAQ.QUESTION_1',
       answer: 'HOME.FAQ.ANSWER_1',
       isOpen: true
     },

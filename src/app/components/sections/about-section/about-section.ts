@@ -3,8 +3,8 @@ import { Component } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 
 
-import { AboutContent } from '../../../interfaces/about-section.interface';
-import { MissionVisionCard } from '../../../interfaces/mission-vision-card.interface';
+import { AboutContent } from '../../../interfaces/translations/about-section.interface';
+import { MissionVisionCard } from '../../../interfaces/translations/mission-vision-card.interface';
 
 @Component({
   selector: 'app-about-section',

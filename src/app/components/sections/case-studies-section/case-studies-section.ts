@@ -4,8 +4,8 @@ import { TranslateModule } from '@ngx-translate/core';
 
 import { AppButtonComponent } from '../../ui/buttons/app-button/app-button.component';
 
-import { CaseStudy } from '../../../interfaces/case-study.interface';
-import { CaseStudiesContent } from '../../../interfaces/case-studies-content.interface';
+import { CaseStudy } from '../../../interfaces/data/case-study.interface';
+import { CaseStudiesContent } from '../../../interfaces/translations/case-studies-content.interface';
 
 @Component({
   selector: 'app-case-studies-section',
