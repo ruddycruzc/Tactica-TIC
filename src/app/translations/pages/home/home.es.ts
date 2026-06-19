@@ -9,26 +9,49 @@ export const homeEs = {
           ABOUT_BUTTON: 'Conócenos',
           VISION_BUTTON: 'Ver proyectos'
         },
-    PRODUCT_SHOWCASE: {
-          PRODUCT_1: {
-            TITLE: 'Verifactu',
-            DESCRIPTION:
-              'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
-          },
+   PRODUCT_SHOWCASE: {
 
-          PRODUCT_2: {
-            TITLE: 'Nombre de Producto',
-            DESCRIPTION:
-              'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
-          },
+  PRODUCTS: {
 
-          SIDE_CARD: {
-            TITLE:
-              '¿Puede el control de jornada mejorar la gestión laboral de tu equipo?',
-            EMPHASIS: 'control de jornada',
-            BUTTON_LABEL: 'Conoce más'
-          }
-        },
+    VERIFACTU: {
+
+      TITLE: 'VeriFactu',
+
+      DESCRIPTION:
+        'Cumple con la normativa VeriFactu y automatiza la gestión de facturación desde una plataforma moderna y conectada.'
+    },
+
+    CONTROL_HORARIO: {
+
+      TITLE: 'Control Horario',
+
+      DESCRIPTION:
+        'Gestiona fichajes, vacaciones, jornadas laborales y control de personal desde una única plataforma.'
+    },
+
+CONTROL_PLACAS: {
+
+  TITLE: 'Control de Placas',
+
+  DESCRIPTION:
+    'Sistema de visión artificial para la identificación, validación y control automático de placas metálicas en procesos industriales.'
+}
+
+  },
+
+  SIDE_CARD: {
+
+    TITLE:
+      'Descubre cómo nuestros productos transforman procesos empresariales',
+
+    EMPHASIS:
+      'procesos empresariales',
+
+    BUTTON_LABEL:
+      'Más información'
+  }
+
+},
 TEXT_INFO: {
   STATEMENT:
     'Transformamos procesos industriales conectando inteligencia artificial, IoT, visión artificial y software a medida para ayudar a las empresas a controlar, automatizar y tomar mejores decisiones.',

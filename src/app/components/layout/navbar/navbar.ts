@@ -1,8 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 
 import { TranslateModule } from '@ngx-translate/core';
-
 
 import { NavItem } from '../../../interfaces/data/nav-item.interface';
 import { TranslationService } from '../../../services/translation-service/translation.service';
@@ -11,44 +10,36 @@ import { FormsModule } from '@angular/forms';
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [
-    RouterLink,
-    RouterLinkActive,
-    TranslateModule,
-    AppButtonComponent,FormsModule
-  ],
+  imports: [RouterLink, RouterLinkActive, TranslateModule, AppButtonComponent, FormsModule],
   templateUrl: './navbar.html',
-  styleUrl: './navbar.css'
+  styleUrl: './navbar.css',
 })
 export class Navbar {
-
-  constructor(
-    private translationService: TranslationService
-  ) {}
+  constructor(private translationService: TranslationService) {}
 
   menuOpen = false;
 
   navigationItems: NavItem[] = [
     {
       label: 'NAV.ABOUT',
-      route: '/about'
+      route: '/about',
     },
     {
       label: 'NAV.PROJECTS',
-      route: '/projects'
+      route: '/projects',
     },
     {
       label: 'NAV.BLOG',
-      route: '/blog'
+      route: '/blog',
     },
-     {
+    {
       label: 'NAV.CONTACT',
-      route: '/contact'
+      route: '/contact',
     },
     {
       label: 'NAV.CAREERS',
-      route: '/careers'
-    }
+      route: '/careers',
+    },
   ];
 
   get currentLanguage(): string {
@@ -62,21 +53,40 @@ export class Navbar {
   toggleMenu(): void {
     this.menuOpen = !this.menuOpen;
   }
-searchOpen = false;
-searchTerm = '';
-toggleSearch(): void {
 
-  if (window.innerWidth <= 1024) {
-    this.menuOpen = true;
+
+
+@HostListener('window:scroll')
+onWindowScroll(): void {
+
+  if (this.menuOpen) {
+
+    this.menuOpen = false;
+
   }
 
-  this.searchOpen = !this.searchOpen;
+  if (this.searchOpen) {
+
+    this.searchOpen = false;
+
+  }
+
 }
+
+  searchOpen = false;
+  searchTerm = '';
+  toggleSearch(): void {
+    if (window.innerWidth <= 1024) {
+      this.menuOpen = true;
+    }
+
+    this.searchOpen = !this.searchOpen;
+  }
   onSearchClick(): void {
     console.log('Buscar');
   }
-closeMenu(): void {
-  this.menuOpen = false;
-  this.searchOpen = false;
-}
+  closeMenu(): void {
+    this.menuOpen = false;
+    this.searchOpen = false;
+  }
 }

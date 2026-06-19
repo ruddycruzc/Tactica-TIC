@@ -1,27 +1,28 @@
-import { Product } from '../../interfaces/data/product.interface';
+import { Product }
+  from '../../interfaces/data/product.interface';
 
 export const PRODUCTS: Product[] = [
   {
-    id: 'verifactu',
-
-    title: 'Verifactu',
-
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-
+    id: 'VERIFACTU',
     image:
-      '/assets/images/product-showcase/Porducto.jpg'
+      '/assets/images/product-showcase/verifactu.jpg',
+    url:
+      'https://verifactu-tt.web.app'
   },
 
   {
-    id: 'product-2',
-
-    title: 'Nombre de Producto',
-
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-
+    id: 'CONTROL_HORARIO',
     image:
-      '/assets/images/product-showcase/Porducto2.png'
+      '/assets/images/product-showcase/control-horario.png',
+    url:
+      'https://control-horario-tt.web.app'
+  },
+
+  {
+    id: 'CONTROL_PLACAS',
+    image:
+      '/assets/images/product-showcase/control-defectos.jpg',
+    url:
+      'https://control-placas-tt.web.app'
   }
 ];

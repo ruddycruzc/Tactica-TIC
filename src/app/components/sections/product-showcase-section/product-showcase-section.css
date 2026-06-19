@@ -1,61 +1,299 @@
 .product-showcase {
   background: var(--color-bkg-light);
-  padding-top: 0rem;
+
+  padding-top: 0;
   padding-bottom: 4rem;
 }
 
 .product-showcase__inner {
-  --reveal-delay: 140ms;
-  --reveal-duration: 820ms;
-  --reveal-stagger: 120ms;
-  display: grid;
-  grid-template-columns: minmax(0, 1.95fr) minmax(0, 1fr) minmax(0, 1fr);
-  gap: var(--grid-gap);
-  align-items: stretch;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  gap: 0;
+
+  overflow: visible;
 }
+.product-showcase__inner:hover
+.product-showcase__slot {
+
+  margin-left: -20px;
+}
+
+/* ==========================
+   CARDS DESKTOP
+========================== */
 
 .product-showcase__slot {
-  min-width: 0;
+
+  position: relative;
+
+  width: 320px;
+
+  min-width: 320px;
+
   height: var(--product-card-height);
-  animation: tt-card-reveal var(--reveal-duration) cubic-bezier(0.16, 1, 0.3, 1) both;
-  animation-delay: calc(var(--reveal-delay) + (var(--showcase-index, 0) * var(--reveal-stagger)));
-  transition: transform var(--transition-card);
-}
 
-.product-showcase__slot:not(.product-showcase__slot--expanded):not(.product-showcase__slot--static) {
+  margin-left: -60px;
+
   cursor: pointer;
+
+  animation:
+    tt-card-reveal
+    var(--reveal-duration)
+    cubic-bezier(0.16, 1, 0.3, 1)
+    both;
+
+  animation-delay:
+    calc(
+      var(--reveal-delay)
+      +
+      (
+        var(--showcase-index, 0)
+        *
+        var(--reveal-stagger)
+      )
+    );
+
+  transition:
+    transform .45s cubic-bezier(.22,1,.36,1),
+    filter .35s ease,
+    opacity .35s ease;
+
+  will-change:
+    transform;
 }
 
-@media (min-width: 1025px) {
-  .product-showcase__inner:has(.product-showcase__slot:nth-child(2).product-showcase__slot--expanded) {
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1.95fr) minmax(0, 1fr);
-  }
+.product-showcase__slot:first-child {
 
-  .product-showcase__inner {
-    transition: grid-template-columns var(--transition-card);
-  }
+  margin-left: 0;
 }
+
+
+/* Abanico */
+
+.product-showcase__slot:nth-child(1) {
+
+  transform:
+    rotate(-6deg);
+
+  z-index: 1;
+}
+
+.product-showcase__slot:nth-child(2) {
+
+  transform:
+    rotate(2deg);
+
+  z-index: 2;
+}
+
+.product-showcase__slot:nth-child(3) {
+
+  transform:
+    rotate(7deg);
+
+  z-index: 3;
+}
+
+/* CTA */
+
+.product-showcase__slot--static {
+
+  position: relative;
+
+  z-index: 10;
+
+  cursor: default;
+}
+
+.product-showcase__slot--static:hover {
+
+  transform: none;
+}
+/* ==========================
+   CARTA ACTIVA
+========================== */
+
+.product-showcase__slot--active {
+ margin-left: 20px;
+  transform:
+    translateY(-30px)
+    rotate(0deg)
+    scale(1.06) !important;
+
+  z-index: 100 !important;
+}
+
+/* Atenuar resto */
+
+.product-showcase__inner:hover
+.product-showcase__slot:not(.product-showcase__slot--active):not(.product-showcase__slot--static) {
+
+  opacity: .6;
+
+  filter:
+    grayscale(.5);
+}
+
+/* Glow */
+
+.product-showcase__slot--active::after {
+
+  content: '';
+
+  position: absolute;
+
+  inset: 0;
+
+  border-radius:
+    var(--radius-cards);
+
+  box-shadow:
+    0 25px 60px
+    rgba(255, 0, 128, .18);
+
+  pointer-events: none;
+}
+
+
+/* ==========================
+   TABLET
+========================== */
 
 @media (max-width: 1024px) {
+
+  .product-showcase__slot {
+
+    width: 260px;
+
+    min-width: 260px;
+  }
+
+}
+
+/* ==========================
+   MOBILE WALLET STACK
+========================== */
+
+@media (max-width: 768px) {
+
+  .product-showcase {
+
+    padding-bottom: 8rem;
+  }
+
   .product-showcase__inner {
-    grid-template-columns: 1fr;
+
+    display: block;
+
+    position: relative;
+
+    min-height: auto;
+
+    padding-inline: 1rem;
   }
 
   .product-showcase__slot {
-    height: auto;
-    min-height: var(--product-card-height);
+
+    position: sticky;
+
+    top: 90px;
+
+    width: 100%;
+
+    max-width: 90vw;
+
+    min-width: unset;
+
+    height: var(--product-card-height-mobile);
+
+    margin-inline: auto;
+
+    transform: none !important;
+
+    transition:
+      transform .3s ease;
+
+    transform-origin:
+      center top;
+
+    box-shadow:
+      0 24px 48px rgba(0, 0, 0, .20);
   }
+
+  /* SOLAPADO DEL MAZO */
+
+  .product-showcase__slot:not(:first-child) {
+
+    margin-top: -140px;
+  }
+
+  /* ORDEN DE APARICIÓN */
+
+  .product-showcase__slot:nth-child(1) {
+
+    z-index: 1;
+
+    rotate: -2deg;
+  }
+
+  .product-showcase__slot:nth-child(2) {
+
+    z-index: 2;
+
+    rotate: 1deg;
+  }
+
+  .product-showcase__slot:nth-child(3) {
+
+    z-index: 3;
+
+    rotate: -1deg;
+  }
+
+  .product-showcase__slot--static {
+
+    z-index: 4;
+
+    rotate: 2deg;
+  }
+
+  /* DETALLE TIPO TARJETA */
+
+  .product-showcase__slot::before {
+
+    content: '';
+
+    position: absolute;
+
+    top: 12px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 48px;
+
+    height: 4px;
+
+    border-radius: 999px;
+
+    background:
+      rgba(255, 255, 255, .35);
+
+    z-index: 20;
+  }
+
+  /* PEQUEÑO EFECTO AL TOCAR */
+.product-showcase__slot--active {
+
+  transform:
+    translateY(-8px)
+    scale(1.03) !important;
 }
 
-@media (max-width: 640px) {
-  .product-showcase__slot {
-    min-height: 23rem;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .product-showcase__slot {
-    animation: none;
-    transition: none;
-  }
 }

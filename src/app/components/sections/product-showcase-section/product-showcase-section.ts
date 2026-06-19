@@ -24,4 +24,13 @@ readonly products = PRODUCTS; //CONSUME LOS DATOS QUE ESTAN EN LA CARPETA data/p
   setActive(index: number): void {
     this.activeIndex = index;
   }
+
+  openProduct(url: string): void {
+
+    window.open(
+      url,
+      '_blank',
+      'noopener,noreferrer'
+    );
+}
 }
