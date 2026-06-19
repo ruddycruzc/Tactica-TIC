@@ -36,9 +36,11 @@
   font-weight: var(--font-weight-regular);
   line-height: var(--text-body-line-height);
 }
-
 @media (max-width: 640px) {
+
   .project-card img {
-    aspect-ratio: var(--project-card-image-ratio-mobile);
+
+    aspect-ratio: 1.7/ 1;
   }
+
 }
