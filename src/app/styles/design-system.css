@@ -45,7 +45,7 @@
   --section-padding-x-desktop: clamp(6rem, 9vw, 8rem);
   --section-padding-x-tablet: 3rem;
   --section-padding-x-mobile: 1.25rem;
-  --section-padding-y-desktop: 7rem;
+  --section-padding-y-desktop: 5rem;
   --section-padding-y-tablet: 3rem;
   --section-padding-y-mobile: 2.5rem;
   --section-padding-x: var(--section-padding-x-desktop);

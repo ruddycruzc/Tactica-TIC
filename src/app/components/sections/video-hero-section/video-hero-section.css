@@ -19,16 +19,52 @@
   will-change: transform, opacity;
 }
 
+/* ==========================
+   TABLET
+   (iPad, Surface, tablets Android)
+========================== */
+
 @media (max-width: 968px) {
+
   .video-hero-section {
-    padding-block: var(--section-padding-y-mobile);
+
+    padding-inline: 1rem;
+
+    padding-block:
+      var(--section-padding-y-mobile);
   }
+
 }
 
+/* ==========================
+   MÓVILES PEQUEÑOS
+   (iPhone SE, Galaxy A)
+========================== */
+
+@media (max-width: 640px) {
+
+  .video-hero-section {
+
+    padding-inline: .75rem;
+  }
+
+}
+
+/* ==========================
+   ACCESIBILIDAD
+   Usuarios con reducción
+   de movimiento activada
+========================== */
+
 @media (prefers-reduced-motion: reduce) {
+
   .video-hero-section app-video-hero {
+
     opacity: 1;
+
     transform: none;
+
     will-change: auto;
   }
+
 }

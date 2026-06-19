@@ -21,9 +21,36 @@
 .text-info__statement app-typewriter-text {
   display: block;
 }
+/* ==========================
+   TABLET
+   (iPad, Surface, tablets Android)
+========================== */
+
+@media (max-width: 968px) {
+
+  .text-info {
+
+    min-height: auto;
+  }
+
+}
+/* ==========================
+   MÓVILES
+   (iPhone, Galaxy, Pixel)
+========================== */
 
 @media (max-width: 640px) {
-  .text-info__statement {
-    line-height: 1.22;
+
+  .text-info {
+
+    min-height: auto;
   }
+
+  .text-info__statement {
+
+    line-height: 1.22;
+
+    max-width: 100%;
+  }
+
 }

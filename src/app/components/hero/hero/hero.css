@@ -8,6 +8,7 @@
   max-width: 68rem;
   gap: var(--grid-gap);
   text-align: center;
+  margin-inline: auto;
 }
 
 .hero-title {
@@ -31,7 +32,7 @@
 }
 
 .hero-description {
-  max-width: 67rem;
+  max-width: 52rem;
   margin: 0;
   color: var(--text-body-color);
   font-family: var(--font-family-heading);

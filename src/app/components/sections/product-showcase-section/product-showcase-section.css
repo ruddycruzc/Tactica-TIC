@@ -1,7 +1,7 @@
 .product-showcase {
   background: var(--color-bkg-light);
 
-  padding-top: 0;
+  padding-top: 2rem;
   padding-bottom: 4rem;
 }
 
@@ -174,9 +174,9 @@
   }
 
 }
-
 /* ==========================
-   MOBILE WALLET STACK
+   MÓVILES
+   (iPhone, Galaxy, Pixel)
 ========================== */
 
 @media (max-width: 768px) {
@@ -197,70 +197,60 @@
     padding-inline: 1rem;
   }
 
-  .product-showcase__slot {
+.product-showcase__slot {
 
-    position: sticky;
+  position: sticky;
 
-    top: 90px;
+  top: 110px;
 
-    width: 100%;
+  width: 100%;
 
-    max-width: 90vw;
+  max-width: 90vw;
 
-    min-width: unset;
+  min-width: unset;
 
-    height: var(--product-card-height-mobile);
+  height: var(--product-card-height-mobile);
 
-    margin-inline: auto;
+  margin-inline: auto;
 
-    transform: none !important;
+  margin-bottom: 4rem;
 
-    transition:
-      transform .3s ease;
+  transform: none !important;
 
-    transform-origin:
-      center top;
+  box-shadow:
+    0 24px 48px rgba(0,0,0,.20);
 
-    box-shadow:
-      0 24px 48px rgba(0, 0, 0, .20);
-  }
+    opacity: 1 !important;
 
-  /* SOLAPADO DEL MAZO */
-
-  .product-showcase__slot:not(:first-child) {
-
-    margin-top: -140px;
-  }
+  filter: none !important;
+}
 
   /* ORDEN DE APARICIÓN */
 
   .product-showcase__slot:nth-child(1) {
+  z-index: 1;
 
-    z-index: 1;
-
-    rotate: -2deg;
+  top: 90px;
   }
 
-  .product-showcase__slot:nth-child(2) {
+/* ==========================
+   EFECTO BARAJA MÓVIL
+========================== */
 
-    z-index: 2;
+.product-showcase__slot:nth-child(2) {
 
-    rotate: 1deg;
-  }
+  margin-top: -12rem;
+}
 
-  .product-showcase__slot:nth-child(3) {
+.product-showcase__slot:nth-child(3) {
 
-    z-index: 3;
+  margin-top: -12rem;
+}
 
-    rotate: -1deg;
-  }
+.product-showcase__slot--static {
 
-  .product-showcase__slot--static {
-
-    z-index: 4;
-
-    rotate: 2deg;
-  }
+  margin-top: -12rem;
+}
 
   /* DETALLE TIPO TARJETA */
 
