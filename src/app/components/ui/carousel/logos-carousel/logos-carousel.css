@@ -13,7 +13,7 @@
 }
 
 .logos-carousel__viewport {
-  width: 100vw;
+  width: 100%;
   margin-left: 0;
   overflow: hidden;
   padding: 3rem 0;
@@ -67,6 +67,7 @@
 @media (prefers-reduced-motion: reduce) {
   .logos-carousel__track {
     animation: none;
+      will-change: auto;
   }
 }
 
