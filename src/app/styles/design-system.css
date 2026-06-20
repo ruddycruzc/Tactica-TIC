@@ -13,7 +13,7 @@
   --font-size-3xl: 1.875rem;
   --font-size-4xl: 2.5rem;
   --font-size-5xl: 3.5rem;
-  --font-size-h1-desktop: clamp(1rem, 5.3vw, 3.5rem);
+  --font-size-h1-desktop: clamp(1rem, 5.3vw, 3rem);
   --font-size-h2-desktop: 2rem;
   --font-size-h3-desktop: 1.25rem;
   --font-size-p-desktop: clamp(1rem, 1.15vw, 1.15rem);

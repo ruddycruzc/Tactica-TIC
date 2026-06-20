@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NgFor } from '@angular/common';
 import { AppButtonComponent } from '../../ui/buttons/app-button/app-button.component';
+import { AnimatedBackground } from '../../media/animated-background/animated-background';
 
 import { ScrollRevealDirective } from '../../../directives/scroll-reveal.directive';
 import { HubItem } from '../../../interfaces/translations/newsletter-section.interface';
@@ -8,7 +9,7 @@ import { HubItem } from '../../../interfaces/translations/newsletter-section.int
 @Component({
   selector: 'app-newsletter-section',
   standalone: true,
-  imports: [AppButtonComponent, NgFor, ScrollRevealDirective],
+  imports: [AppButtonComponent, NgFor, ScrollRevealDirective, AnimatedBackground],
   templateUrl: './newsletter-section.html',
   styleUrl: './newsletter-section.css'
 })
