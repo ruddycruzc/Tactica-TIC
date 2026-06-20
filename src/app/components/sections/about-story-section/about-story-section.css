@@ -29,5 +29,13 @@
 @media (max-width: 900px) {
   .about-story-section__info {
     grid-template-columns: 1fr;
+    gap: 1rem;
   }
+}
+@media (max-width: 640px) {
+.about-story-section__inner {
+  display: grid;
+  gap: 1rem;
+}
+ 
 }

@@ -104,3 +104,13 @@
     font-size: var(--font-size-h2);
   }
 }
+@media (max-width: 640px) {
+ .hub-container {
+  padding: 2rem var(--section-padding-x);
+  background-color: var(--color-bkg-light); 
+  position: relative; 
+  overflow: hidden; 
+  font-weight: var(--font-weight-regular);
+}
+
+}

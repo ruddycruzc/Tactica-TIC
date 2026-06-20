@@ -70,16 +70,16 @@
 }
 
 .project-name {
-  font-size: var(--font-size-card-title);
+  font-size: var(--font-size-project-card-title);
   color: var(--text-highlight-color);
-  font-weight: var(--font-weight-bold);
-  line-height: var(--text-body-line-height);
+  font-weight: var(--font-weight-semibold);
+  line-height: 1.5rem;
   margin-top: 0;
   margin-bottom: var(--title-subtitle-spacing);
   padding-bottom: var(--title-subtitle-spacing);
   border-bottom: 2px solid var(--color-border);
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: 0;
 }
 
 .project-card p,

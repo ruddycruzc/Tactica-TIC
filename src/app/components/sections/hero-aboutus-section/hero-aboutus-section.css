@@ -36,9 +36,4 @@
     padding-top: calc(var(--section-padding-y) + var(--button-height));
   
   }
-  .hero-aboutus__inner video {
-    width: 1rem;
-    height: 1rem;
-    border-radius: var(--border-radius-lg);
-  }
 }

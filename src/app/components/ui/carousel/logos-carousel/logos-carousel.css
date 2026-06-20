@@ -84,3 +84,9 @@
     padding: var(--logo-item-padding);
   }
 }
+@media (max-width: 640px) {
+  .logos-carousel__viewport {
+  padding-top: 0rem;
+}
+ 
+}

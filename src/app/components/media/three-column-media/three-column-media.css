@@ -31,4 +31,9 @@
     height: auto;
     aspect-ratio: var(--project-card-image-ratio);
   }
+
+  .three-column-media video {
+    aspect-ratio: auto;
+    object-fit: contain;
+  }
 }

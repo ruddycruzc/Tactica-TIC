@@ -32,6 +32,7 @@
 
   --font-size-hero-description: clamp(1.1rem, 1.55vw, 1.5rem);
   --font-size-card-title: clamp(1.35rem, 1.55vw, 1.40rem);
+  --font-size-project-card-title: var(--font-size-card-title);
   --font-size-expandable-card-title: clamp(1.05rem, 1.7vw, 1.35rem);
   --font-size-expandable-card-title-expanded: clamp(1.1rem, 2vw, 1.45rem);
   --font-size-card-description: clamp(1.05rem, 1.3vw, 1.25rem);
@@ -318,6 +319,7 @@ p {
     --font-size-h2: var(--font-size-h2-mobile);
     --font-size-h3: var(--font-size-h3-mobile);
     --font-size-p: var(--font-size-p-mobile);
+    --font-size-project-card-title: clamp(1.05rem, 5vw, 1.28rem);
     --font-size-hero-description: clamp(1rem, 4.6vw, 1.15rem);
     --font-size-text-info: 1.5rem;
   }
