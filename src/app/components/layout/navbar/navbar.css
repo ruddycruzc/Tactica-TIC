@@ -53,7 +53,7 @@
   align-items: center;
   color: var(--nav-link-color);
   font-family: var(--font-family-heading);
-  font-size: var(--font-size-body-medium);
+  font-size: var(--font-size-p);
   font-weight: var(--nav-link-font-weight);
   line-height: 1;
   text-decoration: none;

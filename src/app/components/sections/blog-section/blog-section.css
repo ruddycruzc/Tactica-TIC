@@ -55,7 +55,7 @@
 .blog-page-section__dots {
   display: flex;
   align-items: center;
-  gap: var(--blog-dot-gap, var(--card-title-description-gap));
+  gap: var(--card-title-description-gap);
 }
 
 .blog-page-section__dot {

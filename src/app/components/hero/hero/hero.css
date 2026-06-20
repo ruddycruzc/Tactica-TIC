@@ -6,7 +6,7 @@
   align-items: center;
   width: 100%;
   max-width: 68rem;
-  gap: var(--grid-gap);
+  gap: var(--cards-gap);
   text-align: center;
   margin-inline: auto;
 }
@@ -50,7 +50,7 @@
 }
 
 .arrow {
-  font-size: var(--font-size-body-medium);
+  font-size: var(--font-size-p);
 }
 
 @media (max-width: 968px) {

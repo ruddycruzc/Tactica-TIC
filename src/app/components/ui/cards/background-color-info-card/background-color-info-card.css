@@ -50,13 +50,13 @@
   max-width: var(--color-info-body-width);
   margin: 0rem 0 0;
   color: inherit;
-  font-size: var(--font-size-body-medium);
+  font-size: var(--font-size-p);
   line-height: var(--line-height-base);
 }
 
 .background-color-info-card app-button {
   align-self: flex-start;
-  margin-top: var(--grid-gap);
+  margin-top: var(--cards-gap);
   color: var(--color-white);
 }
 

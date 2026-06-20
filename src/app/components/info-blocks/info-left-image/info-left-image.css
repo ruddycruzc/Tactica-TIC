@@ -38,7 +38,7 @@
 .info-left-image__content p {
   margin: 0;
   color: var(--text-body-color);
-  font-size: var(--font-size-body-medium);
+  font-size: var(--font-size-p);
   line-height: var(--text-body-line-height);
 }
 

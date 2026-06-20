@@ -1,4 +1,7 @@
 .cards-carousel {
+  --carousel-inner-width: min(calc(100% - (var(--section-padding-x) * 2)), var(--page-max-width));
+  --carousel-edge-offset: max(var(--section-padding-x), calc((100vw - var(--page-max-width)) / 2));
+
   position: relative;
   width: 100%;
   max-width: none;
@@ -13,10 +16,9 @@
   align-items: flex-start;
   justify-content: space-between;
   gap: var(--cards-gap);
-  width: min(100%, var(--page-max-width));
-  margin: 0;
-  padding: 0 var(--section-padding-x);
-  padding-right: 0;
+  width: var(--carousel-inner-width);
+  margin: 0 auto;
+  padding: 0;
   box-sizing: border-box;
 }
 
@@ -41,7 +43,7 @@
   padding-block: 1rem;
   margin: 0;
   color: var(--text-body-color);
-  font-size: var(--font-size-body-medium);
+  font-size: var(--font-size-p);
   font-weight: var(--font-weight-regular);
  line-height: var(--text-body-line-height);
   text-align: left;
@@ -51,14 +53,17 @@
   display: flex;
   flex: 0 0 auto;
   gap: var(--cards-gap);
+  margin-left: auto;
  
 }
 
 .cards-carousel__viewport {
   width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
     scroll-snap-type: x mandatory;
   padding-top: 2rem;
-  padding-left: var(--section-padding-x);
+  padding-left: var(--carousel-edge-offset);
   padding-right: 0;
 
   margin: 0;
@@ -115,7 +120,7 @@
   }
 
   .cards-carousel__controls {
-    display: none;
+    align-self: flex-end;
   }
 }
 
@@ -138,7 +143,7 @@
 
   .cards-carousel__viewport {
 
-    padding-left: var(--section-padding-x);
+    padding-left: var(--carousel-edge-offset);
     padding-right: 0;
     padding-top: 0;
   }

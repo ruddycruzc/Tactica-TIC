@@ -30,14 +30,12 @@
   --font-size-h3: var(--font-size-h3-desktop);
   --font-size-p: var(--font-size-p-desktop);
 
-  --font-size-hero: var(--font-size-h1);
   --font-size-hero-description: clamp(1.1rem, 1.55vw, 1.5rem);
   --font-size-card-title: clamp(1.35rem, 1.55vw, 1.40rem);
   --font-size-expandable-card-title: clamp(1.05rem, 1.7vw, 1.35rem);
   --font-size-expandable-card-title-expanded: clamp(1.1rem, 2vw, 1.45rem);
   --font-size-card-description: clamp(1.05rem, 1.3vw, 1.25rem);
   --font-size-body-large: clamp(1.05rem, 1.3vw, 1.25rem);
-  --font-size-body-medium: var(--font-size-p);
   --font-size-text-info: var(--font-size-h2);
 
   --line-height-tight: 1.04;
@@ -72,9 +70,8 @@
   --container-padding-lg: var(--section-padding-x-desktop);
  
 
-  --grid-gap: 1.5rem;
-  --cards-gap: var(--grid-gap);
-  --grid-gap-wide: clamp(2rem, 6vw, 4rem);
+  --cards-gap: 1.5rem;
+  --layout-gap-wide: clamp(2rem, 6vw, 4rem);
   --section-gap: clamp(4rem, 9vw, 7.5rem);
   --title-subtitle-spacing: 1rem;
   --card-title-description-gap: 0.25rem;
@@ -116,7 +113,7 @@
   --faq-header-width: 26.25rem;
   --faq-header-width-tablet: 38.75rem;
   --faq-answer-width: 47.5rem;
-  --faq-grid-gap: clamp(2.5rem, 7vw, 6rem);
+  --faq-layout-gap: clamp(2.5rem, 7vw, 6rem);
   --faq-item-padding-y: 1.625rem;
   --faq-icon-size: 1.75rem;
   --faq-icon-line-width: 0.75rem;
@@ -127,8 +124,6 @@
   --logos-section-padding-top: 2rem;
   --logos-section-padding-bottom: 2rem;
   --logo-item-padding: 0.75rem;
-  --blog-grid-row-gap: var(--section-padding-y-mobile);
-  --blog-dot-gap: var(--card-title-description-gap);
   --blog-dot-size: 0.625rem;
   --cards-offset-left: var(--section-padding-x);
   --cards-width: min(var(--page-max-width), calc(100vw - var(--cards-offset-left)));

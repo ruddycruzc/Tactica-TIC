@@ -11,7 +11,7 @@
   margin: 0 auto;
   display: grid;
   grid-template-columns: minmax(var(--color-info-text-width), 0.72fr) minmax(0, 1fr);
-  gap: var(--faq-grid-gap);
+  gap: var(--faq-layout-gap);
   align-items: start;
 }
 
@@ -35,7 +35,7 @@
 .faq-subtitle {
   margin: 0;
   color: var(--text-body-color);
-  font-size: var(--font-size-body-medium);
+  font-size: var(--font-size-p);
   font-weight: var(--font-weight-regular);
   line-height: var(--text-body-line-height);
 }
@@ -55,7 +55,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: var(--grid-gap);
+  gap: var(--cards-gap);
   list-style: none;
   font-size: var(--font-size-body-large);
   font-weight: var(--font-weight-medium);
@@ -101,9 +101,9 @@
 
 .faq-answer {
   max-width: var(--faq-answer-width);
-  padding: 0 calc(var(--faq-icon-size) + var(--grid-gap)) var(--faq-item-padding-y) 0;
+  padding: 0 calc(var(--faq-icon-size) + var(--cards-gap)) var(--faq-item-padding-y) 0;
   color: var(--text-body-color);
-  font-size: var(--font-size-body-medium);
+  font-size: var(--font-size-p);
   line-height: var(--text-body-line-height);
 }
 

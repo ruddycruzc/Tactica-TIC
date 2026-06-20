@@ -61,7 +61,7 @@
 }
 
 .hub-description {
-  font-size: var(--font-size-body-medium);
+  font-size: var(--font-size-p);
   color: var(--text-body-color);
   line-height: var(--text-body-line-height);
   margin: 0;
@@ -95,7 +95,7 @@
 }
 
 .hub-text-group p {
-  font-size: var(--font-size-body-medium);
+  font-size: var(--font-size-p);
   color: var(--text-body-color);
   line-height: var(--text-body-line-height);
   margin: 0;

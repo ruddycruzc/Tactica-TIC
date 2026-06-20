@@ -31,7 +31,7 @@
   margin: var(--project-card-content-gap) 0 var(--title-subtitle-spacing);
   color: var(--text-body-color);
   font-family: var(--font-family-base);
-  font-size: var(--font-size-body-medium);
+  font-size: var(--font-size-p);
   font-weight: var(--font-weight-regular);
   line-height: var(--text-body-line-height);
 }

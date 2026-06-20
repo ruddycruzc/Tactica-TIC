@@ -107,7 +107,7 @@
   max-height: 0;
   color: var(--color-white);
   font-family: var(--font-family-heading);
-  font-size: var(--font-size-body-medium);
+  font-size: var(--font-size-p);
   font-weight: var(--font-weight-regular);
   opacity: 0;
 

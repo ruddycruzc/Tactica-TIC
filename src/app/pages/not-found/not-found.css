@@ -43,7 +43,7 @@
 }
 
 .error-description {
-  font-size: var(--font-size-body-medium);
+  font-size: var(--font-size-p);
   color: var(--text-body-color);
   line-height: var(--text-body-line-height);
   max-width: 480px;
@@ -73,6 +73,6 @@
   }
 
   .error-description {
-    font-size: var(--font-size-body-medium);
+    font-size: var(--font-size-p);
   }
 }

@@ -58,24 +58,54 @@ readonly cards = TEAM_MEMBERS;
   private dragStartX = 0;
   private scrollStart = 0;
 
-  private scroll(amount: number): void {
+  private getSlideStep(): number {
+
+    const viewport =
+      this.viewport?.nativeElement;
+
+    const slide =
+      viewport?.querySelector<HTMLElement>(
+        '.cards-carousel__slide'
+      );
+
+    if (
+      !viewport ||
+      !slide
+    ) {
+      return 360;
+    }
+
+    const styles =
+      getComputedStyle(
+        viewport.querySelector<HTMLElement>(
+          '.cards-carousel__track'
+        ) || viewport
+      );
+
+    const gap =
+      Number.parseFloat(styles.columnGap || styles.gap) || 0;
+
+    return slide.getBoundingClientRect().width + gap;
+  }
+
+  private scroll(direction: 1 | -1): void {
 
     if (!this.viewport) {
       return;
     }
 
     this.viewport.nativeElement.scrollBy({
-      left: amount,
+      left: this.getSlideStep() * direction,
       behavior: 'smooth'
     });
   }
 
   prev(): void {
-    this.scroll(-360);
+    this.scroll(-1);
   }
 
   next(): void {
-    this.scroll(360);
+    this.scroll(1);
   }
 
   startDrag(event: PointerEvent): void {

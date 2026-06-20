@@ -85,7 +85,7 @@
 .image-card__role {
   margin: 0 0 6px;
   color: var(--color-white);
-  font-size: var(--font-size-body-medium);
+  font-size: var(--font-size-p);
   font-weight: var(--font-weight-extrabold);
   line-height: var(--text-heading-line-height);
 }
@@ -101,7 +101,7 @@
 .image-card__description {
   margin: 0;
   color: var(--color-white);
-  font-size: var(--font-size-body-medium);
+  font-size: var(--font-size-p);
   line-height: var(--text-heading-line-height);
   font-weight: var(--font-weight-regular);
 }

@@ -32,7 +32,7 @@
 }
 
 .final-cta app-button {
-  margin-top: var(--grid-gap);
+  margin-top: var(--cards-gap);
 }
 
 .final-cta__shape {

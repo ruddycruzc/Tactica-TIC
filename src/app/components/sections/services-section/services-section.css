@@ -152,7 +152,7 @@
 }
 
 .service-description {
-  font-size: var(--font-size-body-medium);
+  font-size: var(--font-size-p);
   color: var(--text-body-color);
   line-height: var(--text-body-line-height);
   margin: 0 0 25px 0;
