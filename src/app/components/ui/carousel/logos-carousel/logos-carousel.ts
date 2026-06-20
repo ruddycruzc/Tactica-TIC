@@ -13,5 +13,11 @@ export class LogosCarousel {
 
 readonly logos = LOGOS;
 
+readonly logoLoop = [
+  ...LOGOS,
+  ...LOGOS,
+  ...LOGOS
+];
+
 }
 

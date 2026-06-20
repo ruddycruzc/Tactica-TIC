@@ -7,7 +7,7 @@
     <div class="logos-carousel__track">
       <div class="logos-carousel__group" 
       [attr.aria-label]="'HOME.LOGOS.PARTNERS_LABEL' | translate">
-        @for (logo of logos; track logo.src) {
+        @for (logo of logoLoop; track $index) {
 
   
           <div class="logos-carousel__item">
@@ -24,7 +24,7 @@
 
         <div class="logos-carousel__group" aria-hidden="true">
 
-          @for (logo of logos; track logo.src) {
+          @for (logo of logoLoop; track $index) {
 
           <div class="logos-carousel__item">
             <img [src]="logo.src" alt="" class="logos-carousel__logo" />

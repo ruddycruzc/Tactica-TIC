@@ -59,11 +59,13 @@
 
 .cards-carousel__viewport {
   width: 100%;
+  padding-left: 0;
   overflow-x: auto;
   overflow-y: hidden;
-    scroll-snap-type: x mandatory;
+  scroll-snap-type: x mandatory;
+  scroll-padding-left: var(--carousel-edge-offset);
   padding-top: 2rem;
-  padding-left: var(--carousel-edge-offset);
+  
   padding-right: 0;
 
   margin: 0;
@@ -81,8 +83,8 @@
   align-items: stretch;
   gap: var(--cards-gap);
   width: max-content;
-  padding-left: 0;
-  padding-right: 0;
+  padding-left: var(--carousel-edge-offset);
+  padding-right: var(--carousel-edge-offset);
 }
 
 .cards-carousel__slide {
@@ -120,7 +122,12 @@
   }
 
   .cards-carousel__controls {
-    align-self: flex-end;
+    display: none;
+  }
+
+  .cards-carousel__viewport {
+    cursor: auto;
+    touch-action: pan-x;
   }
 }
 
@@ -129,7 +136,7 @@
 @media (max-width: 768px) {
   .cards-carousel__track {
     gap: var(--cards-gap);
-    padding-right: 0;
+    padding-right: var(--carousel-edge-offset);
   }
   .cards-carousel__slide {
 
@@ -143,7 +150,7 @@
 
   .cards-carousel__viewport {
 
-    padding-left: var(--carousel-edge-offset);
+    padding-left: 0;
     padding-right: 0;
     padding-top: 0;
   }

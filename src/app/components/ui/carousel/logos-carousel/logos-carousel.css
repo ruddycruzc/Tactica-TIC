@@ -24,12 +24,14 @@
   display: flex;
   width: max-content;
   padding-right: 0;
-  animation: logos-scroll 24s linear infinite;
+  animation: logos-scroll 64s linear infinite;
+  transform: translate3d(0, 0, 0);
   will-change: transform;
 }
 
 .logos-carousel__group {
   display: flex;
+  flex: 0 0 auto;
   align-items: center;
   gap: var(--logos-gap);
   padding-right: var(--logos-gap);
@@ -66,8 +68,7 @@
 
 @media (prefers-reduced-motion: reduce) {
   .logos-carousel__track {
-    animation: none;
-      will-change: auto;
+    animation-duration: 96s;
   }
 }
 
