@@ -111,7 +111,7 @@
 
 .mv-cards-container {
   display: flex;
-  gap: 24px;
+  gap: var(--cards-gap);
 }
 
 .mv-card {
@@ -174,7 +174,7 @@
   
   .mv-cards-container {
     flex-direction: column;
-    gap: 20px;
+    gap: var(--cards-gap);
   }
   
   .section-side-title {

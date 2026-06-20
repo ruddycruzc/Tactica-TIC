@@ -42,7 +42,7 @@
 .blog-page-section__grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: var(--blog-grid-row-gap, var(--section-padding-y-mobile)) var(--grid-gap);
+  gap: var(--cards-gap);
 }
 
 .blog-page-section__controls {
@@ -82,5 +82,11 @@
 
   .blog-page-section__grid {
     grid-template-columns: 1fr;
+    gap : 2rem;
   }
+  .blog-page-section__inner {
+
+  gap: 2.3rem var(--section-padding-y);
+  
+}
 }

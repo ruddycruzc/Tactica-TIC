@@ -4,6 +4,8 @@ export interface Product {
 
   image: string;
 
+  mediaType?: 'image' | 'video';
+
   url: string;
 
 }

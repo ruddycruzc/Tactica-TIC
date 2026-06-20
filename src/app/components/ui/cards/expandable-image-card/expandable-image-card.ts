@@ -10,6 +10,7 @@ export class ExpandableImageCard {
   @Input({ required: true }) title = '';
   @Input() description = '';
   @Input({ required: true }) image = '';
+  @Input() mediaType: 'image' | 'video' = 'image';
   @Input() imageAlt = '';
   @Input() expanded = false;
 }

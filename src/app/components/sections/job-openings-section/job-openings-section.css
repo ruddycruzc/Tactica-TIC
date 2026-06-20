@@ -43,7 +43,7 @@
   --reveal-stagger: 130ms;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: var(--grid-gap);
+  gap: var(--cards-gap);
 }
 
 :host ::ng-deep app-image-text-card {

@@ -16,6 +16,7 @@
             'HOME.PRODUCT_SHOWCASE.PRODUCTS.' + product.id + '.DESCRIPTION' | translate
           "
           [image]="product.image"
+          [mediaType]="product.mediaType || 'image'"
           [expanded]="activeIndex === index"
         >
         </app-expandable-image-card>

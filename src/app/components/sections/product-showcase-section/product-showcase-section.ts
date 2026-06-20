@@ -17,7 +17,7 @@ import { PRODUCTS } from '../../../data/products/products.data';
   styleUrl: './product-showcase-section.css',
 })
 export class ProductShowcaseSection {
-  activeIndex = 0;
+  activeIndex = 1;
 
 readonly products = PRODUCTS; //CONSUME LOS DATOS QUE ESTAN EN LA CARPETA data/products/
 

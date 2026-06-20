@@ -71,7 +71,7 @@
   --reveal-duration: 820ms;
   --reveal-stagger: 140ms;
   display: flex;
-  gap: 30px;
+  gap: var(--cards-gap);
 }
 
 .hub-item {
@@ -84,7 +84,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 30px;
+  gap: var(--cards-gap);
 }
 
 .hub-text-group h3 {

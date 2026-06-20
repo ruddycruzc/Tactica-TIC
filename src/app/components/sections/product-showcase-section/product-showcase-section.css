@@ -183,107 +183,119 @@
 
   .product-showcase {
 
-    padding-bottom: 8rem;
+    padding-top: var(--section-padding-y-mobile);
+
+    padding-bottom: var(--section-padding-y-mobile);
   }
 
   .product-showcase__inner {
 
-    display: block;
+    display: flex;
+
+    flex-direction: column;
 
     position: relative;
 
     min-height: auto;
 
-    padding-inline: 1rem;
+    gap: var(--cards-gap);
+
+    padding-inline: 0;
   }
 
-.product-showcase__slot {
+  .product-showcase__inner:hover
+  .product-showcase__slot {
 
-  position: sticky;
+    margin-left: 0;
+  }
 
-  top: 110px;
+  .product-showcase__slot {
 
-  width: 100%;
+    position: relative;
 
-  max-width: 90vw;
+    top: auto;
 
-  min-width: unset;
+    width: 100%;
 
-  height: var(--product-card-height-mobile);
+    max-width: none;
 
-  margin-inline: auto;
+    min-width: 0;
 
-  margin-bottom: 4rem;
+    height: auto;
 
-  transform: none !important;
+    min-height: var(--product-card-height-mobile);
 
-  box-shadow:
-    0 24px 48px rgba(0,0,0,.20);
+    margin: 0;
+
+    animation: product-mobile-card-in 520ms cubic-bezier(0.16, 1, 0.3, 1) both;
+
+    animation-delay: calc(var(--showcase-index, 0) * 90ms);
+
+    transform: none !important;
+
+    box-shadow:
+      0 1.125rem 2.5rem rgba(0,0,0,.14);
 
     opacity: 1 !important;
 
-  filter: none !important;
-}
-
-  /* ORDEN DE APARICIÓN */
-
-  .product-showcase__slot:nth-child(1) {
-  z-index: 1;
-
-  top: 90px;
+    filter: none !important;
   }
 
-/* ==========================
-   EFECTO BARAJA MÓVIL
-========================== */
+  .product-showcase__slot:nth-child(1) {
 
-.product-showcase__slot:nth-child(2) {
+    order: 2;
 
-  margin-top: -12rem;
-}
+    z-index: 1;
+  }
 
-.product-showcase__slot:nth-child(3) {
+  .product-showcase__slot:nth-child(2) {
 
-  margin-top: -12rem;
-}
+    order: 1;
 
-.product-showcase__slot--static {
+    z-index: 2;
+  }
 
-  margin-top: -12rem;
-}
+  .product-showcase__slot:nth-child(3) {
 
-  /* DETALLE TIPO TARJETA */
+    order: 3;
+
+    z-index: 3;
+  }
+
+  .product-showcase__slot--static {
+
+    order: 4;
+
+    min-height: 0;
+
+    margin: 0;
+  }
 
   .product-showcase__slot::before {
 
-    content: '';
-
-    position: absolute;
-
-    top: 12px;
-
-    left: 50%;
-
-    transform: translateX(-50%);
-
-    width: 48px;
-
-    height: 4px;
-
-    border-radius: 999px;
-
-    background:
-      rgba(255, 255, 255, .35);
-
-    z-index: 20;
+    content: none;
   }
 
-  /* PEQUEÑO EFECTO AL TOCAR */
-.product-showcase__slot--active {
+  .product-showcase__slot--active {
 
-  transform:
-    translateY(-8px)
-    scale(1.03) !important;
+    transform: translateY(-0.25rem) !important;
+  }
+
+  .product-showcase__slot--active::after {
+
+    box-shadow:
+      0 1.5rem 3.25rem rgba(225, 61, 98, .16);
+  }
 }
 
+@keyframes product-mobile-card-in {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 1.5rem, 0) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+  }
 }

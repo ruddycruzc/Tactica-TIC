@@ -7,7 +7,6 @@
   min-width: 0;
   display: block;
   padding: var(--project-card-padding);
-
   box-shadow: none;
 }
 

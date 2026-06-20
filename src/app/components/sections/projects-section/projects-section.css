@@ -49,7 +49,7 @@
 .projects-grid {
   display: flex;
   flex-direction: column;
-  gap: 35px;
+  gap: var(--cards-gap);
 }
 
 .project-card {

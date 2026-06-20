@@ -21,24 +21,17 @@ padding:
 
 max-width: 100%;
 }
-/* ==========================
-   TABLET Y PORTÁTILES PEQUEÑOS
-   (iPad Air, iPad Pro vertical,
-   Surface Pro, laptops compactos)
-========================== */
+
 @media (max-width: 968px) {
   .hero-section {
     min-height: auto;
     padding: 8.75rem var(--section-padding-x) 3rem;
   }
 }
-/* ==========================
-   MÓVILES
-   (iPhone SE, iPhone 14,
-   Galaxy S20, Pixel)
-========================== */
+
 @media (max-width: 640px) {
   .hero-section {
     padding-top: 7.5rem;
+    padding-bottom: 0.15rem;
   }
 }

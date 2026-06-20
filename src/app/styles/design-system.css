@@ -13,16 +13,31 @@
   --font-size-3xl: 1.875rem;
   --font-size-4xl: 2.5rem;
   --font-size-5xl: 3.5rem;
-  --font-size-h1: clamp(1rem, 5.3vw, 3.5rem);
-  --font-size-h2: 2rem;
-  --font-size-h3: 1.25rem;
+  --font-size-h1-desktop: clamp(1rem, 5.3vw, 3.5rem);
+  --font-size-h2-desktop: 2rem;
+  --font-size-h3-desktop: 1.25rem;
+  --font-size-p-desktop: clamp(1rem, 1.15vw, 1.15rem);
+  --font-size-h1-tablet: clamp(2.75rem, 7vw, 4rem);
+  --font-size-h2-tablet: clamp(2rem, 4.8vw, 2.65rem);
+  --font-size-h3-tablet: 1.25rem;
+  --font-size-p-tablet: clamp(1rem, 1.15vw, 1.15rem);
+  --font-size-h1-mobile: clamp(2.5rem, 11vw, 3.15rem);
+  --font-size-h2-mobile: clamp(1.45rem, 7vw, 2rem);
+  --font-size-h3-mobile: clamp(1.1rem, 5vw, 1.25rem);
+  --font-size-p-mobile: clamp(0.98rem, 4.2vw, 1.08rem);
+  --font-size-h1: var(--font-size-h1-desktop);
+  --font-size-h2: var(--font-size-h2-desktop);
+  --font-size-h3: var(--font-size-h3-desktop);
+  --font-size-p: var(--font-size-p-desktop);
 
   --font-size-hero: var(--font-size-h1);
   --font-size-hero-description: clamp(1.1rem, 1.55vw, 1.5rem);
   --font-size-card-title: clamp(1.35rem, 1.55vw, 1.40rem);
+  --font-size-expandable-card-title: clamp(1.05rem, 1.7vw, 1.35rem);
+  --font-size-expandable-card-title-expanded: clamp(1.1rem, 2vw, 1.45rem);
   --font-size-card-description: clamp(1.05rem, 1.3vw, 1.25rem);
   --font-size-body-large: clamp(1.05rem, 1.3vw, 1.25rem);
-  --font-size-body-medium: clamp(1rem, 1.15vw, 1.15rem);
+  --font-size-body-medium: var(--font-size-p);
   --font-size-text-info: var(--font-size-h2);
 
   --line-height-tight: 1.04;
@@ -58,6 +73,7 @@
  
 
   --grid-gap: 1.5rem;
+  --cards-gap: var(--grid-gap);
   --grid-gap-wide: clamp(2rem, 6vw, 4rem);
   --section-gap: clamp(4rem, 9vw, 7.5rem);
   --title-subtitle-spacing: 1rem;
@@ -77,7 +93,7 @@
   --project-card-image-ratio: 1.365 / 1;
   --project-card-image-ratio-mobile: 1.15 / 1;
   --project-card-content-gap: 0.375rem;
-  --project-card-padding: 1rem;
+  --project-card-padding: 0;
   --about-media-height: clamp(17.5rem, 22vw, 22rem);
   --cta-height: clamp(20rem, 28vw, 26rem);
   --cta-copy-width: 45rem;
@@ -115,7 +131,6 @@
   --blog-dot-gap: var(--card-title-description-gap);
   --blog-dot-size: 0.625rem;
   --cards-offset-left: var(--section-padding-x);
-  --cards-gap: var(--grid-gap);
   --cards-width: min(var(--page-max-width), calc(100vw - var(--cards-offset-left)));
   --card-size: calc((var(--cards-width) - (var(--cards-gap) * 2)) / 3);
   --project-logo-gap: 0.9375rem;
@@ -259,14 +274,24 @@ h2 {
   font-size: var(--font-size-h2);
 }
 
+h3 {
+  font-size: var(--font-size-h3);
+}
+
+p {
+  font-size: var(--font-size-p);
+}
+
 @media (max-width: 1024px) {
   :root {
     --section-padding-x: var(--section-padding-x-tablet);
     --section-padding-y: var(--section-padding-y-tablet);
     --container-padding: var(--section-padding-x-tablet);
     --page-margin: var(--section-padding-x-tablet);
-    --font-size-h1: clamp(2.75rem, 7vw, 4rem);
-    --font-size-h2: clamp(2rem, 4.8vw, 2.65rem);
+    --font-size-h1: var(--font-size-h1-tablet);
+    --font-size-h2: var(--font-size-h2-tablet);
+    --font-size-h3: var(--font-size-h3-tablet);
+    --font-size-p: var(--font-size-p-tablet);
     --font-size-text-info: clamp(1.85rem, 4.5vw, 2.25rem);
   }
 }
@@ -281,7 +306,6 @@ h2 {
 
 @media (max-width: 768px) {
   :root {
-    --cards-gap: 1rem;
     --logos-gap: 1.75rem;
     --logo-item-width: 9.5rem;
     --logo-item-height: 6.75rem;
@@ -295,8 +319,10 @@ h2 {
     --section-padding-y: var(--section-padding-y-mobile);
     --container-padding: var(--section-padding-x-mobile);
     --page-margin: var(--section-padding-x-mobile);
-    --font-size-h1: clamp(2.75rem, 12.5vw, 3.35rem);
-    --font-size-h2: clamp(1.9rem, 9vw, 2.5rem);
+    --font-size-h1: var(--font-size-h1-mobile);
+    --font-size-h2: var(--font-size-h2-mobile);
+    --font-size-h3: var(--font-size-h3-mobile);
+    --font-size-p: var(--font-size-p-mobile);
     --font-size-hero-description: clamp(1rem, 4.6vw, 1.15rem);
     --font-size-text-info: 1.5rem;
   }

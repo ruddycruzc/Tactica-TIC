@@ -68,7 +68,7 @@
 .services-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 30px;
+  gap: var(--cards-gap);
   width: 100%;
 }
 
@@ -192,6 +192,6 @@
 @media (max-width: 768px) {
   .services-container { padding: var(--section-padding-y) var(--section-padding-x); }
   .services-title { font-size: var(--font-size-h2); }
-  .services-grid { grid-template-columns: 1fr; gap: 20px; }
+  .services-grid { grid-template-columns: 1fr; gap: var(--cards-gap); }
   .service-card { padding: 30px; }
 }

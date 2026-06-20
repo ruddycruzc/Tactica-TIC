@@ -46,6 +46,7 @@
   .video-hero-section {
 
     padding-inline: .75rem;
+    padding-bottom:0;
   }
 
 }

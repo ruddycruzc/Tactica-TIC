@@ -63,7 +63,7 @@
   line-height: var(--line-height-base);
 }
 
-@media (max-width: 968px) {
+@media (max-width: 1284px) {
   .video-content {
     grid-template-columns: 1fr;
     gap: var(--grid-gap);
@@ -72,6 +72,12 @@
 
   .video-wrapper {
     aspect-ratio: 16 / 9;
+  }
+
+  .section-title,
+  .section-description,
+  .section-lead {
+    max-width: 100%;
   }
 
   .section-lead {
@@ -90,13 +96,6 @@
     padding: var(--section-padding-x);
 
     border-radius: var(--radius-cards);
-  }
-
-  .section-title,
-  .section-description,
-  .section-lead {
-
-    max-width: 100%;
   }
 
 }

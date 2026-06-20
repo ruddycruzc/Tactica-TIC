@@ -8,3 +8,11 @@
     padding: var(--section-padding-y) 0;
   }
 }
+
+@media (max-width: 480px) {
+
+  .logos-section {
+    padding-bottom: 0;
+  }
+
+}

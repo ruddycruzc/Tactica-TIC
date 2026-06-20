@@ -17,7 +17,7 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 60px; /* Separación limpia entre bloques */
+  gap: var(--cards-gap);
 }
 
 /* --- Cabecera de la Sección --- */
@@ -49,7 +49,7 @@
 .clients-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+  gap: var(--cards-gap);
   width: 100%;
 }
 
@@ -94,7 +94,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 24px;
+  gap: var(--cards-gap);
   padding-top: 20px;
   border-top: 1px solid var(--color-border);
   text-align: center;
@@ -122,7 +122,7 @@
   }
   .clients-grid {
     grid-template-columns: 1fr; /* 1 columna en móviles */
-    gap: 16px;
+    gap: var(--cards-gap);
   }
   .client-brand-card {
     padding: 30px 16px;

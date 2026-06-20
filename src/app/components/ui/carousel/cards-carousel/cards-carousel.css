@@ -12,7 +12,7 @@
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  gap: var(--grid-gap);
+  gap: var(--cards-gap);
   width: min(100%, var(--page-max-width));
   margin: 0;
   padding: 0 var(--section-padding-x);
@@ -50,17 +50,16 @@
 .cards-carousel__controls {
   display: flex;
   flex: 0 0 auto;
-  gap: 1rem;
+  gap: var(--cards-gap);
  
 }
 
 .cards-carousel__viewport {
   width: 100%;
-  overflow-x: auto;
-  overflow-y: hidden;
-  scroll-snap-type: x mandatory;
+    scroll-snap-type: x mandatory;
   padding-top: 2rem;
-    padding-inline: var(--section-padding-x);
+  padding-left: var(--section-padding-x);
+  padding-right: 0;
 
   margin: 0;
   box-sizing: border-box;
@@ -78,7 +77,7 @@
   gap: var(--cards-gap);
   width: max-content;
   padding-left: 0;
-  padding-right: var(--section-padding-x);
+  padding-right: 0;
 }
 
 .cards-carousel__slide {
@@ -120,15 +119,12 @@
   }
 }
 
-/* ==========================
-   MÓVILES
-   (iPhone SE, Galaxy A)
-========================== */
+
 
 @media (max-width: 768px) {
   .cards-carousel__track {
     gap: var(--cards-gap);
-    padding-right: var(--section-padding-x);
+    padding-right: 0;
   }
   .cards-carousel__slide {
 
@@ -136,16 +132,15 @@
   }
 
 }
-/* ==========================
-   MÓVILES PEQUEÑOS
-   (iPhone SE)
-========================== */
+
 
 @media (max-width: 480px) {
 
   .cards-carousel__viewport {
 
-    padding-inline: 1rem;
+    padding-left: var(--section-padding-x);
+    padding-right: 0;
+    padding-top: 0;
   }
 
 }
