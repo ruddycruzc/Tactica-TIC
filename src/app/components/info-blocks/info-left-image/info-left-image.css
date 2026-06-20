@@ -50,5 +50,6 @@
 @media (max-width: 900px) {
   .info-left-image {
     grid-template-columns: 1fr;
+    gap: 1rem;
   }
 }
