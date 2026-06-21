@@ -5,7 +5,9 @@ import {
   ElementRef,
   HostListener,
   Input,
+  OnChanges,
   OnDestroy,
+  SimpleChanges,
   inject,
 } from '@angular/core';
 
@@ -20,7 +22,7 @@ export type TypewriterTextSegment = {
   templateUrl: './typewriter-text.html',
   styleUrl: './typewriter-text.css',
 })
-export class TypewriterText implements AfterViewInit, OnDestroy {
+export class TypewriterText implements AfterViewInit, OnChanges, OnDestroy {
   private readonly elementRef = inject<ElementRef<HTMLElement>>(ElementRef);
   private readonly changeDetectorRef = inject(ChangeDetectorRef);
   private observer: IntersectionObserver | null = null;
@@ -53,6 +55,29 @@ export class TypewriterText implements AfterViewInit, OnDestroy {
 
   private get sourceSegments(): TypewriterTextSegment[] {
     return this.segments.length ? this.segments : [{ text: this.text }];
+  }
+
+  ngOnChanges(changes: SimpleChanges): void {
+    if (!changes['text'] && !changes['segments']) {
+      return;
+    }
+
+    if (this.timerId !== null) {
+      window.clearInterval(this.timerId);
+      this.timerId = null;
+    }
+
+    if (this.hasPlayed) {
+      const fullText =
+        this.sourceSegments.map((segment) => segment.text).join('');
+
+      this.visibleCharacters = Array.from(fullText).length;
+      this.displayText = fullText;
+      return;
+    }
+
+    this.visibleCharacters = 0;
+    this.displayText = '';
   }
 
   ngAfterViewInit(): void {
