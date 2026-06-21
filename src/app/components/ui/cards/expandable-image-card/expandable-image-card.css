@@ -1,6 +1,7 @@
 :host {
   display: block;
   height: 100%;
+  background: transparent;
 }
 
 .expandable-image-card {
@@ -12,7 +13,7 @@
   min-height: var(--product-card-height);
   overflow: hidden;
   border-radius: var(--radius-cards);
-  background: var(--color-surface-card);
+  background: var(--color-black);
   isolation: isolate;
   
 }
@@ -27,9 +28,9 @@
 
   background: linear-gradient(
     180deg,
-    transparent 58%,
-    rgba(17, 17, 17, 0.18) 76%,
-    rgba(17, 17, 17, 0.62) 100%
+    rgba(17, 17, 17, 0.04) 42%,
+    rgba(17, 17, 17, 0.28) 74%,
+    rgba(17, 17, 17, 0.72) 100%
   );
 
   opacity: 1;
@@ -138,6 +139,12 @@
   }
 }
 
+@media (max-width: 768px) {
+  .expandable-image-card {
+    min-height: var(--product-card-height-mobile);
+  }
+}
+
 @media (min-width: 1025px) {
   .expandable-image-card:not(.expandable-image-card--expanded) .expandable-image-card__content {
     padding-bottom: 1.5rem;
@@ -175,9 +182,9 @@
     background:
       linear-gradient(
         180deg,
-        transparent 52%,
-        rgba(17,17,17,.22) 76%,
-        rgba(17,17,17,.68) 100%
+        rgba(17,17,17,.06) 38%,
+        rgba(17,17,17,.34) 74%,
+        rgba(17,17,17,.76) 100%
       );
 
     opacity: 1;
